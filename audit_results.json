@@ -1,0 +1,332 @@
+[
+  {
+    "id": "sciencelink",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": true,
+    "hasEnHp": true,
+    "hasEnEb": true
+  },
+  {
+    "id": "banua-fruit-blast",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": true,
+    "hasEnHp": true,
+    "hasEnEb": true
+  },
+  {
+    "id": "si-pemanah",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "rimba-pedia",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "celestial-weaver",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "tanzib",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "puzzle",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": true,
+    "hasEnHp": true,
+    "hasEnEb": true
+  },
+  {
+    "id": "martabak-pecahan",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "doodle",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": true,
+    "hasEnHp": true,
+    "hasEnEb": true
+  },
+  {
+    "id": "si-taktik",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "traditional",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": true,
+    "hasEnHp": true,
+    "hasEnEb": true
+  },
+  {
+    "id": "space-war",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "ai-basketball",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "mancing-kata",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "kancil",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "nusaboard",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": true,
+    "hasEnHp": true,
+    "hasEnEb": true
+  },
+  {
+    "id": "jagoan-kata",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "geo-squad",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "ruang-io",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "adu-tarik-dino",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": true,
+    "hasEnHp": true,
+    "hasEnEb": true
+  },
+  {
+    "id": "tatap-hap",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "cocok-logi",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "mesin-koleksi",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "pendekar-balon",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "detektif-cilik",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "mewarnai",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "belajar-angka",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "Aksi Ambulans",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "Gass Damkar",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "Jalur Huruf",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "Petualangan Satu Garis",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "gabung-ceria",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  },
+  {
+    "id": "dunia-hewan",
+    "status": "🟢 COMPLETE",
+    "hasDesc": true,
+    "hasHp": true,
+    "hasEb": true,
+    "hasEn": false,
+    "hasEnHp": false,
+    "hasEnEb": false
+  }
+]

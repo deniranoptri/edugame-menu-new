@@ -1,0 +1,836 @@
+{
+  "banua-fruit-blast": {
+    "howToPlay": [
+      "Perhatikan soal matematika yang muncul di layar utama.",
+      "Tunggu buah-buahan melayang yang membawa berbagai pilihan angka.",
+      "Ayunkan tangan untuk mengiris buah yang membawa jawaban yang benar.",
+      "Hindari mengiris bom atau buah dengan jawaban yang salah.",
+      "Kumpulkan skor tertinggi sebelum batas waktu berakhir."
+    ],
+    "educationalBenefits": [
+      "Melatih kemampuan berhitung cepat (aritmatika dasar).",
+      "Meningkatkan koordinasi mata dan motorik tangan.",
+      "Melatih fokus dan konsentrasi di bawah tekanan waktu."
+    ],
+    "en": {
+      "howToPlay": [
+        "Observe the math problem displayed on the screen.",
+        "Wait for the flying fruits carrying various number choices.",
+        "Swipe your hand to slice the fruit with the correct answer.",
+        "Avoid slicing bombs or fruits with incorrect answers.",
+        "Collect the highest score before the time runs out."
+      ],
+      "educationalBenefits": [
+        "Practices rapid mental calculation (basic arithmetic).",
+        "Improves hand-eye coordination and motor skills.",
+        "Trains focus and concentration under time pressure."
+      ]
+    }
+  },
+  "si-pemanah": {
+    "howToPlay": [
+      "Lihat target angka atau soal matematika yang diberikan.",
+      "Arahkan busur panah ke jawaban yang paling tepat.",
+      "Tarik dan lepaskan anak panah untuk menembak target.",
+      "Lanjutkan ke level berikutnya dengan tingkat kesulitan yang meningkat."
+    ],
+    "educationalBenefits": [
+      "Meningkatkan kecepatan dan ketepatan menghitung.",
+      "Melatih fokus visual dan akurasi.",
+      "Membangun pemahaman konsep angka secara interaktif."
+    ],
+    "en": {
+      "howToPlay": [
+        "Check the target number or math problem presented.",
+        "Aim the bow at the correct answer.",
+        "Pull back and release the arrow to hit the target.",
+        "Proceed to the next level with increasing difficulty."
+      ],
+      "educationalBenefits": [
+        "Improves calculation speed and accuracy.",
+        "Trains visual focus and precision.",
+        "Builds number sense interactively."
+      ]
+    }
+  },
+  "rimba-pedia": {
+    "howToPlay": [
+      "Jelajahi peta virtual hutan Nusantara.",
+      "Cari dan temukan berbagai hewan langka yang bersembunyi.",
+      "Pilih hewan yang ditemukan untuk membaca ensiklopedia informasinya.",
+      "Jawab pertanyaan singkat terkait hewan tersebut untuk mendapatkan poin."
+    ],
+    "educationalBenefits": [
+      "Meningkatkan literasi membaca melalui informasi ensiklopedia.",
+      "Menambah wawasan tentang keanekaragaman hayati Indonesia.",
+      "Melatih ketelitian visual dalam mencari objek."
+    ],
+    "en": {
+      "howToPlay": [
+        "Explore the virtual map of the Indonesian jungle.",
+        "Search and discover hidden endangered animals.",
+        "Select the found animal to read its encyclopedia information.",
+        "Answer short questions about the animal to earn points."
+      ],
+      "educationalBenefits": [
+        "Improves reading literacy through encyclopedia entries.",
+        "Expands knowledge about Indonesian biodiversity.",
+        "Trains visual attention and search skills."
+      ]
+    }
+  },
+  "celestial-weaver": {
+    "howToPlay": [
+      "Pilih tantangan menenun dari motif tradisional yang tersedia.",
+      "Perhatikan pola warna dan bentuk pada panduan.",
+      "Tarik benang virtual dan ikuti pola yang sesuai.",
+      "Selesaikan tenunan hingga membentuk kain tradisional yang utuh."
+    ],
+    "educationalBenefits": [
+      "Melatih pengenalan pola dan logika algoritmik dasar.",
+      "Menumbuhkan apresiasi terhadap seni budaya tradisional.",
+      "Meningkatkan ketelitian dan motorik halus."
+    ],
+    "en": {
+      "howToPlay": [
+        "Choose a weaving challenge from the available traditional motifs.",
+        "Observe the color and shape patterns on the guide.",
+        "Drag the virtual threads to match the requested pattern.",
+        "Complete the weaving to form a full traditional cloth."
+      ],
+      "educationalBenefits": [
+        "Trains pattern recognition and basic algorithmic logic.",
+        "Fosters appreciation for traditional cultural arts.",
+        "Improves attention to detail and fine motor skills."
+      ]
+    }
+  },
+  "tanzib": {
+    "howToPlay": [
+      "Pilih tingkat kesulitan kuis seputar sejarah Islam.",
+      "Baca pertanyaan yang ditampilkan di layar.",
+      "Pilih jawaban yang paling tepat dari opsi yang tersedia.",
+      "Pelajari penjelasan sejarah setelah menjawab pertanyaan."
+    ],
+    "educationalBenefits": [
+      "Meningkatkan wawasan literasi sejarah kebudayaan Islam.",
+      "Melatih kemampuan membaca dan pemahaman teks.",
+      "Membangun karakter dan nilai moral dari tokoh sejarah."
+    ],
+    "en": {
+      "howToPlay": [
+        "Select the difficulty level for the Islamic history quiz.",
+        "Read the questions displayed on the screen.",
+        "Choose the most accurate answer from the options provided.",
+        "Study the historical explanations after answering."
+      ],
+      "educationalBenefits": [
+        "Expands historical literacy of Islamic culture.",
+        "Trains reading comprehension and text analysis.",
+        "Builds character and moral values through historical figures."
+      ]
+    }
+  },
+  "puzzle": {
+    "howToPlay": [
+      "Perhatikan gambar utuh sebelum diacak.",
+      "Pilih kepingan puzzle yang berserakan.",
+      "Tarik dan letakkan kepingan ke tempat yang tepat di kanvas.",
+      "Susun hingga gambar Nusantara kembali utuh."
+    ],
+    "educationalBenefits": [
+      "Melatih kemampuan logika spasial dan visual.",
+      "Meningkatkan memori jangka pendek anak.",
+      "Mengenalkan keragaman budaya Nusantara secara visual."
+    ],
+    "en": {
+      "howToPlay": [
+        "Observe the complete image before it is scrambled.",
+        "Select the scattered puzzle pieces.",
+        "Drag and drop the pieces into the correct spots on the canvas.",
+        "Arrange them until the cultural image is fully restored."
+      ],
+      "educationalBenefits": [
+        "Trains spatial and visual logic skills.",
+        "Improves short-term memory.",
+        "Visually introduces the diversity of Indonesian culture."
+      ]
+    }
+  },
+  "martabak-pecahan": {
+    "howToPlay": [
+      "Terima pesanan pelanggan yang meminta porsi martabak tertentu.",
+      "Pilih alat pemotong untuk membagi martabak sesuai nilai pecahan.",
+      "Seret potongan martabak yang bernilai benar ke dalam kotak pesanan.",
+      "Selesaikan pesanan sebelum pelanggan pergi."
+    ],
+    "educationalBenefits": [
+      "Mengenalkan konsep pecahan matematika secara visual dan konkret.",
+      "Melatih kemampuan pemecahan masalah sederhana.",
+      "Mengaitkan matematika dengan kehidupan sehari-hari."
+    ],
+    "en": {
+      "howToPlay": [
+        "Receive a customer's order for a specific fraction of a pancake.",
+        "Choose the cutting tool to divide the pancake according to the fraction.",
+        "Drag the correct fraction pieces into the order box.",
+        "Complete the order before the customer leaves."
+      ],
+      "educationalBenefits": [
+        "Introduces math fractions visually and concretely.",
+        "Trains basic problem-solving skills.",
+        "Connects mathematics to everyday real-world scenarios."
+      ]
+    }
+  },
+  "doodle": {
+    "howToPlay": [
+      "Pilih alat gambar (kuas, pensil, atau penghapus).",
+      "Gunakan layar sentuh untuk menggambar bebas di atas kanvas.",
+      "Eksperimen dengan berbagai warna untuk menghias karya.",
+      "Simpan atau hapus kanvas untuk memulai kembali."
+    ],
+    "educationalBenefits": [
+      "Merangsang imajinasi dan kreativitas visual.",
+      "Melatih motorik halus dan koordinasi tangan-mata.",
+      "Menjadi media ekspresi bebas untuk anak."
+    ],
+    "en": {
+      "howToPlay": [
+        "Choose a drawing tool (brush, pencil, or eraser).",
+        "Use the touch screen to draw freely on the canvas.",
+        "Experiment with various colors to decorate your art.",
+        "Save or clear the canvas to start over."
+      ],
+      "educationalBenefits": [
+        "Stimulates imagination and visual creativity.",
+        "Trains fine motor skills and hand-eye coordination.",
+        "Serves as a medium for free expression."
+      ]
+    }
+  },
+  "si-taktik": {
+    "howToPlay": [
+      "Perhatikan area permainan Tic-Tac-Toe.",
+      "Pilih kotak kosong untuk meletakkan simbol milikmu (X atau O).",
+      "Coba susun tiga simbol berurutan secara horizontal, vertikal, atau diagonal.",
+      "Halangi lawan agar tidak menyusun tiga simbol lebih dulu."
+    ],
+    "educationalBenefits": [
+      "Melatih pemikiran strategis dan perencanaan langkah.",
+      "Meningkatkan kemampuan problem solving dan antisipasi.",
+      "Membangun logika berpikir sederhana."
+    ],
+    "en": {
+      "howToPlay": [
+        "Observe the Tic-Tac-Toe playing grid.",
+        "Select an empty square to place your symbol (X or O).",
+        "Attempt to align three symbols horizontally, vertically, or diagonally.",
+        "Block your opponent from aligning their three symbols first."
+      ],
+      "educationalBenefits": [
+        "Trains strategic thinking and forward planning.",
+        "Improves problem-solving and anticipation skills.",
+        "Builds fundamental logical reasoning."
+      ]
+    }
+  },
+  "traditional": {
+    "howToPlay": [
+      "Pilih jenis alat musik gamelan yang ingin dimainkan.",
+      "Sentuh atau ketuk bilah/instrumen di layar untuk menghasilkan suara.",
+      "Ikuti panduan nada untuk memainkan lagu tradisional sederhana.",
+      "Eksplorasi harmoni dengan membunyikan beberapa instrumen."
+    ],
+    "educationalBenefits": [
+      "Mengenalkan kekayaan alat musik tradisional Indonesia.",
+      "Melatih kecerdasan musikal dan ritme.",
+      "Meningkatkan apresiasi terhadap seni budaya lokal."
+    ],
+    "en": {
+      "howToPlay": [
+        "Select a traditional gamelan instrument to play.",
+        "Touch or tap the bars/instruments on the screen to produce sound.",
+        "Follow the note guide to play simple traditional songs.",
+        "Explore harmony by playing multiple notes."
+      ],
+      "educationalBenefits": [
+        "Introduces the rich traditional instruments of Indonesia.",
+        "Trains musical intelligence and rhythm.",
+        "Increases appreciation for local cultural arts."
+      ]
+    }
+  },
+  "space-war": {
+    "howToPlay": [
+      "Kendalikan pesawat luar angkasa dengan memecahkan soal matematika.",
+      "Tembak musuh yang datang dengan mengetik atau memilih jawaban benar.",
+      "Jawab secepat mungkin sebelum musuh mendekat.",
+      "Kalahkan bos musuh di akhir setiap level."
+    ],
+    "educationalBenefits": [
+      "Melatih kemampuan aritmatika mental di bawah tekanan.",
+      "Meningkatkan fokus dan refleks cepat.",
+      "Membangun kepercayaan diri dalam menyelesaikan soal matematika."
+    ],
+    "en": {
+      "howToPlay": [
+        "Control your spaceship by solving math problems.",
+        "Shoot incoming enemies by typing or selecting the correct answers.",
+        "Answer as quickly as possible before the enemy approaches.",
+        "Defeat the boss enemy at the end of each level."
+      ],
+      "educationalBenefits": [
+        "Trains mental arithmetic under pressure.",
+        "Improves focus and quick reflexes.",
+        "Builds confidence in solving math problems."
+      ]
+    }
+  },
+  "ai-basketball": {
+    "howToPlay": [
+      "Berdiri di depan kamera panel interaktif.",
+      "Ikuti instruksi gerakan (seperti melompat atau melempar) untuk memasukkan bola.",
+      "Sinkronkan gerakan fisikmu dengan timing di layar.",
+      "Kumpulkan poin terbanyak dari setiap tembakan sukses."
+    ],
+    "educationalBenefits": [
+      "Meningkatkan aktivitas fisik dan kesehatan tubuh.",
+      "Melatih koordinasi motorik kasar dan ketepatan gerak.",
+      "Memberikan pengalaman olahraga secara imersif dan interaktif."
+    ],
+    "en": {
+      "howToPlay": [
+        "Stand in front of the interactive panel's camera.",
+        "Follow the movement instructions (like jumping or throwing) to shoot the ball.",
+        "Synchronize your physical movements with the on-screen timing.",
+        "Collect the most points from successful shots."
+      ],
+      "educationalBenefits": [
+        "Promotes physical activity and bodily health.",
+        "Trains gross motor coordination and movement precision.",
+        "Provides an immersive and interactive sports experience."
+      ]
+    }
+  },
+  "mancing-kata": {
+    "howToPlay": [
+      "Perhatikan kata target yang diminta di layar.",
+      "Arahkan kail pancing virtual ke ikan yang membawa huruf yang tepat.",
+      "Tangkap huruf secara berurutan agar membentuk kata.",
+      "Hindari menangkap rintangan atau huruf yang salah."
+    ],
+    "educationalBenefits": [
+      "Meningkatkan penguasaan kosa kata dan ejaan.",
+      "Melatih ketelitian visual dan fokus.",
+      "Mengenalkan struktur bahasa secara interaktif."
+    ],
+    "en": {
+      "howToPlay": [
+        "Note the target word requested on the screen.",
+        "Aim the virtual fishing hook at the fish carrying the correct letters.",
+        "Catch the letters in sequence to spell the word.",
+        "Avoid catching obstacles or incorrect letters."
+      ],
+      "educationalBenefits": [
+        "Improves vocabulary mastery and spelling.",
+        "Trains visual attention and focus.",
+        "Introduces language structure interactively."
+      ]
+    }
+  },
+  "kancil": {
+    "howToPlay": [
+      "Perhatikan peta labirin atau rintangan di layar.",
+      "Rancang jalur pergerakan menggunakan blok-blok perintah arah.",
+      "Susun algoritma (maju, belok kiri, belok kanan) agar Kancil mencapai tujuan.",
+      "Jalankan program dan perbaiki jika Kancil menabrak rintangan."
+    ],
+    "educationalBenefits": [
+      "Mengenalkan dasar-dasar pemikiran komputasional (coding).",
+      "Melatih pemecahan masalah (problem solving) secara logis.",
+      "Membangun kemampuan perencanaan dan prediksi."
+    ],
+    "en": {
+      "howToPlay": [
+        "Observe the maze or obstacle map on the screen.",
+        "Design a movement path using directional command blocks.",
+        "Arrange the algorithm (forward, turn left, turn right) so the Mouse Deer reaches the goal.",
+        "Run the program and debug if it hits an obstacle."
+      ],
+      "educationalBenefits": [
+        "Introduces basic computational thinking (coding).",
+        "Trains logical problem-solving skills.",
+        "Builds planning and prediction capabilities."
+      ]
+    }
+  },
+  "nusaboard": {
+    "howToPlay": [
+      "Buka kanvas kosong interaktif NusaBoard.",
+      "Tambahkan teks, bentuk, atau gambar untuk memulai diskusi.",
+      "Tarik garis penghubung antar elemen untuk membuat peta pikiran (mind map).",
+      "Gunakan bersama teman dalam sesi kolaborasi kelas."
+    ],
+    "educationalBenefits": [
+      "Meningkatkan kemampuan pengorganisasian ide dan informasi.",
+      "Melatih kreativitas presentasi visual.",
+      "Mendukung kerja sama tim dan kolaborasi ide secara real-time."
+    ],
+    "en": {
+      "howToPlay": [
+        "Open the interactive blank NusaBoard canvas.",
+        "Add text, shapes, or images to start the discussion.",
+        "Draw connecting lines between elements to create mind maps.",
+        "Use it together with peers during classroom collaboration sessions."
+      ],
+      "educationalBenefits": [
+        "Improves idea and information organization skills.",
+        "Trains creative visual presentation.",
+        "Supports teamwork and real-time idea collaboration."
+      ]
+    }
+  },
+  "jagoan-kata": {
+    "howToPlay": [
+      "Lihat serangkaian huruf acak yang diberikan.",
+      "Geser dan rangkai huruf-huruf tersebut menjadi sebuah kata baku.",
+      "Temukan sebanyak mungkin kombinasi kata tersembunyi.",
+      "Selesaikan teka-teki sebelum waktu habis."
+    ],
+    "educationalBenefits": [
+      "Memperkaya perbendaharaan kosa kata Bahasa Indonesia.",
+      "Melatih kemampuan anagram dan pemrosesan bahasa.",
+      "Meningkatkan kemampuan mengeja kata dengan benar."
+    ],
+    "en": {
+      "howToPlay": [
+        "Look at the series of scrambled letters provided.",
+        "Swipe and arrange the letters to form valid words.",
+        "Find as many hidden word combinations as possible.",
+        "Complete the puzzle before the time runs out."
+      ],
+      "educationalBenefits": [
+        "Enriches vocabulary knowledge.",
+        "Trains anagramming and language processing skills.",
+        "Improves correct spelling abilities."
+      ]
+    }
+  },
+  "geo-squad": {
+    "howToPlay": [
+      "Perhatikan properti bangun datar atau ruang yang diminta (contoh: cari yang memiliki 4 sisi).",
+      "Pilih karakter Geo Squad yang merepresentasikan bentuk yang tepat.",
+      "Pasangkan bentuk dengan bayangan atau slot yang sesuai.",
+      "Selesaikan level untuk mempelajari karakteristik bangun geometri baru."
+    ],
+    "educationalBenefits": [
+      "Mengenalkan konsep geometri dasar secara visual.",
+      "Melatih kemampuan klasifikasi dan pencocokan bentuk.",
+      "Meningkatkan pemahaman tentang sifat-sifat bangun datar."
+    ],
+    "en": {
+      "howToPlay": [
+        "Observe the requested properties of a shape (e.g., find one with 4 sides).",
+        "Select the Geo Squad character representing the correct shape.",
+        "Match the shape with its corresponding shadow or slot.",
+        "Clear levels to learn the characteristics of new geometric shapes."
+      ],
+      "educationalBenefits": [
+        "Introduces basic geometry concepts visually.",
+        "Trains shape classification and matching skills.",
+        "Improves understanding of shape properties."
+      ]
+    }
+  },
+  "ruang-io": {
+    "howToPlay": [
+      "Pilih objek bangun ruang 3D yang ingin dieksplorasi.",
+      "Gunakan jari untuk memutar objek ke segala arah (360 derajat).",
+      "Perhatikan jumlah sisi, rusuk, dan titik sudut dari objek tersebut.",
+      "Buka jaring-jaring bangun ruang untuk melihat struktur datarnya."
+    ],
+    "educationalBenefits": [
+      "Meningkatkan kemampuan spasial dan visualisasi 3D.",
+      "Membantu pemahaman konsep jaring-jaring bangun ruang.",
+      "Mempermudah abstraksi materi matematika geometri."
+    ],
+    "en": {
+      "howToPlay": [
+        "Select a 3D geometric object to explore.",
+        "Use your fingers to rotate the object in any direction (360 degrees).",
+        "Observe the number of faces, edges, and vertices of the object.",
+        "Unfold the 3D shape into its net to see its flat structure."
+      ],
+      "educationalBenefits": [
+        "Improves spatial intelligence and 3D visualization.",
+        "Aids understanding of 3D shape nets.",
+        "Simplifies abstraction in geometric mathematics."
+      ]
+    }
+  },
+  "adu-tarik-dino": {
+    "howToPlay": [
+      "Bermain berdua dalam mode layar terbagi (split-screen).",
+      "Perhatikan soal perbandingan atau perhitungan matematika yang muncul.",
+      "Pilih jawaban benar lebih cepat dari lawanmu.",
+      "Tarik tali ke arah dinosaurusmu untuk setiap jawaban yang benar."
+    ],
+    "educationalBenefits": [
+      "Melatih kecepatan pemrosesan informasi matematika.",
+      "Membangun sportivitas melalui kompetisi yang sehat.",
+      "Meningkatkan pemahaman konsep lebih besar dan lebih kecil."
+    ],
+    "en": {
+      "howToPlay": [
+        "Play head-to-head in split-screen mode.",
+        "Watch for the math comparison or calculation problems that appear.",
+        "Select the correct answer faster than your opponent.",
+        "Pull the rope toward your dinosaur for each correct answer."
+      ],
+      "educationalBenefits": [
+        "Trains fast mathematical information processing.",
+        "Builds sportsmanship through healthy competition.",
+        "Improves understanding of greater than and less than concepts."
+      ]
+    }
+  },
+  "tatap-hap": {
+    "howToPlay": [
+      "Perhatikan urutan pola atau warna yang menyala di layar.",
+      "Ingat baik-baik urutan tersebut.",
+      "Ketuk layar untuk mengulangi pola dengan urutan yang sama persis.",
+      "Tantangan akan semakin panjang dan cepat setiap ronde."
+    ],
+    "educationalBenefits": [
+      "Melatih memori jangka pendek dan daya ingat visual.",
+      "Meningkatkan rentang konsentrasi (attention span).",
+      "Membangun fokus dan kecepatan respons."
+    ],
+    "en": {
+      "howToPlay": [
+        "Observe the sequence of patterns or colors lighting up on the screen.",
+        "Memorize the exact sequence carefully.",
+        "Tap the screen to repeat the pattern in the exact same order.",
+        "The challenge gets longer and faster each round."
+      ],
+      "educationalBenefits": [
+        "Trains short-term memory and visual recall.",
+        "Increases attention span.",
+        "Builds focus and response speed."
+      ]
+    }
+  },
+  "cocok-logi": {
+    "howToPlay": [
+      "Perhatikan bentuk atau objek utama yang ditampilkan.",
+      "Cari bentuk pasangannya dari beberapa pilihan yang ada.",
+      "Tarik garis atau seret objek ke tempat yang memiliki siluet atau fungsi serupa.",
+      "Selesaikan semua pasangan untuk melanjutkan."
+    ],
+    "educationalBenefits": [
+      "Mengenalkan logika relasi dan pengelompokan objek.",
+      "Melatih motorik halus saat menyentuh dan menarik objek.",
+      "Meningkatkan kemampuan identifikasi visual anak PAUD."
+    ],
+    "en": {
+      "howToPlay": [
+        "Observe the main shape or object displayed.",
+        "Find its matching counterpart from the given choices.",
+        "Draw a line or drag the object to the silhouette or related item.",
+        "Complete all pairs to proceed."
+      ],
+      "educationalBenefits": [
+        "Introduces relational logic and object categorization.",
+        "Trains fine motor skills while dragging objects.",
+        "Improves visual identification skills for early learners."
+      ]
+    }
+  },
+  "mesin-koleksi": {
+    "howToPlay": [
+      "Sentuh layar untuk memasukkan koin virtual.",
+      "Tarik tuas atau putar tombol pada mesin Gacha.",
+      "Buka kapsul yang keluar untuk melihat hadiah hewan atau bentuk.",
+      "Kumpulkan semua kejutan di rak koleksi."
+    ],
+    "educationalBenefits": [
+      "Mengenalkan konsep sebab dan akibat secara sederhana.",
+      "Memberikan stimulus hadiah (reward) untuk eksplorasi.",
+      "Melatih motorik tangan dan kesabaran."
+    ],
+    "en": {
+      "howToPlay": [
+        "Touch the screen to insert a virtual coin.",
+        "Pull the lever or turn the knob on the Gacha machine.",
+        "Open the dispensed capsule to reveal an animal or shape prize.",
+        "Collect all surprises on the collection shelf."
+      ],
+      "educationalBenefits": [
+        "Introduces simple cause-and-effect concepts.",
+        "Provides positive reward stimuli for exploration.",
+        "Trains hand motor skills and patience."
+      ]
+    }
+  },
+  "pendekar-balon": {
+    "howToPlay": [
+      "Dengarkan instruksi angka atau huruf yang harus dicari.",
+      "Perhatikan balon-balon terbang yang membawa angka atau huruf.",
+      "Ketuk (pop) balon yang membawa target yang tepat.",
+      "Jangan ketuk balon yang membawa jawaban salah."
+    ],
+    "educationalBenefits": [
+      "Melatih pengenalan dini pada huruf alfabet dan angka.",
+      "Meningkatkan koordinasi mata-tangan dan respons motorik.",
+      "Melatih pendengaran dan instruksi selektif."
+    ],
+    "en": {
+      "howToPlay": [
+        "Listen to the instruction for the target number or letter.",
+        "Watch the flying balloons carrying various numbers or letters.",
+        "Tap (pop) the balloons carrying the correct targets.",
+        "Do not tap balloons with incorrect answers."
+      ],
+      "educationalBenefits": [
+        "Trains early recognition of alphabet letters and numbers.",
+        "Improves hand-eye coordination and motor response.",
+        "Trains listening and selective instruction following."
+      ]
+    }
+  },
+  "detektif-cilik": {
+    "howToPlay": [
+      "Lihat daftar benda yang harus ditemukan di panel bawah.",
+      "Telusuri gambar pemandangan yang penuh dengan berbagai objek.",
+      "Ketuk benda yang tersembunyi jika kamu menemukannya.",
+      "Gunakan kaca pembesar jika kesulitan mencari benda yang kecil."
+    ],
+    "educationalBenefits": [
+      "Meningkatkan fokus dan ketelitian visual (visual scanning).",
+      "Menambah perbendaharaan kosakata benda sehari-hari.",
+      "Melatih kesabaran dalam observasi."
+    ],
+    "en": {
+      "howToPlay": [
+        "Look at the list of objects to find in the bottom panel.",
+        "Scan the crowded scenery picture.",
+        "Tap the hidden object when you locate it.",
+        "Use the magnifying glass if you have trouble finding small items."
+      ],
+      "educationalBenefits": [
+        "Improves focus and visual scanning skills.",
+        "Increases everyday vocabulary.",
+        "Trains patience during observation."
+      ]
+    }
+  },
+  "mewarnai": {
+    "howToPlay": [
+      "Pilih sketsa gambar sayuran yang ingin diwarnai.",
+      "Pilih warna dari palet di sebelah layar.",
+      "Ketuk area kosong pada gambar untuk mengisi warna (fill).",
+      "Campurkan berbagai warna untuk membuat karyamu lebih hidup."
+    ],
+    "educationalBenefits": [
+      "Mengembangkan kreativitas dan ekspresi seni anak.",
+      "Mengenalkan berbagai jenis sayuran sehat secara visual.",
+      "Meningkatkan pengenalan warna dasar dan kombinasi."
+    ],
+    "en": {
+      "howToPlay": [
+        "Select a vegetable sketch to color.",
+        "Choose a color from the palette on the side of the screen.",
+        "Tap empty areas on the drawing to fill them with color.",
+        "Mix various colors to make your artwork vibrant."
+      ],
+      "educationalBenefits": [
+        "Develops creativity and artistic expression.",
+        "Visually introduces various types of healthy vegetables.",
+        "Improves recognition of basic colors and combinations."
+      ]
+    }
+  },
+  "belajar-angka": {
+    "howToPlay": [
+      "Pilih dua tabung reaksi yang berisi warna dasar (merah, kuning, biru).",
+      "Tuangkan isi kedua tabung ke dalam gelas ukur.",
+      "Aduk perlahan dan perhatikan perubahan warna yang terjadi.",
+      "Coba temukan semua kombinasi warna sekunder yang mungkin."
+    ],
+    "educationalBenefits": [
+      "Mengenalkan teori warna dasar dan pencampuran warna.",
+      "Memberikan pengalaman observasi eksperimen sains sederhana.",
+      "Merangsang rasa ingin tahu logis."
+    ],
+    "en": {
+      "howToPlay": [
+        "Select two test tubes containing primary colors (red, yellow, blue).",
+        "Pour the contents of both tubes into the beaker.",
+        "Stir gently and observe the resulting color change.",
+        "Try to discover all possible secondary color combinations."
+      ],
+      "educationalBenefits": [
+        "Introduces basic color theory and color mixing.",
+        "Provides a simple science experiment observation experience.",
+        "Stimulates logical curiosity."
+      ]
+    }
+  },
+  "Aksi Ambulans": {
+    "howToPlay": [
+      "Perhatikan mobil Ambulans dan kendaraan lain yang menghalangi jalan.",
+      "Geser kendaraan lain maju atau mundur untuk membuat jalan keluar.",
+      "Arahkan Ambulans keluar dari area parkir menuju rumah sakit.",
+      "Selesaikan teka-teki dengan jumlah geseran sesedikit mungkin."
+    ],
+    "educationalBenefits": [
+      "Melatih pemikiran logis dan perencanaan spasial.",
+      "Meningkatkan kemampuan pemecahan masalah (problem solving).",
+      "Mengenalkan konsep simpati untuk memberikan jalan pada Ambulans."
+    ],
+    "en": {
+      "howToPlay": [
+        "Observe the Ambulance and the other vehicles blocking its path.",
+        "Slide other vehicles forward or backward to clear an exit route.",
+        "Guide the Ambulance out of the parking area to the hospital.",
+        "Solve the puzzle using the fewest possible moves."
+      ],
+      "educationalBenefits": [
+        "Trains logical thinking and spatial planning.",
+        "Improves problem-solving skills.",
+        "Introduces the sympathetic concept of yielding to emergency vehicles."
+      ]
+    }
+  },
+  "Gass Damkar": {
+    "howToPlay": [
+      "Perhatikan titik sumber api yang menyala di gedung.",
+      "Arahkan selang air dengan memutar sudut pancuran.",
+      "Hitung kekuatan semprotan agar air tepat mengenai api.",
+      "Padamkan seluruh titik api sebelum waktu habis."
+    ],
+    "educationalBenefits": [
+      "Melatih koordinasi visual dan perhitungan sudut sederhana.",
+      "Meningkatkan motorik halus dalam mengendalikan objek di layar.",
+      "Mengenalkan profesi petugas pemadam kebakaran dan keselamatan dasar."
+    ],
+    "en": {
+      "howToPlay": [
+        "Observe the fire sources burning in the building.",
+        "Aim the water hose by adjusting the nozzle angle.",
+        "Calculate the spray force so the water accurately hits the fire.",
+        "Extinguish all fires before the time runs out."
+      ],
+      "educationalBenefits": [
+        "Trains visual coordination and simple angle estimation.",
+        "Improves fine motor skills in controlling on-screen objects.",
+        "Introduces the firefighter profession and basic safety."
+      ]
+    }
+  },
+  "Jalur Huruf": {
+    "howToPlay": [
+      "Pilih huruf alfabet yang ingin dipelajari.",
+      "Perhatikan titik awal dan tanda panah panduan.",
+      "Gunakan jari untuk menelusuri garis (tracing) mengikuti arah panah.",
+      "Selesaikan tarikan garis tanpa terputus hingga huruf terbentuk."
+    ],
+    "educationalBenefits": [
+      "Melatih memori otot dan persiapan menulis secara fisik.",
+      "Mengenalkan bentuk baku huruf alfabet.",
+      "Meningkatkan koordinasi mata dan tangan secara presisi."
+    ],
+    "en": {
+      "howToPlay": [
+        "Select an alphabet letter you want to learn.",
+        "Observe the starting point and guiding arrows.",
+        "Use your finger to trace the lines following the arrows.",
+        "Complete the continuous stroke until the letter is fully formed."
+      ],
+      "educationalBenefits": [
+        "Trains muscle memory and physical writing preparation.",
+        "Introduces the standard shapes of alphabet letters.",
+        "Improves precise hand-eye coordination."
+      ]
+    }
+  },
+  "Petualangan Satu Garis": {
+    "howToPlay": [
+      "Perhatikan sekumpulan titik yang membentuk suatu pola atau bentuk.",
+      "Mulai dari satu titik awal.",
+      "Tarik garis menghubungkan seluruh titik tanpa mengangkat jari.",
+      "Selesaikan teka-teki tanpa melewati garis yang sama dua kali."
+    ],
+    "educationalBenefits": [
+      "Melatih logika alur dan pemikiran topologi dasar.",
+      "Meningkatkan konsentrasi dan perencanaan langkah.",
+      "Melatih kesabaran anak dalam mencoba berbagai alternatif solusi."
+    ],
+    "en": {
+      "howToPlay": [
+        "Observe the set of dots forming a pattern or shape.",
+        "Start from any initial dot.",
+        "Draw a continuous line connecting all dots without lifting your finger.",
+        "Solve the puzzle without traversing the same line twice."
+      ],
+      "educationalBenefits": [
+        "Trains flow logic and basic topological thinking.",
+        "Improves concentration and step planning.",
+        "Trains patience in trying multiple alternative solutions."
+      ]
+    }
+  },
+  "gabung-ceria": {
+    "howToPlay": [
+      "Perhatikan objek (buah atau bentuk) yang muncul di atas layar.",
+      "Geser objek ke kiri atau kanan untuk menentukan posisi jatuh.",
+      "Jatuhkan objek agar menyentuh objek lain yang identik.",
+      "Dua objek identik akan bergabung menjadi satu objek yang lebih besar."
+    ],
+    "educationalBenefits": [
+      "Mengenalkan konsep ukuran dan hukum fisika sentuhan ringan.",
+      "Melatih perencanaan spasial agar tumpukan tidak melewati batas.",
+      "Meningkatkan strategi visual secara menyenangkan."
+    ],
+    "en": {
+      "howToPlay": [
+        "Observe the object (fruit or shape) appearing at the top of the screen.",
+        "Slide the object left or right to position its drop.",
+        "Drop the object so it touches another identical object.",
+        "Two identical objects will merge into a larger object."
+      ],
+      "educationalBenefits": [
+        "Introduces size concepts and basic physics collisions.",
+        "Trains spatial planning to prevent the stack from overflowing.",
+        "Improves visual strategy in an engaging way."
+      ]
+    }
+  },
+  "dunia-hewan": {
+    "howToPlay": [
+      "Lihat hewan lucu yang sedang lapar di layar.",
+      "Perhatikan berbagai jenis makanan yang disediakan di sekitarnya.",
+      "Tarik makanan yang tepat dan berikan kepada hewan tersebut (misal: pisang untuk monyet).",
+      "Pelajari respons gembira hewan saat diberi makanan yang benar."
+    ],
+    "educationalBenefits": [
+      "Mengenalkan pengetahuan dasar IPA tentang jenis hewan dan makanannya.",
+      "Melatih kemampuan klasifikasi dan pencocokan.",
+      "Membangun rasa empati terhadap makhluk hidup."
+    ],
+    "en": {
+      "howToPlay": [
+        "Look at the hungry cute animal on the screen.",
+        "Observe the various types of food provided around it.",
+        "Drag the correct food and feed it to the animal (e.g., banana for monkey).",
+        "Learn the animal's happy reaction when fed the right food."
+      ],
+      "educationalBenefits": [
+        "Introduces basic natural science regarding animals and their diets.",
+        "Trains classification and matching skills.",
+        "Builds empathy towards living creatures."
+      ]
+    }
+  }
+}

@@ -1,0 +1,929 @@
+Testing ID_Home: http://localhost:3001/
+Testing ID_Hub: http://localhost:3001/game-edukasi-ifp
+Testing ID_Guide: http://localhost:3001/panduan/penggunaan-ifp-papan-interaktif-digital
+Testing ID_Game: http://localhost:3001/game/nusaboard
+Testing EN_Hub: http://localhost:3001/en/educational-games-for-interactive-flat-panels
+Testing EN_Guide: http://localhost:3001/en/guides/using-educational-games-on-interactive-flat-panels
+Testing EN_Game: http://localhost:3001/en/game/nusaboard
+Testing EN_Unknown: http://localhost:3001/en/this-route-does-not-exist
+Testing Popstate...
+{
+  "ID_Home": {
+    "data": {
+      "title": "Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif",
+      "lang": "id",
+      "canonical": "https://papaninteraktif.com/",
+      "hreflangs": [],
+      "meta": {
+        "description": "Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru. Belajar sambil bermain dengan berbagai pilihan game.",
+        "ogTitle": "Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif",
+        "ogDescription": "Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru. Belajar sambil bermain dengan berbagai pilihan game.",
+        "ogUrl": "https://papaninteraktif.com/",
+        "ogLocale": null
+      },
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://papaninteraktif.com/#website",
+              "url": "https://papaninteraktif.com/",
+              "name": "Papan Interaktif Digital",
+              "alternateName": "Free Mobile & Smartboard Edu Games",
+              "description": "Portal Game edukasi untuk HP, Laptop, dan Smartboard. Solusi ice breaking Kurikulum Merdeka PAUD/TK, SD, SMP.",
+              "inLanguage": [
+                "id",
+                "en"
+              ]
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://papaninteraktif.com/#organization",
+              "name": "Papan Interaktif",
+              "url": "https://papaninteraktif.com/",
+              "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha-AFY6CzbyV_3kY-lPLVY1gjufXp-BZFWWYxoctjjlkHvHbrbkARO5hz9dJFf9AaigBxU_dA44v6LgDANS4ThUIpI1-jVc8dRI-As9gTrKgF8Vx-VQ2zc97J0rvZZFxR6gRIlhkjDgGv4BgoRtA7Q2VxVsAK6KpKciwGThtrakO58nTxEkDEGSJ70jvI/s512/Media%20Papan%20Interaktif%20Digital%20(512%20x%20512%20px).png",
+              "founder": {
+                "@type": "Person",
+                "name": "Deni Ranoptri, M.Pd"
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Perangkat apa saja yang bisa digunakan untuk main game ini?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sangat fleksibel! Game kami 100% responsif di HP, Tablet, PC, Laptop, Chromebook, hingga Interactive Flat Panel (IFP)."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "bodyText": "DENI RANOPTRI  PRODUCTION  MANDAI  MEDIA ANAK NUSANTARA DIGITAL AKTIF INSPIRATIF  ⬇️ PILIH HALAMAN GAME ⬇️ 🎓 UMUM 🎈 JUNIOR CEK SINI! KLIK UNTUK MEMPERBESAR GABUNG SALURAN JURNAL GURU DENI RANOPTRI, M.PD GAME ANAK (PAUD/TK) GAME LOGIKA GAME IFP/KELAS TENTANG KAMI KEBIJAKAN PRIVASI HUBUNGI KAMI 🌇 S",
+      "links": [
+        "https://whatsapp.com/channel/0029Vb84szt65yDK88AA4X0h",
+        "/jurnal-guru",
+        "https://www.instagram.com/best_deny?igsh=MTdqYTJmcWsydGUwMw==",
+        "https://www.tiktok.com/@denipositif",
+        "https://web.facebook.com/demian.renovtri.3?rdid=NebkE1tEAlxKk8ZM&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1FwSzyNwVW%2F%3F_rdc%3D1%26_rdr",
+        "https://www.youtube.com/@DeniRanoptri",
+        "/game-edukasi-anak",
+        "/game-logika",
+        "/game-edukasi-ifp",
+        "/about",
+        "/privacy-policy",
+        "/contact",
+        "/game/rimba-pedia",
+        "/game/banua-fruit-blast",
+        "/game/si-pemanah",
+        "/game/rimba-pedia",
+        "/game/celestial-weaver",
+        "/game/tanzib",
+        "/game/puzzle",
+        "/game/martabak-pecahan",
+        "/game/doodle",
+        "/game/si-taktik",
+        "/game/traditional",
+        "/game/space-war",
+        "/game/ai-basketball",
+        "/game/mancing-kata",
+        "/game/kancil",
+        "/game/nusaboard",
+        "/game/jagoan-kata",
+        "/game/geo-squad",
+        "/game/ruang-io",
+        "/panduan/penggunaan-ifp-papan-interaktif-digital",
+        "/panduan/memilih-game-edukasi-anak",
+        "https://whatsapp.com/channel/0029Vb84szt65yDK88AA4X0h",
+        "/jurnal-guru",
+        "https://www.instagram.com/best_deny?igsh=MTdqYTJmcWsydGUwMw==",
+        "https://www.tiktok.com/@denipositif",
+        "https://web.facebook.com/demian.renovtri.3?rdid=NebkE1tEAlxKk8ZM&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1FwSzyNwVW%2F%3F_rdc%3D1%26_rdr",
+        "https://www.youtube.com/@DeniRanoptri",
+        "/game-edukasi-anak",
+        "/game-logika",
+        "/game-edukasi-ifp",
+        "/about",
+        "/privacy-policy",
+        "/contact"
+      ]
+    },
+    "logs": {
+      "errors": [],
+      "warnings": []
+    }
+  },
+  "ID_Hub": {
+    "data": {
+      "title": "Game Edukasi IFP & Papan Interaktif Digital | Papan Interaktif",
+      "lang": "id",
+      "canonical": "http://localhost:3001/game-edukasi-ifp",
+      "hreflangs": [
+        {
+          "lang": "id",
+          "href": "http://localhost:3001/game-edukasi-ifp"
+        },
+        {
+          "lang": "en",
+          "href": "http://localhost:3001/en/educational-games-for-interactive-flat-panels"
+        },
+        {
+          "lang": "x-default",
+          "href": "http://localhost:3001/game-edukasi-ifp"
+        }
+      ],
+      "meta": {
+        "description": "Game edukasi interaktif yang dioptimalkan untuk Interactive Flat Panel (IFP) dan layar sentuh besar di kelas. Cocok untuk ice breaking dan kolaborasi siswa.",
+        "ogTitle": "Game Edukasi IFP & Papan Interaktif Digital | Papan Interaktif",
+        "ogDescription": "Game edukasi interaktif yang dioptimalkan untuk Interactive Flat Panel (IFP) dan layar sentuh besar di kelas. Cocok untuk ice breaking dan kolaborasi siswa.",
+        "ogUrl": "http://localhost:3001/game-edukasi-ifp",
+        "ogLocale": "id_ID"
+      },
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://papaninteraktif.com/#website",
+              "url": "https://papaninteraktif.com/",
+              "name": "Papan Interaktif Digital",
+              "alternateName": "Free Mobile & Smartboard Edu Games",
+              "description": "Portal Game edukasi untuk HP, Laptop, dan Smartboard. Solusi ice breaking Kurikulum Merdeka PAUD/TK, SD, SMP.",
+              "inLanguage": [
+                "id",
+                "en"
+              ]
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://papaninteraktif.com/#organization",
+              "name": "Papan Interaktif",
+              "url": "https://papaninteraktif.com/",
+              "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha-AFY6CzbyV_3kY-lPLVY1gjufXp-BZFWWYxoctjjlkHvHbrbkARO5hz9dJFf9AaigBxU_dA44v6LgDANS4ThUIpI1-jVc8dRI-As9gTrKgF8Vx-VQ2zc97J0rvZZFxR6gRIlhkjDgGv4BgoRtA7Q2VxVsAK6KpKciwGThtrakO58nTxEkDEGSJ70jvI/s512/Media%20Papan%20Interaktif%20Digital%20(512%20x%20512%20px).png",
+              "founder": {
+                "@type": "Person",
+                "name": "Deni Ranoptri, M.Pd"
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Perangkat apa saja yang bisa digunakan untuk main game ini?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sangat fleksibel! Game kami 100% responsif di HP, Tablet, PC, Laptop, Chromebook, hingga Interactive Flat Panel (IFP)."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Game Interaktif Ruang Kelas",
+          "description": "Kumpulan game edukasi yang dirancang khusus untuk layar sentuh besar IFP di kelas.",
+          "url": "http://localhost:3001/game-edukasi-ifp",
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "url": "http://localhost:3001/game/banua-fruit-blast"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "url": "http://localhost:3001/game/puzzle"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "url": "http://localhost:3001/game/doodle"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "url": "http://localhost:3001/game/traditional"
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "url": "http://localhost:3001/game/nusaboard"
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "url": "http://localhost:3001/game/adu-tarik-dino"
+              }
+            ]
+          }
+        }
+      ],
+      "bodyText": "KEMBALI UNTUK PAPAN INTERAKTIF DIGITAL (IFP) Game Interaktif Ruang Kelas  Maksimalkan penggunaan Interactive Flat Panel (IFP) atau smartboard di ruang kelas Anda. Game dalam kategori ini sangat cocok digunakan sebagai ice breaking, kuis interaktif, dan media kolaborasi kelompok karena mendukung area",
+      "links": [
+        "/panduan/penggunaan-ifp-papan-interaktif-digital",
+        "/game/banua-fruit-blast",
+        "/game/puzzle",
+        "/game/doodle",
+        "/game/traditional",
+        "/game/nusaboard",
+        "/game/adu-tarik-dino"
+      ]
+    },
+    "logs": {
+      "errors": [],
+      "warnings": []
+    }
+  },
+  "ID_Guide": {
+    "data": {
+      "title": "Panduan Menggunakan Game Edukasi pada IFP di Kelas | Papan Interaktif",
+      "lang": "id",
+      "canonical": "http://localhost:3001/panduan/penggunaan-ifp-papan-interaktif-digital",
+      "hreflangs": [
+        {
+          "lang": "id",
+          "href": "http://localhost:3001/panduan/penggunaan-ifp-papan-interaktif-digital"
+        },
+        {
+          "lang": "en",
+          "href": "http://localhost:3001/en/guides/using-educational-games-on-interactive-flat-panels"
+        },
+        {
+          "lang": "x-default",
+          "href": "http://localhost:3001/panduan/penggunaan-ifp-papan-interaktif-digital"
+        }
+      ],
+      "meta": {
+        "description": "Pelajari cara efektif memanfaatkan game edukasi dan Interactive Flat Panel (IFP) atau Papan Interaktif Digital untuk kolaborasi siswa dan ice breaking di kelas.",
+        "ogTitle": "Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif",
+        "ogDescription": "Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru. Belajar sambil bermain dengan berbagai pilihan game.",
+        "ogUrl": "https://papaninteraktif.com/",
+        "ogLocale": null
+      },
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://papaninteraktif.com/#website",
+              "url": "https://papaninteraktif.com/",
+              "name": "Papan Interaktif Digital",
+              "alternateName": "Free Mobile & Smartboard Edu Games",
+              "description": "Portal Game edukasi untuk HP, Laptop, dan Smartboard. Solusi ice breaking Kurikulum Merdeka PAUD/TK, SD, SMP.",
+              "inLanguage": [
+                "id",
+                "en"
+              ]
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://papaninteraktif.com/#organization",
+              "name": "Papan Interaktif",
+              "url": "https://papaninteraktif.com/",
+              "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha-AFY6CzbyV_3kY-lPLVY1gjufXp-BZFWWYxoctjjlkHvHbrbkARO5hz9dJFf9AaigBxU_dA44v6LgDANS4ThUIpI1-jVc8dRI-As9gTrKgF8Vx-VQ2zc97J0rvZZFxR6gRIlhkjDgGv4BgoRtA7Q2VxVsAK6KpKciwGThtrakO58nTxEkDEGSJ70jvI/s512/Media%20Papan%20Interaktif%20Digital%20(512%20x%20512%20px).png",
+              "founder": {
+                "@type": "Person",
+                "name": "Deni Ranoptri, M.Pd"
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Perangkat apa saja yang bisa digunakan untuk main game ini?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sangat fleksibel! Game kami 100% responsif di HP, Tablet, PC, Laptop, Chromebook, hingga Interactive Flat Panel (IFP)."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Panduan Menggunakan Game Edukasi pada Papan Interaktif (IFP) di Kelas",
+          "description": "Pelajari cara efektif memanfaatkan game edukasi dan Interactive Flat Panel (IFP) atau Papan Interaktif Digital untuk kolaborasi siswa dan ice breaking di kelas.",
+          "url": "http://localhost:3001/panduan/penggunaan-ifp-papan-interaktif-digital",
+          "author": {
+            "@type": "Organization",
+            "name": "Tim Papan Interaktif"
+          }
+        }
+      ],
+      "bodyText": "KEMBALI Panduan Menggunakan Game Edukasi pada Papan Interaktif (IFP) di Kelas  Transformasi ruang kelas modern tidak lepas dari kehadiran Interactive Flat Panel (IFP) atau Papan Interaktif Digital. Panduan ini dirancang untuk membantu guru memaksimalkan potensi layar sentuh besar sebagai media pembe",
+      "links": [
+        "/game-edukasi-ifp"
+      ]
+    },
+    "logs": {
+      "errors": [],
+      "warnings": []
+    }
+  },
+  "ID_Game": {
+    "data": {
+      "title": "NusaBoard | Game Edukasi Interaktif | Papan Interaktif",
+      "lang": "id",
+      "canonical": "http://localhost:3001/game/nusaboard",
+      "hreflangs": [
+        {
+          "lang": "id",
+          "href": "http://localhost:3001/game/nusaboard"
+        },
+        {
+          "lang": "en",
+          "href": "http://localhost:3001/en/game/nusaboard"
+        },
+        {
+          "lang": "x-default",
+          "href": "http://localhost:3001/game/nusaboard"
+        }
+      ],
+      "meta": {
+        "description": "Kanvas interaktif untuk menyusun ide, mind mapping, dan kolaborasi pemikiran secara visual.",
+        "ogTitle": "NusaBoard | Game Edukasi Interaktif | Papan Interaktif",
+        "ogDescription": "Kanvas interaktif untuk menyusun ide, mind mapping, dan kolaborasi pemikiran secara visual.",
+        "ogUrl": "http://localhost:3001/game/nusaboard",
+        "ogLocale": null
+      },
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://papaninteraktif.com/#website",
+              "url": "https://papaninteraktif.com/",
+              "name": "Papan Interaktif Digital",
+              "alternateName": "Free Mobile & Smartboard Edu Games",
+              "description": "Portal Game edukasi untuk HP, Laptop, dan Smartboard. Solusi ice breaking Kurikulum Merdeka PAUD/TK, SD, SMP.",
+              "inLanguage": [
+                "id",
+                "en"
+              ]
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://papaninteraktif.com/#organization",
+              "name": "Papan Interaktif",
+              "url": "https://papaninteraktif.com/",
+              "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha-AFY6CzbyV_3kY-lPLVY1gjufXp-BZFWWYxoctjjlkHvHbrbkARO5hz9dJFf9AaigBxU_dA44v6LgDANS4ThUIpI1-jVc8dRI-As9gTrKgF8Vx-VQ2zc97J0rvZZFxR6gRIlhkjDgGv4BgoRtA7Q2VxVsAK6KpKciwGThtrakO58nTxEkDEGSJ70jvI/s512/Media%20Papan%20Interaktif%20Digital%20(512%20x%20512%20px).png",
+              "founder": {
+                "@type": "Person",
+                "name": "Deni Ranoptri, M.Pd"
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Perangkat apa saja yang bisa digunakan untuk main game ini?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sangat fleksibel! Game kami 100% responsif di HP, Tablet, PC, Laptop, Chromebook, hingga Interactive Flat Panel (IFP)."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "VideoGame",
+                "EducationalApplication"
+              ],
+              "@id": "http://localhost:3001/game/nusaboard",
+              "name": "NusaBoard",
+              "description": "Kanvas interaktif untuk menyusun ide, mind mapping, dan kolaborasi pemikiran secara visual.",
+              "applicationCategory": "EducationalGame",
+              "operatingSystem": "Any",
+              "educationalUse": "Pengorganisasian ide dan visualisasi konsep",
+              "audience": {
+                "@type": "EducationalAudience",
+                "educationalRole": "Siswa SMP dan Guru"
+              },
+              "url": "http://localhost:3001/game/nusaboard",
+              "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEOjCuKDE5__LJd0D3T9HZ8geCq_1ZllO24IyjsnY8RAya4AcCrnXUTWP8P4qFsIO1WSlk0CLi2YhlaVC_yaTXksTq4DC6W7g2f7okaDfKbyoPpuhzZjyMCR8EiTwdpY-NbOF6qW3JZZrPP0DhpLg5mIqXJYdyAWnRfGTgaa5RVU7UeG6jGpORcPm80KHl/s320/Maskot%20Kanvas%20Merah%20Putih.png"
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Papan Interaktif",
+                  "item": "https://papaninteraktif.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Game Edukasi",
+                  "item": "https://papaninteraktif.com/#game-edukasi"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "NusaBoard",
+                  "item": "http://localhost:3001/game/nusaboard"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "bodyText": "Kembali ke Papan Interaktif NusaBoard  Mind Mapping  LOGIKA GAME IFP / KELAS  Kanvas interaktif untuk menyusun ide, mind mapping, dan kolaborasi pemikiran secara visual.  TARGET AUDIENS  Siswa SMP dan Guru  KONTEKS EDUKASI  Umum  FOKUS BELAJAR  Pengorganisasian ide dan visualisasi konsep  MAIN SEKAR",
+      "links": [
+        "/",
+        "/game-logika",
+        "/game-edukasi-ifp",
+        "https://nusa.papaninteraktif.com/"
+      ]
+    },
+    "logs": {
+      "errors": [],
+      "warnings": []
+    }
+  },
+  "EN_Hub": {
+    "data": {
+      "title": "Educational Games for Interactive Flat Panels | Papan Interaktif",
+      "lang": "en",
+      "canonical": "http://localhost:3001/game-edukasi-ifp",
+      "hreflangs": [
+        {
+          "lang": "id",
+          "href": "http://localhost:3001/game-edukasi-ifp"
+        },
+        {
+          "lang": "en",
+          "href": "http://localhost:3001/en/educational-games-for-interactive-flat-panels"
+        },
+        {
+          "lang": "x-default",
+          "href": "http://localhost:3001/game-edukasi-ifp"
+        }
+      ],
+      "meta": {
+        "description": "Interactive educational games optimized for Interactive Flat Panels (IFP) and large touch screens in the classroom. Perfect for student collaboration and ice breaking.",
+        "ogTitle": "Educational Games for Interactive Flat Panels | Papan Interaktif",
+        "ogDescription": "Interactive educational games optimized for Interactive Flat Panels (IFP) and large touch screens in the classroom. Perfect for student collaboration and ice breaking.",
+        "ogUrl": "http://localhost:3001/en/educational-games-for-interactive-flat-panels",
+        "ogLocale": "en_US"
+      },
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://papaninteraktif.com/#website",
+              "url": "https://papaninteraktif.com/",
+              "name": "Papan Interaktif Digital",
+              "alternateName": "Free Mobile & Smartboard Edu Games",
+              "description": "Portal Game edukasi untuk HP, Laptop, dan Smartboard. Solusi ice breaking Kurikulum Merdeka PAUD/TK, SD, SMP.",
+              "inLanguage": [
+                "id",
+                "en"
+              ]
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://papaninteraktif.com/#organization",
+              "name": "Papan Interaktif",
+              "url": "https://papaninteraktif.com/",
+              "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha-AFY6CzbyV_3kY-lPLVY1gjufXp-BZFWWYxoctjjlkHvHbrbkARO5hz9dJFf9AaigBxU_dA44v6LgDANS4ThUIpI1-jVc8dRI-As9gTrKgF8Vx-VQ2zc97J0rvZZFxR6gRIlhkjDgGv4BgoRtA7Q2VxVsAK6KpKciwGThtrakO58nTxEkDEGSJ70jvI/s512/Media%20Papan%20Interaktif%20Digital%20(512%20x%20512%20px).png",
+              "founder": {
+                "@type": "Person",
+                "name": "Deni Ranoptri, M.Pd"
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Perangkat apa saja yang bisa digunakan untuk main game ini?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sangat fleksibel! Game kami 100% responsif di HP, Tablet, PC, Laptop, Chromebook, hingga Interactive Flat Panel (IFP)."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Game Interaktif Ruang Kelas",
+          "description": "A collection of interactive educational games designed for Interactive Flat Panels.",
+          "url": "http://localhost:3001/game-edukasi-ifp",
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "url": "http://localhost:3001/game/banua-fruit-blast"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "url": "http://localhost:3001/game/puzzle"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "url": "http://localhost:3001/game/doodle"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "url": "http://localhost:3001/game/traditional"
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "url": "http://localhost:3001/game/nusaboard"
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "url": "http://localhost:3001/game/adu-tarik-dino"
+              }
+            ]
+          }
+        }
+      ],
+      "bodyText": "KEMBALI UNTUK PAPAN INTERAKTIF DIGITAL (IFP) Game Interaktif Ruang Kelas  Maksimalkan penggunaan Interactive Flat Panel (IFP) atau smartboard di ruang kelas Anda. Game dalam kategori ini sangat cocok digunakan sebagai ice breaking, kuis interaktif, dan media kolaborasi kelompok karena mendukung area",
+      "links": [
+        "/en/guides/using-educational-games-on-interactive-flat-panels",
+        "/game/banua-fruit-blast",
+        "/game/puzzle",
+        "/game/doodle",
+        "/game/traditional",
+        "/game/nusaboard",
+        "/game/adu-tarik-dino"
+      ]
+    },
+    "logs": {
+      "errors": [],
+      "warnings": []
+    }
+  },
+  "EN_Guide": {
+    "data": {
+      "title": "Guide: Using Educational Games on Interactive Flat Panels | Papan Interaktif",
+      "lang": "en",
+      "canonical": "http://localhost:3001/en/guides/using-educational-games-on-interactive-flat-panels",
+      "hreflangs": [
+        {
+          "lang": "id",
+          "href": "http://localhost:3001/panduan/penggunaan-ifp-papan-interaktif-digital"
+        },
+        {
+          "lang": "en",
+          "href": "http://localhost:3001/en/guides/using-educational-games-on-interactive-flat-panels"
+        },
+        {
+          "lang": "x-default",
+          "href": "http://localhost:3001/panduan/penggunaan-ifp-papan-interaktif-digital"
+        }
+      ],
+      "meta": {
+        "description": "Learn effective strategies for using educational games on Interactive Flat Panels (IFP) to boost classroom collaboration, engagement, and active learning.",
+        "ogTitle": "Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif",
+        "ogDescription": "Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru. Belajar sambil bermain dengan berbagai pilihan game.",
+        "ogUrl": "https://papaninteraktif.com/",
+        "ogLocale": null
+      },
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://papaninteraktif.com/#website",
+              "url": "https://papaninteraktif.com/",
+              "name": "Papan Interaktif Digital",
+              "alternateName": "Free Mobile & Smartboard Edu Games",
+              "description": "Portal Game edukasi untuk HP, Laptop, dan Smartboard. Solusi ice breaking Kurikulum Merdeka PAUD/TK, SD, SMP.",
+              "inLanguage": [
+                "id",
+                "en"
+              ]
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://papaninteraktif.com/#organization",
+              "name": "Papan Interaktif",
+              "url": "https://papaninteraktif.com/",
+              "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha-AFY6CzbyV_3kY-lPLVY1gjufXp-BZFWWYxoctjjlkHvHbrbkARO5hz9dJFf9AaigBxU_dA44v6LgDANS4ThUIpI1-jVc8dRI-As9gTrKgF8Vx-VQ2zc97J0rvZZFxR6gRIlhkjDgGv4BgoRtA7Q2VxVsAK6KpKciwGThtrakO58nTxEkDEGSJ70jvI/s512/Media%20Papan%20Interaktif%20Digital%20(512%20x%20512%20px).png",
+              "founder": {
+                "@type": "Person",
+                "name": "Deni Ranoptri, M.Pd"
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Perangkat apa saja yang bisa digunakan untuk main game ini?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sangat fleksibel! Game kami 100% responsif di HP, Tablet, PC, Laptop, Chromebook, hingga Interactive Flat Panel (IFP)."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Panduan Menggunakan Game Edukasi pada Papan Interaktif (IFP) di Kelas",
+          "description": "Pelajari cara efektif memanfaatkan game edukasi dan Interactive Flat Panel (IFP) atau Papan Interaktif Digital untuk kolaborasi siswa dan ice breaking di kelas.",
+          "url": "http://localhost:3001/panduan/penggunaan-ifp-papan-interaktif-digital",
+          "author": {
+            "@type": "Organization",
+            "name": "Tim Papan Interaktif"
+          }
+        }
+      ],
+      "bodyText": "KEMBALI Panduan Menggunakan Game Edukasi pada Papan Interaktif (IFP) di Kelas  Transformasi ruang kelas modern tidak lepas dari kehadiran Interactive Flat Panel (IFP) atau Papan Interaktif Digital. Panduan ini dirancang untuk membantu guru memaksimalkan potensi layar sentuh besar sebagai media pembe",
+      "links": [
+        "/en/educational-games-for-interactive-flat-panels"
+      ]
+    },
+    "logs": {
+      "errors": [],
+      "warnings": []
+    }
+  },
+  "EN_Game": {
+    "data": {
+      "title": "NusaBoard | Interactive Educational Games | Papan Interaktif",
+      "lang": "en",
+      "canonical": "http://localhost:3001/en/game/nusaboard",
+      "hreflangs": [
+        {
+          "lang": "id",
+          "href": "http://localhost:3001/game/nusaboard"
+        },
+        {
+          "lang": "en",
+          "href": "http://localhost:3001/en/game/nusaboard"
+        },
+        {
+          "lang": "x-default",
+          "href": "http://localhost:3001/game/nusaboard"
+        }
+      ],
+      "meta": {
+        "description": "An interactive canvas designed for collaborative brainstorming, mind mapping, and visual concept organization on large touch displays.",
+        "ogTitle": "NusaBoard | Interactive Educational Games | Papan Interaktif",
+        "ogDescription": "An interactive canvas designed for collaborative brainstorming, mind mapping, and visual concept organization on large touch displays.",
+        "ogUrl": "http://localhost:3001/en/game/nusaboard",
+        "ogLocale": null
+      },
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://papaninteraktif.com/#website",
+              "url": "https://papaninteraktif.com/",
+              "name": "Papan Interaktif Digital",
+              "alternateName": "Free Mobile & Smartboard Edu Games",
+              "description": "Portal Game edukasi untuk HP, Laptop, dan Smartboard. Solusi ice breaking Kurikulum Merdeka PAUD/TK, SD, SMP.",
+              "inLanguage": [
+                "id",
+                "en"
+              ]
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://papaninteraktif.com/#organization",
+              "name": "Papan Interaktif",
+              "url": "https://papaninteraktif.com/",
+              "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha-AFY6CzbyV_3kY-lPLVY1gjufXp-BZFWWYxoctjjlkHvHbrbkARO5hz9dJFf9AaigBxU_dA44v6LgDANS4ThUIpI1-jVc8dRI-As9gTrKgF8Vx-VQ2zc97J0rvZZFxR6gRIlhkjDgGv4BgoRtA7Q2VxVsAK6KpKciwGThtrakO58nTxEkDEGSJ70jvI/s512/Media%20Papan%20Interaktif%20Digital%20(512%20x%20512%20px).png",
+              "founder": {
+                "@type": "Person",
+                "name": "Deni Ranoptri, M.Pd"
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Perangkat apa saja yang bisa digunakan untuk main game ini?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sangat fleksibel! Game kami 100% responsif di HP, Tablet, PC, Laptop, Chromebook, hingga Interactive Flat Panel (IFP)."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": [
+                "VideoGame",
+                "EducationalApplication"
+              ],
+              "@id": "http://localhost:3001/en/game/nusaboard",
+              "name": "NusaBoard",
+              "description": "An interactive canvas designed for collaborative brainstorming, mind mapping, and visual concept organization on large touch displays.",
+              "applicationCategory": "EducationalGame",
+              "operatingSystem": "Any",
+              "educationalUse": "Pengorganisasian ide dan visualisasi konsep",
+              "audience": {
+                "@type": "EducationalAudience",
+                "educationalRole": "Siswa SMP dan Guru"
+              },
+              "url": "http://localhost:3001/en/game/nusaboard",
+              "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEOjCuKDE5__LJd0D3T9HZ8geCq_1ZllO24IyjsnY8RAya4AcCrnXUTWP8P4qFsIO1WSlk0CLi2YhlaVC_yaTXksTq4DC6W7g2f7okaDfKbyoPpuhzZjyMCR8EiTwdpY-NbOF6qW3JZZrPP0DhpLg5mIqXJYdyAWnRfGTgaa5RVU7UeG6jGpORcPm80KHl/s320/Maskot%20Kanvas%20Merah%20Putih.png"
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Papan Interaktif",
+                  "item": "https://papaninteraktif.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Game Edukasi",
+                  "item": "https://papaninteraktif.com/#game-edukasi"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "NusaBoard",
+                  "item": "http://localhost:3001/en/game/nusaboard"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "bodyText": "Kembali ke Papan Interaktif NusaBoard  Mind Mapping  LOGIKA GAME IFP / KELAS  Kanvas interaktif untuk menyusun ide, mind mapping, dan kolaborasi pemikiran secara visual.  TARGET AUDIENS  Middle School & Teachers  KONTEKS EDUKASI  General  FOKUS BELAJAR  Idea organization and visual collaboration  MA",
+      "links": [
+        "/",
+        "/game-logika",
+        "/en/educational-games-for-interactive-flat-panels",
+        "https://nusa.papaninteraktif.com/"
+      ]
+    },
+    "logs": {
+      "errors": [],
+      "warnings": []
+    }
+  },
+  "EN_Unknown": {
+    "data": {
+      "title": "Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif",
+      "lang": "id",
+      "canonical": "https://papaninteraktif.com/",
+      "hreflangs": [],
+      "meta": {
+        "description": "Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru. Belajar sambil bermain dengan berbagai pilihan game.",
+        "ogTitle": "Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif",
+        "ogDescription": "Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru. Belajar sambil bermain dengan berbagai pilihan game.",
+        "ogUrl": "https://papaninteraktif.com/",
+        "ogLocale": null
+      },
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://papaninteraktif.com/#website",
+              "url": "https://papaninteraktif.com/",
+              "name": "Papan Interaktif Digital",
+              "alternateName": "Free Mobile & Smartboard Edu Games",
+              "description": "Portal Game edukasi untuk HP, Laptop, dan Smartboard. Solusi ice breaking Kurikulum Merdeka PAUD/TK, SD, SMP.",
+              "inLanguage": [
+                "id",
+                "en"
+              ]
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://papaninteraktif.com/#organization",
+              "name": "Papan Interaktif",
+              "url": "https://papaninteraktif.com/",
+              "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha-AFY6CzbyV_3kY-lPLVY1gjufXp-BZFWWYxoctjjlkHvHbrbkARO5hz9dJFf9AaigBxU_dA44v6LgDANS4ThUIpI1-jVc8dRI-As9gTrKgF8Vx-VQ2zc97J0rvZZFxR6gRIlhkjDgGv4BgoRtA7Q2VxVsAK6KpKciwGThtrakO58nTxEkDEGSJ70jvI/s512/Media%20Papan%20Interaktif%20Digital%20(512%20x%20512%20px).png",
+              "founder": {
+                "@type": "Person",
+                "name": "Deni Ranoptri, M.Pd"
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Perangkat apa saja yang bisa digunakan untuk main game ini?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sangat fleksibel! Game kami 100% responsif di HP, Tablet, PC, Laptop, Chromebook, hingga Interactive Flat Panel (IFP)."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "bodyText": "DENI RANOPTRI  PRODUCTION  MANDAI  MEDIA ANAK NUSANTARA DIGITAL AKTIF INSPIRATIF  ⬇️ PILIH HALAMAN GAME ⬇️ 🎓 UMUM 🎈 JUNIOR CEK SINI! KLIK UNTUK MEMPERBESAR GABUNG SALURAN JURNAL GURU DENI RANOPTRI, M.PD GAME ANAK (PAUD/TK) GAME LOGIKA GAME IFP/KELAS TENTANG KAMI KEBIJAKAN PRIVASI HUBUNGI KAMI 🌇 S",
+      "links": [
+        "https://whatsapp.com/channel/0029Vb84szt65yDK88AA4X0h",
+        "/jurnal-guru",
+        "https://www.instagram.com/best_deny?igsh=MTdqYTJmcWsydGUwMw==",
+        "https://www.tiktok.com/@denipositif",
+        "https://web.facebook.com/demian.renovtri.3?rdid=NebkE1tEAlxKk8ZM&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1FwSzyNwVW%2F%3F_rdc%3D1%26_rdr",
+        "https://www.youtube.com/@DeniRanoptri",
+        "/game-edukasi-anak",
+        "/game-logika",
+        "/game-edukasi-ifp",
+        "/about",
+        "/privacy-policy",
+        "/contact",
+        "/game/rimba-pedia",
+        "/game/banua-fruit-blast",
+        "/game/si-pemanah",
+        "/game/rimba-pedia",
+        "/game/celestial-weaver",
+        "/game/tanzib",
+        "/game/puzzle",
+        "/game/martabak-pecahan",
+        "/game/doodle",
+        "/game/si-taktik",
+        "/game/traditional",
+        "/game/space-war",
+        "/game/ai-basketball",
+        "/game/mancing-kata",
+        "/game/kancil",
+        "/game/nusaboard",
+        "/game/jagoan-kata",
+        "/game/geo-squad",
+        "/game/ruang-io",
+        "/panduan/penggunaan-ifp-papan-interaktif-digital",
+        "/panduan/memilih-game-edukasi-anak",
+        "https://whatsapp.com/channel/0029Vb84szt65yDK88AA4X0h",
+        "/jurnal-guru",
+        "https://www.instagram.com/best_deny?igsh=MTdqYTJmcWsydGUwMw==",
+        "https://www.tiktok.com/@denipositif",
+        "https://web.facebook.com/demian.renovtri.3?rdid=NebkE1tEAlxKk8ZM&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1FwSzyNwVW%2F%3F_rdc%3D1%26_rdr",
+        "https://www.youtube.com/@DeniRanoptri",
+        "/game-edukasi-anak",
+        "/game-logika",
+        "/game-edukasi-ifp",
+        "/about",
+        "/privacy-policy",
+        "/contact"
+      ]
+    },
+    "logs": {
+      "errors": [],
+      "warnings": []
+    }
+  },
+  "Popstate_EN": {
+    "langs": [
+      "en",
+      "en",
+      ""
+    ],
+    "errors": []
+  }
+}

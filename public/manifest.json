@@ -1,0 +1,17 @@
+{
+  "name": "Papan Interaktif Digital",
+  "short_name": "Papan Interaktif",
+  "description": "Portal Game Edukasi untuk HP, Laptop, dan Smartboard.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#DDEBF8",
+  "theme_color": "#DDEBF8",
+  "icons": [
+    {
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha-AFY6CzbyV_3kY-lPLVY1gjufXp-BZFWWYxoctjjlkHvHbrbkARO5hz9dJFf9AaigBxU_dA44v6LgDANS4ThUIpI1-jVc8dRI-As9gTrKgF8Vx-VQ2zc97J0rvZZFxR6gRIlhkjDgGv4BgoRtA7Q2VxVsAK6KpKciwGThtrakO58nTxEkDEGSJ70jvI/s512/Media%20Papan%20Interaktif%20Digital%20(512%20x%20512%20px).png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

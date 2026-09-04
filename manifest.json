@@ -1,0 +1,32 @@
+{
+  "name": "Papan Interaktif Digital - Deni Ranoptri",
+  "short_name": "PapanInteraktif",
+  "description": "Game edukasi interaktif untuk Interactive Flat Panel (IFP). Setelah instal, cek Layar Utama HP atau Desktop Anda!",
+  "start_url": "https://papaninteraktif.com/",
+  "scope": "https://papaninteraktif.com/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0C1A69",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha-AFY6CzbyV_3kY-lPLVY1gjufXp-BZFWWYxoctjjlkHvHbrbkARO5hz9dJFf9AaigBxU_dA44v6LgDANS4ThUIpI1-jVc8dRI-As9gTrKgF8Vx-VQ2zc97J0rvZZFxR6gRIlhkjDgGv4BgoRtA7Q2VxVsAK6KpKciwGThtrakO58nTxEkDEGSJ70jvI/s320/Media%20Papan%20Interaktif%20Digital%20(512%20x%20512%20px).png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha-AFY6CzbyV_3kY-lPLVY1gjufXp-BZFWWYxoctjjlkHvHbrbkARO5hz9dJFf9AaigBxU_dA44v6LgDANS4ThUIpI1-jVc8dRI-As9gTrKgF8Vx-VQ2zc97J0rvZZFxR6gRIlhkjDgGv4BgoRtA7Q2VxVsAK6KpKciwGThtrakO58nTxEkDEGSJ70jvI/s320/Media%20Papan%20Interaktif%20Digital%20(512%20x%20512%20px).png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Cek di Layar Utama",
+      "url": "/",
+      "description": "Aplikasi tersimpan di Layar Utama Anda"
+    }
+  ]
+}

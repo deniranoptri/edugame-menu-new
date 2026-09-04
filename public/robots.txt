@@ -1,0 +1,50 @@
+# ==========================================
+# ROBOTS.TXT UNTUK PAPANINTERAKTIF.COM
+# Dioptimalkan untuk SEO Global & AdSense
+# ==========================================
+
+# 1. ATURAN UNTUK SEMUA BOT (DEFAULT)
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /config/
+Disallow: /api/
+Disallow: /*?*search=
+Disallow: /*?*sort=
+
+# 2. ATURAN KHUSUS GOOGLEBOT (MESIN PENCARI UTAMA)
+User-agent: Googlebot
+Allow: /
+# Izinkan Google membaca semua resource penting agar bisa me-render halaman dengan sempurna (JS/CSS)
+Allow: /*.js$
+Allow: /*.css$
+
+# 3. ATURAN KHUSUS GOOGLE IMAGE (PENTING UNTUK GAME EDUKASI)
+User-agent: Googlebot-Image
+Allow: /
+# Izinkan Google mengindeks gambar cover game, karakter, dll.
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.webp$
+Allow: /*.gif$
+Allow: /*.svg$
+
+# 4. ATURAN KHUSUS ADSENSE (AGAR IKLAN RELEVAN & TIDAK DIBLOKIR)
+User-agent: Mediapartners-Google
+Allow: /
+
+# 5. ATURAN UNTUK MENCEGAH BOT SAMPAH/SPAM (MENGHEMAT BANDWIDTH SERVER)
+User-agent: AhrefsBot
+Disallow: /
+User-agent: SemrushBot
+Disallow: /
+User-agent: MJ12bot
+Disallow: /
+User-agent: DotBot
+Disallow: /
+
+# ==========================================
+# LOKASI SITEMAP (PETA SITUS)
+# ==========================================
+Sitemap: https://papaninteraktif.com/sitemap.xml
