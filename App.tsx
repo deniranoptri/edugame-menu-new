@@ -15,6 +15,7 @@ import CommunityHub from './components/CommunityHub';
 import { HubIfp } from './components/HubIfp';
 import { HubKids } from './components/HubKids';
 import { HubLogic } from './components/HubLogic';
+import NotFound from './components/NotFound';
 
 // --- THE GOLDEN PATH: Hanya Galeri yang di-lazy load ---
 const GaleriAksi = lazy(() => import('./components/GaleriAksi'));
@@ -465,7 +466,7 @@ const App: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [currentLocale, setCurrentLocale] = useState<'id' | 'en'>('id');
-  const [currentView, setCurrentView] = useState<'home' | 'privacy' | 'contact' | 'about' | 'blog' | 'gameDetail' | 'hubKids' | 'hubLogic' | 'hubIfp' | 'guideIfp' | 'guideKids'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'privacy' | 'contact' | 'about' | 'blog' | 'gameDetail' | 'hubKids' | 'hubLogic' | 'hubIfp' | 'guideIfp' | 'guideKids' | 'notfound'>('home');
   const [selectedGameId, setSelectedGameId] = useState<string | null>(null);
 
   useEffect(() => {
@@ -475,7 +476,7 @@ const App: React.FC = () => {
     const isAllowedEn = parsed.locale === 'en' && ['hubIfp', 'guideIfp', 'gameDetail'].includes(parsed.type);
     if (parsed.locale !== 'id' && !isAllowedEn) {
       setCurrentLocale('id');
-      setCurrentView('home');
+      setCurrentView('notfound');
     } else {
       setCurrentLocale(parsed.locale as 'id' | 'en');
       if (parsed.type === 'gameDetail') {
@@ -484,7 +485,7 @@ const App: React.FC = () => {
         const ifpGames = ['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional', 'sciencelink'];
         if (parsed.locale === 'en' && !ifpGames.includes(slug)) {
           setCurrentLocale('id');
-          setCurrentView('home');
+          setCurrentView('notfound');
         } else {
           setCurrentView('gameDetail');
           setSelectedGameId(slug);
@@ -493,7 +494,7 @@ const App: React.FC = () => {
         setCurrentView(parsed.type);
       } else {
         setCurrentLocale('id');
-        setCurrentView('home');
+        setCurrentView('notfound');
       }
     }
 
@@ -511,7 +512,7 @@ const App: React.FC = () => {
       const isAllowedEn = parsed.locale === 'en' && ['hubIfp', 'guideIfp', 'gameDetail'].includes(parsed.type);
       if (parsed.locale !== 'id' && !isAllowedEn) {
         setCurrentLocale('id');
-        setCurrentView('home');
+        setCurrentView('notfound');
       } else {
         setCurrentLocale(parsed.locale as 'id' | 'en');
         if (parsed.type === 'gameDetail') {
@@ -519,7 +520,7 @@ const App: React.FC = () => {
           const ifpGames = ['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional', 'sciencelink'];
           if (parsed.locale === 'en' && !ifpGames.includes(slug)) {
             setCurrentLocale('id');
-            setCurrentView('home');
+            setCurrentView('notfound');
           } else {
             setCurrentView('gameDetail');
             setSelectedGameId(slug);
@@ -528,7 +529,7 @@ const App: React.FC = () => {
           setCurrentView(parsed.type);
         } else {
           setCurrentLocale('id');
-          setCurrentView('home');
+          setCurrentView('notfound');
         }
       }
     };
@@ -549,13 +550,13 @@ const App: React.FC = () => {
     return matchesSearch && matchesCategory;
   });
 
-  const navigateTo = (view: 'home' | 'privacy' | 'contact' | 'about' | 'blog' | 'gameDetail' | 'hubKids' | 'hubLogic' | 'hubIfp' | 'guideIfp' | 'guideKids', path: string) => {
+  const navigateTo = (view: 'home' | 'privacy' | 'contact' | 'about' | 'blog' | 'gameDetail' | 'hubKids' | 'hubLogic' | 'hubIfp' | 'guideIfp' | 'guideKids' | 'notfound', path: string) => {
     window.history.pushState({}, '', path);
     const parsed = parseRoute(path);
     const isAllowedEn = parsed.locale === 'en' && ['hubIfp', 'guideIfp', 'gameDetail'].includes(parsed.type);
     if (parsed.locale !== 'id' && !isAllowedEn) {
       setCurrentLocale('id');
-      setCurrentView('home');
+      setCurrentView('notfound');
     } else {
       setCurrentLocale(parsed.locale as 'id' | 'en');
       if (parsed.type === 'gameDetail') {
@@ -564,7 +565,7 @@ const App: React.FC = () => {
         const ifpGames = ['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional', 'sciencelink'];
         if (parsed.locale === 'en' && !ifpGames.includes(slug)) {
           setCurrentLocale('id');
-          setCurrentView('home');
+          setCurrentView('notfound');
         } else {
           setCurrentView('gameDetail');
           setSelectedGameId(slug);
@@ -573,7 +574,7 @@ const App: React.FC = () => {
         setCurrentView(parsed.type);
       } else {
         setCurrentLocale('id');
-        setCurrentView('home');
+        setCurrentView('notfound');
       }
     }
   };
@@ -616,9 +617,10 @@ const App: React.FC = () => {
     if (game) {
       return <GameDetail locale={currentLocale} game={game} onBack={() => navigateTo('home', '/')} />;
     } else {
-      setCurrentView('home');
+      return <NotFound onBack={() => navigateTo('home', '/')} />;
     }
   }
+  if (currentView === 'notfound') return <NotFound onBack={() => navigateTo('home', '/')} />;
 
   const mainBg = gameMode === 'kids' ? 'bg-[#FFF8E1]' : 'bg-[#DDEBF8]';
   const sidebarBg = gameMode === 'kids' ? 'bg-[#FFE0B2]' : 'bg-[#CBE1F4]';
