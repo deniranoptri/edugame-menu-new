@@ -16,6 +16,7 @@ import { HubIfp } from './components/HubIfp';
 import { HubKids } from './components/HubKids';
 import { HubLogic } from './components/HubLogic';
 import NotFound from './components/NotFound';
+import { AdSenseDisplay } from './components/AdSenseDisplay';
 
 // --- THE GOLDEN PATH: Hanya Galeri yang di-lazy load ---
 const GaleriAksi = lazy(() => import('./components/GaleriAksi'));
@@ -697,6 +698,8 @@ const App: React.FC = () => {
             {/* TAMBAHAN BANNER TANTANGAN HARIAN */}
             <DailyChallenge onClickGame={handleCardClick} lang={currentLocale as "id" | "en"} />
             {/* ================================== */}
+
+            <AdSenseDisplay />
 
             <h2 className="sr-only">Jelajahi Game Berdasarkan Kategori</h2>
             <div className="flex flex-wrap gap-2 mb-8">

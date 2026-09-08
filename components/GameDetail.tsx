@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { GameConfig, GameConfigWithTags } from '../types';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface GameDetailProps {
   locale?: "id" | "en";
@@ -297,6 +298,8 @@ const GameDetail: React.FC<GameDetailProps> = ({ game, onBack, locale = "id" }) 
                 </ul>
               </section>
             )}
+
+            <AdSenseInArticle />
 
             <div className="mt-8">
               {game.url && !game.isComingSoon ? (
