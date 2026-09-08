@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
-import { GameConfig } from './types';
+import { GameConfig, GameConfigWithTags } from './types';
 import MenuCard from './components/MenuCard';
 import ProfileModal from './components/ProfileModal';
 import PrivacyPolicy from './components/PrivacyPolicy';
@@ -18,32 +18,47 @@ import { HubLogic } from './components/HubLogic';
 import NotFound from './components/NotFound';
 import { AdSenseDisplay } from './components/AdSenseDisplay';
 
-// --- THE GOLDEN PATH: Hanya Galeri yang di-lazy load ---
+type GameMode = 'general' | 'kids';
+
+const SIDEBAR_IMAGE_URL = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEioYACaf1j7wDRqM1azWCF4O9aZEUDo_k7UPVv1qm4MQ9OPTqkX3S-9qmFBBCFVagHwJkWtpbU3LQrUmpLWUgT7qxYJJZr6XLpzH6u2Aiq0l72Vpc_Zdfj2ZgMvXu3n7UrWsoHK8W66ccg33oAEx5eQgDhHyzfoLakBj8lRFliltrXVwzBownSu9Ys_k7M/s1200/Barcode%20Edupid.png';
+
 const GaleriAksi = lazy(() => import('./components/GaleriAksi'));
 
-// --- TYPE DEFINITION ---
-interface BeforeInstallPromptEvent extends Event {
-  readonly platforms: string[];
-  readonly userChoice: Promise<{ outcome: 'accepted' | 'dismissed', platform: string }>;
-  prompt(): Promise<void>;
-}
-
-const SIDEBAR_IMAGE_URL = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiy1nBWxRDPWSuvIxaPghmzXv4MwoxjhM_dfs-KrOTsq8WM6FOW4VrvN9mC-02axBYmE_MvWj3GNpQD_BjPl1f72P2135RE46bRzS0UuHjfqgvmBvvJVZy6a_QK2VzmlEvWtsKkxILLrJwAS6wEZ_lUuKI7_uhyphenhyphenGvegOgXWiIiQJhJErxvgPAaBjCBHZs4/s320/qr-code%20(3)%20(1).png';
-
-type GameMode = 'general' | 'kids';
-interface GameConfigWithTags extends GameConfig { tags?: string[]; }
-
-// ==========================================
-// DATA STATIS (GAME & SOSMED)
-// ==========================================
 const socialLinks = [
-  { name: "Instagram", url: "https://www.instagram.com/best_deny?igsh=MTdqYTJmcWsydGUwMw==", icon: "https://img.icons8.com/fluency/96/instagram-new.png" },
   { name: "TikTok", url: "https://www.tiktok.com/@denipositif", icon: "https://img.icons8.com/fluency/96/tiktok.png" },
   { name: "Facebook", url: "https://web.facebook.com/demian.renovtri.3?rdid=NebkE1tEAlxKk8ZM&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1FwSzyNwVW%2F%3F_rdc%3D1%26_rdr", icon: "https://img.icons8.com/fluency/96/facebook-new.png" },
   { name: "YouTube", url: "https://www.youtube.com/@DeniRanoptri", icon: "https://img.icons8.com/fluency/96/youtube-play.png" }
 ];
 
 const generalGames: GameConfigWithTags[] = [
+
+  {
+    id: 'helirescue',
+    title: 'HELI RESCUE',
+    subtitle: 'Misi Penyelamat Hutan',
+    bgColor: 'linear-gradient(135deg, #064E3B 0%, #059669 100%)',
+    isNew: true,
+    image: 'https://github.com/deniranoptri/media/blob/sibungas/Heli%20Hijau.png?raw=true',
+    url: 'https://helirescue.papaninteraktif.com/',
+    description: "Terbang, temukan titik api, dan padamkan kebakaran hutan sambil belajar. Pilih misi, kendalikan helikopter, dan selamatkan lebih banyak hutan!",
+    subject: "Umum",
+    audience: "SD, SMP, SMA",
+    educationLevel: 'general',
+    learningFocus: "Ketangkasan, Logika, Pengambilan Keputusan",
+    howToPlay: [
+      "Pilih misi dari markas",
+      "Kendalikan helikopter hijau",
+      "Ambil air dan padamkan titik api",
+      "Jawab pertanyaan untuk mendapatkan skor ekstra"
+    ],
+    educationalBenefits: [
+      "Melatih koordinasi mata dan tangan",
+      "Meningkatkan kesadaran lingkungan",
+      "Melatih kecepatan dalam mengambil keputusan"
+    ],
+    tags: ['🔢 Numerasi', '📚 Literasi', '🎯 Ice Breaking', '🧠 Logika', '🏀 Sport'],
+    categoryKeys: ['numeracy', 'literacy', 'ice-breaking', 'logic', 'sport']
+  },
   { 
     id: 'sciencelink', 
     title: 'SCIENCELINK', 

@@ -140,18 +140,17 @@ const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) =
           <div aria-hidden="true" className={`absolute -bottom-10 -left-10 w-20 h-20 md:w-28 md:h-28 rounded-full pointer-events-none ${isLight ? 'bg-[#B71C1C]/5' : 'bg-white/10'}`}></div>
           
           {/* ICON CONTAINER */}
-          <div className={`z-20 mt-1 shrink-0 transition-transform duration-300 w-[35%] max-w-[80px] aspect-square ${!isComingSoon ? 'group-hover:scale-110' : ''}`}>
+          <div className={`z-20 mt-1 shrink-0 transition-transform duration-300 ${config.id === 'helirescue' ? 'w-[50%] max-w-[120px] aspect-square drop-shadow-[0_0_15px_rgba(249,115,22,0.6)]' : 'w-[35%] max-w-[80px] aspect-square'} ${!isComingSoon ? 'group-hover:scale-110' : ''}`}>
             <div className={`
               w-full h-full
-              rounded-full overflow-hidden flex items-center justify-center 
-              ${iconContainerBg} border-2 md:border-[3px] ${iconBorder} shadow-sm relative
+              ${config.id === 'helirescue' ? 'flex items-center justify-center relative' : `rounded-full overflow-hidden flex items-center justify-center ${iconContainerBg} border-2 md:border-[3px] ${iconBorder} shadow-sm relative`}
             `}>
               {config.image && (
                 <>
-                   <div className={`absolute inset-0 bg-gray-300/20 animate-pulse transition-opacity duration-300 ${isLoaded ? 'opacity-0' : 'opacity-100'}`} />
+                   <div className={`absolute inset-0 bg-gray-300/20 animate-pulse transition-opacity duration-300 ${isLoaded ? 'opacity-0' : 'opacity-100'} ${config.id === 'helirescue' ? 'rounded-full' : ''}`} />
                    <img 
-                    src={config.image} alt={`${config.title} - game edukasi ${config.tags?.join(', ') || ''}`} 
-                    className={`w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+                    src={config.image} alt={`${config.title} - game edukasi ${config.tags?.join(', ') || ''}`}
+                    className={`w-full h-full ${config.id === 'helirescue' ? 'object-contain scale-125 origin-bottom' : 'object-cover'} transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
                     referrerPolicy="no-referrer" loading="lazy" onLoad={() => setIsLoaded(true)}
                   />
                 </>
