@@ -2,55 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://papaninteraktif.com/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://papaninteraktif.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://papaninteraktif.com/" />
+  </url>
+  <url>
+    <loc>https://papaninteraktif.com/en/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://papaninteraktif.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://papaninteraktif.com/" />
   </url>
   <url>
     <loc>https://papaninteraktif.com/game-edukasi-anak</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game-logika</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/jurnal-guru</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/panduan/memilih-game-edukasi-anak</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/about</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/contact</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/privacy-policy</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game-edukasi-ifp</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/game-edukasi-ifp" />
@@ -59,7 +71,7 @@
   </url>
   <url>
     <loc>https://papaninteraktif.com/en/educational-games-for-interactive-flat-panels</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/game-edukasi-ifp" />
@@ -68,7 +80,7 @@
   </url>
   <url>
     <loc>https://papaninteraktif.com/panduan/penggunaan-ifp-papan-interaktif-digital</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/panduan/penggunaan-ifp-papan-interaktif-digital" />
@@ -77,7 +89,7 @@
   </url>
   <url>
     <loc>https://papaninteraktif.com/en/guides/using-educational-games-on-interactive-flat-panels</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/panduan/penggunaan-ifp-papan-interaktif-digital" />
@@ -86,7 +98,7 @@
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/nusaboard</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/game/nusaboard" />
@@ -95,7 +107,7 @@
   </url>
   <url>
     <loc>https://papaninteraktif.com/en/game/nusaboard</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/game/nusaboard" />
@@ -104,7 +116,7 @@
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/doodle</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/game/doodle" />
@@ -113,7 +125,7 @@
   </url>
   <url>
     <loc>https://papaninteraktif.com/en/game/doodle</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/game/doodle" />
@@ -122,7 +134,7 @@
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/adu-tarik-dino</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/game/adu-tarik-dino" />
@@ -131,7 +143,7 @@
   </url>
   <url>
     <loc>https://papaninteraktif.com/en/game/adu-tarik-dino</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/game/adu-tarik-dino" />
@@ -140,7 +152,7 @@
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/puzzle</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/game/puzzle" />
@@ -149,7 +161,7 @@
   </url>
   <url>
     <loc>https://papaninteraktif.com/en/game/puzzle</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/game/puzzle" />
@@ -158,7 +170,7 @@
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/banua-fruit-blast</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/game/banua-fruit-blast" />
@@ -167,7 +179,7 @@
   </url>
   <url>
     <loc>https://papaninteraktif.com/en/game/banua-fruit-blast</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/game/banua-fruit-blast" />
@@ -176,7 +188,7 @@
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/traditional</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/game/traditional" />
@@ -185,7 +197,7 @@
   </url>
   <url>
     <loc>https://papaninteraktif.com/en/game/traditional</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/game/traditional" />
@@ -194,121 +206,121 @@
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/jagoan-kata</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/geo-squad</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/ruang-io</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/cocok-logi</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/mesin-koleksi</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/pendekar-balon</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/detektif-cilik</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/mewarnai</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/belajar-angka</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/Aksi%20Ambulans</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/Gass%20Damkar</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/Jalur%20Huruf</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/Petualangan%20Satu%20Garis</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/gabung-ceria</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/dunia-hewan</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/rimba-pedia</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/si-pemanah</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/celestial-weaver</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/tanzib</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://papaninteraktif.com/game/hijaiyah-match</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -19,6 +19,18 @@ let xml = `<?xml version="1.0" encoding="UTF-8"?>
     <lastmod>${today}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://papaninteraktif.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://papaninteraktif.com/" />
+  </url>
+  <url>
+    <loc>https://papaninteraktif.com/en/</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://papaninteraktif.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://papaninteraktif.com/" />
   </url>
   <url>
     <loc>https://papaninteraktif.com/game-edukasi-anak</loc>

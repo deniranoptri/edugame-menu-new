@@ -74,13 +74,6 @@ export const HubIfp: React.FC<HubIfpProps> = ({ games, onBack, navigateTo, local
     setMeta('twitter:title', 'Game Edukasi IFP & Papan Interaktif Digital | Papan Interaktif');
     setMeta('twitter:description', 'Game edukasi interaktif yang dioptimalkan untuk Interactive Flat Panel (IFP) dan layar sentuh besar di kelas. Cocok untuk ice breaking dan kolaborasi siswa.');
 
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', window.location.origin + '/game-edukasi-ifp');
     
     // JSON-LD
     let scriptLd = document.querySelector<HTMLScriptElement>('script#jsonld-hub');
@@ -112,7 +105,7 @@ export const HubIfp: React.FC<HubIfpProps> = ({ games, onBack, navigateTo, local
     return () => {
       document.title = 'Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif';
       setMeta('description', 'Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru. Belajar sambil bermain dengan berbagai pilihan game.');
-      canonical?.setAttribute('href', window.location.origin + '/');
+      linkCanonical?.setAttribute('href', window.location.origin + '/');
       const ld = document.querySelector('script#jsonld-hub');
       if (ld) ld.remove();
       // other metas could be cleaned up but keeping them generic is okay for SPA or let index.html defaults take over

@@ -427,6 +427,12 @@ interface ParsedRoute {
   slug?: string;
 }
 
+
+const clearHreflangs = () => {
+  const links = document.querySelectorAll('link[rel="alternate"][hreflang]');
+  links.forEach(link => link.remove());
+};
+
 const parseRoute = (pathname: string): ParsedRoute => {
   const parts = pathname.split('/').filter(Boolean);
   let locale = 'id';
@@ -465,12 +471,62 @@ const parseRoute = (pathname: string): ParsedRoute => {
   } else if (locale === 'id' && pathType === 'panduan/memilih-game-edukasi-anak') {
     return { locale, type: 'guideKids' };
   } else if (pathType === '') {
-    // Only allow root for en if we eventually build an en home. For now, fallback id.
-    if (locale === 'en') return { locale: 'en', type: 'unknown' };
     return { locale, type: 'home' };
   }
   
   return { locale, type: 'unknown' };
+};
+
+
+const HomeSEOManager = ({ locale }: { locale: 'id' | 'en' }) => {
+  useEffect(() => {
+    document.documentElement.lang = locale;
+    document.title = 'Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif';
+    
+    const setMeta = (name: string, content: string, isProperty = false) => {
+      const attr = isProperty ? 'property' : 'name';
+      let el = document.querySelector(`meta[${attr}="${name}"]`);
+      if (!el) {
+        el = document.createElement('meta');
+        el.setAttribute(attr, name);
+        document.head.appendChild(el);
+      }
+      el.setAttribute('content', content);
+    };
+
+    setMeta('description', 'Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru. Belajar sambil bermain dengan berbagai pilihan game.');
+    
+    // Hreflang
+    const updateHreflang = (lang: string, url: string) => {
+      let link = document.querySelector(`link[hreflang="${lang}"]`);
+      if (!link) {
+        link = document.createElement('link');
+        link.setAttribute('rel', 'alternate');
+        link.setAttribute('hreflang', lang);
+        document.head.appendChild(link);
+      }
+      link.setAttribute('href', url);
+    };
+    updateHreflang('id', 'https://papaninteraktif.com/');
+    updateHreflang('en', 'https://papaninteraktif.com/en/');
+    updateHreflang('x-default', 'https://papaninteraktif.com/');
+
+    // Canonical
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    const currentUrl = locale === 'en' ? 'https://papaninteraktif.com/en/' : 'https://papaninteraktif.com/';
+    canonical.setAttribute('href', currentUrl);
+    
+    return () => {
+      const links = document.querySelectorAll('link[rel="alternate"][hreflang]');
+      links.forEach(link => link.remove());
+    };
+  }, [locale]);
+  return null;
 };
 
 const App: React.FC = () => {
@@ -489,7 +545,7 @@ const App: React.FC = () => {
     const parsed = parseRoute(window.location.pathname);
     
     // Safety boundary: treat non-ID locales as unknown/fallback to home for now to prevent rendering raw Indonesian content on /en/
-    const isAllowedEn = parsed.locale === 'en' && ['hubIfp', 'guideIfp', 'gameDetail'].includes(parsed.type);
+    const isAllowedEn = parsed.locale === 'en' && ['home', 'hubIfp', 'guideIfp', 'gameDetail'].includes(parsed.type);
     if (parsed.locale !== 'id' && !isAllowedEn) {
       setCurrentLocale('id');
       setCurrentView('notfound');
@@ -523,9 +579,10 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const handlePopState = () => {
+      clearHreflangs();
       const parsed = parseRoute(window.location.pathname);
       
-      const isAllowedEn = parsed.locale === 'en' && ['hubIfp', 'guideIfp', 'gameDetail'].includes(parsed.type);
+      const isAllowedEn = parsed.locale === 'en' && ['home', 'hubIfp', 'guideIfp', 'gameDetail'].includes(parsed.type);
       if (parsed.locale !== 'id' && !isAllowedEn) {
         setCurrentLocale('id');
         setCurrentView('notfound');
@@ -567,9 +624,10 @@ const App: React.FC = () => {
   });
 
   const navigateTo = (view: 'home' | 'privacy' | 'contact' | 'about' | 'blog' | 'gameDetail' | 'hubKids' | 'hubLogic' | 'hubIfp' | 'guideIfp' | 'guideKids' | 'notfound', path: string) => {
+    clearHreflangs();
     window.history.pushState({}, '', path);
     const parsed = parseRoute(path);
-    const isAllowedEn = parsed.locale === 'en' && ['hubIfp', 'guideIfp', 'gameDetail'].includes(parsed.type);
+    const isAllowedEn = parsed.locale === 'en' && ['home', 'hubIfp', 'guideIfp', 'gameDetail'].includes(parsed.type);
     if (parsed.locale !== 'id' && !isAllowedEn) {
       setCurrentLocale('id');
       setCurrentView('notfound');
@@ -643,6 +701,7 @@ const App: React.FC = () => {
 
   return (
     <>
+      <HomeSEOManager locale={currentLocale} />
       {/* 1. OVERLAY INTRO */}
       <div className={`fixed inset-0 z-[100] ${mainBg} flex flex-col items-center justify-center transition-all duration-700 ${showIntro ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}>
           <div className="text-3xl md:text-5xl font-black text-[#0C1A69] tracking-tighter">DENI RANOPTRI</div>

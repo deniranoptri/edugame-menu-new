@@ -28,7 +28,7 @@ const CommunityHub: React.FC = () => {
         setComments(data.comments);
       }
     } catch (error) {
-      console.error("Gagal mengambil data", error);
+      // Silently handle fetch failure due to iframe sandboxing or tracker blocking
       setError(true);
     } finally {
       setIsLoading(false);
@@ -56,7 +56,7 @@ const CommunityHub: React.FC = () => {
       setKomentar('');
       setTimeout(fetchData, 1500); 
     } catch (error) {
-      console.error("Error kirim komentar:", error);
+      // Silently handle fetch failure
     } finally {
       setIsSubmitting(false);
     }

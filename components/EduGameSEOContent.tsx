@@ -17,8 +17,8 @@ const EduGameSEOContent: React.FC<Props> = ({ navigateTo, lang = 'id' }) => (
           </h2>
           <p className="text-sm md:text-base opacity-80 leading-relaxed font-medium">
             {lang === 'en' 
-              ? <>We believe that game-based learning makes education enjoyable and highly effective. Through our collection of interactive <strong>educational games</strong>, children and students across broad education levels can explore basic concepts like mathematics, language, and logic in a natural, stress-free environment.</>
-              : <>Kami percaya bahwa pembelajaran berbasis game membuat pendidikan menjadi menyenangkan dan efektif. Melalui koleksi <strong>game edukasi</strong> interaktif kami, anak-anak dan siswa di berbagai tingkat pendidikan dapat mengeksplorasi konsep dasar seperti matematika, bahasa, dan logika dalam lingkungan belajar yang tanpa tekanan.</>
+              ? <>We believe that game-based learning makes education enjoyable and highly effective. Through our collection of interactive <strong>free educational games</strong> and <strong>interactive learning games</strong>, children and students across all education levels can explore concepts like mathematics, language, and logic in a stress-free environment. These <strong>educational games for students</strong> are perfect as <strong>interactive learning activities</strong> for the classroom.</>
+              : <>Kami percaya bahwa pembelajaran berbasis game membuat pendidikan menjadi menyenangkan dan efektif. Melalui koleksi <strong>game edukasi gratis</strong> dan <strong>permainan edukatif</strong> kami, anak-anak dan siswa di berbagai tingkat pendidikan dapat mengeksplorasi konsep dasar matematika, bahasa, dan logika tanpa tekanan. <strong>Game pembelajaran</strong> ini sangat cocok digunakan sebagai <strong>media interaktif</strong> untuk kegiatan kelas.</>
             }
           </p>
           
@@ -61,8 +61,8 @@ const EduGameSEOContent: React.FC<Props> = ({ navigateTo, lang = 'id' }) => (
           </h2>
           <p className="text-sm md:text-base opacity-80 leading-relaxed font-medium">
             {lang === 'en'
-              ? <>For educators from Early Childhood through High School, Papan Interaktif serves as a flexible solution for <strong>interactive learning media</strong>. Use these games as classroom ice breakers, interactive exercises, or digital learning activities to boost student enthusiasm in schools.</>
-              : <>Bagi para pendidik dari tingkat PAUD hingga SMA, Papan Interaktif hadir sebagai solusi <strong>media pembelajaran interaktif</strong> yang fleksibel. Gunakan berbagai game ini sebagai sarana ice breaking, latihan di kelas, maupun aktivitas pendukung pembelajaran digital untuk meningkatkan antusiasme siswa di sekolah.</>
+              ? <>For educators from Early Childhood through High School, Papan Interaktif serves as a flexible solution for <strong>interactive classroom activities</strong>. Use these <strong>classroom games</strong> as ice breakers, interactive exercises, or digital learning media on large <strong>Interactive Flat Panel (IFP)</strong> screens and <strong>Smartboards</strong> to boost student enthusiasm in schools.</>
+              : <>Bagi para pendidik dari tingkat PAUD hingga SMA, Papan Interaktif hadir sebagai solusi <strong>media pembelajaran interaktif</strong> yang fleksibel. Gunakan berbagai game ini sebagai sarana <strong>aktivitas kelas interaktif</strong>, latihan di kelas, maupun pembelajaran digital menggunakan layar besar <strong>Interactive Flat Panel (IFP)</strong> dan <strong>Smartboard</strong> untuk meningkatkan antusiasme siswa di sekolah.</>
             }
           </p>
         </article>
@@ -78,8 +78,18 @@ const EduGameSEOContent: React.FC<Props> = ({ navigateTo, lang = 'id' }) => (
               </strong>
               <span className="text-sm opacity-80 font-medium">
                 {lang === 'en' 
-                  ? 'A digital platform providing a collection of free interactive educational games with no installation required.' 
-                  : 'Platform digital yang menyediakan koleksi game pendidikan interaktif gratis tanpa perlu instalasi.'}
+                   ? 'A digital platform providing a collection of free interactive educational games with no installation required.' 
+                   : 'Platform digital yang menyediakan koleksi game pendidikan interaktif gratis tanpa perlu instalasi.'}
+              </span>
+            </li>
+            <li>
+              <strong className="block text-sm font-black text-[#E45C63]">
+                {lang === 'en' ? 'What are interactive flat panel games?' : 'Apa itu game papan interaktif digital (PID)?'}
+              </strong>
+              <span className="text-sm opacity-80 font-medium">
+                {lang === 'en' 
+                   ? 'Interactive Flat Panel games or smartboard educational games are learning activities specifically designed for large touch screens in modern classrooms, helping teachers create engaging interactive classroom games.' 
+                   : 'Game papan interaktif digital (PID) atau game IFP adalah game edukasi yang dirancang khusus untuk dimainkan di layar sentuh besar di kelas, membantu guru menciptakan aktivitas pembelajaran interaktif yang menyenangkan.'}
               </span>
             </li>
             <li>
@@ -88,18 +98,38 @@ const EduGameSEOContent: React.FC<Props> = ({ navigateTo, lang = 'id' }) => (
               </strong>
               <span className="text-sm opacity-80 font-medium">
                 {lang === 'en' 
-                  ? 'Our games are designed to support learning for Early Childhood, Elementary, Middle, and High School students, and can be used by teachers as classroom ice breakers.' 
-                  : 'Game kami dirancang untuk mendukung pembelajaran bagi anak PAUD, siswa SD, SMP, hingga SMA, serta dapat digunakan oleh guru sebagai materi ice breaking di kelas.'}
+                   ? 'Our games are designed as educational games for kids and students across Early Childhood, Elementary, Middle, and High School. They are highly effective classroom games for teachers to use as ice breakers and interactive teaching activities.' 
+                   : 'Game belajar kami dirancang untuk mendukung pembelajaran bagi siswa dari tingkat PAUD, SD, SMP, hingga SMA. Seluruh permainan sangat cocok digunakan sebagai game untuk guru dalam mengisi ice breaking dan aktivitas kelas interaktif.'}
               </span>
             </li>
             <li>
               <strong className="block text-sm font-black text-[#E45C63]">
-                {lang === 'en' ? 'Can the games be played on mobile phones?' : 'Apakah game dapat dimainkan di HP?'}
+                                {lang === 'en' ? 'Can the games be played on mobile phones?' : 'Apakah game dapat dimainkan di HP?'}
               </strong>
               <span className="text-sm opacity-80 font-medium">
                 {lang === 'en' 
-                  ? 'Yes, all games are fully accessible and optimized for mobile phones, tablets, laptops, and Smartboards (IFP).' 
-                  : 'Ya, semua game dapat diakses dan dimainkan dengan optimal melalui HP, tablet, laptop, hingga Smartboard (IFP).'}
+                   ? 'Yes, all games are fully accessible and optimized for mobile phones, tablets, laptops, Interactive Flat Panels (IFP), and Smartboards.' 
+                   : 'Ya, semua game dapat diakses dan dimainkan dengan optimal melalui HP, tablet, laptop, hingga Interactive Flat Panel (IFP) dan Smartboard.'}
+              </span>
+            </li>
+            <li>
+              <strong className="block text-sm font-black text-[#E45C63]">
+                {lang === 'en' ? 'Are these games free to play?' : 'Apakah game ini gratis?'}
+              </strong>
+              <span className="text-sm opacity-80 font-medium">
+                {lang === 'en' 
+                   ? 'Yes, our entire collection of free educational games is 100% free for teachers and students to access without any subscription fees.' 
+                   : 'Ya, seluruh koleksi game edukasi interaktif gratis kami 100% gratis untuk diakses oleh guru dan siswa tanpa perlu biaya berlangganan.'}
+              </span>
+            </li>
+            <li>
+              <strong className="block text-sm font-black text-[#E45C63]">
+                {lang === 'en' ? 'Are these games suitable for Early Childhood (PAUD/TK) and Elementary students?' : 'Apakah cocok untuk anak usia dini (PAUD/TK) dan siswa SD?'}
+              </strong>
+              <span className="text-sm opacity-80 font-medium">
+                {lang === 'en' 
+                   ? 'Absolutely! We offer a dedicated JUNIOR Mode specifically for Early Childhood activities, as well as a GENERAL mode featuring basic numeracy and literacy challenges for Elementary, Middle, and High School students.' 
+                   : 'Sangat cocok! Kami menyediakan Mode JUNIOR khusus untuk aktivitas PAUD/TK, serta mode UMUM yang berisi materi numerasi dan literasi dasar untuk siswa SD, SMP, hingga SMA.'}
               </span>
             </li>
             <li>

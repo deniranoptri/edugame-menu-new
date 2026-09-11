@@ -5,14 +5,73 @@ export const AdSenseDisplay: React.FC = () => {
   const initialized = useRef(false);
 
   useEffect(() => {
-    if (adRef.current && !initialized.current) {
-      initialized.current = true;
-      try {
-        ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
-      } catch (e) {
-        console.error('AdSense display error', e);
+    let observer: ResizeObserver | null = null;
+    let rafId: number | null = null;
+    const insElement = adRef.current;
+
+    const checkAndInitialize = () => {
+      if (initialized.current || !insElement) return;
+
+      // Ensure it is in the DOM
+      if (!document.body.contains(insElement)) return;
+
+      // Check computed styles
+      const style = window.getComputedStyle(insElement);
+      if (style.display === 'none' || style.visibility === 'hidden') return;
+
+      // Check widths
+      const rect = insElement.getBoundingClientRect();
+      const parent = insElement.parentElement;
+      const parentWidth = parent ? parent.getBoundingClientRect().width : 0;
+
+      if (rect.width > 0 && insElement.offsetWidth > 0 && parentWidth > 0) {
+        // Double check AdSense's own status
+        if (insElement.getAttribute('data-adsbygoogle-status') === 'done') {
+          initialized.current = true;
+          cleanup();
+          return;
+        }
+
+        initialized.current = true;
+        try {
+          ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
+        } catch (e) {
+          console.error('AdSense display error:', e);
+        }
+        cleanup();
+      }
+    };
+
+    const cleanup = () => {
+      if (observer) {
+        observer.disconnect();
+        observer = null;
+      }
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+    };
+
+    if (window.ResizeObserver && insElement) {
+      observer = new ResizeObserver(() => {
+        if (!initialized.current) {
+          if (rafId !== null) cancelAnimationFrame(rafId);
+          rafId = requestAnimationFrame(checkAndInitialize);
+        }
+      });
+      observer.observe(insElement);
+      if (insElement.parentElement) {
+        observer.observe(insElement.parentElement);
       }
     }
+
+    // Initial check
+    rafId = requestAnimationFrame(checkAndInitialize);
+
+    return () => {
+      cleanup();
+    };
   }, []);
 
   return (
