@@ -6,6 +6,58 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import ContactUs from './components/ContactUs';
 import AboutUs from './components/AboutUs';
 import JurnalGuru from './components/JurnalGuru';
+import ArticleIfpMedia from './components/ArticleIfpMedia';
+import ArticleGuideIfp from './components/ArticleGuideIfp';
+import ArticleIfpActivities from './components/ArticleIfpActivities';
+import ArticleMathIfp from './components/ArticleMathIfp';
+import ArticleMatematikaIfp from './components/ArticleMatematikaIfp';
+import ArticleIpaIfp from './components/ArticleIpaIfp';
+import ArticleBahasaIfp from './components/ArticleBahasaIfp';
+import ArticleBahasaIndonesiaIfp from './components/ArticleBahasaIndonesiaIfp';
+import ArticleEnglishIfp from './components/ArticleEnglishIfp';
+import ArticleIpsIfp from './components/ArticleIpsIfp';
+import ArticleGamificationIfp from './components/ArticleGamificationIfp';
+import ArticleGamificationIfpEn from './components/ArticleGamificationIfpEn';
+import ArticleDifferentiatedIfpEn from './components/ArticleDifferentiatedIfpEn';
+import ArticleInkuiriIfpEn from './components/ArticleInkuiriIfpEn';
+import ArticlePjblIfpEn from './components/ArticlePjblIfpEn';
+
+import ArticleSteamIfp from './components/ArticleSteamIfp';
+import ArticleSteamIfpEn from './components/ArticleSteamIfpEn';
+import ArticlePseIfp from './components/ArticlePseIfp';
+import ArticlePseIfpEn from './components/ArticlePseIfpEn';
+import ArticleInkuiriIfp from './components/ArticleInkuiriIfp';
+import ArticleFlippedIfp from './components/ArticleFlippedIfp';
+import ArticleFlippedIfpEn from './components/ArticleFlippedIfpEn';
+import ArticleStationRotationIfp from './components/ArticleStationRotationIfp';
+import ArticleStationRotationIfpEn from './components/ArticleStationRotationIfpEn';
+import ArticleVisualIfp from './components/ArticleVisualIfp';
+import ArticleVisualIfpEn from './components/ArticleVisualIfpEn';
+import ArticleAssessmentIfp from './components/ArticleAssessmentIfp';
+import ArticleAssessmentIfpEn from './components/ArticleAssessmentIfpEn';
+import ArticleCollaborativeIfp from './components/ArticleCollaborativeIfp';
+import ArticleCollaborativeIfpEn from './components/ArticleCollaborativeIfpEn';
+import ArticleClassroomManagementIfp from './components/ArticleClassroomManagementIfp';
+import ArticleIfpFeatures from './components/ArticleIfpFeatures';
+import ArticleChooseIfp from './components/ArticleChooseIfp';
+import ArticleDifferentiatedIfp from './components/ArticleDifferentiatedIfp';
+import ArticleDeepLearningIfp from './components/ArticleDeepLearningIfp';
+import ArticleDeepLearningIfpEn from './components/ArticleDeepLearningIfpEn';
+import ArticleModuleIfp from './components/ArticleModuleIfp';
+import ArticleInclusiveIfp from './components/ArticleInclusiveIfp';
+import ArticlePjblIfp from './components/ArticlePjblIfp';
+import ArticleDiagnosticIfp from './components/ArticleDiagnosticIfp';
+import ArticleAuthenticAssessmentIfpEn from './components/ArticleAuthenticAssessmentIfpEn';
+import ArticleReflectiveLearningIfpEn from './components/ArticleReflectiveLearningIfpEn';
+import ArticleCooperativeIfpEn from './components/ArticleCooperativeIfpEn';
+import ArticleClassroomManagementIfpEn from './components/ArticleClassroomManagementIfpEn';
+import ArticleDiagnosticIfpEn from './components/ArticleDiagnosticIfpEn';
+import ArticleReflectionIfp from './components/ArticleReflectionIfp';
+import ArticleDigitalLiteracyIfp from './components/ArticleDigitalLiteracyIfp';
+import ArticleAuthenticAssessmentIfp from './components/ArticleAuthenticAssessmentIfp';
+import ArticlePblIfp from './components/ArticlePblIfp';
+import ArticlePblIfpEn from './components/ArticlePblIfpEn';
+import ArticleCooperativeIfp from './components/ArticleCooperativeIfp';
 import GuideIFP from './components/GuideIFP';
 import GuideKids from './components/GuideKids'; 
 import GameDetail from './components/GameDetail';
@@ -423,7 +475,7 @@ const SapaanWaktu = () => {
 // SURGICAL ROUTE PARSER - PHASE 8.1 / 9
 interface ParsedRoute {
   locale: string;
-  type: 'home' | 'privacy' | 'contact' | 'about' | 'blog' | 'gameDetail' | 'hubKids' | 'hubLogic' | 'hubIfp' | 'guideIfp' | 'guideKids' | 'unknown';
+  type: 'home' | 'privacy' | 'contact' | 'about' | 'blog' | 'blogEn' | 'articleIfpMedia' | 'articleGuideIfp' | 'articleIfpActivities' | 'articleMathIfp' | 'articleMatematikaIfp' | 'articleIpaIfp' | 'articleBahasaIfp' | 'articleBahasaIndonesiaIfp' | 'articleEnglishIfp' | 'articleIpsIfp' | 'articleGamificationIfp' | 'articleGamificationIfpEn'  | 'articleDifferentiatedIfpEn' | 'articleInkuiriIfpEn' | 'articlePjblIfpEn' | 'articleSteamIfpEn' | 'articleFlippedIfpEn' | 'articleStationRotationIfpEn' | 'articleVisualIfpEn' | 'articleCollaborativeIfpEn' | 'articleAssessmentIfpEn' | 'articleDiagnosticIfpEn' | 'articleDeepLearningIfpEn' | 'articleAuthenticAssessmentIfpEn' | 'articleReflectiveLearningIfpEn' | 'articleCooperativeIfpEn' | 'articleClassroomManagementIfpEn' | 'articleSteamIfp' | 'articlePseIfp' | 'articlePseIfpEn' | 'articleInkuiriIfp' | 'articleFlippedIfp' | 'articleStationRotationIfp' | 'articleVisualIfp' | 'articleAssessmentIfp' | 'articleCollaborativeIfp' | 'articleClassroomManagementIfp' | 'articleIfpFeatures' | 'articleChooseIfp' | 'articleDifferentiatedIfp' | 'articleDeepLearningIfp' | 'articleModuleIfp' | 'articleInclusiveIfp' | 'articlePjblIfp' | 'articleDiagnosticIfp' | 'articleReflectionIfp' | 'articleDigitalLiteracyIfp' | 'articleAuthenticAssessmentIfp' | 'articlePblIfp' | 'articlePblIfpEn' | 'articleCooperativeIfp' | 'gameDetail' | 'hubKids' | 'hubLogic' | 'hubIfp' | 'guideIfp' | 'guideKids' | 'unknown';
   slug?: string;
 }
 
@@ -464,6 +516,115 @@ const parseRoute = (pathname: string): ParsedRoute => {
     return { locale, type: 'about' };
   } else if (locale === 'id' && pathType === 'jurnal-guru') {
     return { locale, type: 'blog' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/memaksimalkan-ifp-sebagai-media-pembelajaran-interaktif') {
+    return { locale, type: 'articleIfpMedia' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/panduan-menggunakan-ifp-untuk-pembelajaran-interaktif-di-kelas') {
+    return { locale, type: 'articleGuideIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/aktivitas-pembelajaran-interaktif-menggunakan-ifp-di-kelas') {
+    return { locale, type: 'articleIfpActivities' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/aktivitas-matematika-interaktif-menggunakan-ifp-di-kelas') {
+    return { locale, type: 'articleMathIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/pembelajaran-matematika-interaktif-menggunakan-ifp') {
+    return { locale, type: 'articleMatematikaIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/aktivitas-ipa-interaktif-menggunakan-ifp-di-kelas') {
+    return { locale, type: 'articleIpaIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/aktivitas-bahasa-indonesia-interaktif-menggunakan-ifp-di-kelas') {
+    return { locale, type: 'articleBahasaIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/pembelajaran-bahasa-indonesia-interaktif-menggunakan-ifp') {
+    return { locale, type: 'articleBahasaIndonesiaIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/pembelajaran-bahasa-inggris-interaktif-menggunakan-ifp') {
+    return { locale, type: 'articleEnglishIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/aktivitas-ips-interaktif-menggunakan-ifp-di-kelas') {
+    return { locale, type: 'articleIpsIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/pembelajaran-ips-interaktif-menggunakan-ifp') {
+    return { locale, type: 'articleIpsIfp' };  } else if (locale === 'en' && pathType === 'journal') {
+    return { locale, type: 'blogEn' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/gamifikasi-pembelajaran-menggunakan-ifp') {
+    return { locale, type: 'articleGamificationIfp' };
+  } else if (locale === 'en' && pathType === 'journal/gamification-using-interactive-flat-panel') {
+    return { locale, type: 'articleGamificationIfpEn' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/pembelajaran-steam-menggunakan-ifp') {
+    return { locale, type: 'articleSteamIfp' };
+  
+  } else if (locale === 'id' && pathType === 'jurnal-guru/pembelajaran-sosial-emosional-menggunakan-ifp') {
+    return { locale, type: 'articlePseIfp' };
+  } else if (locale === 'en' && pathType === 'journal/social-emotional-learning-using-interactive-flat-panel') {
+    return { locale, type: 'articlePseIfpEn' };
+} else if (locale === 'id' && pathType === 'jurnal-guru/pembelajaran-berbasis-inkuiri-menggunakan-ifp') {
+    return { locale, type: 'articleInkuiriIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/flipped-classroom-menggunakan-ifp') {
+    return { locale, type: 'articleFlippedIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/blended-learning-station-rotation-menggunakan-ifp') {
+    return { locale, type: 'articleStationRotationIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/pembelajaran-berbasis-visual-menggunakan-ifp') {
+    return { locale, type: 'articleVisualIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas') {
+    return { locale, type: 'articleAssessmentIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/pembelajaran-kolaboratif-menggunakan-ifp-di-kelas') {
+    return { locale, type: 'articleCollaborativeIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/strategi-pengelolaan-kelas-menggunakan-ifp') {
+    return { locale, type: 'articleClassroomManagementIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/fitur-ifp-untuk-pembelajaran-interaktif') {
+    return { locale, type: 'articleIfpFeatures' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/cara-memilih-ifp-untuk-pembelajaran-di-sekolah') {
+    return { locale, type: 'articleChooseIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/pembelajaran-berdiferensiasi-menggunakan-ifp-di-kelas') {
+    return { locale, type: 'articleDifferentiatedIfp' };
+  } else if (locale === 'en' && pathType === 'journal/differentiated-learning-using-interactive-flat-panel') {
+    return { locale, type: 'articleDifferentiatedIfpEn' };
+  } else if (locale === 'en' && pathType === 'journal/inquiry-based-learning-using-interactive-flat-panel') {
+    return { locale, type: 'articleInkuiriIfpEn' };
+  } else if (locale === 'en' && pathType === 'journal/project-based-learning-using-interactive-flat-panel') {
+    return { locale, type: 'articlePjblIfpEn' };
+  } else if (locale === 'en' && pathType === 'journal/steam-learning-using-interactive-flat-panel') {
+    return { locale, type: 'articleSteamIfpEn' };
+  } else if (locale === 'en' && pathType === 'journal/flipped-classroom-using-interactive-flat-panel') {
+    return { locale, type: 'articleFlippedIfpEn' };
+  } else if (locale === 'en' && pathType === 'journal/blended-learning-station-rotation-using-ifp') {
+    return { locale, type: 'articleStationRotationIfpEn' };
+  } else if (locale === 'en' && pathType === 'journal/visual-learning-using-interactive-flat-panel') {
+    return { locale, type: 'articleVisualIfpEn' };
+  } else if (locale === 'en' && pathType === 'journal/collaborative-learning-using-interactive-flat-panel') {
+    return { locale, type: 'articleCollaborativeIfpEn' };
+  } else if (locale === 'en' && pathType === 'journal/formative-assessment-using-interactive-flat-panel') {
+    return { locale, type: 'articleAssessmentIfpEn' };
+  } else if (locale === 'en' && pathType === 'journal/authentic-assessment-using-interactive-flat-panel') {
+    return { locale, type: 'articleAuthenticAssessmentIfpEn' };
+  } else if (locale === 'en' && pathType === 'journal/reflective-learning-using-interactive-flat-panel') {
+    return { locale, type: 'articleReflectiveLearningIfpEn' };
+  } else if (locale === 'en' && pathType === 'journal/cooperative-learning-using-interactive-flat-panel') {
+    return { locale, type: 'articleCooperativeIfpEn' };
+  } else if (locale === 'en' && pathType === 'journal/classroom-management-using-interactive-flat-panel') {
+    return { locale, type: 'articleClassroomManagementIfpEn' };
+  } else if (locale === 'en' && pathType === 'journal/diagnostic-assessment-using-interactive-flat-panel') {
+    return { locale, type: 'articleDiagnosticIfpEn' };
+  } else if (locale === 'en' && pathType === 'journal/meaningful-learning-using-interactive-flat-panel') {
+    return { locale, type: 'articleDeepLearningIfpEn' };
+
+
+
+
+  } else if (locale === 'id' && pathType === 'jurnal-guru/pembelajaran-mendalam-menggunakan-ifp-di-kelas') {
+    return { locale, type: 'articleDeepLearningIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/modul-ajar-menggunakan-ifp-untuk-pembelajaran-interaktif') {
+    return { locale, type: 'articleModuleIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/pembelajaran-inklusif-menggunakan-ifp-di-kelas') {
+    return { locale, type: 'articleInclusiveIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/pembelajaran-berbasis-proyek-menggunakan-ifp') {
+    return { locale, type: 'articlePjblIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/asesmen-diagnostik-menggunakan-ifp-di-kelas') {
+    return { locale, type: 'articleDiagnosticIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/refleksi-pembelajaran-menggunakan-ifp-di-kelas') {
+    return { locale, type: 'articleReflectionIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/literasi-digital-menggunakan-ifp-di-kelas') {
+    return { locale, type: 'articleDigitalLiteracyIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/asesmen-autentik-menggunakan-ifp-di-kelas') {
+    return { locale, type: 'articleAuthenticAssessmentIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/pembelajaran-berbasis-masalah-menggunakan-ifp') {
+    return { locale, type: 'articlePblIfp' };
+  } else if (locale === 'en' && pathType === 'journal/problem-based-learning-using-interactive-flat-panel') {
+    return { locale, type: 'articlePblIfpEn' };} else if (locale === 'id' && pathType === 'jurnal-guru/pembelajaran-kooperatif-menggunakan-ifp') {
+    return { locale, type: 'articleCooperativeIfp' };
   } else if (locale === 'id' && pathType === 'panduan/penggunaan-ifp-papan-interaktif-digital') {
     return { locale, type: 'guideIfp' };
   } else if (locale === 'en' && pathType === 'guides/using-educational-games-on-interactive-flat-panels') {
@@ -538,14 +699,14 @@ const App: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [currentLocale, setCurrentLocale] = useState<'id' | 'en'>('id');
-  const [currentView, setCurrentView] = useState<'home' | 'privacy' | 'contact' | 'about' | 'blog' | 'gameDetail' | 'hubKids' | 'hubLogic' | 'hubIfp' | 'guideIfp' | 'guideKids' | 'notfound'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'privacy' | 'contact' | 'about' | 'blog' | 'blogEn' | 'articleIfpMedia' | 'articleGuideIfp' | 'articleIfpActivities' | 'articleMathIfp' | 'articleMatematikaIfp' | 'articleIpaIfp' | 'articleBahasaIfp' | 'articleBahasaIndonesiaIfp' | 'articleEnglishIfp' | 'articleIpsIfp' | 'articleGamificationIfp' | 'articleGamificationIfpEn'  | 'articleDifferentiatedIfpEn' | 'articleInkuiriIfpEn' | 'articlePjblIfpEn' | 'articleSteamIfpEn' | 'articleFlippedIfpEn' | 'articleStationRotationIfpEn' | 'articleVisualIfpEn' | 'articleCollaborativeIfpEn' | 'articleAssessmentIfpEn' | 'articleDiagnosticIfpEn' | 'articleDeepLearningIfpEn' | 'articleAuthenticAssessmentIfpEn' | 'articleReflectiveLearningIfpEn' | 'articleCooperativeIfpEn' | 'articleClassroomManagementIfpEn' | 'articleSteamIfp' | 'articlePseIfp' | 'articleInkuiriIfp' | 'articleFlippedIfp' | 'articleStationRotationIfp' | 'articleVisualIfp' | 'articleAssessmentIfp' | 'articleCollaborativeIfp' | 'articleClassroomManagementIfp' | 'articleIfpFeatures' | 'articleChooseIfp' | 'articleDifferentiatedIfp' | 'articleDeepLearningIfp' | 'articleModuleIfp' | 'articleInclusiveIfp' | 'articlePjblIfp' | 'articleDiagnosticIfp' | 'articleReflectionIfp' | 'articleDigitalLiteracyIfp' | 'articleAuthenticAssessmentIfp' | 'articlePblIfp' | 'articlePblIfpEn' | 'articleCooperativeIfp' | 'gameDetail' | 'hubKids' | 'hubLogic' | 'hubIfp' | 'guideIfp' | 'guideKids' | 'notfound'>('home');
   const [selectedGameId, setSelectedGameId] = useState<string | null>(null);
 
   useEffect(() => {
     const parsed = parseRoute(window.location.pathname);
     
     // Safety boundary: treat non-ID locales as unknown/fallback to home for now to prevent rendering raw Indonesian content on /en/
-    const isAllowedEn = parsed.locale === 'en' && ['home', 'hubIfp', 'guideIfp', 'gameDetail'].includes(parsed.type);
+    const isAllowedEn = parsed.locale === 'en' && ['home', 'blogEn', 'hubIfp', 'guideIfp', 'gameDetail', 'articleGamificationIfpEn', 'articleDifferentiatedIfpEn', 'articleInkuiriIfpEn', 'articlePjblIfpEn', 'articleSteamIfpEn', 'articleFlippedIfpEn', 'articleStationRotationIfpEn', 'articleVisualIfpEn', 'articleCollaborativeIfpEn', 'articleAssessmentIfpEn', 'articleDiagnosticIfpEn', 'articleDeepLearningIfpEn', 'articleAuthenticAssessmentIfpEn', 'articleReflectiveLearningIfpEn', 'articleCooperativeIfpEn', 'articleClassroomManagementIfpEn', 'articlePseIfpEn', 'articlePblIfpEn'].includes(parsed.type);
     if (parsed.locale !== 'id' && !isAllowedEn) {
       setCurrentLocale('id');
       setCurrentView('notfound');
@@ -582,7 +743,7 @@ const App: React.FC = () => {
       clearHreflangs();
       const parsed = parseRoute(window.location.pathname);
       
-      const isAllowedEn = parsed.locale === 'en' && ['home', 'hubIfp', 'guideIfp', 'gameDetail'].includes(parsed.type);
+      const isAllowedEn = parsed.locale === 'en' && ['home', 'blogEn', 'hubIfp', 'guideIfp', 'gameDetail', 'articleGamificationIfpEn', 'articleDifferentiatedIfpEn', 'articleInkuiriIfpEn', 'articlePjblIfpEn', 'articleSteamIfpEn', 'articleFlippedIfpEn', 'articleStationRotationIfpEn', 'articleVisualIfpEn', 'articleCollaborativeIfpEn', 'articleAssessmentIfpEn', 'articleDiagnosticIfpEn', 'articleDeepLearningIfpEn', 'articleAuthenticAssessmentIfpEn', 'articleReflectiveLearningIfpEn', 'articleCooperativeIfpEn', 'articleClassroomManagementIfpEn', 'articlePseIfpEn', 'articlePblIfpEn'].includes(parsed.type);
       if (parsed.locale !== 'id' && !isAllowedEn) {
         setCurrentLocale('id');
         setCurrentView('notfound');
@@ -623,11 +784,11 @@ const App: React.FC = () => {
     return matchesSearch && matchesCategory;
   });
 
-  const navigateTo = (view: 'home' | 'privacy' | 'contact' | 'about' | 'blog' | 'gameDetail' | 'hubKids' | 'hubLogic' | 'hubIfp' | 'guideIfp' | 'guideKids' | 'notfound', path: string) => {
+  const navigateTo = (view: 'home' | 'privacy' | 'contact' | 'about' | 'blog' | 'articleIfpMedia' | 'articleGuideIfp' | 'articleIfpActivities' | 'articleMathIfp' | 'articleMatematikaIfp' | 'articleIpaIfp' | 'articleBahasaIfp' | 'articleBahasaIndonesiaIfp' | 'articleEnglishIfp' | 'articleIpsIfp' | 'articleGamificationIfp' | 'articleGamificationIfpEn'  | 'articleDifferentiatedIfpEn' | 'articleInkuiriIfpEn' | 'articlePjblIfpEn' | 'articleSteamIfpEn' | 'articleFlippedIfpEn' | 'articleStationRotationIfpEn' | 'articleVisualIfpEn' | 'articleCollaborativeIfpEn' | 'articleAssessmentIfpEn' | 'articleDiagnosticIfpEn' | 'articleDeepLearningIfpEn' | 'articleAuthenticAssessmentIfpEn' | 'articleReflectiveLearningIfpEn' | 'articleCooperativeIfpEn' | 'articleClassroomManagementIfpEn' | 'articleSteamIfp' | 'articlePseIfp' | 'articleInkuiriIfp' | 'articleFlippedIfp' | 'articleStationRotationIfp' | 'articleVisualIfp' | 'articleAssessmentIfp' | 'articleCollaborativeIfp' | 'articleClassroomManagementIfp' | 'articleIfpFeatures' | 'articleChooseIfp' | 'articleDifferentiatedIfp' | 'articleDeepLearningIfp' | 'articleModuleIfp' | 'articleInclusiveIfp' | 'articlePjblIfp' | 'articleDiagnosticIfp' | 'articleReflectionIfp' | 'articleDigitalLiteracyIfp' | 'articleAuthenticAssessmentIfp' | 'articlePblIfp' | 'gameDetail' | 'hubKids' | 'hubLogic' | 'hubIfp' | 'guideIfp' | 'guideKids' | 'notfound', path: string) => {
     clearHreflangs();
     window.history.pushState({}, '', path);
     const parsed = parseRoute(path);
-    const isAllowedEn = parsed.locale === 'en' && ['home', 'hubIfp', 'guideIfp', 'gameDetail'].includes(parsed.type);
+    const isAllowedEn = parsed.locale === 'en' && ['home', 'blogEn', 'hubIfp', 'guideIfp', 'gameDetail', 'articleGamificationIfpEn', 'articleDifferentiatedIfpEn', 'articleInkuiriIfpEn', 'articlePjblIfpEn', 'articleSteamIfpEn', 'articleFlippedIfpEn', 'articleStationRotationIfpEn', 'articleVisualIfpEn', 'articleCollaborativeIfpEn', 'articleAssessmentIfpEn', 'articleDiagnosticIfpEn', 'articleDeepLearningIfpEn', 'articleAuthenticAssessmentIfpEn', 'articleReflectiveLearningIfpEn', 'articleCooperativeIfpEn', 'articleClassroomManagementIfpEn', 'articlePseIfpEn', 'articlePblIfpEn'].includes(parsed.type);
     if (parsed.locale !== 'id' && !isAllowedEn) {
       setCurrentLocale('id');
       setCurrentView('notfound');
@@ -682,7 +843,62 @@ const App: React.FC = () => {
   if (currentView === 'privacy') return <PrivacyPolicy onBack={() => navigateTo('home', '/')} />;
   if (currentView === 'contact') return <ContactUs onBack={() => navigateTo('home', '/')} />;
   if (currentView === 'about') return <AboutUs onBack={() => navigateTo('home', '/')} />;
-  if (currentView === 'blog') return <JurnalGuru onBack={() => navigateTo('home', '/')} />;
+  if (currentView === 'blog') return <JurnalGuru locale="id" onBack={() => navigateTo('home', '/')} navigateTo={navigateTo} />;
+  if (currentView === 'blogEn') return <JurnalGuru locale="en" onBack={() => navigateTo('home', '/en')} navigateTo={navigateTo} />;
+  if (currentView === 'articleIfpMedia') return <ArticleIfpMedia onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleGuideIfp') return <ArticleGuideIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleIfpActivities') return <ArticleIfpActivities onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleVisualIfp') return <ArticleVisualIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleMathIfp') return <ArticleMathIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleMatematikaIfp') return <ArticleMatematikaIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleStationRotationIfp') return <ArticleStationRotationIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleIpaIfp') return <ArticleIpaIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articlePseIfp') return <ArticlePseIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articlePseIfpEn') return <ArticlePseIfpEn onBack={() => navigateTo('blog', '/en/journal')} navigateTo={navigateTo} />;
+  if (currentView === 'articleFlippedIfp') return <ArticleFlippedIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleInkuiriIfp') return <ArticleInkuiriIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleBahasaIfp') return <ArticleBahasaIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleGamificationIfp') return <ArticleGamificationIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleGamificationIfpEn') return <ArticleGamificationIfpEn onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleSteamIfp') return <ArticleSteamIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleBahasaIndonesiaIfp') return <ArticleBahasaIndonesiaIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleEnglishIfp') return <ArticleEnglishIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleIpsIfp') return <ArticleIpsIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleAssessmentIfp') return <ArticleAssessmentIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleCollaborativeIfp') return <ArticleCollaborativeIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleClassroomManagementIfp') return <ArticleClassroomManagementIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleIfpFeatures') return <ArticleIfpFeatures onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleChooseIfp') return <ArticleChooseIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleDifferentiatedIfp') return <ArticleDifferentiatedIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleDifferentiatedIfpEn') return <ArticleDifferentiatedIfpEn onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleInkuiriIfpEn') return <ArticleInkuiriIfpEn onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articlePjblIfpEn') return <ArticlePjblIfpEn onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleSteamIfpEn') return <ArticleSteamIfpEn onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleFlippedIfpEn') return <ArticleFlippedIfpEn onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleStationRotationIfpEn') return <ArticleStationRotationIfpEn onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleVisualIfpEn') return <ArticleVisualIfpEn onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+
+  if (currentView === 'articleCollaborativeIfpEn') return <ArticleCollaborativeIfpEn onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleAssessmentIfpEn') return <ArticleAssessmentIfpEn onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleDiagnosticIfpEn') return <ArticleDiagnosticIfpEn onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleDeepLearningIfpEn') return <ArticleDeepLearningIfpEn onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+
+
+  if (currentView === 'articleDeepLearningIfp') return <ArticleDeepLearningIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleModuleIfp') return <ArticleModuleIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleInclusiveIfp') return <ArticleInclusiveIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articlePjblIfp') return <ArticlePjblIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleDiagnosticIfp') return <ArticleDiagnosticIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleReflectionIfp') return <ArticleReflectionIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleDigitalLiteracyIfp') return <ArticleDigitalLiteracyIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleAuthenticAssessmentIfp') return <ArticleAuthenticAssessmentIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articlePblIfp') return <ArticlePblIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articlePblIfpEn') return <ArticlePblIfpEn onBack={() => navigateTo('blog', '/en/journal')} navigateTo={navigateTo} />;if (currentView === 'articleCooperativeIfp') return <ArticleCooperativeIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleAuthenticAssessmentIfpEn') return <ArticleAuthenticAssessmentIfpEn onBack={() => navigateTo('blog', '/en/journal')} navigateTo={navigateTo} />;
+  if (currentView === 'articleReflectiveLearningIfpEn') return <ArticleReflectiveLearningIfpEn onBack={() => navigateTo('blog', '/en/journal')} navigateTo={navigateTo} />;
+  if (currentView === 'articleCooperativeIfpEn') return <ArticleCooperativeIfpEn onBack={() => navigateTo('blog', '/en/journal')} navigateTo={navigateTo} />;
+  if (currentView === 'articleClassroomManagementIfpEn') return <ArticleClassroomManagementIfpEn onBack={() => navigateTo('blog', '/en/journal')} navigateTo={navigateTo} />;
+
   if (currentView === 'guideIfp') return <GuideIFP locale={currentLocale} onBack={() => navigateTo('home', '/')} navigateTo={navigateTo} />;
   if (currentView === 'guideKids') return <GuideKids onBack={() => navigateTo('home', '/')} navigateTo={navigateTo} />;
 
@@ -745,7 +961,7 @@ const App: React.FC = () => {
               <nav className="mt-8 pt-4 border-t border-[#0C1A69]/10 flex flex-col gap-2 text-[10px] font-black text-[#0C1A69]/60 uppercase tracking-widest" aria-label="Menu Utama">
                 <a href="/game-edukasi-anak" onClick={(e) => { e.preventDefault(); playSound('pop'); navigateTo('hubKids', '/game-edukasi-anak'); }} className="hover:text-[#E45C63] transition-colors w-fit text-left">Game Anak (PAUD/TK)</a>
                 <a href="/game-logika" onClick={(e) => { e.preventDefault(); playSound('pop'); navigateTo('hubLogic', '/game-logika'); }} className="hover:text-[#E45C63] transition-colors w-fit text-left">Game Logika</a>
-                <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); playSound('pop'); navigateTo('hubIfp', '/game-edukasi-ifp'); }} className="hover:text-[#E45C63] transition-colors w-fit text-left">Game IFP/Kelas</a>
+                <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); playSound('pop'); navigateTo('hubIfp', '/game-edukasi-ifp'); }} className="hover:text-[#E45C63] transition-colors w-fit text-left">Game Edukasi IFP</a>
                 <div className="h-2"></div>
                 <a href="/about" onClick={(e) => { e.preventDefault(); playSound('pop'); navigateTo('about', '/about'); }} className="hover:text-[#E45C63] transition-colors w-fit text-left">Tentang Kami</a>
                 <a href="/privacy-policy" onClick={(e) => { e.preventDefault(); playSound('pop'); navigateTo('privacy', '/privacy-policy'); }} className="hover:text-[#E45C63] transition-colors w-fit text-left">Kebijakan Privasi</a>
@@ -840,7 +1056,7 @@ const App: React.FC = () => {
                   <span className="text-[#0C1A69]/30" aria-hidden="true">|</span>
                   <a href="/game-logika" onClick={(e) => { e.preventDefault(); playSound('pop'); navigateTo('hubLogic', '/game-logika'); }} className="hover:text-[#E45C63] transition-colors">Logika</a>
                   <span className="text-[#0C1A69]/30" aria-hidden="true">|</span>
-                  <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); playSound('pop'); navigateTo('hubIfp', '/game-edukasi-ifp'); }} className="hover:text-[#E45C63] transition-colors">IFP/Kelas</a>
+                  <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); playSound('pop'); navigateTo('hubIfp', '/game-edukasi-ifp'); }} className="hover:text-[#E45C63] transition-colors">Game Edukasi IFP</a>
                 </nav>
                 <nav className="mt-4 flex flex-wrap justify-center gap-3 text-[10px] font-black text-[#0C1A69]/60 uppercase tracking-widest w-full" aria-label="Menu Tambahan Mobile">
                   <a href="/about" onClick={(e) => { e.preventDefault(); playSound('pop'); navigateTo('about', '/about'); }} className="hover:text-[#E45C63] transition-colors">Tentang</a>

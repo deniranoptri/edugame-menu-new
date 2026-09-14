@@ -1,0 +1,40 @@
+{
+  "architecture_audit": {
+    "routing": "Custom SPA routing via History API (window.location.pathname) managed in App.tsx. Includes basic locale detection.",
+    "document_titles": "Imperatively managed via document.title within component useEffect hooks.",
+    "canonical_urls": "Imperatively injected via document.createElement('link') within component useEffect hooks.",
+    "json_ld": "Imperatively injected via script tags within component useEffect hooks. Cleanup functions remove them on unmount.",
+    "language_state": "App.tsx currently identifies locale (e.g., 'id') via URL parsing. JurnalGuru.tsx has an internal UI-only state toggle.",
+    "language_specific_routes": "App.tsx routes explicitly check for `locale === 'id'`, establishing a foundation for `locale === 'en'` branch logic.",
+    "metadata_abstraction": "None. Metadata is hardcoded inside each component. Global SEO will require either duplicating this pattern or building an SEO wrapper component.",
+    "sitemap_architecture": "Static file at public/sitemap.xml. Will require manual updates for /en/ routes in the future."
+  },
+  "hreflang_strategy_plan": {
+    "status": "DRAFT - DO NOT IMPLEMENT",
+    "mechanism": "When EN pages are published, both ID and EN components must inject `<link rel='alternate' hreflang='id' href='...' />` and `<link rel='alternate' hreflang='en' href='...' />`.",
+    "x_default": "The 'id' (Indonesian) URL will serve as the x-default since it is the primary language."
+  },
+  "content_mapping_blueprint": [
+    {
+      "id_source_route": "/jurnal-guru/panduan-menggunakan-ifp-untuk-pembelajaran-interaktif-di-kelas",
+      "id_component": "articleGuideIfp",
+      "proposed_en_slug": "/en/teacher-journal/interactive-flat-panel-teaching-guide",
+      "proposed_en_intent": "Informational / Pedagogical",
+      "proposed_en_primary_keyword": "interactive flat panel teaching strategies"
+    },
+    {
+      "id_source_route": "/jurnal-guru/pembelajaran-berdiferensiasi-menggunakan-ifp-di-kelas",
+      "id_component": "articleDifferentiatedIfp",
+      "proposed_en_slug": "/en/teacher-journal/differentiated-instruction-interactive-flat-panel",
+      "proposed_en_intent": "Classroom Strategy",
+      "proposed_en_primary_keyword": "differentiated instruction with interactive displays"
+    },
+    {
+      "id_source_route": "/jurnal-guru/pembelajaran-berbasis-proyek-menggunakan-ifp",
+      "id_component": "articlePjblIfp",
+      "proposed_en_slug": "/en/teacher-journal/project-based-learning-interactive-flat-panel",
+      "proposed_en_intent": "Implementation",
+      "proposed_en_primary_keyword": "project-based learning interactive flat panel"
+    }
+  ]
+}

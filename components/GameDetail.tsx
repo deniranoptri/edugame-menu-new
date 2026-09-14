@@ -222,7 +222,7 @@ const GameDetail: React.FC<GameDetailProps> = ({ game, onBack, locale = "id" }) 
               )}
               {['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional'].includes(game.id) && (
                 <a href={isEn ? "/en/educational-games-for-interactive-flat-panels" : "/game-edukasi-ifp"} onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', isEn ? '/en/educational-games-for-interactive-flat-panels' : '/game-edukasi-ifp'); window.dispatchEvent(new Event('popstate')); }} className="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-black uppercase rounded-full tracking-wider hover:bg-teal-200 transition-colors cursor-pointer border-2 border-transparent hover:border-teal-300">
-                  Game IFP / Kelas
+                  Game untuk IFP
                 </a>
               )}
               {game.tags?.map(tag => {
@@ -296,6 +296,21 @@ const GameDetail: React.FC<GameDetailProps> = ({ game, onBack, locale = "id" }) 
                     </li>
                   ))}
                 </ul>
+              </section>
+            )}
+
+            {/* IFP CONTEXTUAL SEO SECTION */}
+            {['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional', 'sciencelink'].includes(game.id) && (
+              <section className="mt-6 bg-teal-50 p-6 rounded-3xl border-2 border-teal-100 shadow-sm">
+                <h2 className="text-lg font-black text-teal-900 uppercase tracking-widest mb-2 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-teal-600"><rect width="18" height="12" x="3" y="4" rx="2" ry="2"/><line x1="12" x2="12" y1="16" y2="20"/><line x1="8" x2="16" y1="20" y2="20"/></svg>
+                  {isEn ? "Interactive Classroom Ready" : "Penggunaan di Kelas Interaktif"}
+                </h2>
+                <p className="text-teal-800/90 leading-relaxed font-medium text-sm md:text-base">
+                  {isEn 
+                    ? <>Because it supports direct touch and multi-touch interactions, this game is highly suitable for classroom activities using large touchscreens. Teachers can confidently integrate it as one of their primary <a href="/en/educational-games-for-interactive-flat-panels" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/en/educational-games-for-interactive-flat-panels'); window.dispatchEvent(new Event('popstate')); }} className="font-bold underline hover:text-teal-600">IFP educational games</a> or smartboard educational games, allowing students to collaborate and learn interactively in front of the class.</>
+                    : <>Karena mendukung interaksi multi-touch dan layar sentuh, game ini sangat cocok digunakan untuk aktivitas kelas. Guru dapat menggunakannya sebagai salah satu pilihan utama dari <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/game-edukasi-ifp'); window.dispatchEvent(new Event('popstate')); }} className="font-bold underline hover:text-teal-600">Game Edukasi IFP</a> (Interactive Flat Panel) maupun smartboard, memungkinkan siswa untuk berkolaborasi dan belajar secara interaktif langsung di depan kelas.</>}
+                </p>
               </section>
             )}
 

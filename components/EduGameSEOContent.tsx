@@ -65,6 +65,12 @@ const EduGameSEOContent: React.FC<Props> = ({ navigateTo, lang = 'id' }) => (
               : <>Bagi para pendidik dari tingkat PAUD hingga SMA, Papan Interaktif hadir sebagai solusi <strong>media pembelajaran interaktif</strong> yang fleksibel. Gunakan berbagai game ini sebagai sarana <strong>aktivitas kelas interaktif</strong>, latihan di kelas, maupun pembelajaran digital menggunakan layar besar <strong>Interactive Flat Panel (IFP)</strong> dan <strong>Smartboard</strong> untuk meningkatkan antusiasme siswa di sekolah.</>
             }
           </p>
+          <p className="text-sm md:text-base opacity-80 leading-relaxed font-medium mt-3">
+            {lang === 'en'
+              ? <>For learning using large touch screens, teachers can also access <a href="/en/educational-games-for-interactive-flat-panels" onClick={(e) => { e.preventDefault(); navigateTo('hubIfp', '/en/educational-games-for-interactive-flat-panels'); }} className="text-[#E45C63] font-bold hover:underline">IFP Educational Games</a> designed specifically for Interactive Flat Panels and interactive boards.</>
+              : <>Untuk pembelajaran menggunakan layar sentuh besar, guru juga dapat mengakses <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); navigateTo('hubIfp', '/game-edukasi-ifp'); }} className="text-[#E45C63] font-bold hover:underline">Game Edukasi IFP</a> yang dirancang khusus untuk digunakan pada Interactive Flat Panel dan papan interaktif.</>
+            }
+          </p>
         </article>
 
         <article>
@@ -88,8 +94,8 @@ const EduGameSEOContent: React.FC<Props> = ({ navigateTo, lang = 'id' }) => (
               </strong>
               <span className="text-sm opacity-80 font-medium">
                 {lang === 'en' 
-                   ? 'Interactive Flat Panel games or smartboard educational games are learning activities specifically designed for large touch screens in modern classrooms, helping teachers create engaging interactive classroom games.' 
-                   : 'Game papan interaktif digital (PID) atau game IFP adalah game edukasi yang dirancang khusus untuk dimainkan di layar sentuh besar di kelas, membantu guru menciptakan aktivitas pembelajaran interaktif yang menyenangkan.'}
+                   ? 'Interactive Flat Panel games, interactive whiteboard games, or smartboard educational games are learning activities specifically designed for large touch screens in modern classrooms. They help teachers create engaging interactive classroom games through multi-touch technology.' 
+                   : 'Game papan interaktif digital (PID), game edukasi layar sentuh, atau game IFP adalah game edukasi yang dirancang khusus untuk dimainkan di layar sentuh besar atau smartboard di kelas. Teknologi ini membantu guru menciptakan aktivitas pembelajaran interaktif yang melibatkan banyak siswa sekaligus.'}
               </span>
             </li>
             <li>

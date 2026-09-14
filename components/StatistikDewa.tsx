@@ -49,8 +49,8 @@ const StatistikDewa: React.FC = () => {
 
       {/* Grid Angka */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-2">
-        <StatItem icon="🎮" label="Media Interaktif" target={32} suffix="+" />
-        <StatItem icon="🏫" label="Sekolah Terimbas" target={4500} suffix="+" />
+        <StatItem icon="🎮" label="Media Interaktif" target={34} suffix="+" />
+        <StatItem icon="🏫" label="Sekolah Terimbas" target={15000} suffix="+" />
         <StatItem icon="👥" label="Guru Terinspirasi" target={2000} suffix="+" />
       </div>
     </div>
