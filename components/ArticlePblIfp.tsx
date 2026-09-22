@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticlePblIfpProps {
   onBack: () => void;
@@ -189,6 +190,8 @@ const ArticlePblIfp: React.FC<ArticlePblIfpProps> = ({ onBack, navigateTo }) => 
                 <li><strong>Kolaborasi:</strong> Siswa bekerja dalam kelompok kecil untuk melakukan curah pendapat, berbagi informasi, dan mengembangkan solusi.</li>
                 <li><strong>Pencarian Informasi Mandiri:</strong> Siswa didorong untuk mencari informasi lintas disiplin ilmu untuk menyelesaikan masalah.</li>
               </ul>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Perbedaan PBL dengan PjBL (Project Based Learning)</h2>
               <p>

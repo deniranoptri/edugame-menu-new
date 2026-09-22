@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleInkuiriIfpProps {
   onBack: () => void;
@@ -190,6 +191,8 @@ const ArticleInkuiriIfp: React.FC<ArticleInkuiriIfpProps> = ({ onBack, navigateT
                   <li><strong>Inkuiri Terbimbing (Guided Inquiry):</strong> Cocok untuk pemula. Guru menyiapkan struktur tabel, tautan simulasi, dan pertanyaan penuntun di layar IFP. Siswa hanya perlu maju untuk mengisi variabel dan menarik simpulan. Ini merupakan bagian dari <a href="/jurnal-guru/pembelajaran-berdiferensiasi-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleDifferentiatedIfp', '/jurnal-guru/pembelajaran-berdiferensiasi-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">diferensiasi proses</a>.</li>
                   <li><strong>Inkuiri Terbuka (Open Inquiry):</strong> Untuk siswa mahir. Layar IFP dibiarkan kosong sebagai kanvas putih (<em>blank slate</em>). Siswa diberi kebebasan penuh untuk merancang eksperimen virtual mereka sendiri, mencari alat digital yang tepat, dan mempresentasikannya.</li>
                 </ul>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">10 Aktivitas Inkuiri Interaktif Menggunakan IFP</h2>
                 <p>Berikut adalah 10 rancangan aktivitas inkuiri konkret yang memanfaatkan interaktivitas layar sentuh IFP:</p>

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleDiagnosticIfpEnProps {
   onBack: () => void;
@@ -168,6 +169,8 @@ const ArticleDiagnosticIfpEn: React.FC<ArticleDiagnosticIfpEnProps> = ({ onBack,
                   <li><strong>Instant Visualization:</strong> Teachers and students can see aggregated data (like voting charts or mind maps) instantly on the big screen.</li>
                   <li><strong>Kinesthetic Interactivity:</strong> Manipulating touch objects (dragging, pulling, drawing) engages motor memory and encourages natural responses.</li>
                 </ul>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">10 Diagnostic Strategies on the Touch Screen</h2>
                 <ul className="list-disc pl-6 space-y-4">

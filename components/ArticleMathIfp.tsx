@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleMathIfpProps {
   onBack: () => void;
@@ -148,6 +149,8 @@ const ArticleMathIfp: React.FC<ArticleMathIfpProps> = ({ onBack, navigateTo }) =
               <p>
                 Manfaat utamanya meliputi peningkatan partisipasi aktif dan penalaran matematis. Dengan mengubah papan tulis biasa menjadi kanvas digital yang merespons sentuhan, siswa lebih berani maju ke depan untuk mencoba menjelaskan pemikiran mereka (<em>student explanation</em>). Hal ini memungkinkan terjadinya diskusi matematika yang bermakna, di mana kesalahan konsep dapat segera diidentifikasi dan diperbaiki bersama-sama.
               </p>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">7 Ide Aktivitas Matematika Menggunakan IFP</h2>
               

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleClassroomManagementIfpProps {
   onBack: () => void;
@@ -154,6 +155,8 @@ const ArticleClassroomManagementIfp: React.FC<ArticleClassroomManagementIfpProps
                 <li><strong>Transisi yang Lambat:</strong> Waktu terbuang hanya untuk mengganti giliran kelompok maju ke depan kelas.</li>
                 <li><strong>Kehilangan Kendali Waktu:</strong> Keterasyikan menggunakan <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); navigateTo('hubIfp', '/game-edukasi-ifp'); }} className="text-blue-700 hover:underline font-bold">game edukasi IFP</a> membuat materi esensial tidak tersampaikan.</li>
               </ul>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Menetapkan Aturan dan Rutinitas Dasar IFP</h2>
               <p>

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleDeepLearningIfpProps {
   onBack: () => void;
@@ -191,6 +192,8 @@ const ArticleDeepLearningIfp: React.FC<ArticleDeepLearningIfpProps> = ({ onBack,
               <p>
                 Namun, harus ditekankan bahwa layar sentuh, resolusi, atau <a href="/jurnal-guru/fitur-ifp-untuk-pembelajaran-interaktif" onClick={(e) => { e.preventDefault(); navigateTo('articleIfpFeatures', '/jurnal-guru/fitur-ifp-untuk-pembelajaran-interaktif'); }} className="text-blue-700 hover:underline font-bold">fitur IFP untuk pembelajaran interaktif</a> lainnya tidak akan secara otomatis menciptakan <em>deep learning</em> tanpa desain pedagogis dari guru.
               </p>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Tiga Prinsip Pembelajaran Mendalam dan Peran IFP</h2>
               <p>

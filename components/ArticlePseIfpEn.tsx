@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticlePseIfpEnProps {
   onBack: () => void;
@@ -200,6 +201,8 @@ const ArticlePseIfpEn: React.FC<ArticlePseIfpEnProps> = ({ onBack, navigateTo })
                     <strong>IFP Role:</strong> Decision trees. When the class faces a behavioral dilemma, they collaboratively draw a decision tree on the IFP's infinite whiteboard, analyzing the ripple effects of positive versus negative choices.
                   </li>
                 </ul>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">10 Interactive SEL Activities Using an IFP</h2>
                 

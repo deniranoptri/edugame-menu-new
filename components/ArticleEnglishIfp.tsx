@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleEnglishIfpProps {
   onBack: () => void;
@@ -149,6 +150,8 @@ const ArticleEnglishIfp: React.FC<ArticleEnglishIfpProps> = ({ onBack, navigateT
                 <p>
                   Pemerolehan bahasa (<em>language acquisition</em>) terjadi ketika siswa terlibat dalam komunikasi yang bermakna. Mereka harus menebak makna dari konteks, membuat kesalahan yang aman, dan menerima umpan balik segera. Duduk diam dan menyalin <em>tenses</em> di buku tulis tidak akan memperlancar kecakapan <em>speaking</em> mereka. Siswa butuh <a href="/jurnal-guru/aktivitas-pembelajaran-interaktif-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleIfpActivities', '/jurnal-guru/aktivitas-pembelajaran-interaktif-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">aktivitas pembelajaran interaktif</a> untuk merangsang produksi bahasa.
                 </p>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Peran IFP sebagai Media Visual dan Interaktif</h2>
                 <p>

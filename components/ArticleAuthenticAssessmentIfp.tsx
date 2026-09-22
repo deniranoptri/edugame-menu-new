@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleAuthenticAssessmentIfpProps {
   onBack: () => void;
@@ -162,6 +163,8 @@ const ArticleAuthenticAssessmentIfp: React.FC<ArticleAuthenticAssessmentIfpProps
                 <li>Sering kali menghasilkan produk atau unjuk kerja.</li>
                 <li>Rubrik penilaian terbuka dan diketahui siswa sejak awal.</li>
               </ul>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Perbedaan Asesmen Autentik dengan Tes Tertulis Biasa</h2>
               <div className="overflow-x-auto">

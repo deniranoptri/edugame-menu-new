@@ -83,7 +83,35 @@ const socialLinks = [
 ];
 
 const generalGames: GameConfigWithTags[] = [
-
+  {
+    id: 'jejak-angka',
+    title: 'Jejak Angka',
+    subtitle: 'Petualangan Numerasi & Logika',
+    bgColor: 'linear-gradient(135deg, #2563EB 0%, #4F46E5 100%)',
+    isNew: true,
+    image: 'https://github.com/deniranoptri/media/blob/sibungas/Jejak%20Angka%20.png?raw=true',
+    url: 'https://gamejejakangka.papaninteraktif.com/',
+    description: "Game numerasi dan logika yang melatih ketelitian berhitung, strategi memilih angka, dan kemampuan mencapai jumlah target dengan pilihan yang tepat.",
+    subject: "Numerasi",
+    audience: "SD, SMP, SMA",
+    educationLevel: 'general',
+    learningFocus: "Ketelitian berhitung, penjumlahan, strategi memilih angka, pengambilan keputusan, dan logika.",
+    howToPlay: [
+      "Pilih angka pada papan secara bebas.",
+      "Setiap pilihan menambah jumlah menuju target.",
+      "Capai jumlah target dengan pilihan angka yang tepat.",
+      "Jika melewati target, gunakan undo untuk memperbaiki pilihan."
+    ],
+    educationalBenefits: [
+      "Melatih ketelitian dalam berhitung.",
+      "Menguatkan kemampuan penjumlahan.",
+      "Melatih pengambilan keputusan.",
+      "Mengembangkan strategi dan penalaran logis.",
+      "Melatih fokus dan ketelitian melalui permainan interaktif."
+    ],
+    tags: ['🔢 Numerasi', '🧠 Logika'],
+    categoryKeys: ['numeracy', 'logic']
+  },
   {
     id: 'helirescue',
     title: 'HELI RESCUE',
@@ -631,7 +659,7 @@ const parseRoute = (pathname: string): ParsedRoute => {
     return { locale, type: 'guideIfp' };
   } else if (locale === 'id' && pathType === 'panduan/memilih-game-edukasi-anak') {
     return { locale, type: 'guideKids' };
-  } else if (pathType === '') {
+  } else if (pathType === '' || pathType === 'index.html') {
     return { locale, type: 'home' };
   }
   

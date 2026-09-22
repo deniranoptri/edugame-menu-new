@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleDifferentiatedIfpProps {
   onBack: () => void;
@@ -180,6 +181,8 @@ const ArticleDifferentiatedIfp: React.FC<ArticleDifferentiatedIfpProps> = ({ onB
                   <li><strong>Diferensiasi Proses (Bagaimana cara memahami):</strong> IFP menyediakan <a href="/jurnal-guru/pembelajaran-mendalam-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleDeepLearningIfp', '/jurnal-guru/pembelajaran-mendalam-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">pembelajaran mendalam</a> lewat perancah visual (<em>visual scaffolding</em>). Siswa yang masih butuh bimbingan bisa maju ke IFP untuk menggeser blok-blok kategori (drag-and-drop), sementara siswa yang sudah mahir dibiarkan melakukan analisis tingkat lanjut di meja masing-masing lewat diskusi <a href="/jurnal-guru/pembelajaran-kolaboratif-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleCollaborativeIfp', '/jurnal-guru/pembelajaran-kolaboratif-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">pembelajaran kolaboratif</a>.</li>
                   <li><strong>Diferensiasi Produk (Bagaimana menunjukkan pemahaman):</strong> Saat tiba waktunya presentasi, kanvas IFP tidak memaksa siswa hanya menulis teks. Siswa bebas memilih: apakah mereka ingin mempresentasikan infografis yang mereka desain, mind-map yang mereka coret langsung di IFP, atau memainkan animasi dari aset yang ada.</li>
                 </ul>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">Fleksibilitas Pengelompokan dan Pilihan Siswa</h2>
                 <p>

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleFlippedIfpEnProps {
   onBack: () => void;
@@ -197,6 +198,8 @@ const ArticleFlippedIfpEn: React.FC<ArticleFlippedIfpEnProps> = ({ onBack, navig
                     <br/>Five minutes before class ends, the teacher poses a high-level reflective question on the IFP. Students submit short answers from their devices. The IFP displays all answers in real-time in an anonymous "Wall of Cards" format as a learning reflection.
                   </li>
                 </ul>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">2-Hour Lesson Scenario: "Composing an Exposition Text" (Language Arts)</h2>
                 <div className="bg-purple-50/50 p-6 rounded-2xl border border-purple-100 text-sm md:text-base space-y-4 shadow-sm text-gray-700 my-6">

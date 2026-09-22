@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleIfpActivitiesProps {
   onBack: () => void;
@@ -148,6 +149,8 @@ const ArticleIfpActivities: React.FC<ArticleIfpActivitiesProps> = ({ onBack, nav
               <p>
                 Alasan utama <strong>media pembelajaran IFP</strong> sangat efektif adalah karena kemampuannya mengakomodasi berbagai gaya belajar. Gaya belajar visual dimanjakan oleh resolusi tinggi dan warna tajam. Gaya belajar auditori didukung oleh audio built-in. Yang terpenting, gaya belajar kinestetik akhirnya terfasilitasi melalui sentuhan fisik (<em>touch</em>) pada <em>interactive whiteboard</em>, membuat siswa lebih mudah mengingat konsep yang diajarkan karena mereka mengalami pergerakan otot.
               </p>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. 7 Ide Aktivitas Pembelajaran dengan IFP di Kelas</h2>
               

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleCooperativeIfpProps {
   onBack: () => void;
@@ -159,6 +160,8 @@ const ArticleCooperativeIfp: React.FC<ArticleCooperativeIfpProps> = ({ onBack, n
               <p>
                 Pembelajaran kooperatif bisa diterapkan di dalam PBL maupun PjBL sebagai metode pengorganisasian kerja siswa.
               </p>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Unsur Mutlak Pembelajaran Kooperatif</h2>
               <p>Agar disebut kooperatif, pembelajaran harus memiliki 5 unsur ini (menurut Johnson & Johnson):</p>

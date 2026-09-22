@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleGuideIfpProps {
   onBack: () => void;
@@ -158,6 +159,8 @@ const ArticleGuideIfp: React.FC<ArticleGuideIfpProps> = ({ onBack, navigateTo })
                 <li><strong>Koneksi Internet:</strong> Banyak media pembelajaran digital memerlukan koneksi internet yang stabil agar dapat dimuat dengan cepat.</li>
                 <li><strong>Manajemen Perhatian:</strong> Tetapkan aturan kelas kapan siswa boleh maju menyentuh layar dan kapan mereka harus fokus ke instruksi guru.</li>
               </ul>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Cara Menggunakan IFP dalam Kegiatan Pembelajaran</h2>
               <p>

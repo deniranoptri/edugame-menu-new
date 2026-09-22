@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleCooperativeIfpEnProps {
   onBack: () => void;
@@ -174,6 +175,8 @@ const ArticleCooperativeIfpEn: React.FC<ArticleCooperativeIfpEnProps> = ({ onBac
                 <p>
                   Cooperative learning is often the underlying organizational method used *within* PBL or PjBL.
                 </p>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. The 5 Essential Elements of Cooperative Learning</h2>
                 <p>According to Johnson & Johnson, for learning to be truly cooperative, it must contain:</p>

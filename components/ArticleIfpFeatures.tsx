@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleIfpFeaturesProps {
   onBack: () => void;
@@ -151,6 +152,8 @@ const ArticleIfpFeatures: React.FC<ArticleIfpFeaturesProps> = ({ onBack, navigat
               <p>
                 Memahami <strong>fitur IFP untuk pembelajaran</strong> memungkinkan guru untuk merancang Rencana Pelaksanaan Pembelajaran (RPP) yang lebih efektif. Mengetahui kemampuan alat bantu ajar berarti Anda tahu apa yang bisa dan tidak bisa dilakukan oleh siswa Anda selama pelajaran berlangsung. Menguasai <em>fitur layar sentuh interaktif</em> menghindarkan IFP dari sekadar menjadi layar presentasi pasif yang mahal, dan mengubahnya menjadi <a href="/jurnal-guru/memaksimalkan-ifp-sebagai-media-pembelajaran-interaktif" onClick={(e) => { e.preventDefault(); navigateTo('articleIfpMedia', '/jurnal-guru/memaksimalkan-ifp-sebagai-media-pembelajaran-interaktif'); }} className="text-blue-700 hover:underline font-bold">media pembelajaran interaktif</a> yang sesungguhnya.
               </p>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Layar Sentuh dan Multi-Touch</h2>
               <p>

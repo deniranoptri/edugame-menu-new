@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleModuleIfpProps {
   onBack: () => void;
@@ -154,6 +155,8 @@ const ArticleModuleIfp: React.FC<ArticleModuleIfpProps> = ({ onBack, navigateTo 
               <p>
                 Menambahkan IFP secara spontan tanpa perencanaan di modul ajar sering berujung pada kekacauan: anak-anak berebut menyentuh layar, guru kesulitan mengendalikan kelas, atau layar sekadar menjadi proyektor pasif. Mengintegrasikannya ke dalam rancangan pembelajaran (RPP/Modul Ajar) memastikan bahwa <a href="/jurnal-guru/memaksimalkan-ifp-sebagai-media-pembelajaran-interaktif" onClick={(e) => { e.preventDefault(); navigateTo('articleIfpMedia', '/jurnal-guru/memaksimalkan-ifp-sebagai-media-pembelajaran-interaktif'); }} className="text-blue-700 hover:underline font-bold">penggunaan IFP selaras dengan tujuan</a>, mendorong interaktivitas, visualisasi yang bermakna, kolaborasi, dan umpan balik yang terukur.
               </p>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Mulai dari Tujuan Pembelajaran, Bukan dari Teknologi</h2>
               <p>

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleVisualIfpProps {
   onBack: () => void;
@@ -216,6 +217,8 @@ const ArticleVisualIfp: React.FC<ArticleVisualIfpProps> = ({ onBack, navigateTo 
                     <br/>Di akhir kelas, guru meminta siswa untuk "menggambar" (bukan menulis) satu konsep yang baru mereka pelajari hari ini di tablet mereka. Gambar-gambar tersebut kemudian di-<em>cast</em> (dikirim secara nirkabel) ke layar IFP, membentuk sebuah mosaik pemahaman kelas sebagai <a href="/jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleAssessmentIfp', '/jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">asesmen formatif visual</a>.
                   </li>
                 </ul>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">Skenario Pembelajaran Visual 2 JP: "Misteri Siklus Air" (Sains SD)</h2>
                 <div className="bg-rose-50/50 p-6 rounded-2xl border border-rose-100 text-sm md:text-base space-y-4 shadow-sm text-gray-700 my-6">

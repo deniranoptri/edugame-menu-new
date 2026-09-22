@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleFlippedIfpProps {
   onBack: () => void;
@@ -219,6 +220,8 @@ const ArticleFlippedIfp: React.FC<ArticleFlippedIfpProps> = ({ onBack, navigateT
                     <br/>5 menit sebelum kelas berakhir, guru memunculkan satu pertanyaan reflektif tingkat tinggi di IFP. Siswa mengirimkan jawaban pendek dari <em>smartphone/Chromebook</em> mereka. IFP menampilkan semua jawaban secara <em>real-time</em> dalam format "Dinding Bata" (<em>Wall of Cards</em>) tanpa nama, sebagai <a href="/jurnal-guru/refleksi-pembelajaran-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleReflectionIfp', '/jurnal-guru/refleksi-pembelajaran-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">refleksi pembelajaran</a>.
                   </li>
                 </ul>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">Skenario Pembelajaran 2 JP: "Penyusunan Teks Eksposisi" (Bahasa)</h2>
                 <div className="bg-purple-50/50 p-6 rounded-2xl border border-purple-100 text-sm md:text-base space-y-4 shadow-sm text-gray-700 my-6">

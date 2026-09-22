@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleDeepLearningIfpEnProps {
   onBack: () => void;
@@ -177,6 +178,8 @@ const ArticleDeepLearningIfpEn: React.FC<ArticleDeepLearningIfpEnProps> = ({ onB
                     <em>IFP Role:</em> Through gamification, <a href="/en/journal/formative-assessment-using-interactive-flat-panel" onClick={(e) => { e.preventDefault(); navigateTo('articleAssessmentIfpEn', '/en/journal/formative-assessment-using-interactive-flat-panel'); }} className="text-blue-700 hover:underline font-bold">evaluations</a> become fun, collaborative problem-solving activities rather than stressful tests.
                   </li>
                 </ul>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. The Three Stages of Meaningful Learning</h2>
                 <p>

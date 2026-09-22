@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleIpsIfpProps {
   onBack: () => void;
@@ -149,6 +150,8 @@ const ArticleIpsIfp: React.FC<ArticleIpsIfpProps> = ({ onBack, navigateTo }) => 
                 <p>
                   Konsep-konsep dalam IPS seperti letak geografis, arus migrasi, kegiatan ekonomi (pasar), hingga rentetan sejarah kemerdekaan sangat sulit dipahami hanya lewat narasi. Siswa butuh konteks visual. Membicarakan kepadatan permukiman di bantaran sungai akan jauh lebih berdampak jika siswa langsung melihat citra satelit sungai tersebut di IFP, memperbesar gambarnya, dan membandingkannya dengan area sekitarnya melalui <a href="/jurnal-guru/aktivitas-pembelajaran-interaktif-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleIfpActivities', '/jurnal-guru/aktivitas-pembelajaran-interaktif-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">aktivitas pembelajaran interaktif</a>.
                 </p>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. IFP sebagai Media Pembelajaran IPS (Bukan Tujuan)</h2>
                 <p>

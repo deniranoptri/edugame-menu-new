@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleDifferentiatedIfpEnProps {
   onBack: () => void;
@@ -183,6 +184,8 @@ const ArticleDifferentiatedIfpEn: React.FC<ArticleDifferentiatedIfpEnProps> = ({
                     <strong>IFP Role:</strong> Letting students present via direct whiteboard sketching, casting a presentation from their device, or showing a recorded video.
                   </div>
                 </div>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">10 Practical Strategies for Differentiated Learning Using IFP</h2>
                 <ul className="list-none pl-0 space-y-6">

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleInkuiriIfpEnProps {
   onBack: () => void;
@@ -177,6 +178,8 @@ const ArticleInkuiriIfpEn: React.FC<ArticleInkuiriIfpEnProps> = ({ onBack, navig
                   <li><strong>Guided Inquiry:</strong> Suitable for beginners. The teacher prepares a table structure, simulation links, and guiding questions on the IFP screen. Students only need to step forward to fill in the variables and draw conclusions. This is a form of <a href="/en/journal/differentiated-learning-using-interactive-flat-panel" onClick={(e) => { e.preventDefault(); navigateTo('articleDifferentiatedIfpEn', '/en/journal/differentiated-learning-using-interactive-flat-panel'); }} className="text-blue-700 hover:underline font-bold">differentiated instruction</a>.</li>
                   <li><strong>Open Inquiry:</strong> For advanced students. The IFP screen is left as a <em>blank slate</em>. Students are given full freedom to design their own virtual experiments, find the right digital tools, and present them.</li>
                 </ul>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">10 Interactive Inquiry Activities Using an IFP</h2>
                 <p>Here are 10 concrete inquiry activity designs that utilize the IFP's touch-screen interactivity:</p>

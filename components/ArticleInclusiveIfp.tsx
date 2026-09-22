@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleInclusiveIfpProps {
   onBack: () => void;
@@ -148,6 +149,8 @@ const ArticleInclusiveIfp: React.FC<ArticleInclusiveIfpProps> = ({ onBack, navig
               <p>
                 Mengabaikan keberagaman di kelas sama dengan merancang kegagalan secara sistematis bagi sebagian siswa. Anak yang dominan visual akan kesulitan jika guru hanya berceramah. Anak yang kinestetik akan merasa gelisah jika hanya disuruh duduk membaca buku teks. Dengan memperhatikan keberagaman dan menerapkan strategi inklusif, guru memvalidasi potensi setiap anak. <a href="/jurnal-guru/memaksimalkan-ifp-sebagai-media-pembelajaran-interaktif" onClick={(e) => { e.preventDefault(); navigateTo('articleIfpMedia', '/jurnal-guru/memaksimalkan-ifp-sebagai-media-pembelajaran-interaktif'); }} className="text-blue-700 hover:underline font-bold">Penggunaan IFP secara maksimal</a> dapat menjawab tantangan visual, auditori, maupun kinestetik sekaligus.
               </p>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. IFP Sebagai Alat Bantu, Bukan Tujuan</h2>
               <p>

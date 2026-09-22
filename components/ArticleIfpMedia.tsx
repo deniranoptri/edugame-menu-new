@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleIfpMediaProps {
   onBack: () => void;
@@ -144,6 +145,8 @@ const ArticleIfpMedia: React.FC<ArticleIfpMediaProps> = ({ onBack, navigateTo })
               <p>
                 Penggunaan layar sentuh besar di kelas memberikan keuntungan yang signifikan dibandingkan metode tradisional. Pertama, <strong>pembelajaran interaktif</strong> terbukti secara klinis mampu meningkatkan atensi dan retensi materi. Kedua, layar sentuh (touchscreen) memberikan pengalaman belajar kinestetik; siswa tidak hanya melihat dan mendengar, tetapi juga menyentuh dan berpartisipasi. Ketiga, fitur <em>multi-touch</em> memungkinkan beberapa siswa maju ke depan dan berkolaborasi sekaligus di satu smartboard.
               </p>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">Cara Menggunakan IFP dalam Kegiatan Pembelajaran</h2>
               

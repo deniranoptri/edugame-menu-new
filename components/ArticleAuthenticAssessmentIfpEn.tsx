@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleAuthenticAssessmentIfpEnProps {
   onBack: () => void;
@@ -174,6 +175,8 @@ const ArticleAuthenticAssessmentIfpEn: React.FC<ArticleAuthenticAssessmentIfpEnP
                   <li>Often results in a product or performance.</li>
                   <li>Grading rubrics are open and known to students from the beginning.</li>
                 </ul>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Why the IFP Supports Authentic Tasks</h2>
                 <p>

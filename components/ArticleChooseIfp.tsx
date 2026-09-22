@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleChooseIfpProps {
   onBack: () => void;
@@ -162,6 +163,8 @@ const ArticleChooseIfp: React.FC<ArticleChooseIfpProps> = ({ onBack, navigateTo 
                 <li><strong>Usia Siswa (Student Age):</strong> <strong>IFP untuk kelas SD</strong> membutuhkan daya tahan ekstra dan antarmuka sentuh yang sangat sederhana, berbeda dengan kebutuhan lab komputer anak SMA.</li>
                 <li><strong>Kebutuhan Kolaborasi:</strong> Jika sekolah Anda menerapkan Kurikulum Merdeka yang sarat dengan Proyek Penguatan Profil Pelajar Pancasila (P5), fitur yang memfasilitasi kerja kelompok mutlak diperlukan.</li>
               </ul>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Ukuran Layar IFP dan Kondisi Ruang Kelas</h2>
               <p>

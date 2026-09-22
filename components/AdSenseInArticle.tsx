@@ -16,7 +16,7 @@ export const AdSenseInArticle: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full my-8">
+    <div className="w-full my-8 min-h-[250px] flex items-center justify-center">
       <ins
         ref={adRef}
         className="adsbygoogle"

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticlePblIfpEnProps {
   onBack: () => void;
@@ -200,6 +201,8 @@ const ArticlePblIfpEn: React.FC<ArticlePblIfpEnProps> = ({ onBack, navigateTo })
                     The class critiques the solutions. The IFP is used for peer-voting, rubric display, and capturing final reflective takeaways, embedding <a href="/en/journal/reflective-learning-using-interactive-flat-panel" onClick={(e) => { e.preventDefault(); navigateTo('articleReflectiveLearningIfpEn', '/en/journal/reflective-learning-using-interactive-flat-panel'); }} className="text-blue-700 hover:underline font-bold">reflective learning</a> deeply into the routine.
                   </li>
                 </ol>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">10 Interactive PBL Activities Utilizing the IFP</h2>
                 

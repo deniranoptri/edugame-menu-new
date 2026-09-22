@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleReflectionIfpProps {
   onBack: () => void;
@@ -148,6 +149,8 @@ const ArticleReflectionIfp: React.FC<ArticleReflectionIfpProps> = ({ onBack, nav
               <p>
                 Seringkali, refleksi dilakukan dengan menulis di buku catatan pribadi yang hanya dibaca oleh guru. Meskipun ini baik untuk privasi, metode ini kehilangan kekuatan belajar dari <em>peer</em> (teman sebaya). Menggunakan layar sentuh raksasa IFP sebagai medium refleksi memungkinkan siswa melihat agregat pemahaman kelas. Mereka menyadari bahwa "Oh, ternyata bukan hanya saya yang masih bingung tentang materi ini." Hal ini menumbuhkan empati dan rasa aman di dalam kelas.
               </p>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Exit Ticket Interaktif di Layar Sentuh</h2>
               <p>

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleBahasaIndonesiaIfpProps {
   onBack: () => void;
@@ -149,6 +150,8 @@ const ArticleBahasaIndonesiaIfp: React.FC<ArticleBahasaIndonesiaIfpProps> = ({ o
                 <p>
                   Bahasa Indonesia adalah mata pelajaran yang sangat tekstual. Sayangnya, memproses paragraf panjang secara pasif dari buku sering memicu kebosanan atau kebuntuan daya tangkap. Dengan mengusung <strong>Bahasa Indonesia interaktif dengan Interactive Flat Panel</strong>, teks diubah menjadi objek visual yang manipulatif. Guru dapat memperbesar ukuran teks, menandai kata hubung dengan berbagai warna, dan memandu pemusatan perhatian kelas dengan sangat presisi.
                 </p>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Peran IFP sebagai Media, Bukan Tujuan Pembelajaran</h2>
                 <p>

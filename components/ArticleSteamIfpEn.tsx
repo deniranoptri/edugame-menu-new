@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleSteamIfpEnProps {
   onBack: () => void;
@@ -199,6 +200,8 @@ const ArticleSteamIfpEn: React.FC<ArticleSteamIfpEnProps> = ({ onBack, navigateT
                     <br/>Using an electrical circuit simulator. Students draw lines on the IFP that act as virtual wires, connecting batteries, switches, and light bulbs. If the voltage and resistance calculations are correct (Math), the animated light bulb on the IFP illuminates.
                   </li>
                 </ul>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">2-Hour STEAM Lesson Scenario: "Designing a Green City Park"</h2>
                 <div className="bg-purple-50/50 p-6 rounded-2xl border border-purple-100 text-sm md:text-base space-y-4 shadow-sm text-gray-700 my-6">

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleGamificationIfpProps {
   onBack: () => void;
@@ -166,6 +167,8 @@ const ArticleGamificationIfp: React.FC<ArticleGamificationIfpProps> = ({ onBack,
                 <p>
                   Gamifikasi menuntut <strong>umpan balik instan (immediate feedback)</strong> dan <strong>visibilitas publik</strong>. Jika guru mencatat poin diam-diam di buku nilai, elemen gamifikasinya mati. Papan peringkat (<em>leaderboard</em>), <em>timer</em> hitung mundur, dan animasi kemenangan harus terlihat besar, bercahaya, dan dapat diintervensi oleh siswa langsung. IFP memenuhi semua kriteria ini. Layarnya yang besar, respons sentuhannya, dan audionya menciptakan atmosfer kompetitif yang sehat ala <em>game show</em> di TV.
                 </p>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Elemen Utama Gamifikasi di Layar IFP</h2>
                 <p>Agar gamifikasi berjalan efektif di kelas, pastikan Anda menampilkan setidaknya 3 dari 5 elemen berikut di IFP secara konsisten selama jam pelajaran:</p>

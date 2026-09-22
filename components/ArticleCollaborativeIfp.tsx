@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleCollaborativeIfpProps {
   onBack: () => void;
@@ -191,6 +192,8 @@ const ArticleCollaborativeIfp: React.FC<ArticleCollaborativeIfpProps> = ({ onBac
               <div className="bg-teal-50 p-4 rounded-xl border-l-4 border-teal-500 my-6 text-sm">
                 <strong>💡 Catatan:</strong> Untuk memahami lebih lanjut potensi dasar perangkat ini, silakan baca <a href="/jurnal-guru/panduan-menggunakan-ifp-untuk-pembelajaran-interaktif-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleGuideIfp', '/jurnal-guru/panduan-menggunakan-ifp-untuk-pembelajaran-interaktif-di-kelas'); }} className="text-blue-700 hover:underline font-bold">Panduan Menggunakan IFP untuk Pembelajaran Interaktif di Kelas</a>.
               </div>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Cara Mengatur Kelompok Saat Menggunakan IFP</h2>
               <p>

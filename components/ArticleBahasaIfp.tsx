@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleBahasaIfpProps {
   onBack: () => void;
@@ -152,6 +153,8 @@ const ArticleBahasaIfp: React.FC<ArticleBahasaIfpProps> = ({ onBack, navigateTo 
                 <li><strong>Membaca Teks Interaktif:</strong> Tampilkan sebuah wacana di layar besar. Ajak siswa membaca nyaring secara bergiliran. Guru dapat menggunakan alat <em>highlighter digital</em> untuk langsung menyoroti pelafalan atau intonasi pada frasa tertentu saat itu juga.</li>
                 <li><strong>Mengenali Unsur Cerita:</strong> Saat membaca cerpen bersama, guru dapat meminta perwakilan siswa maju untuk melingkari dengan warna biru untuk "Tokoh", hijau untuk "Latar", dan merah untuk "Konflik".</li>
               </ul>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">Aktivitas Memahami Teks dengan Layar Sentuh</h2>
               <p>

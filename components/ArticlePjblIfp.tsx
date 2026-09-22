@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticlePjblIfpProps {
   onBack: () => void;
@@ -179,6 +180,8 @@ const ArticlePjblIfp: React.FC<ArticlePjblIfpProps> = ({ onBack, navigateTo }) =
               <p>
                 Proyek yang kompleks sering kali menghasilkan data, ide, dan referensi yang berserakan. Jika hanya mengandalkan kertas karton atau papan tulis konvensional, jejak pemikiran siswa (<em>trail of thoughts</em>) mudah hilang atau terhapus. Dengan <a href="/jurnal-guru/memaksimalkan-ifp-sebagai-media-pembelajaran-interaktif" onClick={(e) => { e.preventDefault(); navigateTo('articleIfpMedia', '/jurnal-guru/memaksimalkan-ifp-sebagai-media-pembelajaran-interaktif'); }} className="text-blue-700 hover:underline font-bold">memaksimalkan IFP sebagai media pembelajaran</a>, seluruh proses—dari <em>mind map</em> awal hingga prototipe digital—dapat disimpan, diakses kembali (<em>recall</em>), dan direvisi pada pertemuan berikutnya. 
               </p>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Fase 1: Penentuan Pertanyaan Mendasar (Start with the Essential Question)</h2>
               <p>

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleCollaborativeIfpEnProps {
   onBack: () => void;
@@ -168,6 +169,8 @@ const ArticleCollaborativeIfpEn: React.FC<ArticleCollaborativeIfpEnProps> = ({ o
                   <li><strong>Multi-Touch Capability:</strong> Modern IFPs can detect 20 to 40 touch points simultaneously. This means two, three, or four students can step up and interact with the digital canvas at the same time without waiting.</li>
                   <li><strong>Shared Workspace:</strong> The IFP provides an infinite digital whiteboard where students can perform visual activities with immediate feedback.</li>
                 </ul>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. How to Manage Groups at the IFP</h2>
                 <p>

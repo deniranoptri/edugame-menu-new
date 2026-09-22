@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleStationRotationIfpEnProps {
   onBack: () => void;
@@ -200,6 +201,8 @@ const ArticleStationRotationIfpEn: React.FC<ArticleStationRotationIfpEnProps> = 
                     <br/>At the IFP station, students open a group interactive quiz app. The IFP immediately displays scores and automated feedback for their answers. This serves as a rapid <a href="/en/journal/formative-assessment-using-interactive-flat-panel" onClick={(e) => { e.preventDefault(); navigateTo('articleAssessmentIfpEn', '/en/journal/formative-assessment-using-interactive-flat-panel'); }} className="text-blue-700 hover:underline font-bold">formative assessment</a> without requiring teacher intervention.
                   </li>
                 </ul>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">2-Hour Station Rotation Scenario (Math: 2D Geometry)</h2>
                 <div className="bg-emerald-50/50 p-6 rounded-2xl border border-emerald-100 text-sm md:text-base space-y-4 shadow-sm text-gray-700 my-6">

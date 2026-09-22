@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleIpaIfpProps {
   onBack: () => void;
@@ -153,6 +154,8 @@ const ArticleIpaIfp: React.FC<ArticleIpaIfpProps> = ({ onBack, navigateTo }) => 
                 <li>Mengklasifikasi (<em>Classify</em>) objek, sifat material, atau variabel fisika.</li>
                 <li>Menjelaskan (<em>Explain</em>) alur atau proses sebab-akibat berdasarkan apa yang divisualisasikan.</li>
               </ul>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Aktivitas 1 — Observasi Gambar dan Video Fenomena IPA</h2>
               <p>

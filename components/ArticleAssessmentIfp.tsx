@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleAssessmentIfpProps {
   onBack: () => void;
@@ -182,6 +183,8 @@ const ArticleAssessmentIfp: React.FC<ArticleAssessmentIfpProps> = ({ onBack, nav
               <p>
                 Banyak guru masih menganggap IFP hanya sebagai layar presentasi yang canggih atau sekadar alat untuk menampilkan video. Padahal, <em>asesmen interaktif dengan IFP</em> mampu mengubah dinamika kelas secara drastis. Dengan fitur sentuh ganda (<em>multi-touch</em>) dan integrasi perangkat lunak nirkabel, <strong>asesmen digital di kelas</strong> menjadi instan. Guru dapat melihat di mana letak kesulitan siswa, mengidentifikasi miskonsepsi secara <em>real-time</em>, dan langsung memodifikasi strategi mengajar pada jam pelajaran tersebut.
               </p>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">Ide Aktivitas Asesmen Formatif dengan IFP</h2>
               <p>

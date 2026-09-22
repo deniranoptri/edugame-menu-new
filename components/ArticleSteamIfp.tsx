@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleSteamIfpProps {
   onBack: () => void;
@@ -185,6 +186,8 @@ const ArticleSteamIfp: React.FC<ArticleSteamIfpProps> = ({ onBack, navigateTo })
                   <li><strong>Art (Seni):</strong> Seni dalam STEAM memberikan ruang bagi estetika, desain antarmuka, dan empati pengguna. Di IFP, siswa menggunakan palet warna digital tanpa batas untuk membuat poster presentasi, mendesain logo proyek, atau mengeksplorasi proporsi visual (<em>golden ratio</em>).</li>
                   <li><strong>Mathematics (Matematika):</strong> Mulai dari kalkulator grafis yang dapat disentuh, manipulatif pecahan, hingga grafik 3D yang dapat diputar 360 derajat. Matematika berubah dari sekadar angka di kertas menjadi bentuk visual interaktif yang konkret melalui <a href="/jurnal-guru/pembelajaran-matematika-interaktif-menggunakan-ifp" onClick={(e) => { e.preventDefault(); navigateTo('articleMatematikaIfp', '/jurnal-guru/pembelajaran-matematika-interaktif-menggunakan-ifp'); }} className="text-blue-700 hover:underline font-bold">aktivitas matematika IFP</a>.</li>
                 </ul>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">Siklus Rekayasa (Engineering Design Process) di IFP</h2>
                 <p>

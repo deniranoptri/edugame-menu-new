@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticlePseIfpProps {
   onBack: () => void;
@@ -188,6 +189,8 @@ const ArticlePseIfp: React.FC<ArticlePseIfpProps> = ({ onBack, navigateTo }) => 
                 <p>
                   Bagi anak-anak dan remaja, mengartikulasikan emosi yang abstrak dengan kata-kata adalah tugas kognitif yang berat. Emosi itu transien dan tidak berwujud. IFP membantu melakukan "objektifikasi emosi" (<em>emotional objectification</em>). Dengan menempelkan <em>sticky note</em> digital bergambar "awan badai" (marah) atau "matahari" (senang) di IFP, siswa memisahkan emosi tersebut dari identitas dirinya. Mereka menyadari bahwa <em>"saya sedang merasakan marah"</em>, bukan <em>"saya adalah pemarah"</em>. Ini adalah langkah krusial dalam <a href="/jurnal-guru/asesmen-diagnostik-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleDiagnosticIfp', '/jurnal-guru/asesmen-diagnostik-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">asesmen diagnostik emosional</a>.
                 </p>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">10 Aktivitas Pembelajaran Sosial Emosional (PSE) Interaktif</h2>
                 <p>Berikut adalah 10 aktivitas praktis yang dapat langsung diterapkan guru menggunakan IFP untuk memperkuat kultur sosial emosional di ruang kelas:</p>

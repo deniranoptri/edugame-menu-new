@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleVisualIfpEnProps {
   onBack: () => void;
@@ -195,6 +196,8 @@ const ArticleVisualIfpEn: React.FC<ArticleVisualIfpEnProps> = ({ onBack, navigat
                     <br/>At the end of class, the teacher asks students to "draw" (not write) one concept they learned today on their tablets. These sketches are cast wirelessly to the IFP, creating a mosaic of class comprehension as a <a href="/en/journal/formative-assessment-using-interactive-flat-panel" onClick={(e) => { e.preventDefault(); navigateTo('articleAssessmentIfpEn', '/en/journal/formative-assessment-using-interactive-flat-panel'); }} className="text-blue-700 hover:underline font-bold">visual formative assessment</a>.
                   </li>
                 </ul>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">2-Hour Visual Scenario: "The Water Cycle Mystery" (Elementary Science)</h2>
                 <div className="bg-rose-50/50 p-6 rounded-2xl border border-rose-100 text-sm md:text-base space-y-4 shadow-sm text-gray-700 my-6">

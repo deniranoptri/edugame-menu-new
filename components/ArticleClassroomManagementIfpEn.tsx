@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleClassroomManagementIfpEnProps {
   onBack: () => void;
@@ -169,6 +170,8 @@ const ArticleClassroomManagementIfpEn: React.FC<ArticleClassroomManagementIfpEnP
                   <li><strong>Slow Transitions:</strong> Time wasted just rotating groups to the front of the class.</li>
                   <li><strong>Loss of Time Control:</strong> Getting so caught up in educational games that essential curriculum is missed.</li>
                 </ul>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Establishing Basic IFP Routines</h2>
                 <p>

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleMatematikaIfpProps {
   onBack: () => void;
@@ -149,6 +150,8 @@ const ArticleMatematikaIfp: React.FC<ArticleMatematikaIfpProps> = ({ onBack, nav
                 <p>
                   Banyak siswa mengalami kecemasan matematika (<em>math anxiety</em>) karena mereka dipaksa langsung berpikir pada tahap simbolik (angka dan huruf) tanpa melewati tahap konkret (objek fisik) dan ikonis (gambar). Otak manusia memproses konsep kuantitas jauh lebih cepat jika divisualisasikan. <strong>Visualisasi matematika dengan layar interaktif</strong> menyediakan "jembatan visual" tersebut. 
                 </p>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. IFP sebagai Papan Eksplorasi Matematika</h2>
                 <p>

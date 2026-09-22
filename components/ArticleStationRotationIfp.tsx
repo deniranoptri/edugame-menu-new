@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleStationRotationIfpProps {
   onBack: () => void;
@@ -225,6 +226,8 @@ const ArticleStationRotationIfp: React.FC<ArticleStationRotationIfpProps> = ({ o
                     <br/>Di stasiun IFP, siswa membuka aplikasi kuis interaktif kelompok. IFP langsung menampilkan skor dan umpan balik otomatis atas jawaban mereka. Ini menjadi <a href="/jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleAssessmentIfp', '/jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">asesmen formatif cepat</a> tanpa memerlukan intervensi guru.
                   </li>
                 </ul>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">Skenario Pembelajaran Station Rotation 2 JP (Matematika: Bangun Datar)</h2>
                 <div className="bg-emerald-50/50 p-6 rounded-2xl border border-emerald-100 text-sm md:text-base space-y-4 shadow-sm text-gray-700 my-6">

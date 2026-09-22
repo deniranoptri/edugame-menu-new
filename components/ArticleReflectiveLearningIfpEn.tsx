@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleReflectiveLearningIfpEnProps {
   onBack: () => void;
@@ -163,6 +164,8 @@ const ArticleReflectiveLearningIfpEn: React.FC<ArticleReflectiveLearningIfpEnPro
                 <p>
                   Often, reflection is done in private notebooks read only by the teacher. While good for privacy, this method loses the power of peer learning. Using the IFP's giant touch screen as a reflective medium allows students to see the aggregate understanding of the class. They realize, "Oh, I'm not the only one who is confused about this." This fosters empathy and psychological safety.
                 </p>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">10 Reflective Activities on the IFP</h2>
                 <ul className="list-disc pl-6 space-y-4">

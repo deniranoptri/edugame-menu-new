@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleDigitalLiteracyIfpProps {
   onBack: () => void;
@@ -148,6 +149,8 @@ const ArticleDigitalLiteracyIfp: React.FC<ArticleDigitalLiteracyIfpProps> = ({ o
               <p>
                 Kesalahan fatal yang sering terjadi di sekolah adalah menganggap literasi digital selesai setelah siswa bisa menyalakan komputer atau mengirim email. Teknologi, termasuk IFP, hanyalah alat bantu. Tujuan utamanya adalah membangun kemampuan berpikir. Siswa harus diajak bergeser dari status "pengguna teknologi yang pasif" menjadi "pemikir kritis yang berdaya di dunia digital".
               </p>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Peran IFP dalam Membangun Literasi Digital</h2>
               <p>

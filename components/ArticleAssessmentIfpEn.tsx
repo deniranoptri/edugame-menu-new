@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleAssessmentIfpEnProps {
   onBack: () => void;
@@ -163,6 +164,8 @@ const ArticleAssessmentIfpEn: React.FC<ArticleAssessmentIfpEnProps> = ({ onBack,
                 <p>
                   Many teachers still consider the IFP merely as an advanced presentation screen. However, interactive assessment with an IFP can drastically alter classroom dynamics. With multi-touch features and wireless device integration, digital assessment becomes instant.
                 </p>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">10 Formative Assessment Activities Using the IFP</h2>
                 <ul className="list-disc pl-6 space-y-4">

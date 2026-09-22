@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticlePjblIfpEnProps {
   onBack: () => void;
@@ -163,6 +164,8 @@ const ArticlePjblIfpEn: React.FC<ArticlePjblIfpEnProps> = ({ onBack, navigateTo 
                 <p>
                   Complex projects often produce scattered data, ideas, and references. If you only rely on poster board or conventional whiteboards, students' <em>trail of thoughts</em> are easily lost or erased. By maximizing the IFP as an interactive learning medium, the entire process—from the initial <em>mind map</em> to the digital prototype—can be saved, recalled, and revised in subsequent meetings.
                 </p>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Phase 1: Determining the Essential Question</h2>
                 <p>

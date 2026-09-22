@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleDiagnosticIfpProps {
   onBack: () => void;
@@ -179,6 +180,8 @@ const ArticleDiagnosticIfp: React.FC<ArticleDiagnosticIfpProps> = ({ onBack, nav
               <p>
                 Tanpa asesmen diagnostik, guru mengajar berdasarkan asumsi. Asumsi bahwa semua siswa mulai dari garis <em>start</em> yang sama sering kali salah. Sebagian siswa mungkin sudah menguasai konsep, sebagian belum tahu apa-apa, dan sebagian lagi—yang paling berbahaya—membawa <strong>miskonsepsi</strong> yang mengakar. Memetakan kondisi awal ini krusial agar guru tidak membuang waktu mengulang materi yang sudah dikuasai atau melompat terlalu jauh meninggalkan siswa yang belum siap.
               </p>
+
+              <AdSenseInArticle />
 
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">3. Perbedaan Asesmen Diagnostik dan Asesmen Formatif</h2>
               <p>

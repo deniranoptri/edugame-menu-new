@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { AdSenseInArticle } from './AdSenseInArticle';
 
 interface ArticleGamificationIfpEnProps {
   onBack: () => void;
@@ -185,6 +186,8 @@ const ArticleGamificationIfpEn: React.FC<ArticleGamificationIfpEnProps> = ({ onB
                     On-screen timers that create positive tension and urgency during group tasks.
                   </div>
                 </div>
+
+                <AdSenseInArticle />
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">10 Ways to Apply Gamification on an IFP</h2>
                 <ul className="list-none pl-0 space-y-6">
