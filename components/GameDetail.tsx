@@ -193,13 +193,13 @@ const GameDetail: React.FC<GameDetailProps> = ({ game, onBack, locale = "id" }) 
           <div className="w-full md:w-1/3 flex justify-center">
             <div 
               className="w-full aspect-square max-w-[240px] rounded-3xl p-4 shadow-inner flex items-center justify-center border-4"
-              style={{ backgroundColor: game.bgColor, borderColor: 'rgba(255,255,255,0.5)' }}
+              style={{ background: game.bgColor, borderColor: 'rgba(255,255,255,0.5)' }}
             >
               {game.image && (
                 <img 
                   src={game.image} 
                   alt={`Ikon game ${game.title}`} 
-                  className="w-full h-full object-cover rounded-xl drop-shadow-md"
+                  className={`w-full h-full ${game.id === 'color-link-junior' ? 'object-contain p-2' : 'object-cover'} rounded-xl drop-shadow-md`}
                 />
               )}
             </div>
@@ -220,7 +220,7 @@ const GameDetail: React.FC<GameDetailProps> = ({ game, onBack, locale = "id" }) 
                   Logika
                 </a>
               )}
-              {['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional'].includes(game.id) && (
+              {['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional', 'color-link-junior'].includes(game.id) && (
                 <a href={isEn ? "/en/educational-games-for-interactive-flat-panels" : "/game-edukasi-ifp"} onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', isEn ? '/en/educational-games-for-interactive-flat-panels' : '/game-edukasi-ifp'); window.dispatchEvent(new Event('popstate')); }} className="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-black uppercase rounded-full tracking-wider hover:bg-teal-200 transition-colors cursor-pointer border-2 border-transparent hover:border-teal-300">
                   Game untuk IFP
                 </a>
@@ -300,7 +300,7 @@ const GameDetail: React.FC<GameDetailProps> = ({ game, onBack, locale = "id" }) 
             )}
 
             {/* IFP CONTEXTUAL SEO SECTION */}
-            {['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional', 'sciencelink'].includes(game.id) && (
+            {['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional', 'sciencelink', 'color-link-junior'].includes(game.id) && (
               <section className="mt-6 bg-teal-50 p-6 rounded-3xl border-2 border-teal-100 shadow-sm">
                 <h2 className="text-lg font-black text-teal-900 uppercase tracking-widest mb-2 flex items-center gap-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-teal-600"><rect width="18" height="12" x="3" y="4" rx="2" ry="2"/><line x1="12" x2="12" y1="16" y2="20"/><line x1="8" x2="16" y1="20" y2="20"/></svg>

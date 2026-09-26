@@ -3,7 +3,8 @@ import { MenuCardProps } from '../types';
 
 const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const isLight = config.variant === 'light';
+  const isColorLink = config.id === 'color-link-junior';
+  const isLight = config.variant === 'light' && !isColorLink;
   const isEn = locale === 'en' && config.en;
   const displayTitle = isEn ? config.en.title : config.title;
   const displaySubtitle = isEn ? config.en.subtitle : config.subtitle;
@@ -12,19 +13,29 @@ const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) =
 
   const isComingSoon = config.isComingSoon;
   
-  const textColorClass = isLight ? 'text-[#B71C1C]' : 'text-white';
-  const subTextColorClass = isLight ? 'text-[#B71C1C]' : 'text-white';
-  const borderClass = isLight ? 'border-[#EF9A9A]' : 'border-white/40';
-  const focusRingClass = isLight ? 'focus:ring-[#EF9A9A]/50' : 'focus:ring-white/50';
+  const textColorClass = isColorLink ? 'text-[#0C1A69]' : isLight ? 'text-[#B71C1C]' : 'text-white';
+  const subTextColorClass = isColorLink ? 'text-[#0C1A69]/75' : isLight ? 'text-[#B71C1C]' : 'text-white';
+  const borderClass = isColorLink 
+    ? 'border-indigo-100/90 shadow-[0_8px_24px_-6px_rgba(79,70,229,0.18)] hover:border-indigo-300 hover:shadow-[0_12px_28px_-4px_rgba(79,70,229,0.25)] ring-1 ring-indigo-500/10' 
+    : isLight ? 'border-[#EF9A9A]' : 'border-white/40';
+  const focusRingClass = isColorLink ? 'focus:ring-indigo-400/50' : isLight ? 'focus:ring-[#EF9A9A]/50' : 'focus:ring-white/50';
   
-  const iconContainerBg = isLight ? 'bg-[#FFEBEE]' : 'bg-white/20';
-  const iconBorder = isLight ? 'border-[#EF9A9A]' : 'border-white/50';
-  const pillBg = isLight ? 'bg-[#FFEBEE] text-[#B71C1C]' : isComingSoon ? 'bg-black/20 text-white/80' : 'bg-white/30 text-white';
+  const iconContainerBg = isColorLink 
+    ? 'bg-gradient-to-tr from-cyan-50/90 via-blue-50/90 to-indigo-50/90' 
+    : isLight ? 'bg-[#FFEBEE]' : 'bg-white/20';
+  const iconBorder = isColorLink ? 'border-indigo-200/80 shadow-xs' : isLight ? 'border-[#EF9A9A]' : 'border-white/50';
+  const pillBg = isColorLink 
+    ? 'bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white shadow-sm hover:brightness-105' 
+    : isLight ? 'bg-[#FFEBEE] text-[#B71C1C]' : isComingSoon ? 'bg-black/20 text-white/80' : 'bg-white/30 text-white';
   
-  const arrowContainerClass = isLight 
+  const arrowContainerClass = isColorLink
+    ? 'bg-indigo-600 text-white group-hover:bg-[#0C1A69] group-hover:scale-110'
+    : isLight 
     ? 'bg-[#FFEBEE] group-hover:bg-[#B71C1C] group-hover:scale-110' 
     : 'bg-white/30 group-hover:bg-white group-hover:scale-110';
-  const arrowIconClass = isLight
+  const arrowIconClass = isColorLink
+    ? 'text-white'
+    : isLight
     ? 'text-[#B71C1C] group-hover:text-white'
     : 'text-white group-hover:text-gray-800';
 
@@ -64,7 +75,7 @@ const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) =
           <button 
             onClick={handleShare}
             aria-label="Bagikan Game"
-            className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 rounded-full bg-white/20 backdrop-blur-sm border-2 border-white/50 flex items-center justify-center shadow-sm hover:bg-[#25D366] hover:border-white transition-all duration-300 hover:scale-110 focus:outline-none"
+            className={`w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 rounded-full ${isColorLink ? 'bg-white/80 border-2 border-indigo-200 text-[#0C1A69] shadow-sm hover:bg-[#25D366] hover:border-white hover:text-white' : 'bg-white/20 backdrop-blur-sm border-2 border-white/50 text-white shadow-sm hover:bg-[#25D366] hover:border-white'} flex items-center justify-center transition-all duration-300 hover:scale-110 focus:outline-none`}
           >
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
@@ -72,7 +83,7 @@ const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) =
               height="14" 
               viewBox="0 0 24 24" 
               fill="none" 
-              stroke="white" 
+              stroke="currentColor" 
               strokeWidth="2.5" 
               strokeLinecap="round" 
               strokeLinejoin="round"
@@ -136,11 +147,21 @@ const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) =
         },
         <>
           {/* Dekorasi Latar Belakang */}
-          <div aria-hidden="true" className={`absolute -top-10 -right-10 w-24 h-24 md:w-32 md:h-32 rounded-full pointer-events-none ${isLight ? 'bg-[#B71C1C]/5' : 'bg-white/10'}`}></div>
-          <div aria-hidden="true" className={`absolute -bottom-10 -left-10 w-20 h-20 md:w-28 md:h-28 rounded-full pointer-events-none ${isLight ? 'bg-[#B71C1C]/5' : 'bg-white/10'}`}></div>
+          {isColorLink ? (
+            <>
+              {/* Subtle multi-color node accents: Violet, Blue, Cyan, Green, Orange */}
+              <div aria-hidden="true" className="absolute -top-8 -right-8 w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-cyan-400/15 via-blue-400/15 to-violet-500/15 blur-xl pointer-events-none"></div>
+              <div aria-hidden="true" className="absolute -bottom-8 -left-8 w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-tr from-emerald-400/15 via-amber-400/15 to-orange-400/15 blur-xl pointer-events-none"></div>
+            </>
+          ) : (
+            <>
+              <div aria-hidden="true" className={`absolute -top-10 -right-10 w-24 h-24 md:w-32 md:h-32 rounded-full pointer-events-none ${isLight ? 'bg-[#B71C1C]/5' : 'bg-white/10'}`}></div>
+              <div aria-hidden="true" className={`absolute -bottom-10 -left-10 w-20 h-20 md:w-28 md:h-28 rounded-full pointer-events-none ${isLight ? 'bg-[#B71C1C]/5' : 'bg-white/10'}`}></div>
+            </>
+          )}
           
           {/* ICON CONTAINER */}
-          <div className={`z-20 mt-1 shrink-0 transition-transform duration-300 ${config.id === 'helirescue' ? 'w-[50%] max-w-[120px] aspect-square drop-shadow-[0_0_15px_rgba(249,115,22,0.6)]' : 'w-[35%] max-w-[80px] aspect-square'} ${!isComingSoon ? 'group-hover:scale-110' : ''}`}>
+          <div className={`z-20 mt-1 shrink-0 transition-transform duration-300 ${config.id === 'helirescue' ? 'w-[50%] max-w-[120px] aspect-square drop-shadow-[0_0_15px_rgba(249,115,22,0.6)]' : isColorLink ? 'w-[42%] max-w-[96px] aspect-square drop-shadow-sm' : 'w-[35%] max-w-[80px] aspect-square'} ${!isComingSoon ? 'group-hover:scale-105' : ''}`}>
             <div className={`
               w-full h-full
               ${config.id === 'helirescue' ? 'flex items-center justify-center relative' : `rounded-full overflow-hidden flex items-center justify-center ${iconContainerBg} border-2 md:border-[3px] ${iconBorder} shadow-sm relative`}
@@ -149,8 +170,9 @@ const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) =
                 <>
                    <div className={`absolute inset-0 bg-gray-300/20 animate-pulse transition-opacity duration-300 ${isLoaded ? 'opacity-0' : 'opacity-100'} ${config.id === 'helirescue' ? 'rounded-full' : ''}`} />
                    <img 
-                    src={config.image} alt={`${config.title} - game edukasi ${config.tags?.join(', ') || ''}`}
-                    className={`w-full h-full ${config.id === 'helirescue' ? 'object-contain scale-125 origin-bottom' : 'object-cover'} transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+                    src={config.image} 
+                    alt={isColorLink ? "Maskot resmi Linki Color Link Junior - Game logika warna anak" : `${config.title} - game edukasi ${config.tags?.join(', ') || ''}`}
+                    className={`w-full h-full ${config.id === 'helirescue' ? 'object-contain scale-125 origin-bottom' : isColorLink ? 'object-contain p-1 transform-gpu hover:scale-110 transition-transform' : 'object-cover'} transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
                     referrerPolicy="no-referrer" loading="lazy" onLoad={() => setIsLoaded(true)}
                   />
                 </>
@@ -159,12 +181,26 @@ const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) =
           </div>
 
           {/* TEXT CONTAINER */}
-          <div className={`flex-1 w-full flex flex-col justify-center items-center ${textColorClass} z-20 relative px-1 my-1.5 sm:my-2 min-h-0`}>
-            <h3 className="text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[16px] font-black tracking-tight leading-[1.15] mb-0.5 drop-shadow-sm w-full line-clamp-2">
-              {config.title}
+          <div className={`flex-1 w-full flex flex-col justify-center items-center ${textColorClass} z-20 relative px-1 my-1 sm:my-1.5 min-h-0`}>
+            <h3 className="text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] font-black tracking-tight leading-[1.15] mb-0.5 drop-shadow-xs w-full line-clamp-2">
+              {displayTitle}
             </h3>
+            {isColorLink && (
+              <div className="flex items-center gap-1.5 my-0.5">
+                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[8px] sm:text-[9px] md:text-[10px] font-black tracking-wider bg-indigo-50/90 text-indigo-700 border border-indigo-200/70 shadow-2xs">
+                  🧠 LOGIKA
+                </span>
+                <div className="flex items-center gap-0.5 opacity-90" aria-hidden="true" title="Node warna Color Link">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#8B5CF6]"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6]"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#06B6D4]"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F97316]"></span>
+                </div>
+              </div>
+            )}
             <p className={`text-[8px] sm:text-[9px] md:text-[10px] lg:text-[11px] leading-[1.2] font-bold opacity-90 line-clamp-2 w-full px-1 ${subTextColorClass}`}>
-              {config.subtitle}
+              {displaySubtitle}
             </p>
           </div>
 

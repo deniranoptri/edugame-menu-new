@@ -268,6 +268,57 @@ const generalGames: GameConfigWithTags[] = [
 ];
 
 const kidsGames: GameConfigWithTags[] = [
+  {
+    id: 'color-link-junior',
+    title: 'Color Link Junior',
+    subtitle: 'Puzzle Logika Warna',
+    bgColor: 'linear-gradient(135deg, #FFFFFF 0%, #F0F9FF 45%, #FAF5FF 100%)',
+    variant: 'light',
+    isNew: true,
+    image: 'https://github.com/deniranoptri/media/blob/sibungas/Maskot%20Colorlink.png?raw=true',
+    url: 'https://colorlinkjunior.papaninteraktif.com/',
+    description: 'Hubungkan warna dan pecahkan jalurnya! Game puzzle warna edukatif untuk anak PAUD, TK, dan SD yang melatih pemikiran logis, pengenalan warna, dan koordinasi motorik secara menyenangkan.',
+    subject: 'Logika & Spasial',
+    audience: 'PAUD, SD',
+    educationLevel: 'paud',
+    learningFocus: 'Pengenalan warna, penalaran spasial, pemecahan masalah logika, dan koordinasi motorik halus.',
+    howToPlay: [
+      'Pilih mode permainan (Solo 26 level, Duel, atau Squad) dan ukuran papan grid.',
+      'Sentuh titik warna dan tarik garis menuju pasangan titik dengan warna yang sama.',
+      'Pastikan setiap jalur garis warna tidak saling bersilangan atau bertubrukan.',
+      'Hubungkan seluruh warna hingga seluruh petak papan terisi penuh untuk menang!'
+    ],
+    educationalBenefits: [
+      'Melatih penalaran logis dan pemecahan masalah sejak usia dini.',
+      'Mengasah kemampuan diskriminasi dan pengenalan warna visual.',
+      'Mengembangkan koordinasi mata-tangan dan kelenturan motorik halus pada layar sentuh.',
+      'Melatih daya konsentrasi, kesabaran, dan kemampuan berpikir strategis langkah-demi-langkah.',
+      'Mendukung pembelajaran kolaboratif di kelas interaktif melalui mode permainan bersama.'
+    ],
+    tags: ['🧠 Logika'],
+    categoryKeys: ['logic'],
+    en: {
+      title: 'Color Link Junior',
+      subtitle: 'Color Logic Puzzle',
+      description: 'Connect colors and clear the path! An engaging color-matching logic puzzle game for early childhood and elementary learners, designed to build spatial reasoning and fine motor skills.',
+      subject: 'Logic & Spatial Reasoning',
+      audience: 'Early Childhood, Elementary (K-5)',
+      learningFocus: 'Color discrimination, spatial reasoning, logical planning, and fine motor coordination.',
+      howToPlay: [
+        'Select your game mode (Solo 26 levels, Duel, or Squad) and grid board size.',
+        'Touch a colored dot and drag a line to its matching colored pair.',
+        'Ensure that no color lines collide, intersect, or cross each other.',
+        'Fill every tile on the grid board to complete the puzzle challenge!'
+      ],
+      educationalBenefits: [
+        'Fosters logical reasoning and spatial problem-solving skills at an early age.',
+        'Enhances visual perception and color recognition abilities.',
+        'Strengthens fine motor control and hand-eye coordination on touchscreen devices.',
+        'Builds focus, patience, and step-by-step strategic planning.',
+        'Promotes collaborative classroom engagement through multi-touch group modes.'
+      ]
+    }
+  },
   { id: 'adu-tarik-dino', howToPlay: ["Bermain berdua dalam mode layar terbagi (split-screen).","Perhatikan soal perbandingan atau perhitungan matematika yang muncul.","Pilih jawaban benar lebih cepat dari lawanmu.","Tarik tali ke arah dinosaurusmu untuk setiap jawaban yang benar."], educationalBenefits: ["Melatih kecepatan pemrosesan informasi matematika.","Membangun sportivitas melalui kompetisi yang sehat.","Meningkatkan pemahaman konsep lebih besar dan lebih kecil."], title: 'Tarik Dino', subtitle: 'Adu Kuat!', bgColor: '#FF8FA3', isNew: true, image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0-UeNvrM6NqoMMYlCp4_hsPKZ6qzIlLl9l3nSU4dGEppp1gFJkcLqHOtbReV0gdIrOwMcC4bMvILREr37zsjR0OmBesBbS8h8hWNF6FMl3vRI9xKrHj_sv8DbuNNDftSi41zsRNZWLyrsA4NM1iCZ76-xSpooz6CVD4Iu_9oQ7fdAcN4tU0upk-itvak/s320/Gemini_Generated_Image_fim7njfim7njfim7-removebg-preview%20(1).png', url: 'https://dino-tug-of-war.papaninteraktif.com/', description: "Permainan tarik tambang seru bertema Dinosaurus untuk mengenalkan konsep perbandingan ukuran dan kekuatan dasar.", audience: "PAUD, SD", educationLevel: 'paud', learningFocus: "Pengenalan konsep logika dasar dan perbandingan", tags: ['🧠 Logika', '🔢 Numerasi'], categoryKeys: ['logic', 'numeracy'], 
     
     

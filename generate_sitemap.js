@@ -5,7 +5,7 @@ const games = [
   'jagoan-kata', 'geo-squad', 'ruang-io', 'cocok-logi', 'mesin-koleksi', 'pendekar-balon',
   'detektif-cilik', 'mewarnai', 'belajar-angka', 'Aksi Ambulans', 'Gass Damkar', 'Jalur Huruf',
   'Petualangan Satu Garis', 'gabung-ceria', 'dunia-hewan', 'rimba-pedia', 'si-pemanah',
-  'celestial-weaver', 'tanzib', 'hijaiyah-match'
+  'celestial-weaver', 'tanzib', 'hijaiyah-match', 'color-link-junior'
 ];
 
 const ifpGames = ['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional'];
