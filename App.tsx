@@ -84,6 +84,52 @@ const socialLinks = [
 
 const generalGames: GameConfigWithTags[] = [
   {
+    id: 'math-domino-arena',
+    title: 'Math Domino Arena',
+    subtitle: 'Game Numerasi Interaktif',
+    bgColor: 'linear-gradient(135deg, #0F766E 0%, #14B8A6 50%, #F59E0B 100%)',
+    isNew: true,
+    image: 'https://github.com/deniranoptri/media/blob/sibungas/Maskot_Domino_Ceria_Melompat-removebg-preview%20(1).png?raw=true',
+    url: 'https://math-games.papaninteraktif.com/',
+    description: 'Asah kemampuan numerasi, penalaran, dan strategi melalui permainan domino matematika yang interaktif dan seru.',
+    subject: 'Matematika',
+    audience: 'SD, SMP, SMA',
+    educationLevel: 'general',
+    learningFocus: 'Numerasi, penalaran matematika, strategi, dan pemecahan masalah',
+    howToPlay: [
+      'Pilih mode permainan yang tersedia.',
+      'Amati tantangan matematika pada keping domino.',
+      'Pikirkan jawaban dan pilih keping yang sesuai.',
+      'Susun keping dengan tepat untuk melanjutkan permainan dan meraih skor.'
+    ],
+    educationalBenefits: [
+      'Melatih kemampuan numerasi dan penalaran matematika.',
+      'Meningkatkan konsentrasi dan ketelitian.',
+      'Mengembangkan strategi dan kemampuan pemecahan masalah.'
+    ],
+    tags: ['🔢 Numerasi'],
+    categoryKeys: ['numeracy'],
+    en: {
+      title: 'Math Domino Arena',
+      subtitle: 'Interactive Math & Numeracy Game',
+      description: 'Build numeracy, mathematical reasoning, and strategic thinking through an interactive domino math game.',
+      subject: 'Mathematics',
+      audience: 'Elementary, Middle, and High School',
+      learningFocus: 'Numeracy, mathematical reasoning, strategy, and problem solving',
+      howToPlay: [
+        'Choose an available game mode.',
+        'Observe the math challenge on the domino tiles.',
+        'Think through the answer and choose the matching tile.',
+        'Place the correct tiles to continue the game and earn points.'
+      ],
+      educationalBenefits: [
+        'Builds numeracy and mathematical reasoning skills.',
+        'Improves concentration and accuracy.',
+        'Develops strategy and problem-solving skills.'
+      ]
+    }
+  },
+  {
     id: 'jejak-angka',
     title: 'Jejak Angka',
     subtitle: 'Petualangan Numerasi & Logika',
