@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { AdSenseInArticle } from './AdSenseInArticle';
+import { applySEOMetadata } from '../seo';
 
 interface ArticleDifferentiatedIfpProps {
   onBack: () => void;
@@ -9,49 +10,28 @@ interface ArticleDifferentiatedIfpProps {
 const ArticleDifferentiatedIfp: React.FC<ArticleDifferentiatedIfpProps> = ({ onBack, navigateTo }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Pembelajaran Berdiferensiasi Menggunakan IFP | Jurnal Guru";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Panduan lengkap pembelajaran berdiferensiasi menggunakan IFP. Pelajari strategi diferensiasi konten, proses, dan produk melalui media layar interaktif."
-      );
-    }
-    
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', window.location.origin + '/jurnal-guru/pembelajaran-berdiferensiasi-menggunakan-ifp-di-kelas');
 
-    // Hreflang Tags
-    const hreflangs = [
-      { hreflang: 'id', href: window.location.origin + '/jurnal-guru/pembelajaran-berdiferensiasi-menggunakan-ifp-di-kelas' },
-      { hreflang: 'en', href: window.location.origin + '/en/journal/differentiated-learning-using-interactive-flat-panel' },
-      { hreflang: 'x-default', href: window.location.origin + '/jurnal-guru/pembelajaran-berdiferensiasi-menggunakan-ifp-di-kelas' }
-    ];
-    
-    hreflangs.forEach(({ hreflang, href }) => {
-      let link = document.querySelector(`link[hreflang="${hreflang}"]`);
-      if (!link) {
-        link = document.createElement('link');
-        link.setAttribute('rel', 'alternate');
-        link.setAttribute('hreflang', hreflang);
-        document.head.appendChild(link);
-      }
-      link.setAttribute('href', href);
-    });
-
-    const scriptId = 'article-differentiated-ifp-schema';
-    let existingScript = document.getElementById(scriptId);
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify([
+    applySEOMetadata({
+      lang: 'id',
+      title: 'Pembelajaran Berdiferensiasi Menggunakan IFP | Jurnal Guru',
+      description: 'Panduan lengkap pembelajaran berdiferensiasi menggunakan IFP. Pelajari strategi diferensiasi konten, proses, dan produk melalui media layar interaktif.',
+      canonical: 'https://papaninteraktif.com/jurnal-guru/pembelajaran-berdiferensiasi-menggunakan-ifp-di-kelas',
+      hreflangs: [
+        { lang: 'id', href: 'https://papaninteraktif.com/jurnal-guru/pembelajaran-berdiferensiasi-menggunakan-ifp-di-kelas' },
+        { lang: 'en', href: 'https://papaninteraktif.com/en/journal/differentiated-learning-using-interactive-flat-panel' }
+      ],
+      openGraph: {
+        title: 'Pembelajaran Berdiferensiasi Menggunakan IFP | Jurnal Guru',
+        description: 'Panduan lengkap pembelajaran berdiferensiasi menggunakan IFP. Pelajari strategi diferensiasi konten, proses, dan produk melalui media layar interaktif.',
+        type: 'article',
+        url: 'https://papaninteraktif.com/jurnal-guru/pembelajaran-berdiferensiasi-menggunakan-ifp-di-kelas'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Pembelajaran Berdiferensiasi Menggunakan IFP | Jurnal Guru',
+        description: 'Panduan lengkap pembelajaran berdiferensiasi menggunakan IFP. Pelajari strategi diferensiasi konten, proses, dan produk melalui media layar interaktif.'
+      },
+      jsonLd: [
         {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -66,12 +46,12 @@ const ArticleDifferentiatedIfp: React.FC<ArticleDifferentiatedIfpProps> = ({ onB
             "name": "Papan Interaktif",
             "logo": {
               "@type": "ImageObject",
-              "url": window.location.origin + "/logo.png"
+              "url": "https://papaninteraktif.com/logo.png"
             }
           },
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": window.location.origin + "/jurnal-guru/pembelajaran-berdiferensiasi-menggunakan-ifp-di-kelas"
+            "@id": "https://papaninteraktif.com/jurnal-guru/pembelajaran-berdiferensiasi-menggunakan-ifp-di-kelas"
           }
         },
         {
@@ -82,34 +62,24 @@ const ArticleDifferentiatedIfp: React.FC<ArticleDifferentiatedIfpProps> = ({ onB
               "@type": "ListItem",
               "position": 1,
               "name": "Beranda",
-              "item": window.location.origin + "/"
+              "item": "https://papaninteraktif.com/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Jurnal Guru",
-              "item": window.location.origin + "/jurnal-guru"
+              "item": "https://papaninteraktif.com/jurnal-guru"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Pembelajaran Berdiferensiasi Menggunakan IFP",
-              "item": window.location.origin + "/jurnal-guru/pembelajaran-berdiferensiasi-menggunakan-ifp-di-kelas"
+              "item": "https://papaninteraktif.com/jurnal-guru/pembelajaran-berdiferensiasi-menggunakan-ifp-di-kelas"
             }
           ]
         }
-      ]);
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      if (existingScript) {
-        existingScript.remove();
-      } else {
-        const scriptToRemove = document.getElementById(scriptId);
-        if (scriptToRemove) scriptToRemove.remove();
-      }
-    };
+      ]
+    });
   }, []);
 
   return (

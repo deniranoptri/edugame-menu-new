@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { AdSenseInArticle } from './AdSenseInArticle';
+import { applySEOMetadata } from '../seo';
 
 interface ArticlePblIfpProps {
   onBack: () => void;
@@ -9,62 +10,28 @@ interface ArticlePblIfpProps {
 const ArticlePblIfp: React.FC<ArticlePblIfpProps> = ({ onBack, navigateTo }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Pembelajaran Berbasis Masalah (PBL) Menggunakan IFP di Kelas | Jurnal Guru";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Panduan komprehensif memfasilitasi Pembelajaran Berbasis Masalah (PBL) menggunakan Interactive Flat Panel (IFP), dari identifikasi masalah hingga presentasi solusi."
-      );
-    }
-    
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-        canonical.setAttribute('href', window.location.origin + '/jurnal-guru/pembelajaran-berbasis-masalah-menggunakan-ifp');
 
-    const idUrl = window.location.origin + '/jurnal-guru/pembelajaran-berbasis-masalah-menggunakan-ifp';
-    const enUrl = window.location.origin + '/en/journal/problem-based-learning-using-interactive-flat-panel';
-
-    let hrefLangId = document.querySelector('link[hreflang="id"]');
-    if (!hrefLangId) {
-      hrefLangId = document.createElement('link');
-      hrefLangId.setAttribute('rel', 'alternate');
-      hrefLangId.setAttribute('hreflang', 'id');
-      document.head.appendChild(hrefLangId);
-    }
-    hrefLangId.setAttribute('href', idUrl);
-
-    let hrefLangEn = document.querySelector('link[hreflang="en"]');
-    if (!hrefLangEn) {
-      hrefLangEn = document.createElement('link');
-      hrefLangEn.setAttribute('rel', 'alternate');
-      hrefLangEn.setAttribute('hreflang', 'en');
-      document.head.appendChild(hrefLangEn);
-    }
-    hrefLangEn.setAttribute('href', enUrl);
-
-    let hrefLangDef = document.querySelector('link[hreflang="x-default"]');
-    if (!hrefLangDef) {
-      hrefLangDef = document.createElement('link');
-      hrefLangDef.setAttribute('rel', 'alternate');
-      hrefLangDef.setAttribute('hreflang', 'x-default');
-      document.head.appendChild(hrefLangDef);
-    }
-    hrefLangDef.setAttribute('href', idUrl);
-
-    // Structured Data for Article
-    const scriptId = 'article-pbl-ifp-schema';
-    let existingScript = document.getElementById(scriptId);
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify([
+    applySEOMetadata({
+      lang: 'id',
+      title: 'Pembelajaran Berbasis Masalah (PBL) Menggunakan IFP di Kelas | Jurnal Guru',
+      description: 'Panduan komprehensif memfasilitasi Pembelajaran Berbasis Masalah (PBL) menggunakan Interactive Flat Panel (IFP), dari identifikasi masalah hingga presentasi solusi.',
+      canonical: 'https://papaninteraktif.com/jurnal-guru/pembelajaran-berbasis-masalah-menggunakan-ifp',
+      hreflangs: [
+        { lang: 'id', href: 'https://papaninteraktif.com/jurnal-guru/pembelajaran-berbasis-masalah-menggunakan-ifp' },
+        { lang: 'en', href: 'https://papaninteraktif.com/en/journal/problem-based-learning-using-interactive-flat-panel' }
+      ],
+      openGraph: {
+        title: 'Pembelajaran Berbasis Masalah (PBL) Menggunakan IFP di Kelas | Jurnal Guru',
+        description: 'Panduan komprehensif memfasilitasi Pembelajaran Berbasis Masalah (PBL) menggunakan Interactive Flat Panel (IFP), dari identifikasi masalah hingga presentasi solusi.',
+        type: 'article',
+        url: 'https://papaninteraktif.com/jurnal-guru/pembelajaran-berbasis-masalah-menggunakan-ifp'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Pembelajaran Berbasis Masalah (PBL) Menggunakan IFP di Kelas | Jurnal Guru',
+        description: 'Panduan komprehensif memfasilitasi Pembelajaran Berbasis Masalah (PBL) menggunakan Interactive Flat Panel (IFP), dari identifikasi masalah hingga presentasi solusi.'
+      },
+      jsonLd: [
         {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -79,7 +46,7 @@ const ArticlePblIfp: React.FC<ArticlePblIfpProps> = ({ onBack, navigateTo }) => 
             "name": "Papan Interaktif",
             "logo": {
               "@type": "ImageObject",
-              "url": window.location.origin + "/icon.svg"
+              "url": "https://papaninteraktif.com/icon.svg"
             }
           }
         },
@@ -91,40 +58,24 @@ const ArticlePblIfp: React.FC<ArticlePblIfpProps> = ({ onBack, navigateTo }) => 
               "@type": "ListItem",
               "position": 1,
               "name": "Beranda",
-              "item": window.location.origin + "/"
+              "item": "https://papaninteraktif.com/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Jurnal Guru",
-              "item": window.location.origin + "/jurnal-guru"
+              "item": "https://papaninteraktif.com/jurnal-guru"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Pembelajaran Berbasis Masalah dengan IFP",
-              "item": window.location.origin + "/jurnal-guru/pembelajaran-berbasis-masalah-menggunakan-ifp"
+              "item": "https://papaninteraktif.com/jurnal-guru/pembelajaran-berbasis-masalah-menggunakan-ifp"
             }
           ]
         }
-      ]);
-      document.head.appendChild(script);
-    }
-
-        return () => {
-      document.title = 'Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif';
-      if (metaDescription) {
-        metaDescription.setAttribute('content', 'Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru.');
-      }
-      const scriptToRemove = document.getElementById(scriptId);
-      if (scriptToRemove) {
-        scriptToRemove.remove();
-      }
-      if (canonical) canonical.remove();
-      if (hrefLangId) hrefLangId.remove();
-      if (hrefLangEn) hrefLangEn.remove();
-      if (hrefLangDef) hrefLangDef.remove();
-    };
+      ]
+    });
   }, []);
 
   return (

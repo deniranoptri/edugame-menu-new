@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { AdSenseInArticle } from './AdSenseInArticle';
+import { applySEOMetadata } from '../seo';
 
 interface ArticlePjblIfpProps {
   onBack: () => void;
@@ -9,63 +10,28 @@ interface ArticlePjblIfpProps {
 const ArticlePjblIfp: React.FC<ArticlePjblIfpProps> = ({ onBack, navigateTo }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Pembelajaran Berbasis Proyek (PjBL) Menggunakan IFP | Jurnal Guru";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Panduan komprehensif menerapkan model Pembelajaran Berbasis Proyek (PjBL) menggunakan Interactive Flat Panel (IFP) untuk meningkatkan kolaborasi dan pemecahan masalah."
-      );
-    }
-    
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', window.location.origin + '/jurnal-guru/pembelajaran-berbasis-proyek-menggunakan-ifp');
 
-    const idUrl = 'https://papaninteraktif.com/jurnal-guru/pembelajaran-berbasis-proyek-menggunakan-ifp';
-    const enUrl = 'https://papaninteraktif.com/en/journal/project-based-learning-using-interactive-flat-panel';
-
-    let hrefLangId = document.querySelector('link[hreflang="id"]');
-    if (!hrefLangId) {
-      hrefLangId = document.createElement('link');
-      hrefLangId.setAttribute('rel', 'alternate');
-      hrefLangId.setAttribute('hreflang', 'id');
-      document.head.appendChild(hrefLangId);
-    }
-    hrefLangId.setAttribute('href', idUrl);
-
-    let hrefLangEn = document.querySelector('link[hreflang="en"]');
-    if (!hrefLangEn) {
-      hrefLangEn = document.createElement('link');
-      hrefLangEn.setAttribute('rel', 'alternate');
-      hrefLangEn.setAttribute('hreflang', 'en');
-      document.head.appendChild(hrefLangEn);
-    }
-    hrefLangEn.setAttribute('href', enUrl);
-
-    let hrefLangDef = document.querySelector('link[hreflang="x-default"]');
-    if (!hrefLangDef) {
-      hrefLangDef = document.createElement('link');
-      hrefLangDef.setAttribute('rel', 'alternate');
-      hrefLangDef.setAttribute('hreflang', 'x-default');
-      document.head.appendChild(hrefLangDef);
-    }
-    hrefLangDef.setAttribute('href', idUrl);
-
-
-    // Structured Data for Article
-    const scriptId = 'article-pjbl-ifp-schema';
-    let existingScript = document.getElementById(scriptId);
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify([
+    applySEOMetadata({
+      lang: 'id',
+      title: 'Pembelajaran Berbasis Proyek (PjBL) Menggunakan IFP | Jurnal Guru',
+      description: 'Panduan komprehensif menerapkan model Pembelajaran Berbasis Proyek (PjBL) menggunakan Interactive Flat Panel (IFP) untuk meningkatkan kolaborasi dan pemecahan masalah.',
+      canonical: 'https://papaninteraktif.com/jurnal-guru/pembelajaran-berbasis-proyek-menggunakan-ifp',
+      hreflangs: [
+        { lang: 'id', href: 'https://papaninteraktif.com/jurnal-guru/pembelajaran-berbasis-proyek-menggunakan-ifp' },
+        { lang: 'en', href: 'https://papaninteraktif.com/en/journal/project-based-learning-using-interactive-flat-panel' }
+      ],
+      openGraph: {
+        title: 'Pembelajaran Berbasis Proyek (PjBL) Menggunakan IFP | Jurnal Guru',
+        description: 'Panduan komprehensif menerapkan model Pembelajaran Berbasis Proyek (PjBL) menggunakan Interactive Flat Panel (IFP) untuk meningkatkan kolaborasi dan pemecahan masalah.',
+        type: 'article',
+        url: 'https://papaninteraktif.com/jurnal-guru/pembelajaran-berbasis-proyek-menggunakan-ifp'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Pembelajaran Berbasis Proyek (PjBL) Menggunakan IFP | Jurnal Guru',
+        description: 'Panduan komprehensif menerapkan model Pembelajaran Berbasis Proyek (PjBL) menggunakan Interactive Flat Panel (IFP) untuk meningkatkan kolaborasi dan pemecahan masalah.'
+      },
+      jsonLd: [
         {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -80,7 +46,7 @@ const ArticlePjblIfp: React.FC<ArticlePjblIfpProps> = ({ onBack, navigateTo }) =
             "name": "Papan Interaktif",
             "logo": {
               "@type": "ImageObject",
-              "url": window.location.origin + "/icon.svg"
+              "url": "https://papaninteraktif.com/icon.svg"
             }
           }
         },
@@ -92,35 +58,24 @@ const ArticlePjblIfp: React.FC<ArticlePjblIfpProps> = ({ onBack, navigateTo }) =
               "@type": "ListItem",
               "position": 1,
               "name": "Beranda",
-              "item": window.location.origin + "/"
+              "item": "https://papaninteraktif.com/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Jurnal Guru",
-              "item": window.location.origin + "/jurnal-guru"
+              "item": "https://papaninteraktif.com/jurnal-guru"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Pembelajaran Berbasis Proyek IFP",
-              "item": window.location.origin + "/jurnal-guru/pembelajaran-berbasis-proyek-menggunakan-ifp"
+              "item": "https://papaninteraktif.com/jurnal-guru/pembelajaran-berbasis-proyek-menggunakan-ifp"
             }
           ]
         }
-      ]);
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      document.title = 'Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif';
-      if (metaDescription) {
-        metaDescription.setAttribute('content', 'Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru.');
-      }
-      if (existingScript) existingScript.remove();
-      const addedScript = document.getElementById(scriptId);
-      if (addedScript) addedScript.remove();
-    };
+      ]
+    });
   }, []);
 
   return (

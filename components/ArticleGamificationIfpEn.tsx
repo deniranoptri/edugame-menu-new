@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { AdSenseInArticle } from './AdSenseInArticle';
+import { applySEOMetadata } from '../seo';
 
 interface ArticleGamificationIfpEnProps {
   onBack: () => void;
@@ -9,50 +10,28 @@ interface ArticleGamificationIfpEnProps {
 const ArticleGamificationIfpEn: React.FC<ArticleGamificationIfpEnProps> = ({ onBack, navigateTo }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Gamification Using Interactive Flat Panel | Teacher Journal";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "A complete guide to learning gamification using Interactive Flat Panels. Learn how to implement points, badges, leaderboards, and educational competitive activities in the classroom."
-      );
-    }
-    
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', window.location.origin + '/en/journal/gamification-using-interactive-flat-panel');
 
-    // Hreflang Tags
-    const hreflangs = [
-      { hreflang: 'id', href: window.location.origin + '/jurnal-guru/gamifikasi-pembelajaran-menggunakan-ifp' },
-      { hreflang: 'en', href: window.location.origin + '/en/journal/gamification-using-interactive-flat-panel' },
-      { hreflang: 'x-default', href: window.location.origin + '/jurnal-guru/gamifikasi-pembelajaran-menggunakan-ifp' }
-    ];
-    
-    hreflangs.forEach(({ hreflang, href }) => {
-      let link = document.querySelector(`link[hreflang="${hreflang}"]`);
-      if (!link) {
-        link = document.createElement('link');
-        link.setAttribute('rel', 'alternate');
-        link.setAttribute('hreflang', hreflang);
-        document.head.appendChild(link);
-      }
-      link.setAttribute('href', href);
-    });
-
-    const scriptId = 'article-gamification-ifp-en-schema';
-    let existingScript = document.getElementById(scriptId);
-    
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify([
+    applySEOMetadata({
+      lang: 'en',
+      title: 'Gamification Using Interactive Flat Panel | Teacher Journal',
+      description: 'A complete guide to learning gamification using Interactive Flat Panels. Learn how to implement points, badges, leaderboards, and educational competitive activities in the classroom.',
+      canonical: 'https://papaninteraktif.com/en/journal/gamification-using-interactive-flat-panel',
+      hreflangs: [
+        { lang: 'id', href: 'https://papaninteraktif.com/jurnal-guru/gamifikasi-pembelajaran-menggunakan-ifp' },
+        { lang: 'en', href: 'https://papaninteraktif.com/en/journal/gamification-using-interactive-flat-panel' }
+      ],
+      openGraph: {
+        title: 'Gamification Using Interactive Flat Panel | Teacher Journal',
+        description: 'A complete guide to learning gamification using Interactive Flat Panels. Learn how to implement points, badges, leaderboards, and educational competitive activities in the classroom.',
+        type: 'article',
+        url: 'https://papaninteraktif.com/en/journal/gamification-using-interactive-flat-panel'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Gamification Using Interactive Flat Panel | Teacher Journal',
+        description: 'A complete guide to learning gamification using Interactive Flat Panels. Learn how to implement points, badges, leaderboards, and educational competitive activities in the classroom.'
+      },
+      jsonLd: [
         {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -102,18 +81,8 @@ const ArticleGamificationIfpEn: React.FC<ArticleGamificationIfpEnProps> = ({ onB
             }
           ]
         }
-      ]);
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      if (existingScript) {
-        existingScript.remove();
-      } else {
-        const scriptToRemove = document.getElementById(scriptId);
-        if (scriptToRemove) scriptToRemove.remove();
-      }
-    };
+      ]
+    });
   }, []);
 
   return (

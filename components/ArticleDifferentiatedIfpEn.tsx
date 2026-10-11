@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { AdSenseInArticle } from './AdSenseInArticle';
+import { applySEOMetadata } from '../seo';
 
 interface ArticleDifferentiatedIfpEnProps {
   onBack: () => void;
@@ -9,50 +10,28 @@ interface ArticleDifferentiatedIfpEnProps {
 const ArticleDifferentiatedIfpEn: React.FC<ArticleDifferentiatedIfpEnProps> = ({ onBack, navigateTo }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Differentiated Learning Using Interactive Flat Panel | Teacher Journal";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "A practical guide to implementing differentiated learning using Interactive Flat Panels. Discover content, process, and product differentiation strategies for diverse classrooms."
-      );
-    }
-    
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', window.location.origin + '/en/journal/differentiated-learning-using-interactive-flat-panel');
 
-    // Hreflang Tags
-    const hreflangs = [
-      { hreflang: 'id', href: window.location.origin + '/jurnal-guru/pembelajaran-berdiferensiasi-menggunakan-ifp-di-kelas' },
-      { hreflang: 'en', href: window.location.origin + '/en/journal/differentiated-learning-using-interactive-flat-panel' },
-      { hreflang: 'x-default', href: window.location.origin + '/jurnal-guru/pembelajaran-berdiferensiasi-menggunakan-ifp-di-kelas' }
-    ];
-    
-    hreflangs.forEach(({ hreflang, href }) => {
-      let link = document.querySelector(`link[hreflang="${hreflang}"]`);
-      if (!link) {
-        link = document.createElement('link');
-        link.setAttribute('rel', 'alternate');
-        link.setAttribute('hreflang', hreflang);
-        document.head.appendChild(link);
-      }
-      link.setAttribute('href', href);
-    });
-
-    const scriptId = 'article-differentiated-ifp-en-schema';
-    let existingScript = document.getElementById(scriptId);
-    
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify([
+    applySEOMetadata({
+      lang: 'en',
+      title: 'Differentiated Learning Using Interactive Flat Panel | Teacher Journal',
+      description: 'A practical guide to implementing differentiated learning using Interactive Flat Panels. Discover content, process, and product differentiation strategies for diverse classrooms.',
+      canonical: 'https://papaninteraktif.com/en/journal/differentiated-learning-using-interactive-flat-panel',
+      hreflangs: [
+        { lang: 'id', href: 'https://papaninteraktif.com/jurnal-guru/pembelajaran-berdiferensiasi-menggunakan-ifp-di-kelas' },
+        { lang: 'en', href: 'https://papaninteraktif.com/en/journal/differentiated-learning-using-interactive-flat-panel' }
+      ],
+      openGraph: {
+        title: 'Differentiated Learning Using Interactive Flat Panel | Teacher Journal',
+        description: 'A practical guide to implementing differentiated learning using Interactive Flat Panels. Discover content, process, and product differentiation strategies for diverse classrooms.',
+        type: 'article',
+        url: 'https://papaninteraktif.com/en/journal/differentiated-learning-using-interactive-flat-panel'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Differentiated Learning Using Interactive Flat Panel | Teacher Journal',
+        description: 'A practical guide to implementing differentiated learning using Interactive Flat Panels. Discover content, process, and product differentiation strategies for diverse classrooms.'
+      },
+      jsonLd: [
         {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -102,18 +81,8 @@ const ArticleDifferentiatedIfpEn: React.FC<ArticleDifferentiatedIfpEnProps> = ({
             }
           ]
         }
-      ]);
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      if (existingScript) {
-        existingScript.remove();
-      } else {
-        const scriptToRemove = document.getElementById(scriptId);
-        if (scriptToRemove) scriptToRemove.remove();
-      }
-    };
+      ]
+    });
   }, []);
 
   return (

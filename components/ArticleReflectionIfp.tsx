@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { AdSenseInArticle } from './AdSenseInArticle';
+import { applySEOMetadata } from '../seo';
 
 interface ArticleReflectionIfpProps {
   onBack: () => void;
@@ -9,32 +10,28 @@ interface ArticleReflectionIfpProps {
 const ArticleReflectionIfp: React.FC<ArticleReflectionIfpProps> = ({ onBack, navigateTo }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Refleksi Pembelajaran Menggunakan IFP di Kelas | Jurnal Guru";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Panduan komprehensif memfasilitasi refleksi pembelajaran secara interaktif menggunakan Interactive Flat Panel (IFP), termasuk exit ticket, mood meter, dan rating pemahaman."
-      );
-    }
-    
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', window.location.origin + '/jurnal-guru/refleksi-pembelajaran-menggunakan-ifp-di-kelas');
 
-    // Structured Data for Article
-    const scriptId = 'article-reflection-ifp-schema';
-    let existingScript = document.getElementById(scriptId);
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify([
+    applySEOMetadata({
+      lang: 'id',
+      title: 'Refleksi Pembelajaran Menggunakan IFP di Kelas | Jurnal Guru',
+      description: 'Panduan komprehensif memfasilitasi refleksi pembelajaran secara interaktif menggunakan Interactive Flat Panel (IFP), termasuk exit ticket, mood meter, dan rating pemahaman.',
+      canonical: 'https://papaninteraktif.com/jurnal-guru/refleksi-pembelajaran-menggunakan-ifp-di-kelas',
+      hreflangs: [
+        { lang: 'id', href: 'https://papaninteraktif.com/jurnal-guru/refleksi-pembelajaran-menggunakan-ifp-di-kelas' },
+        { lang: 'en', href: 'https://papaninteraktif.com/en/journal/reflective-learning-using-interactive-flat-panel' }
+      ],
+      openGraph: {
+        title: 'Refleksi Pembelajaran Menggunakan IFP di Kelas | Jurnal Guru',
+        description: 'Panduan komprehensif memfasilitasi refleksi pembelajaran secara interaktif menggunakan Interactive Flat Panel (IFP), termasuk exit ticket, mood meter, dan rating pemahaman.',
+        type: 'article',
+        url: 'https://papaninteraktif.com/jurnal-guru/refleksi-pembelajaran-menggunakan-ifp-di-kelas'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Refleksi Pembelajaran Menggunakan IFP di Kelas | Jurnal Guru',
+        description: 'Panduan komprehensif memfasilitasi refleksi pembelajaran secara interaktif menggunakan Interactive Flat Panel (IFP), termasuk exit ticket, mood meter, dan rating pemahaman.'
+      },
+      jsonLd: [
         {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -49,7 +46,7 @@ const ArticleReflectionIfp: React.FC<ArticleReflectionIfpProps> = ({ onBack, nav
             "name": "Papan Interaktif",
             "logo": {
               "@type": "ImageObject",
-              "url": window.location.origin + "/icon.svg"
+              "url": "https://papaninteraktif.com/icon.svg"
             }
           }
         },
@@ -61,35 +58,24 @@ const ArticleReflectionIfp: React.FC<ArticleReflectionIfpProps> = ({ onBack, nav
               "@type": "ListItem",
               "position": 1,
               "name": "Beranda",
-              "item": window.location.origin + "/"
+              "item": "https://papaninteraktif.com/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Jurnal Guru",
-              "item": window.location.origin + "/jurnal-guru"
+              "item": "https://papaninteraktif.com/jurnal-guru"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Refleksi Pembelajaran dengan IFP",
-              "item": window.location.origin + "/jurnal-guru/refleksi-pembelajaran-menggunakan-ifp-di-kelas"
+              "item": "https://papaninteraktif.com/jurnal-guru/refleksi-pembelajaran-menggunakan-ifp-di-kelas"
             }
           ]
         }
-      ]);
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      document.title = 'Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif';
-      if (metaDescription) {
-        metaDescription.setAttribute('content', 'Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru.');
-      }
-      if (existingScript) existingScript.remove();
-      const addedScript = document.getElementById(scriptId);
-      if (addedScript) addedScript.remove();
-    };
+      ]
+    });
   }, []);
 
   return (

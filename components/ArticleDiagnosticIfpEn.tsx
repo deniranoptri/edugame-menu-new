@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { AdSenseInArticle } from './AdSenseInArticle';
+import { applySEOMetadata } from '../seo';
 
 interface ArticleDiagnosticIfpEnProps {
   onBack: () => void;
@@ -9,62 +10,28 @@ interface ArticleDiagnosticIfpEnProps {
 const ArticleDiagnosticIfpEn: React.FC<ArticleDiagnosticIfpEnProps> = ({ onBack, navigateTo }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Diagnostic Assessment Using Interactive Flat Panel | Jurnal Guru";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "A guide to mapping student readiness and misconceptions using an Interactive Flat Panel before instruction begins."
-      );
-    }
-    
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', window.location.origin + '/en/journal/diagnostic-assessment-using-interactive-flat-panel');
 
-    const idUrl = window.location.origin + '/jurnal-guru/asesmen-diagnostik-menggunakan-ifp-di-kelas';
-    const enUrl = window.location.origin + '/en/journal/diagnostic-assessment-using-interactive-flat-panel';
-
-    let hrefLangId = document.querySelector('link[hreflang="id"]');
-    if (!hrefLangId) {
-      hrefLangId = document.createElement('link');
-      hrefLangId.setAttribute('rel', 'alternate');
-      hrefLangId.setAttribute('hreflang', 'id');
-      document.head.appendChild(hrefLangId);
-    }
-    hrefLangId.setAttribute('href', idUrl);
-
-    let hrefLangEn = document.querySelector('link[hreflang="en"]');
-    if (!hrefLangEn) {
-      hrefLangEn = document.createElement('link');
-      hrefLangEn.setAttribute('rel', 'alternate');
-      hrefLangEn.setAttribute('hreflang', 'en');
-      document.head.appendChild(hrefLangEn);
-    }
-    hrefLangEn.setAttribute('href', enUrl);
-
-    let hrefLangDef = document.querySelector('link[hreflang="x-default"]');
-    if (!hrefLangDef) {
-      hrefLangDef = document.createElement('link');
-      hrefLangDef.setAttribute('rel', 'alternate');
-      hrefLangDef.setAttribute('hreflang', 'x-default');
-      document.head.appendChild(hrefLangDef);
-    }
-    hrefLangDef.setAttribute('href', idUrl);
-
-    const scriptId = 'article-diagnostic-ifp-en-schema';
-    let existingScript = document.getElementById(scriptId);
-    
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify([
+    applySEOMetadata({
+      lang: 'en',
+      title: 'Diagnostic Assessment Using Interactive Flat Panel | Jurnal Guru',
+      description: 'A guide to mapping student readiness and misconceptions using an Interactive Flat Panel before instruction begins.',
+      canonical: 'https://papaninteraktif.com/en/journal/diagnostic-assessment-using-interactive-flat-panel',
+      hreflangs: [
+        { lang: 'id', href: 'https://papaninteraktif.com/jurnal-guru/asesmen-diagnostik-menggunakan-ifp-di-kelas' },
+        { lang: 'en', href: 'https://papaninteraktif.com/en/journal/diagnostic-assessment-using-interactive-flat-panel' }
+      ],
+      openGraph: {
+        title: 'Diagnostic Assessment Using Interactive Flat Panel | Jurnal Guru',
+        description: 'A guide to mapping student readiness and misconceptions using an Interactive Flat Panel before instruction begins.',
+        type: 'article',
+        url: 'https://papaninteraktif.com/en/journal/diagnostic-assessment-using-interactive-flat-panel'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Diagnostic Assessment Using Interactive Flat Panel | Jurnal Guru',
+        description: 'A guide to mapping student readiness and misconceptions using an Interactive Flat Panel before instruction begins.'
+      },
+      jsonLd: [
         {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -79,12 +46,12 @@ const ArticleDiagnosticIfpEn: React.FC<ArticleDiagnosticIfpEnProps> = ({ onBack,
             "name": "Papan Interaktif",
             "logo": {
               "@type": "ImageObject",
-              "url": window.location.origin + "/icon.svg"
+              "url": "https://papaninteraktif.com/icon.svg"
             }
           },
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": window.location.origin + "/en/journal/diagnostic-assessment-using-interactive-flat-panel"
+            "@id": "https://papaninteraktif.com/en/journal/diagnostic-assessment-using-interactive-flat-panel"
           },
           "inLanguage": "en"
         },
@@ -96,30 +63,24 @@ const ArticleDiagnosticIfpEn: React.FC<ArticleDiagnosticIfpEnProps> = ({ onBack,
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": window.location.origin + "/en"
+              "item": "https://papaninteraktif.com/en"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Journal",
-              "item": window.location.origin + "/en/journal"
+              "item": "https://papaninteraktif.com/en/journal"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Diagnostic Assessment Using IFP",
-              "item": window.location.origin + "/en/journal/diagnostic-assessment-using-interactive-flat-panel"
+              "item": "https://papaninteraktif.com/en/journal/diagnostic-assessment-using-interactive-flat-panel"
             }
           ]
         }
-      ]);
-      document.head.appendChild(script);
-    }
-    
-    return () => {
-      const scriptToRemove = document.getElementById(scriptId);
-      if (scriptToRemove) scriptToRemove.remove();
-    };
+      ]
+    });
   }, []);
 
   return (

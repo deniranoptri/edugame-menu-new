@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { AdSenseInArticle } from './AdSenseInArticle';
+import { applySEOMetadata } from '../seo';
 
 interface ArticleStationRotationIfpProps {
   onBack: () => void;
@@ -9,62 +10,28 @@ interface ArticleStationRotationIfpProps {
 const ArticleStationRotationIfp: React.FC<ArticleStationRotationIfpProps> = ({ onBack, navigateTo }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Blended Learning: Model Station Rotation Menggunakan IFP | Jurnal Guru";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Panduan implementasi Station Rotation (Blended Learning) menggunakan IFP. Solusi mengoptimalkan 1 layar interaktif untuk 30 siswa melalui rotasi kolaboratif."
-      );
-    }
-    
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', window.location.origin + '/jurnal-guru/blended-learning-station-rotation-menggunakan-ifp');
 
-    const idUrl = 'https://papaninteraktif.com/jurnal-guru/blended-learning-station-rotation-menggunakan-ifp';
-    const enUrl = 'https://papaninteraktif.com/en/journal/blended-learning-station-rotation-using-ifp';
-
-    let hrefLangId = document.querySelector('link[hreflang="id"]');
-    if (!hrefLangId) {
-      hrefLangId = document.createElement('link');
-      hrefLangId.setAttribute('rel', 'alternate');
-      hrefLangId.setAttribute('hreflang', 'id');
-      document.head.appendChild(hrefLangId);
-    }
-    hrefLangId.setAttribute('href', idUrl);
-
-    let hrefLangEn = document.querySelector('link[hreflang="en"]');
-    if (!hrefLangEn) {
-      hrefLangEn = document.createElement('link');
-      hrefLangEn.setAttribute('rel', 'alternate');
-      hrefLangEn.setAttribute('hreflang', 'en');
-      document.head.appendChild(hrefLangEn);
-    }
-    hrefLangEn.setAttribute('href', enUrl);
-
-    let hrefLangDef = document.querySelector('link[hreflang="x-default"]');
-    if (!hrefLangDef) {
-      hrefLangDef = document.createElement('link');
-      hrefLangDef.setAttribute('rel', 'alternate');
-      hrefLangDef.setAttribute('hreflang', 'x-default');
-      document.head.appendChild(hrefLangDef);
-    }
-    hrefLangDef.setAttribute('href', idUrl);
-
-
-    const scriptId = 'article-station-rotation-ifp-schema';
-    let existingScript = document.getElementById(scriptId);
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify([
+    applySEOMetadata({
+      lang: 'id',
+      title: 'Blended Learning: Model Station Rotation Menggunakan IFP | Jurnal Guru',
+      description: 'Panduan implementasi Station Rotation (Blended Learning) menggunakan IFP. Solusi mengoptimalkan 1 layar interaktif untuk 30 siswa melalui rotasi kolaboratif.',
+      canonical: 'https://papaninteraktif.com/jurnal-guru/blended-learning-station-rotation-menggunakan-ifp',
+      hreflangs: [
+        { lang: 'id', href: 'https://papaninteraktif.com/jurnal-guru/blended-learning-station-rotation-menggunakan-ifp' },
+        { lang: 'en', href: 'https://papaninteraktif.com/en/journal/blended-learning-station-rotation-using-ifp' }
+      ],
+      openGraph: {
+        title: 'Blended Learning: Model Station Rotation Menggunakan IFP | Jurnal Guru',
+        description: 'Panduan implementasi Station Rotation (Blended Learning) menggunakan IFP. Solusi mengoptimalkan 1 layar interaktif untuk 30 siswa melalui rotasi kolaboratif.',
+        type: 'article',
+        url: 'https://papaninteraktif.com/jurnal-guru/blended-learning-station-rotation-menggunakan-ifp'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Blended Learning: Model Station Rotation Menggunakan IFP | Jurnal Guru',
+        description: 'Panduan implementasi Station Rotation (Blended Learning) menggunakan IFP. Solusi mengoptimalkan 1 layar interaktif untuk 30 siswa melalui rotasi kolaboratif.'
+      },
+      jsonLd: [
         {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -79,12 +46,12 @@ const ArticleStationRotationIfp: React.FC<ArticleStationRotationIfpProps> = ({ o
             "name": "Papan Interaktif",
             "logo": {
               "@type": "ImageObject",
-              "url": window.location.origin + "/logo.png"
+              "url": "https://papaninteraktif.com/icon.svg"
             }
           },
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": window.location.origin + "/jurnal-guru/blended-learning-station-rotation-menggunakan-ifp"
+            "@id": "https://papaninteraktif.com/jurnal-guru/blended-learning-station-rotation-menggunakan-ifp"
           }
         },
         {
@@ -95,34 +62,24 @@ const ArticleStationRotationIfp: React.FC<ArticleStationRotationIfpProps> = ({ o
               "@type": "ListItem",
               "position": 1,
               "name": "Beranda",
-              "item": window.location.origin + "/"
+              "item": "https://papaninteraktif.com/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Jurnal Guru",
-              "item": window.location.origin + "/jurnal-guru"
+              "item": "https://papaninteraktif.com/jurnal-guru"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Model Station Rotation",
-              "item": window.location.origin + "/jurnal-guru/blended-learning-station-rotation-menggunakan-ifp"
+              "item": "https://papaninteraktif.com/jurnal-guru/blended-learning-station-rotation-menggunakan-ifp"
             }
           ]
         }
-      ]);
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      if (existingScript) {
-        existingScript.remove();
-      } else {
-        const scriptToRemove = document.getElementById(scriptId);
-        if (scriptToRemove) scriptToRemove.remove();
-      }
-    };
+      ]
+    });
   }, []);
 
   return (
