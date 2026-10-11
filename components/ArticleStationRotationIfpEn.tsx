@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { AdSenseInArticle } from './AdSenseInArticle';
+import { applySEOMetadata } from '../seo';
 
 interface ArticleStationRotationIfpEnProps {
   onBack: () => void;
@@ -9,62 +10,28 @@ interface ArticleStationRotationIfpEnProps {
 const ArticleStationRotationIfpEn: React.FC<ArticleStationRotationIfpEnProps> = ({ onBack, navigateTo }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Blended Learning Station Rotation Using IFP | Jurnal Guru";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "A complete guide to implementing the Blended Learning Station Rotation model using an Interactive Flat Panel to maximize classroom management and student engagement."
-      );
-    }
-    
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', window.location.origin + '/en/journal/blended-learning-station-rotation-using-ifp');
 
-    const idUrl = window.location.origin + '/jurnal-guru/blended-learning-station-rotation-menggunakan-ifp';
-    const enUrl = window.location.origin + '/en/journal/blended-learning-station-rotation-using-ifp';
-
-    let hrefLangId = document.querySelector('link[hreflang="id"]');
-    if (!hrefLangId) {
-      hrefLangId = document.createElement('link');
-      hrefLangId.setAttribute('rel', 'alternate');
-      hrefLangId.setAttribute('hreflang', 'id');
-      document.head.appendChild(hrefLangId);
-    }
-    hrefLangId.setAttribute('href', idUrl);
-
-    let hrefLangEn = document.querySelector('link[hreflang="en"]');
-    if (!hrefLangEn) {
-      hrefLangEn = document.createElement('link');
-      hrefLangEn.setAttribute('rel', 'alternate');
-      hrefLangEn.setAttribute('hreflang', 'en');
-      document.head.appendChild(hrefLangEn);
-    }
-    hrefLangEn.setAttribute('href', enUrl);
-
-    let hrefLangDef = document.querySelector('link[hreflang="x-default"]');
-    if (!hrefLangDef) {
-      hrefLangDef = document.createElement('link');
-      hrefLangDef.setAttribute('rel', 'alternate');
-      hrefLangDef.setAttribute('hreflang', 'x-default');
-      document.head.appendChild(hrefLangDef);
-    }
-    hrefLangDef.setAttribute('href', idUrl);
-
-    const scriptId = 'article-station-rotation-ifp-en-schema';
-    let existingScript = document.getElementById(scriptId);
-    
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify([
+    applySEOMetadata({
+      lang: 'en',
+      title: 'Blended Learning Station Rotation Using IFP | Jurnal Guru',
+      description: 'A complete guide to implementing the Blended Learning Station Rotation model using an Interactive Flat Panel to maximize classroom management and student engagement.',
+      canonical: 'https://papaninteraktif.com/en/journal/blended-learning-station-rotation-using-ifp',
+      hreflangs: [
+        { lang: 'id', href: 'https://papaninteraktif.com/jurnal-guru/blended-learning-station-rotation-menggunakan-ifp' },
+        { lang: 'en', href: 'https://papaninteraktif.com/en/journal/blended-learning-station-rotation-using-ifp' }
+      ],
+      openGraph: {
+        title: 'Blended Learning Station Rotation Using IFP | Jurnal Guru',
+        description: 'A complete guide to implementing the Blended Learning Station Rotation model using an Interactive Flat Panel to maximize classroom management and student engagement.',
+        type: 'article',
+        url: 'https://papaninteraktif.com/en/journal/blended-learning-station-rotation-using-ifp'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Blended Learning Station Rotation Using IFP | Jurnal Guru',
+        description: 'A complete guide to implementing the Blended Learning Station Rotation model using an Interactive Flat Panel to maximize classroom management and student engagement.'
+      },
+      jsonLd: [
         {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -79,12 +46,12 @@ const ArticleStationRotationIfpEn: React.FC<ArticleStationRotationIfpEnProps> = 
             "name": "Papan Interaktif",
             "logo": {
               "@type": "ImageObject",
-              "url": window.location.origin + "/icon.svg"
+              "url": "https://papaninteraktif.com/icon.svg"
             }
           },
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": window.location.origin + "/en/journal/blended-learning-station-rotation-using-ifp"
+            "@id": "https://papaninteraktif.com/en/journal/blended-learning-station-rotation-using-ifp"
           },
           "inLanguage": "en"
         },
@@ -96,30 +63,24 @@ const ArticleStationRotationIfpEn: React.FC<ArticleStationRotationIfpEnProps> = 
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": window.location.origin + "/en"
+              "item": "https://papaninteraktif.com/en"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Journal",
-              "item": window.location.origin + "/en/journal"
+              "item": "https://papaninteraktif.com/en/journal"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Station Rotation Using IFP",
-              "item": window.location.origin + "/en/journal/blended-learning-station-rotation-using-ifp"
+              "item": "https://papaninteraktif.com/en/journal/blended-learning-station-rotation-using-ifp"
             }
           ]
         }
-      ]);
-      document.head.appendChild(script);
-    }
-    
-    return () => {
-      const scriptToRemove = document.getElementById(scriptId);
-      if (scriptToRemove) scriptToRemove.remove();
-    };
+      ]
+    });
   }, []);
 
   return (

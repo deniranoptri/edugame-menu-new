@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { AdSenseInArticle } from './AdSenseInArticle';
+import { applySEOMetadata } from '../seo';
 
 interface ArticleGamificationIfpProps {
   onBack: () => void;
@@ -9,48 +10,28 @@ interface ArticleGamificationIfpProps {
 const ArticleGamificationIfp: React.FC<ArticleGamificationIfpProps> = ({ onBack, navigateTo }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Gamifikasi Pembelajaran Menggunakan IFP | Jurnal Guru";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Panduan lengkap gamifikasi pembelajaran menggunakan IFP. Pelajari cara menerapkan poin, badge, papan peringkat, dan aktivitas kompetitif yang edukatif di kelas."
-      );
-    }
-    
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', window.location.origin + '/jurnal-guru/gamifikasi-pembelajaran-menggunakan-ifp');
-    // Hreflang Tags
-    const hreflangs = [
-      { hreflang: 'id', href: window.location.origin + '/jurnal-guru/gamifikasi-pembelajaran-menggunakan-ifp' },
-      { hreflang: 'en', href: window.location.origin + '/en/journal/gamification-using-interactive-flat-panel' },
-      { hreflang: 'x-default', href: window.location.origin + '/jurnal-guru/gamifikasi-pembelajaran-menggunakan-ifp' }
-    ];
-    
-    hreflangs.forEach(({ hreflang, href }) => {
-      let link = document.querySelector(`link[hreflang="${hreflang}"]`);
-      if (!link) {
-        link = document.createElement('link');
-        link.setAttribute('rel', 'alternate');
-        link.setAttribute('hreflang', hreflang);
-        document.head.appendChild(link);
-      }
-      link.setAttribute('href', href);
-    });
 
-    const scriptId = 'article-gamification-ifp-schema';
-    let existingScript = document.getElementById(scriptId);
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify([
+    applySEOMetadata({
+      lang: 'id',
+      title: 'Gamifikasi Pembelajaran Menggunakan IFP | Jurnal Guru',
+      description: 'Panduan lengkap gamifikasi pembelajaran menggunakan IFP. Pelajari cara menerapkan poin, badge, papan peringkat, dan aktivitas kompetitif yang edukatif di kelas.',
+      canonical: 'https://papaninteraktif.com/jurnal-guru/gamifikasi-pembelajaran-menggunakan-ifp',
+      hreflangs: [
+        { lang: 'id', href: 'https://papaninteraktif.com/jurnal-guru/gamifikasi-pembelajaran-menggunakan-ifp' },
+        { lang: 'en', href: 'https://papaninteraktif.com/en/journal/gamification-using-interactive-flat-panel' }
+      ],
+      openGraph: {
+        title: 'Gamifikasi Pembelajaran Menggunakan IFP | Jurnal Guru',
+        description: 'Panduan lengkap gamifikasi pembelajaran menggunakan IFP. Pelajari cara menerapkan poin, badge, papan peringkat, dan aktivitas kompetitif yang edukatif di kelas.',
+        type: 'article',
+        url: 'https://papaninteraktif.com/jurnal-guru/gamifikasi-pembelajaran-menggunakan-ifp'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Gamifikasi Pembelajaran Menggunakan IFP | Jurnal Guru',
+        description: 'Panduan lengkap gamifikasi pembelajaran menggunakan IFP. Pelajari cara menerapkan poin, badge, papan peringkat, dan aktivitas kompetitif yang edukatif di kelas.'
+      },
+      jsonLd: [
         {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -65,12 +46,12 @@ const ArticleGamificationIfp: React.FC<ArticleGamificationIfpProps> = ({ onBack,
             "name": "Papan Interaktif",
             "logo": {
               "@type": "ImageObject",
-              "url": window.location.origin + "/logo.png"
+              "url": "https://papaninteraktif.com/logo.png"
             }
           },
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": window.location.origin + "/jurnal-guru/gamifikasi-pembelajaran-menggunakan-ifp"
+            "@id": "https://papaninteraktif.com/jurnal-guru/gamifikasi-pembelajaran-menggunakan-ifp"
           }
         },
         {
@@ -81,34 +62,24 @@ const ArticleGamificationIfp: React.FC<ArticleGamificationIfpProps> = ({ onBack,
               "@type": "ListItem",
               "position": 1,
               "name": "Beranda",
-              "item": window.location.origin + "/"
+              "item": "https://papaninteraktif.com/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Jurnal Guru",
-              "item": window.location.origin + "/jurnal-guru"
+              "item": "https://papaninteraktif.com/jurnal-guru"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Gamifikasi Pembelajaran Menggunakan IFP",
-              "item": window.location.origin + "/jurnal-guru/gamifikasi-pembelajaran-menggunakan-ifp"
+              "item": "https://papaninteraktif.com/jurnal-guru/gamifikasi-pembelajaran-menggunakan-ifp"
             }
           ]
         }
-      ]);
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      if (existingScript) {
-        existingScript.remove();
-      } else {
-        const scriptToRemove = document.getElementById(scriptId);
-        if (scriptToRemove) scriptToRemove.remove();
-      }
-    };
+      ]
+    });
   }, []);
 
   return (

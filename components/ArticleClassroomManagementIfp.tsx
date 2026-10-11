@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { AdSenseInArticle } from './AdSenseInArticle';
+import { applySEOMetadata } from '../seo';
 
 interface ArticleClassroomManagementIfpProps {
   onBack: () => void;
@@ -9,32 +10,28 @@ interface ArticleClassroomManagementIfpProps {
 const ArticleClassroomManagementIfp: React.FC<ArticleClassroomManagementIfpProps> = ({ onBack, navigateTo }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Strategi Pengelolaan Kelas Menggunakan IFP | Jurnal Guru";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Strategi mengelola kelas menggunakan IFP untuk mengatur perhatian, rotasi, transisi, dan partisipasi siswa agar pembelajaran interaktif tetap tertib."
-      );
-    }
-    
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', window.location.origin + '/jurnal-guru/strategi-pengelolaan-kelas-menggunakan-ifp');
 
-    // Structured Data for Article
-    const scriptId = 'article-management-ifp-schema';
-    let existingScript = document.getElementById(scriptId);
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify([
+    applySEOMetadata({
+      lang: 'id',
+      title: 'Strategi Pengelolaan Kelas Menggunakan IFP | Jurnal Guru',
+      description: 'Strategi mengelola kelas menggunakan IFP untuk mengatur perhatian, rotasi, transisi, dan partisipasi siswa agar pembelajaran interaktif tetap tertib.',
+      canonical: 'https://papaninteraktif.com/jurnal-guru/strategi-pengelolaan-kelas-menggunakan-ifp',
+      hreflangs: [
+        { lang: 'id', href: 'https://papaninteraktif.com/jurnal-guru/strategi-pengelolaan-kelas-menggunakan-ifp' },
+        { lang: 'en', href: 'https://papaninteraktif.com/en/journal/classroom-management-using-interactive-flat-panel' }
+      ],
+      openGraph: {
+        title: 'Strategi Pengelolaan Kelas Menggunakan IFP | Jurnal Guru',
+        description: 'Strategi mengelola kelas menggunakan IFP untuk mengatur perhatian, rotasi, transisi, dan partisipasi siswa agar pembelajaran interaktif tetap tertib.',
+        type: 'article',
+        url: 'https://papaninteraktif.com/jurnal-guru/strategi-pengelolaan-kelas-menggunakan-ifp'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Strategi Pengelolaan Kelas Menggunakan IFP | Jurnal Guru',
+        description: 'Strategi mengelola kelas menggunakan IFP untuk mengatur perhatian, rotasi, transisi, dan partisipasi siswa agar pembelajaran interaktif tetap tertib.'
+      },
+      jsonLd: [
         {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -49,7 +46,7 @@ const ArticleClassroomManagementIfp: React.FC<ArticleClassroomManagementIfpProps
             "name": "Papan Interaktif",
             "logo": {
               "@type": "ImageObject",
-              "url": window.location.origin + "/icon.svg"
+              "url": "https://papaninteraktif.com/icon.svg"
             }
           }
         },
@@ -61,35 +58,24 @@ const ArticleClassroomManagementIfp: React.FC<ArticleClassroomManagementIfpProps
               "@type": "ListItem",
               "position": 1,
               "name": "Beranda",
-              "item": window.location.origin + "/"
+              "item": "https://papaninteraktif.com/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Jurnal Guru",
-              "item": window.location.origin + "/jurnal-guru"
+              "item": "https://papaninteraktif.com/jurnal-guru"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Strategi Pengelolaan Kelas Menggunakan IFP",
-              "item": window.location.origin + "/jurnal-guru/strategi-pengelolaan-kelas-menggunakan-ifp"
+              "item": "https://papaninteraktif.com/jurnal-guru/strategi-pengelolaan-kelas-menggunakan-ifp"
             }
           ]
         }
-      ]);
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      document.title = 'Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif';
-      if (metaDescription) {
-        metaDescription.setAttribute('content', 'Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru.');
-      }
-      if (existingScript) existingScript.remove();
-      const addedScript = document.getElementById(scriptId);
-      if (addedScript) addedScript.remove();
-    };
+      ]
+    });
   }, []);
 
   return (

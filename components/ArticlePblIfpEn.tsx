@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { AdSenseInArticle } from './AdSenseInArticle';
+import { applySEOMetadata } from '../seo';
 
 interface ArticlePblIfpEnProps {
   onBack: () => void;
@@ -9,62 +10,28 @@ interface ArticlePblIfpEnProps {
 const ArticlePblIfpEn: React.FC<ArticlePblIfpEnProps> = ({ onBack, navigateTo }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Problem-Based Learning Using Interactive Flat Panel | Teacher Journal";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "A practical guide to implementing Problem-Based Learning (PBL) using an Interactive Flat Panel. Learn how to foster critical thinking, collaboration, and real-world problem-solving."
-      );
-    }
-    
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', window.location.origin + '/en/journal/problem-based-learning-using-interactive-flat-panel');
 
-    const idUrl = window.location.origin + '/jurnal-guru/pembelajaran-berbasis-masalah-menggunakan-ifp';
-    const enUrl = window.location.origin + '/en/journal/problem-based-learning-using-interactive-flat-panel';
-
-    let hrefLangId = document.querySelector('link[hreflang="id"]');
-    if (!hrefLangId) {
-      hrefLangId = document.createElement('link');
-      hrefLangId.setAttribute('rel', 'alternate');
-      hrefLangId.setAttribute('hreflang', 'id');
-      document.head.appendChild(hrefLangId);
-    }
-    hrefLangId.setAttribute('href', idUrl);
-
-    let hrefLangEn = document.querySelector('link[hreflang="en"]');
-    if (!hrefLangEn) {
-      hrefLangEn = document.createElement('link');
-      hrefLangEn.setAttribute('rel', 'alternate');
-      hrefLangEn.setAttribute('hreflang', 'en');
-      document.head.appendChild(hrefLangEn);
-    }
-    hrefLangEn.setAttribute('href', enUrl);
-
-    let hrefLangDef = document.querySelector('link[hreflang="x-default"]');
-    if (!hrefLangDef) {
-      hrefLangDef = document.createElement('link');
-      hrefLangDef.setAttribute('rel', 'alternate');
-      hrefLangDef.setAttribute('hreflang', 'x-default');
-      document.head.appendChild(hrefLangDef);
-    }
-    hrefLangDef.setAttribute('href', idUrl);
-
-    const scriptId = 'article-pbl-ifp-en-schema';
-    let existingScript = document.getElementById(scriptId);
-    
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify([
+    applySEOMetadata({
+      lang: 'en',
+      title: 'Problem-Based Learning Using Interactive Flat Panel | Teacher Journal',
+      description: 'A practical guide to implementing Problem-Based Learning (PBL) using an Interactive Flat Panel. Learn how to foster critical thinking, collaboration, and real-world problem-solving.',
+      canonical: 'https://papaninteraktif.com/en/journal/problem-based-learning-using-interactive-flat-panel',
+      hreflangs: [
+        { lang: 'id', href: 'https://papaninteraktif.com/jurnal-guru/pembelajaran-berbasis-masalah-menggunakan-ifp' },
+        { lang: 'en', href: 'https://papaninteraktif.com/en/journal/problem-based-learning-using-interactive-flat-panel' }
+      ],
+      openGraph: {
+        title: 'Problem-Based Learning Using Interactive Flat Panel | Teacher Journal',
+        description: 'A practical guide to implementing Problem-Based Learning (PBL) using an Interactive Flat Panel. Learn how to foster critical thinking, collaboration, and real-world problem-solving.',
+        type: 'article',
+        url: 'https://papaninteraktif.com/en/journal/problem-based-learning-using-interactive-flat-panel'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Problem-Based Learning Using Interactive Flat Panel | Teacher Journal',
+        description: 'A practical guide to implementing Problem-Based Learning (PBL) using an Interactive Flat Panel. Learn how to foster critical thinking, collaboration, and real-world problem-solving.'
+      },
+      jsonLd: [
         {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -79,14 +46,14 @@ const ArticlePblIfpEn: React.FC<ArticlePblIfpEnProps> = ({ onBack, navigateTo })
             "name": "Papan Interaktif",
             "logo": {
               "@type": "ImageObject",
-              "url": window.location.origin + "/icon.svg"
+              "url": "https://papaninteraktif.com/icon.svg"
             }
           },
           "datePublished": "2024-01-22",
           "dateModified": "2024-01-22",
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": enUrl
+            "@id": "https://papaninteraktif.com/en/journal/problem-based-learning-using-interactive-flat-panel"
           }
         },
         {
@@ -97,36 +64,24 @@ const ArticlePblIfpEn: React.FC<ArticlePblIfpEnProps> = ({ onBack, navigateTo })
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": window.location.origin + "/en"
+              "item": "https://papaninteraktif.com/en"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Journal",
-              "item": window.location.origin + "/en/journal"
+              "item": "https://papaninteraktif.com/en/journal"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Problem-Based Learning Using IFP",
-              "item": enUrl
+              "item": "https://papaninteraktif.com/en/journal/problem-based-learning-using-interactive-flat-panel"
             }
           ]
         }
-      ]);
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      const scriptToRemove = document.getElementById(scriptId);
-      if (scriptToRemove) {
-        scriptToRemove.remove();
-      }
-      if (canonical) canonical.remove();
-      if (hrefLangId) hrefLangId.remove();
-      if (hrefLangEn) hrefLangEn.remove();
-      if (hrefLangDef) hrefLangDef.remove();
-    };
+      ]
+    });
   }, []);
 
   return (

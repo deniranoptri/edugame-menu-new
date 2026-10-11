@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { AdSenseInArticle } from './AdSenseInArticle';
+import { applySEOMetadata } from '../seo';
 
 interface ArticleGuideIfpProps {
   onBack: () => void;
@@ -9,32 +10,28 @@ interface ArticleGuideIfpProps {
 const ArticleGuideIfp: React.FC<ArticleGuideIfpProps> = ({ onBack, navigateTo }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Panduan Menggunakan IFP untuk Pembelajaran Interaktif di Kelas | Jurnal Guru";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Panduan langkah demi langkah cara menggunakan IFP di kelas untuk menciptakan aktivitas belajar menggunakan layar sentuh yang interaktif dan kolaboratif."
-      );
-    }
-    
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', window.location.origin + '/jurnal-guru/panduan-menggunakan-ifp-untuk-pembelajaran-interaktif-di-kelas');
 
-    // Structured Data for Article
-    const scriptId = 'article-guide-ifp-schema';
-    let existingScript = document.getElementById(scriptId);
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify([
+    applySEOMetadata({
+      lang: 'id',
+      title: 'Panduan Menggunakan IFP untuk Pembelajaran Interaktif di Kelas | Jurnal Guru',
+      description: 'Panduan langkah demi langkah cara menggunakan IFP di kelas untuk menciptakan aktivitas belajar menggunakan layar sentuh yang interaktif dan kolaboratif.',
+      canonical: 'https://papaninteraktif.com/jurnal-guru/panduan-menggunakan-ifp-untuk-pembelajaran-interaktif-di-kelas',
+      hreflangs: [
+        { lang: 'id', href: 'https://papaninteraktif.com/jurnal-guru/panduan-menggunakan-ifp-untuk-pembelajaran-interaktif-di-kelas' }
+      ],
+      openGraph: {
+        title: 'Panduan Menggunakan IFP untuk Pembelajaran Interaktif di Kelas | Jurnal Guru',
+        description: 'Panduan langkah demi langkah cara menggunakan IFP di kelas untuk menciptakan aktivitas belajar menggunakan layar sentuh yang interaktif dan kolaboratif.',
+        type: 'article',
+        url: 'https://papaninteraktif.com/jurnal-guru/panduan-menggunakan-ifp-untuk-pembelajaran-interaktif-di-kelas',
+        siteName: 'Papan Interaktif'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Panduan Menggunakan IFP untuk Pembelajaran Interaktif di Kelas | Jurnal Guru',
+        description: 'Panduan langkah demi langkah cara menggunakan IFP di kelas untuk menciptakan aktivitas belajar menggunakan layar sentuh yang interaktif dan kolaboratif.'
+      },
+      jsonLd: [
         {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -49,8 +46,12 @@ const ArticleGuideIfp: React.FC<ArticleGuideIfpProps> = ({ onBack, navigateTo })
             "name": "Papan Interaktif",
             "logo": {
               "@type": "ImageObject",
-              "url": window.location.origin + "/icon.svg"
+              "url": "https://papaninteraktif.com/icon.svg"
             }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://papaninteraktif.com/jurnal-guru/panduan-menggunakan-ifp-untuk-pembelajaran-interaktif-di-kelas"
           }
         },
         {
@@ -61,35 +62,24 @@ const ArticleGuideIfp: React.FC<ArticleGuideIfpProps> = ({ onBack, navigateTo })
               "@type": "ListItem",
               "position": 1,
               "name": "Beranda",
-              "item": window.location.origin + "/"
+              "item": "https://papaninteraktif.com/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Jurnal Guru",
-              "item": window.location.origin + "/jurnal-guru"
+              "item": "https://papaninteraktif.com/jurnal-guru"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Panduan Menggunakan IFP",
-              "item": window.location.origin + "/jurnal-guru/panduan-menggunakan-ifp-untuk-pembelajaran-interaktif-di-kelas"
+              "item": "https://papaninteraktif.com/jurnal-guru/panduan-menggunakan-ifp-untuk-pembelajaran-interaktif-di-kelas"
             }
           ]
         }
-      ]);
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      document.title = 'Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif';
-      if (metaDescription) {
-        metaDescription.setAttribute('content', 'Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru.');
-      }
-      if (existingScript) existingScript.remove();
-      const addedScript = document.getElementById(scriptId);
-      if (addedScript) addedScript.remove();
-    };
+      ]
+    });
   }, []);
 
   return (

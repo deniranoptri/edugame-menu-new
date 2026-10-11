@@ -69,6 +69,7 @@ import { HubKids } from './components/HubKids';
 import { HubLogic } from './components/HubLogic';
 import NotFound from './components/NotFound';
 import { AdSenseDisplay } from './components/AdSenseDisplay';
+import { applySEOMetadata } from './seo';
 
 type GameMode = 'general' | 'kids';
 
@@ -813,51 +814,17 @@ const parseRoute = (pathname: string): ParsedRoute => {
 
 const HomeSEOManager = ({ locale }: { locale: 'id' | 'en' }) => {
   useEffect(() => {
-    document.documentElement.lang = locale;
-    document.title = 'Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif';
-    
-    const setMeta = (name: string, content: string, isProperty = false) => {
-      const attr = isProperty ? 'property' : 'name';
-      let el = document.querySelector(`meta[${attr}="${name}"]`);
-      if (!el) {
-        el = document.createElement('meta');
-        el.setAttribute(attr, name);
-        document.head.appendChild(el);
-      }
-      el.setAttribute('content', content);
-    };
-
-    setMeta('description', 'Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru. Belajar sambil bermain dengan berbagai pilihan game.');
-    
-    // Hreflang
-    const updateHreflang = (lang: string, url: string) => {
-      let link = document.querySelector(`link[hreflang="${lang}"]`);
-      if (!link) {
-        link = document.createElement('link');
-        link.setAttribute('rel', 'alternate');
-        link.setAttribute('hreflang', lang);
-        document.head.appendChild(link);
-      }
-      link.setAttribute('href', url);
-    };
-    updateHreflang('id', 'https://papaninteraktif.com/');
-    updateHreflang('en', 'https://papaninteraktif.com/en/');
-    updateHreflang('x-default', 'https://papaninteraktif.com/');
-
-    // Canonical
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    const currentUrl = locale === 'en' ? 'https://papaninteraktif.com/en/' : 'https://papaninteraktif.com/';
-    canonical.setAttribute('href', currentUrl);
-    
-    return () => {
-      const links = document.querySelectorAll('link[rel="alternate"][hreflang]');
-      links.forEach(link => link.remove());
-    };
+    applySEOMetadata({
+      lang: locale,
+      title: 'Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif',
+      description: 'Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru. Belajar sambil bermain dengan berbagai pilihan game.',
+      canonical: locale === 'en' ? 'https://papaninteraktif.com/en/' : 'https://papaninteraktif.com/',
+      hreflangs: [
+        { lang: 'id', href: 'https://papaninteraktif.com/' },
+        { lang: 'en', href: 'https://papaninteraktif.com/en/' },
+        { lang: 'x-default', href: 'https://papaninteraktif.com/' }
+      ]
+    });
   }, [locale]);
   return null;
 };

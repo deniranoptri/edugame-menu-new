@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { AdSenseInArticle } from './AdSenseInArticle';
+import { applySEOMetadata } from '../seo';
 
 interface ArticleChooseIfpProps {
   onBack: () => void;
@@ -9,32 +10,27 @@ interface ArticleChooseIfpProps {
 const ArticleChooseIfp: React.FC<ArticleChooseIfpProps> = ({ onBack, navigateTo }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Cara Memilih IFP yang Tepat untuk Pembelajaran di Sekolah | Jurnal Guru";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Panduan memilih IFP untuk pembelajaran di sekolah berdasarkan kebutuhan kelas, ukuran ruang, interaksi siswa, konektivitas, visual, dan kesiapan guru."
-      );
-    }
-    
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', window.location.origin + '/jurnal-guru/cara-memilih-ifp-untuk-pembelajaran-di-sekolah');
 
-    // Structured Data for Article
-    const scriptId = 'article-choose-ifp-schema';
-    let existingScript = document.getElementById(scriptId);
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify([
+    applySEOMetadata({
+      lang: 'id',
+      title: 'Cara Memilih IFP yang Tepat untuk Pembelajaran di Sekolah | Jurnal Guru',
+      description: 'Panduan memilih IFP untuk pembelajaran di sekolah berdasarkan kebutuhan kelas, ukuran ruang, interaksi siswa, konektivitas, visual, dan kesiapan guru.',
+      canonical: 'https://papaninteraktif.com/jurnal-guru/cara-memilih-ifp-untuk-pembelajaran-di-sekolah',
+      hreflangs: [
+        { lang: 'id', href: 'https://papaninteraktif.com/jurnal-guru/cara-memilih-ifp-untuk-pembelajaran-di-sekolah' }
+      ],
+      openGraph: {
+        title: 'Cara Memilih IFP yang Tepat untuk Pembelajaran di Sekolah | Jurnal Guru',
+        description: 'Panduan memilih IFP untuk pembelajaran di sekolah berdasarkan kebutuhan kelas, ukuran ruang, interaksi siswa, konektivitas, visual, dan kesiapan guru.',
+        type: 'article',
+        url: 'https://papaninteraktif.com/jurnal-guru/cara-memilih-ifp-untuk-pembelajaran-di-sekolah'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Cara Memilih IFP yang Tepat untuk Pembelajaran di Sekolah | Jurnal Guru',
+        description: 'Panduan memilih IFP untuk pembelajaran di sekolah berdasarkan kebutuhan kelas, ukuran ruang, interaksi siswa, konektivitas, visual, dan kesiapan guru.'
+      },
+      jsonLd: [
         {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -49,8 +45,12 @@ const ArticleChooseIfp: React.FC<ArticleChooseIfpProps> = ({ onBack, navigateTo 
             "name": "Papan Interaktif",
             "logo": {
               "@type": "ImageObject",
-              "url": window.location.origin + "/icon.svg"
+              "url": "https://papaninteraktif.com/icon.svg"
             }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://papaninteraktif.com/jurnal-guru/cara-memilih-ifp-untuk-pembelajaran-di-sekolah"
           }
         },
         {
@@ -61,35 +61,24 @@ const ArticleChooseIfp: React.FC<ArticleChooseIfpProps> = ({ onBack, navigateTo 
               "@type": "ListItem",
               "position": 1,
               "name": "Beranda",
-              "item": window.location.origin + "/"
+              "item": "https://papaninteraktif.com/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Jurnal Guru",
-              "item": window.location.origin + "/jurnal-guru"
+              "item": "https://papaninteraktif.com/jurnal-guru"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Cara Memilih IFP untuk Pembelajaran",
-              "item": window.location.origin + "/jurnal-guru/cara-memilih-ifp-untuk-pembelajaran-di-sekolah"
+              "item": "https://papaninteraktif.com/jurnal-guru/cara-memilih-ifp-untuk-pembelajaran-di-sekolah"
             }
           ]
         }
-      ]);
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      document.title = 'Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif';
-      if (metaDescription) {
-        metaDescription.setAttribute('content', 'Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru.');
-      }
-      if (existingScript) existingScript.remove();
-      const addedScript = document.getElementById(scriptId);
-      if (addedScript) addedScript.remove();
-    };
+      ]
+    });
   }, []);
 
   return (

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { AdSenseInArticle } from './AdSenseInArticle';
+import { applySEOMetadata } from '../seo';
 
 interface ArticleInkuiriIfpProps {
   onBack: () => void;
@@ -9,62 +10,28 @@ interface ArticleInkuiriIfpProps {
 const ArticleInkuiriIfp: React.FC<ArticleInkuiriIfpProps> = ({ onBack, navigateTo }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Pembelajaran Berbasis Inkuiri Menggunakan IFP | Jurnal Guru";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Panduan lengkap implementasi Pembelajaran Berbasis Inkuiri menggunakan IFP. Fasilitasi penyelidikan, pengujian hipotesis, dan pemecahan masalah secara interaktif."
-      );
-    }
-    
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', window.location.origin + '/jurnal-guru/pembelajaran-berbasis-inkuiri-menggunakan-ifp');
 
-    const idUrl = 'https://papaninteraktif.com/jurnal-guru/pembelajaran-berbasis-inkuiri-menggunakan-ifp';
-    const enUrl = 'https://papaninteraktif.com/en/journal/inquiry-based-learning-using-interactive-flat-panel';
-
-    let hrefLangId = document.querySelector('link[hreflang="id"]');
-    if (!hrefLangId) {
-      hrefLangId = document.createElement('link');
-      hrefLangId.setAttribute('rel', 'alternate');
-      hrefLangId.setAttribute('hreflang', 'id');
-      document.head.appendChild(hrefLangId);
-    }
-    hrefLangId.setAttribute('href', idUrl);
-
-    let hrefLangEn = document.querySelector('link[hreflang="en"]');
-    if (!hrefLangEn) {
-      hrefLangEn = document.createElement('link');
-      hrefLangEn.setAttribute('rel', 'alternate');
-      hrefLangEn.setAttribute('hreflang', 'en');
-      document.head.appendChild(hrefLangEn);
-    }
-    hrefLangEn.setAttribute('href', enUrl);
-
-    let hrefLangDef = document.querySelector('link[hreflang="x-default"]');
-    if (!hrefLangDef) {
-      hrefLangDef = document.createElement('link');
-      hrefLangDef.setAttribute('rel', 'alternate');
-      hrefLangDef.setAttribute('hreflang', 'x-default');
-      document.head.appendChild(hrefLangDef);
-    }
-    hrefLangDef.setAttribute('href', idUrl);
-
-
-    const scriptId = 'article-inkuiri-ifp-schema';
-    let existingScript = document.getElementById(scriptId);
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify([
+    applySEOMetadata({
+      lang: 'id',
+      title: 'Pembelajaran Berbasis Inkuiri Menggunakan IFP | Jurnal Guru',
+      description: 'Panduan lengkap implementasi Pembelajaran Berbasis Inkuiri menggunakan IFP. Fasilitasi penyelidikan, pengujian hipotesis, dan pemecahan masalah secara interaktif.',
+      canonical: 'https://papaninteraktif.com/jurnal-guru/pembelajaran-berbasis-inkuiri-menggunakan-ifp',
+      hreflangs: [
+        { lang: 'id', href: 'https://papaninteraktif.com/jurnal-guru/pembelajaran-berbasis-inkuiri-menggunakan-ifp' },
+        { lang: 'en', href: 'https://papaninteraktif.com/en/journal/inquiry-based-learning-using-interactive-flat-panel' }
+      ],
+      openGraph: {
+        title: 'Pembelajaran Berbasis Inkuiri Menggunakan IFP | Jurnal Guru',
+        description: 'Panduan lengkap implementasi Pembelajaran Berbasis Inkuiri menggunakan IFP. Fasilitasi penyelidikan, pengujian hipotesis, dan pemecahan masalah secara interaktif.',
+        type: 'article',
+        url: 'https://papaninteraktif.com/jurnal-guru/pembelajaran-berbasis-inkuiri-menggunakan-ifp'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Pembelajaran Berbasis Inkuiri Menggunakan IFP | Jurnal Guru',
+        description: 'Panduan lengkap implementasi Pembelajaran Berbasis Inkuiri menggunakan IFP. Fasilitasi penyelidikan, pengujian hipotesis, dan pemecahan masalah secara interaktif.'
+      },
+      jsonLd: [
         {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -79,12 +46,12 @@ const ArticleInkuiriIfp: React.FC<ArticleInkuiriIfpProps> = ({ onBack, navigateT
             "name": "Papan Interaktif",
             "logo": {
               "@type": "ImageObject",
-              "url": window.location.origin + "/logo.png"
+              "url": "https://papaninteraktif.com/logo.png"
             }
           },
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": window.location.origin + "/jurnal-guru/pembelajaran-berbasis-inkuiri-menggunakan-ifp"
+            "@id": "https://papaninteraktif.com/jurnal-guru/pembelajaran-berbasis-inkuiri-menggunakan-ifp"
           }
         },
         {
@@ -95,34 +62,24 @@ const ArticleInkuiriIfp: React.FC<ArticleInkuiriIfpProps> = ({ onBack, navigateT
               "@type": "ListItem",
               "position": 1,
               "name": "Beranda",
-              "item": window.location.origin + "/"
+              "item": "https://papaninteraktif.com/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Jurnal Guru",
-              "item": window.location.origin + "/jurnal-guru"
+              "item": "https://papaninteraktif.com/jurnal-guru"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Pembelajaran Berbasis Inkuiri Menggunakan IFP",
-              "item": window.location.origin + "/jurnal-guru/pembelajaran-berbasis-inkuiri-menggunakan-ifp"
+              "item": "https://papaninteraktif.com/jurnal-guru/pembelajaran-berbasis-inkuiri-menggunakan-ifp"
             }
           ]
         }
-      ]);
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      if (existingScript) {
-        existingScript.remove();
-      } else {
-        const scriptToRemove = document.getElementById(scriptId);
-        if (scriptToRemove) scriptToRemove.remove();
-      }
-    };
+      ]
+    });
   }, []);
 
   return (

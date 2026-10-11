@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { AdSenseInArticle } from './AdSenseInArticle';
+import { applySEOMetadata } from '../seo';
 
 interface ArticleCooperativeIfpProps {
   onBack: () => void;
@@ -9,32 +10,28 @@ interface ArticleCooperativeIfpProps {
 const ArticleCooperativeIfp: React.FC<ArticleCooperativeIfpProps> = ({ onBack, navigateTo }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Pembelajaran Kooperatif Menggunakan IFP di Kelas | Jurnal Guru";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Panduan memfasilitasi pembelajaran kooperatif menggunakan Interactive Flat Panel (IFP), mencakup interdependensi positif, peran siswa, dan aktivitas kelompok."
-      );
-    }
-    
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', window.location.origin + '/jurnal-guru/pembelajaran-kooperatif-menggunakan-ifp');
 
-    // Structured Data for Article
-    const scriptId = 'article-cooperative-ifp-schema';
-    let existingScript = document.getElementById(scriptId);
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify([
+    applySEOMetadata({
+      lang: 'id',
+      title: 'Pembelajaran Kooperatif Menggunakan IFP di Kelas | Jurnal Guru',
+      description: 'Panduan memfasilitasi pembelajaran kooperatif menggunakan Interactive Flat Panel (IFP), mencakup interdependensi positif, peran siswa, dan aktivitas kelompok.',
+      canonical: 'https://papaninteraktif.com/jurnal-guru/pembelajaran-kooperatif-menggunakan-ifp',
+      hreflangs: [
+        { lang: 'id', href: 'https://papaninteraktif.com/jurnal-guru/pembelajaran-kooperatif-menggunakan-ifp' },
+        { lang: 'en', href: 'https://papaninteraktif.com/en/journal/cooperative-learning-using-interactive-flat-panel' }
+      ],
+      openGraph: {
+        title: 'Pembelajaran Kooperatif Menggunakan IFP di Kelas | Jurnal Guru',
+        description: 'Panduan memfasilitasi pembelajaran kooperatif menggunakan Interactive Flat Panel (IFP), mencakup interdependensi positif, peran siswa, dan aktivitas kelompok.',
+        type: 'article',
+        url: 'https://papaninteraktif.com/jurnal-guru/pembelajaran-kooperatif-menggunakan-ifp'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Pembelajaran Kooperatif Menggunakan IFP di Kelas | Jurnal Guru',
+        description: 'Panduan memfasilitasi pembelajaran kooperatif menggunakan Interactive Flat Panel (IFP), mencakup interdependensi positif, peran siswa, dan aktivitas kelompok.'
+      },
+      jsonLd: [
         {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -49,7 +46,7 @@ const ArticleCooperativeIfp: React.FC<ArticleCooperativeIfpProps> = ({ onBack, n
             "name": "Papan Interaktif",
             "logo": {
               "@type": "ImageObject",
-              "url": window.location.origin + "/icon.svg"
+              "url": "https://papaninteraktif.com/icon.svg"
             }
           }
         },
@@ -61,35 +58,24 @@ const ArticleCooperativeIfp: React.FC<ArticleCooperativeIfpProps> = ({ onBack, n
               "@type": "ListItem",
               "position": 1,
               "name": "Beranda",
-              "item": window.location.origin + "/"
+              "item": "https://papaninteraktif.com/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Jurnal Guru",
-              "item": window.location.origin + "/jurnal-guru"
+              "item": "https://papaninteraktif.com/jurnal-guru"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Pembelajaran Kooperatif dengan IFP",
-              "item": window.location.origin + "/jurnal-guru/pembelajaran-kooperatif-menggunakan-ifp"
+              "item": "https://papaninteraktif.com/jurnal-guru/pembelajaran-kooperatif-menggunakan-ifp"
             }
           ]
         }
-      ]);
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      document.title = 'Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif';
-      if (metaDescription) {
-        metaDescription.setAttribute('content', 'Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru.');
-      }
-      if (existingScript) existingScript.remove();
-      const addedScript = document.getElementById(scriptId);
-      if (addedScript) addedScript.remove();
-    };
+      ]
+    });
   }, []);
 
   return (
