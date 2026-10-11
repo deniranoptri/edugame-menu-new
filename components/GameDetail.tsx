@@ -91,7 +91,7 @@ const GameDetail: React.FC<GameDetailProps> = ({ game, onBack, locale = "id" }) 
       link.setAttribute('href', url);
     };
 
-    if (['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional'].includes(game.id)) {
+    if (['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional', 'sciencelink'].includes(game.id)) {
       updateHreflang('id', baseUrl + idPath);
       updateHreflang('en', baseUrl + enPath);
       updateHreflang('x-default', baseUrl + idPath);

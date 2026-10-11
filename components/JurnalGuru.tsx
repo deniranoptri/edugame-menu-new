@@ -11,25 +11,39 @@ const JurnalGuru: React.FC<JurnalGuruProps> = ({ locale, onBack, navigateTo }) =
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Pusat Pengetahuan Pedagogis IFP | Jurnal Guru Papan Interaktif";
+
+    // Set document language attribute based on current locale
+    document.documentElement.lang = currentLang;
+
+    // Locale-aware document title and meta description
+    const isEn = currentLang === 'en';
+    const docTitle = isEn
+      ? "IFP Pedagogical Knowledge Center | Papan Interaktif Journal"
+      : "Pusat Pengetahuan Pedagogis IFP | Jurnal Guru Papan Interaktif";
+    const descContent = isEn
+      ? "Journal: Pedagogical guides and interactive learning strategies using Interactive Flat Panels (IFP) for teachers."
+      : "Jurnal Guru: Pusat panduan pedagogis dan strategi pembelajaran interaktif menggunakan Interactive Flat Panel (IFP) untuk guru PAUD, SD, dan SMP.";
+
+    document.title = docTitle;
 
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Jurnal Guru: Pusat panduan pedagogis dan strategi pembelajaran interaktif menggunakan Interactive Flat Panel (IFP) untuk guru PAUD, SD, dan SMP."
-      );
+      metaDescription.setAttribute("content", descContent);
     }
 
+    // Set canonical URL based on locale
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement('link');
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', window.location.origin + (currentLang === 'en' ? '/en/journal' : '/jurnal-guru'));
-    
-  }, []);
+    canonical.setAttribute('href', window.location.origin + (isEn ? '/en/journal' : '/jurnal-guru'));
+
+    // Clean up any alternate hreflang tags for monolingual journal routes
+    const hreflangLinks = document.querySelectorAll('link[rel="alternate"][hreflang]');
+    hreflangLinks.forEach(link => link.remove());
+  }, [currentLang]);
 
 
   const renderCardEn = (type: string, borderColor: string) => {

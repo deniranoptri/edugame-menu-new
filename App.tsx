@@ -84,6 +84,53 @@ const socialLinks = [
 
 const generalGames: GameConfigWithTags[] = [
   {
+    id: 'porogapit-arena',
+    title: 'Porogapit Arena',
+    subtitle: 'Tantangan Numerasi Pembagian',
+    bgColor: 'linear-gradient(135deg, #0284C7 0%, #0EA5E9 50%, #06B6D4 100%)',
+    isNew: true,
+    image: 'https://raw.githubusercontent.com/deniranoptri/media/sibungas/Maskot%20Porogaphit.png',
+    url: 'https://game-porogapit.papaninteraktif.com/',
+    description: 'Asah numerasi dan logika lewat tantangan aritmetika pembagian bersusun (porogapit). Kuasai langkah pembagian secara terstruktur dan interaktif.',
+    subject: 'Matematika',
+    audience: 'SD, SMP, SMA',
+    educationLevel: 'general',
+    learningFocus: 'Operasi pembagian bersusun (porogapit), aritmetika dasar, penalaran numerasi, dan ketelitian kalkulasi.',
+    howToPlay: [
+      'Pilih tingkat kesulitan pembagian yang diinginkan.',
+      'Perhatikan bilangan yang dibagi dan bilangan pembagi pada papan porogapit.',
+      'Lakukan langkah pembagian, perkalian, dan pengurangan secara berurutan.',
+      'Tuliskan hasil bagi di atas garis hingga mencapai sisa nol atau solusi akhir.'
+    ],
+    educationalBenefits: [
+      'Memperkuat penguasaan konsep algoritma pembagian bersusun (porogapit).',
+      'Melatih ketelitian dan kecepatan kalkulasi aritmetika dasar.',
+      'Meningkatkan rasa percaya diri siswa dalam memecahkan soal matematika bertingkat.',
+      'Mengembangkan penalaran logis dan kedisiplinan alur berpikir matematis.'
+    ],
+    tags: ['🔢 Numerasi', '🧠 Logika'],
+    categoryKeys: ['numeracy', 'logic'],
+    en: {
+      title: 'Porogapit Arena',
+      subtitle: 'Long Division Math Challenge',
+      description: 'Master long division and step-by-step arithmetic through an engaging, interactive mathematical arena.',
+      subject: 'Mathematics',
+      audience: 'Elementary, Middle, and High School',
+      learningFocus: 'Long division algorithms, arithmetic fluency, step-by-step calculation, and mathematical reasoning.',
+      howToPlay: [
+        'Select your preferred difficulty tier.',
+        'Observe the dividend and divisor on the step-by-step division board.',
+        'Execute division, multiplication, and subtraction cycles methodically.',
+        'Complete the quotient and solve the challenge to earn mastery points.'
+      ],
+      educationalBenefits: [
+        'Strengthens algorithmic understanding of multi-digit long division.',
+        'Improves computational fluency and calculation precision.',
+        'Builds student confidence in structured arithmetic problem solving.'
+      ]
+    }
+  },
+  {
     id: 'math-domino-arena',
     title: 'Math Domino Arena',
     subtitle: 'Game Numerasi Interaktif',
@@ -828,6 +875,7 @@ const App: React.FC = () => {
   const [selectedGameId, setSelectedGameId] = useState<string | null>(null);
 
   useEffect(() => {
+    clearHreflangs();
     const parsed = parseRoute(window.location.pathname);
     
     // Safety boundary: treat non-ID locales as unknown/fallback to home for now to prevent rendering raw Indonesian content on /en/

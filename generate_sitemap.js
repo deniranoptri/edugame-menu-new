@@ -1,14 +1,16 @@
 import fs from 'fs';
 
 const games = [
-  'nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional',
-  'jagoan-kata', 'geo-squad', 'ruang-io', 'cocok-logi', 'mesin-koleksi', 'pendekar-balon',
+  'porogapit-arena', 'math-domino-arena', 'jejak-angka', 'helirescue', 'sciencelink', 'banua-fruit-blast',
+  'si-pemanah', 'rimba-pedia', 'celestial-weaver', 'tanzib', 'puzzle', 'martabak-pecahan',
+  'doodle', 'si-taktik', 'traditional', 'space-war', 'ai-basketball', 'mancing-kata',
+  'kancil', 'nusaboard', 'jagoan-kata', 'geo-squad', 'ruang-io',
+  'color-link-junior', 'adu-tarik-dino', 'tatap-hap', 'cocok-logi', 'mesin-koleksi', 'pendekar-balon',
   'detektif-cilik', 'mewarnai', 'belajar-angka', 'Aksi Ambulans', 'Gass Damkar', 'Jalur Huruf',
-  'Petualangan Satu Garis', 'gabung-ceria', 'dunia-hewan', 'rimba-pedia', 'si-pemanah',
-  'celestial-weaver', 'tanzib', 'hijaiyah-match', 'color-link-junior'
+  'Petualangan Satu Garis', 'gabung-ceria', 'dunia-hewan'
 ];
 
-const ifpGames = ['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional'];
+const ifpGames = ['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional', 'sciencelink'];
 
 const today = new Date().toISOString().split('T')[0];
 
@@ -49,6 +51,18 @@ let xml = `<?xml version="1.0" encoding="UTF-8"?>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/jurnal-guru" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://papaninteraktif.com/en/journal" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://papaninteraktif.com/jurnal-guru" />
+  </url>
+  <url>
+    <loc>https://papaninteraktif.com/en/journal</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://papaninteraktif.com/jurnal-guru" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://papaninteraktif.com/en/journal" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://papaninteraktif.com/jurnal-guru" />
   </url>
   <url>
     <loc>https://papaninteraktif.com/panduan/memilih-game-edukasi-anak</loc>
@@ -152,6 +166,42 @@ for (const game of games) {
   }
 }
 
+const articlesRaw = fs.readFileSync('seo/article-registry.json', 'utf8');
+const articleRegistry = JSON.parse(articlesRaw);
+
+for (const art of articleRegistry) {
+  if (art.languagePair && art.enUrl) {
+    xml += `  <url>
+    <loc>${art.idUrl}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="${art.idUrl}" />
+    <xhtml:link rel="alternate" hreflang="en" href="${art.enUrl}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${art.idUrl}" />
+  </url>
+  <url>
+    <loc>${art.enUrl}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="${art.idUrl}" />
+    <xhtml:link rel="alternate" hreflang="en" href="${art.enUrl}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${art.idUrl}" />
+  </url>
+`;
+  } else {
+    xml += `  <url>
+    <loc>${art.idUrl}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+`;
+  }
+}
+
 xml += `</urlset>\n`;
 
 fs.writeFileSync('public/sitemap.xml', xml);
+console.log('Sitemap generated successfully.');
