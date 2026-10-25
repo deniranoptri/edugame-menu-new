@@ -1,5 +1,29 @@
 [
   {
+    "id": "numeriq-math",
+    "title": "NUMERIQ Math",
+    "subtitle": "Matriks & Tantangan Numerasi",
+    "bgColor": "linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #2563EB 100%)",
+    "isNew": true,
+    "image": "https://github.com/deniranoptri/media/blob/sibungas/Maskot_Robot_Numeriq.png?raw=true",
+    "url": "https://numeriqmath.papaninteraktif.com/",
+    "description": "Asah ketangkasan numerasi, logika operasi hitung, dan penalaran matematika interaktif bersama Robot Numeriq. Cocok untuk tantangan berhitung siswa SD dan SMP.",
+    "subject": "Matematika / Numerasi",
+    "audience": "SD, SMP",
+    "educationLevel": "general",
+    "learningFocus": "Operasi aritmetika, penalaran numerasi, logika matriks angka, dan pemecahan masalah matematika",
+    "tags": ["🔢 Numerasi", "🧠 Logika"],
+    "categoryKeys": ["numeracy", "logic"],
+    "en": {
+      "title": "NUMERIQ Math",
+      "subtitle": "Interactive Math & Numeracy Challenge",
+      "description": "Build numeracy fluency, mental arithmetic, and mathematical reasoning through interactive matrix puzzles with Robot Numeriq.",
+      "subject": "Mathematics",
+      "audience": "Primary & Middle School",
+      "learningFocus": "Arithmetic fluency, numeracy reasoning, and structured problem solving"
+    }
+  },
+  {
     "id": "sciencelink",
     "title": "SCIENCELINK",
     "subtitle": "Hubungkan. Pikirkan. Pecahkan.",

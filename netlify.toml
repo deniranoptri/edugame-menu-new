@@ -1,4 +1,22 @@
 [[redirects]]
+  from = "http://www.papaninteraktif.com/*"
+  to = "https://papaninteraktif.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.papaninteraktif.com/*"
+  to = "https://papaninteraktif.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://papaninteraktif.com/*"
+  to = "https://papaninteraktif.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://denigames.netlify.app/*"
   to = "https://papaninteraktif.com/:splat"
   status = 301

@@ -85,6 +85,53 @@ const socialLinks = [
 
 const generalGames: GameConfigWithTags[] = [
   {
+    id: 'numeriq-math',
+    title: 'NUMERIQ Math',
+    subtitle: 'Matriks & Tantangan Numerasi',
+    bgColor: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #2563EB 100%)',
+    isNew: true,
+    image: 'https://github.com/deniranoptri/media/blob/sibungas/Maskot_Robot_Numeriq.png?raw=true',
+    url: 'https://numeriqmath.papaninteraktif.com/',
+    description: 'Asah ketangkasan numerasi, logika operasi hitung, dan penalaran matematika interaktif bersama Robot Numeriq. Cocok untuk tantangan berhitung siswa SD dan SMP.',
+    subject: 'Matematika / Numerasi',
+    audience: 'SD, SMP',
+    educationLevel: 'general',
+    learningFocus: 'Operasi aritmetika, penalaran numerasi, logika matriks angka, dan pemecahan masalah matematika',
+    howToPlay: [
+      'Pilih tingkat kesulitan tantangan numerasi yang diinginkan.',
+      'Amati matriks angka dan soal operasi hitung pada papan interaktif.',
+      'Hitung dengan teliti dan pilih solusi angka yang paling tepat.',
+      'Selesaikan setiap ronde untuk mengumpulkan skor dan naik level.'
+    ],
+    educationalBenefits: [
+      'Memperkuat penguasaan konsep aritmetika dan operasi hitung matematika.',
+      'Melatih kecepatan berhitung mental dan ketangkasan penalaran numerasi.',
+      'Meningkatkan konsentrasi, ketelitian, dan pemecahan masalah terstruktur.',
+      'Membangun rasa percaya diri siswa SD & SMP dalam menyelesaikan soal matematika.'
+    ],
+    tags: ['🔢 Numerasi', '🧠 Logika'],
+    categoryKeys: ['numeracy', 'logic'],
+    en: {
+      title: 'NUMERIQ Math',
+      subtitle: 'Interactive Math & Numeracy Challenge',
+      description: 'Build numeracy fluency, mental arithmetic, and mathematical reasoning through interactive matrix puzzles with Robot Numeriq.',
+      subject: 'Mathematics',
+      audience: 'Primary & Middle School',
+      learningFocus: 'Arithmetic fluency, numeracy reasoning, and structured problem solving',
+      howToPlay: [
+        'Select your preferred numeracy challenge level.',
+        'Observe the number matrix and arithmetic problem on screen.',
+        'Calculate quickly and tap the matching numerical answer.',
+        'Clear rounds to build streak points and master math concepts.'
+      ],
+      educationalBenefits: [
+        'Enhances basic arithmetic fluency and mental calculation speed.',
+        'Strengthens logical mathematical reasoning and numerical problem solving.',
+        'Builds student confidence in interactive classroom math challenges.'
+      ]
+    }
+  },
+  {
     id: 'porogapit-arena',
     title: 'Porogapit Arena',
     subtitle: 'Tantangan Numerasi Pembagian',

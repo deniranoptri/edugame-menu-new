@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { GameConfig, GameConfigWithTags } from '../types';
 import { AdSenseInArticle } from './AdSenseInArticle';
+import { applySEOMetadata, HreflangEntry } from '../seo';
 
 interface GameDetailProps {
   locale?: "id" | "en";
@@ -21,93 +22,25 @@ const GameDetail: React.FC<GameDetailProps> = ({ game, onBack, locale = "id" }) 
   const displayEducationalBenefits = isEn ? game.en.educationalBenefits : game.educationalBenefits;
 
   useEffect(() => {
-    document.documentElement.lang = locale;
-    
-    // 5. ROUTE-AWARE DOCUMENT TITLE & 6. ROUTE-AWARE META DESCRIPTION
     const docTitle = isEn 
       ? `${displayTitle} | Interactive Educational Games | Papan Interaktif`
       : `${game.title} | Game Edukasi Interaktif | Papan Interaktif`;
-    
-    document.title = docTitle;
 
-    
-    // Set dynamic description based on evidence
     const descriptionText = displayDescription || `${game.title} - ${game.subtitle}. Game edukasi di Papan Interaktif.`;
-    
-    // Update basic meta tags
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute('content', descriptionText);
 
-    // 8. OPEN GRAPH & 9. TWITTER METADATA & 7. CANONICAL
-        const baseUrl = window.location.origin;
+    const baseUrl = 'https://papaninteraktif.com';
     const idPath = `/game/${game.id}`;
     const enPath = `/en/game/${game.id}`;
     const currentUrl = baseUrl + (locale === 'en' ? enPath : idPath);
-    const altUrl = baseUrl + (locale === 'en' ? idPath : enPath);
-    
-    // Helper to update meta tag safely
-    const updateMeta = (property: string, content: string, isName = false) => {
-      const attr = isName ? 'name' : 'property';
-      let tag = document.querySelector(`meta[${attr}="${property}"]`);
-      if (!tag) {
-        tag = document.createElement('meta');
-        tag.setAttribute(attr, property);
-        document.head.appendChild(tag);
-      }
-      tag.setAttribute('content', content);
-    };
 
-    updateMeta('og:title', docTitle);
-    updateMeta('og:description', descriptionText);
-    updateMeta('og:url', currentUrl);
-    updateMeta('twitter:title', docTitle, true);
-    updateMeta('twitter:description', descriptionText, true);
-    if (game.image) {
-      updateMeta('og:image', game.image);
-      updateMeta('twitter:image', game.image, true);
-    }
+    const isBilingualIfp = ['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional', 'sciencelink'].includes(game.id);
 
-    
+    const hreflangs: HreflangEntry[] = isBilingualIfp ? [
+      { lang: 'id', href: baseUrl + idPath },
+      { lang: 'en', href: baseUrl + enPath },
+      { lang: 'x-default', href: baseUrl + idPath }
+    ] : [];
 
-
-    // Canonical
-    let linkCanonical = document.querySelector('link[rel="canonical"]');
-    if (!linkCanonical) {
-      linkCanonical = document.createElement('link');
-      linkCanonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(linkCanonical);
-    }
-    linkCanonical.setAttribute('href', currentUrl);
-
-    // Hreflang logic (Phase 9 Pilot)
-    const updateHreflang = (lang, url) => {
-      let link = document.querySelector(`link[hreflang="${lang}"]`);
-      if (!link) {
-        link = document.createElement('link');
-        link.setAttribute('rel', 'alternate');
-        link.setAttribute('hreflang', lang);
-        document.head.appendChild(link);
-      }
-      link.setAttribute('href', url);
-    };
-
-    if (['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional', 'sciencelink'].includes(game.id)) {
-      updateHreflang('id', baseUrl + idPath);
-      updateHreflang('en', baseUrl + enPath);
-      updateHreflang('x-default', baseUrl + idPath);
-    }
-
-
-    // 11. INJECT STRUCTURED DATA (JSON-LD)
-    const scriptId = 'seo-structured-data';
-    let scriptTag = document.getElementById(scriptId) as HTMLScriptElement;
-    if (!scriptTag) {
-      scriptTag = document.createElement('script');
-      scriptTag.setAttribute('id', scriptId);
-      scriptTag.setAttribute('type', 'application/ld+json');
-      document.head.appendChild(scriptTag);
-    }
-    
     const schemaData = {
       "@context": "https://schema.org",
       "@graph": [
@@ -151,26 +84,28 @@ const GameDetail: React.FC<GameDetailProps> = ({ game, onBack, locale = "id" }) 
         }
       ]
     };
-    scriptTag.textContent = JSON.stringify(schemaData);
 
-    // Restore title and meta on unmount
-    return () => {
-      document.title = 'Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif';
-      if (metaDesc) {
-        metaDesc.setAttribute('content', 'Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru. Belajar sambil bermain dengan berbagai pilihan game.');
-      }
-      updateMeta('og:title', 'Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif');
-      updateMeta('og:description', 'Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru. Belajar sambil bermain dengan berbagai pilihan game.');
-      updateMeta('og:url', window.location.origin);
-      updateMeta('twitter:title', 'Game Edukasi & Media Pembelajaran Interaktif | Papan Interaktif', true);
-      updateMeta('twitter:description', 'Papan Interaktif menyediakan game edukasi dan media pembelajaran interaktif untuk anak, siswa, dan guru.', true);
-      if (linkCanonical) {
-        linkCanonical.setAttribute('href', window.location.origin);
-      }
-      const existingScript = document.getElementById(scriptId);
-      if (existingScript) existingScript.remove();
-    };
-  }, [game]);
+    applySEOMetadata({
+      lang: locale,
+      title: docTitle,
+      description: descriptionText,
+      canonical: currentUrl,
+      hreflangs: hreflangs,
+      openGraph: {
+        title: docTitle,
+        description: descriptionText,
+        url: currentUrl,
+        image: game.image || undefined
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: docTitle,
+        description: descriptionText,
+        image: game.image || undefined
+      },
+      jsonLd: schemaData
+    });
+  }, [game, locale, isEn, displayTitle, displayDescription]);
 
   // 3. ELIMINATE FALLBACK BOILERPLATE
   return (

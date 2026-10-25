@@ -109,6 +109,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://papaninteraktif.com/panduan/penggunaan-ifp-papan-interaktif-digital" />
   </url>
   <url>
+    <loc>https://papaninteraktif.com/game/numeriq-math</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://papaninteraktif.com/game/porogapit-arena</loc>
     <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
