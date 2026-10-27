@@ -249,6 +249,22 @@ const GameDetail: React.FC<GameDetailProps> = ({ game, onBack, locale = "id" }) 
               </section>
             )}
 
+            {/* PROMOTIONAL HASHTAGS SECTION */}
+            {game.hashtags && game.hashtags.length > 0 && (
+              <section className="mt-6 bg-amber-50/80 p-5 rounded-2xl border border-amber-200/80">
+                <h2 className="text-xs font-black text-amber-900 uppercase tracking-widest mb-2">
+                  {isEn ? "Promotional Tags" : "Hashtag Promosi & Komunitas"}
+                </h2>
+                <div className="flex flex-wrap gap-2 text-xs font-bold text-amber-800">
+                  {game.hashtags.map((tag, idx) => (
+                    <span key={idx} className="bg-amber-100/90 px-2.5 py-1 rounded-md border border-amber-300/60">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </section>
+            )}
+
             <AdSenseInArticle />
 
             <div className="mt-8">

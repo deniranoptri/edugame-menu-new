@@ -37,6 +37,7 @@ export interface GameConfig {
   seoTitle?: string;
   seoDescription?: string;
   tags?: string[];
+  hashtags?: string[];
   categoryKeys?: string[];
   en?: LocalizedContent;
 }

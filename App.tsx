@@ -85,6 +85,72 @@ const socialLinks = [
 
 const generalGames: GameConfigWithTags[] = [
   {
+    id: 'ketapel-sakti',
+    title: 'KETAPEL SAKTI',
+    subtitle: 'Bidik Jawaban, Taklukkan Tantangan!',
+    bgColor: 'linear-gradient(135deg, #5D3A1A 0%, #8B5E3C 50%, #B8860B 100%)',
+    isNew: true,
+    image: 'https://raw.githubusercontent.com/deniranoptri/media/sibungas/Maskot%20Ketapel%20papaninteraktif.com.png',
+    url: 'https://slingshot.papaninteraktif.com/',
+    description: 'KETAPEL SAKTI adalah game edukasi interaktif yang memadukan tantangan membidik sasaran dengan latihan soal akademik. Siswa membaca pertanyaan, menentukan jawaban, lalu membidik keranjang jawaban yang tepat melalui mekanik ketapel virtual.',
+    subject: 'Literasi, Numerasi, Logika',
+    audience: 'SD, SMP, SMA',
+    educationLevel: 'general',
+    learningFocus: 'Literasi, numerasi, logika penalaran, latihan akademik, dan persiapan Tes Kemampuan Akademik (TKA)',
+    howToPlay: [
+      'Pilih jenjang, mata pelajaran, dan mode permainan yang tersedia.',
+      'Baca dan pahami pertanyaan dengan cermat.',
+      'Tentukan keranjang jawaban yang benar.',
+      'Tarik dan arahkan ketapel virtual ke sasaran.',
+      'Lepaskan tembakan dan kumpulkan skor tertinggi!'
+    ],
+    educationalBenefits: [
+      'Literasi: melatih pemahaman bacaan, pemahaman informasi, dan ketelitian dalam menentukan jawaban.',
+      'Numerasi: mendukung latihan memahami angka, perhitungan, dan penalaran matematis sesuai materi yang tersedia.',
+      'Logika: melatih pemikiran runtut, analisis pilihan jawaban, dan pengambilan keputusan.',
+      'Latihan akademik: menyediakan pengalaman latihan yang interaktif bagi siswa SD, SMP, dan SMA.',
+      'Persiapan Tes Kemampuan Akademik (TKA): mendukung latihan dan pembiasaan menghadapi soal akademik yang relevan, sesuai konten yang tersedia dalam game.',
+      'Pembelajaran kolaboratif: mode Solo, Duel, dan Trio dapat dimanfaatkan untuk aktivitas mandiri maupun kelompok.'
+    ],
+    tags: ['🎯 Ice Breaking', '🧠 Logika', '🔢 Numerasi', '📚 Literasi'],
+    categoryKeys: ['literacy', 'numeracy', 'logic', 'ice-breaking'],
+    hashtags: [
+      '#KetapelSakti',
+      '#PapanInteraktif',
+      '#GameEdukasi',
+      '#Literasi',
+      '#Numerasi',
+      '#Logika',
+      '#LatihanTKA',
+      '#TesKemampuanAkademik',
+      '#PendidikanDigital',
+      '#PembelajaranInteraktif'
+    ],
+    en: {
+      title: 'KETAPEL SAKTI',
+      subtitle: 'Aim Your Answer, Conquer the Challenge!',
+      description: 'An interactive educational slingshot game combining target-aiming fun with academic practice. Read questions, analyze answers, and launch virtual slingshot shots into the correct goal baskets.',
+      subject: 'Literacy, Numeracy, Logic',
+      audience: 'Primary, Middle, and High School',
+      learningFocus: 'Literacy comprehension, numerical reasoning, logical analysis, academic practice, and TKA question fluency',
+      howToPlay: [
+        'Select school grade level, subject, and available game mode.',
+        'Read and comprehend the question carefully.',
+        'Identify the correct target answer basket.',
+        'Pull back and align the virtual slingshot.',
+        'Release your shot and score points!'
+      ],
+      educationalBenefits: [
+        'Literacy: sharpens reading comprehension, information retention, and answer precision.',
+        'Numeracy: reinforces calculation fluency and mathematical reasoning.',
+        'Logic: develops structured thinking and strategic decision making.',
+        'Academic Practice: provides interactive question practice for Elementary, Middle, and High School students.',
+        'TKA Test Preparation: supports question familiarity and practice for Academic Ability Tests (TKA).',
+        'Collaborative Learning: Solo, Duel, and Trio modes engage individual practice and classroom team competitions.'
+      ]
+    }
+  },
+  {
     id: 'numeriq-math',
     title: 'NUMERIQ Math',
     subtitle: 'Matriks & Tantangan Numerasi',

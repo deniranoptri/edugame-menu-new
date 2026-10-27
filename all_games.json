@@ -24,6 +24,30 @@
     }
   },
   {
+    "id": "ketapel-sakti",
+    "title": "KETAPEL SAKTI",
+    "subtitle": "Bidik Jawaban, Taklukkan Tantangan!",
+    "bgColor": "linear-gradient(135deg, #5D3A1A 0%, #8B5E3C 50%, #B8860B 100%)",
+    "isNew": true,
+    "image": "https://raw.githubusercontent.com/deniranoptri/media/sibungas/Maskot%20Ketapel%20papaninteraktif.com.png",
+    "url": "https://slingshot.papaninteraktif.com/",
+    "description": "KETAPEL SAKTI adalah game edukasi interaktif yang memadukan tantangan membidik sasaran dengan latihan soal akademik. Siswa membaca pertanyaan, menentukan jawaban, lalu membidik keranjang jawaban yang tepat melalui mekanik ketapel virtual.",
+    "subject": "Literasi, Numerasi, Logika",
+    "audience": "SD, SMP, SMA",
+    "educationLevel": "general",
+    "learningFocus": "Literasi, numerasi, logika penalaran, latihan akademik, dan persiapan Tes Kemampuan Akademik (TKA)",
+    "tags": ["🎯 Ice Breaking", "🧠 Logika", "🔢 Numerasi", "📚 Literasi"],
+    "categoryKeys": ["literacy", "numeracy", "logic", "ice-breaking"],
+    "en": {
+      "title": "KETAPEL SAKTI",
+      "subtitle": "Aim Your Answer, Conquer the Challenge!",
+      "description": "An interactive educational slingshot game combining target-aiming fun with academic practice. Read questions, analyze answers, and launch virtual slingshot shots into the correct goal baskets.",
+      "subject": "Literacy, Numeracy, Logic",
+      "audience": "Primary, Middle, and High School",
+      "learningFocus": "Literacy comprehension, numerical reasoning, logical analysis, academic practice, and TKA question fluency"
+    }
+  },
+  {
     "id": "sciencelink",
     "title": "SCIENCELINK",
     "subtitle": "Hubungkan. Pikirkan. Pecahkan.",
