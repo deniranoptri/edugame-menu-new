@@ -48,6 +48,30 @@
     }
   },
   {
+    "id": "bee-english-arena",
+    "title": "BEE ENGLISH ARENA",
+    "subtitle": "Game Bahasa Inggris Interaktif SD, SMP & SMA",
+    "bgColor": "linear-gradient(135deg, #78350F 0%, #D97706 50%, #FBBF24 100%)",
+    "isNew": true,
+    "image": "https://raw.githubusercontent.com/deniranoptri/media/sibungas/Maskot%20Bee%20Learn.png",
+    "url": "https://bee-english.papaninteraktif.com/",
+    "description": "Jelajahi kerajaan madu bersama BEELO! Susun huruf, temukan kosakata Bahasa Inggris, jawab tantangan, dan bermain dalam mode Solo, Duel, Trio, atau Squad.",
+    "subject": "Bahasa Inggris",
+    "audience": "SD, SMP, SMA",
+    "educationLevel": "general",
+    "learningFocus": "Memperkaya kosakata Bahasa Inggris, melatih kemampuan mengeja, dan memahami makna kata.",
+    "tags": ["🐝 Bahasa Inggris", "📚 Literasi", "🎯 Ice Breaking"],
+    "categoryKeys": ["english", "literacy", "ice-breaking"],
+    "en": {
+      "title": "BEE ENGLISH ARENA",
+      "subtitle": "Interactive English Word Challenge for SD, SMP & SMA",
+      "description": "Explore the honey kingdom with BEELO! Form words, discover English vocabulary, conquer language challenges, and play in Solo, Duel, Trio, or Squad modes.",
+      "subject": "English Language",
+      "audience": "Elementary, Middle, and High School",
+      "learningFocus": "English vocabulary enrichment, spelling accuracy, and word comprehension."
+    }
+  },
+  {
     "id": "sciencelink",
     "title": "SCIENCELINK",
     "subtitle": "Hubungkan. Pikirkan. Pecahkan.",

@@ -245,6 +245,65 @@ const generalGames: GameConfigWithTags[] = [
     }
   },
   {
+    id: 'bee-english-arena',
+    title: 'BEE ENGLISH ARENA',
+    subtitle: 'Game Bahasa Inggris Interaktif SD, SMP & SMA',
+    bgColor: 'linear-gradient(135deg, #78350F 0%, #D97706 50%, #FBBF24 100%)',
+    isNew: true,
+    image: 'https://raw.githubusercontent.com/deniranoptri/media/sibungas/Maskot%20Bee%20Learn.png',
+    url: 'https://bee-english.papaninteraktif.com/',
+    description: 'Jelajahi kerajaan madu bersama BEELO! Susun huruf, temukan kosakata Bahasa Inggris, jawab tantangan, dan bermain dalam mode Solo, Duel, Trio, atau Squad.',
+    subject: 'Bahasa Inggris',
+    audience: 'SD, SMP, SMA',
+    educationLevel: 'general',
+    learningFocus: 'Memperkaya kosakata Bahasa Inggris, melatih kemampuan mengeja, dan memahami makna kata.',
+    howToPlay: [
+      'Pilih jenjang SD, SMP, atau SMA.',
+      'Pilih mode Solo, Duel, Trio, atau Squad.',
+      'Pilih durasi permainan.',
+      'Susun huruf menjadi kata Bahasa Inggris.',
+      'Jawab tantangan dan kumpulkan poin.'
+    ],
+    educationalBenefits: [
+      'Meningkatkan keterlibatan belajar, ketelitian, dan kerja sama siswa.',
+      'Memperkaya kosakata Bahasa Inggris, melatih kemampuan mengeja, dan memahami makna kata.',
+      'Mendukung pembelajaran interaktif mandiri dan kelompok melalui mode Solo, Duel, Trio, dan Squad.'
+    ],
+    tags: ['🐝 Bahasa Inggris', '📚 Literasi', '🎯 Ice Breaking'],
+    categoryKeys: ['english', 'literacy', 'ice-breaking'],
+    hashtags: [
+      '#BeeEnglishArena',
+      '#PapanInteraktif',
+      '#GameEdukasi',
+      '#BahasaInggris',
+      '#EnglishArena',
+      '#BelajarBahasaInggris',
+      '#SpellingGame',
+      '#PendidikanDigital',
+      '#PembelajaranInteraktif'
+    ],
+    en: {
+      title: 'BEE ENGLISH ARENA',
+      subtitle: 'Interactive English Word Challenge for SD, SMP & SMA',
+      description: 'Explore the honey kingdom with BEELO! Form words, discover English vocabulary, conquer language challenges, and play in Solo, Duel, Trio, or Squad modes.',
+      subject: 'English Language',
+      audience: 'Elementary, Middle, and High School',
+      learningFocus: 'English vocabulary enrichment, spelling accuracy, and word comprehension.',
+      howToPlay: [
+        'Select grade level (SD, SMP, or SMA).',
+        'Choose game mode: Solo, Duel, Trio, or Squad.',
+        'Choose your game duration.',
+        'Arrange letters to form English words.',
+        'Answer challenges and collect points.'
+      ],
+      educationalBenefits: [
+        'Boosts student engagement, precision, and collaborative teamwork.',
+        'Enriches English vocabulary and spelling proficiency.',
+        'Encourages active and interactive language learning in classrooms.'
+      ]
+    }
+  },
+  {
     id: 'math-domino-arena',
     title: 'Math Domino Arena',
     subtitle: 'Game Numerasi Interaktif',
@@ -1248,6 +1307,7 @@ const App: React.FC = () => {
             <div className="flex flex-wrap gap-2 mb-8">
               {[
   { id: 'all', label: 'Semua' },
+  { id: 'english', label: '🐝 Bahasa Inggris' },
   { id: 'numeracy', label: '🔢 Numerasi' },
   { id: 'literacy', label: '📚 Literasi' },
   { id: 'ice-breaking', label: '🎯 Ice Breaking' },
