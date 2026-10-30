@@ -4,6 +4,7 @@ import { MenuCardProps } from '../types';
 const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const isColorLink = config.id === 'color-link-junior';
+  const isBee = config.id === 'bee-english-arena';
   const isLight = config.variant === 'light' && !isColorLink;
   const isEn = locale === 'en' && config.en;
   const displayTitle = isEn ? config.en.title : config.title;
@@ -38,6 +39,31 @@ const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) =
     : isLight
     ? 'text-[#B71C1C] group-hover:text-white'
     : 'text-white group-hover:text-gray-800';
+
+  // Strict card-specific gating for padding, icon scaling, and typography
+  const cardPaddingClass = (isBee || isColorLink) ? 'p-1.5 sm:p-2 xl:p-2.5' : 'p-2.5 sm:p-3 md:p-4';
+  const iconSizeClass = config.id === 'helirescue'
+    ? 'w-[50%] max-w-[120px] aspect-square drop-shadow-[0_0_15px_rgba(249,115,22,0.6)]'
+    : isColorLink
+    ? 'w-[25%] max-w-[46px] sm:max-w-[50px] xl:max-w-[62px] aspect-square drop-shadow-sm'
+    : isBee
+    ? 'w-[27%] max-w-[50px] sm:max-w-[54px] xl:max-w-[66px] aspect-square'
+    : 'w-[35%] max-w-[80px] aspect-square';
+  const textContainerSpacing = isColorLink
+    ? 'my-0.5 min-h-0 gap-0.5 xl:gap-1'
+    : isBee
+    ? 'my-0.5 xl:my-1 min-h-0'
+    : 'my-1 sm:my-1.5 min-h-0';
+  const titleClass = isBee
+    ? 'text-[8.5px] sm:text-[9.5px] xl:text-[12.5px] font-black tracking-tight leading-[1.08] mb-0.5 drop-shadow-xs w-full line-clamp-2'
+    : isColorLink
+    ? 'text-[8.5px] sm:text-[9.5px] xl:text-[12px] font-black tracking-tight leading-tight drop-shadow-xs w-full line-clamp-1'
+    : 'text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] font-black tracking-tight leading-[1.15] mb-0.5 drop-shadow-xs w-full line-clamp-2';
+  const subtitleClass = isBee
+    ? `text-[6.5px] sm:text-[7.2px] xl:text-[9px] leading-[1.15] font-semibold opacity-95 line-clamp-2 w-full px-0.5 ${subTextColorClass}`
+    : isColorLink
+    ? `text-[7px] sm:text-[7.5px] xl:text-[9px] leading-tight font-bold opacity-90 line-clamp-1 w-full px-1 ${subTextColorClass}`
+    : `text-[8px] sm:text-[9px] md:text-[10px] lg:text-[11px] leading-[1.2] font-bold opacity-90 line-clamp-2 w-full px-1 ${subTextColorClass}`;
 
   // === FUNGSI SHARE WHATSAPP KHUSUS GAME ===
   const handleShare = (e: React.MouseEvent) => {
@@ -136,7 +162,7 @@ const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) =
           className: `
             relative w-full h-full
             flex flex-col items-center justify-start text-center
-            p-2.5 sm:p-3 md:p-4
+            ${cardPaddingClass}
             rounded-[20px] md:rounded-[28px]
             border-2 ${borderClass}
             transform-gpu transition-transform duration-200 block
@@ -161,7 +187,7 @@ const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) =
           )}
           
           {/* ICON CONTAINER */}
-          <div className={`z-20 mt-1 shrink-0 transition-transform duration-300 ${config.id === 'helirescue' ? 'w-[50%] max-w-[120px] aspect-square drop-shadow-[0_0_15px_rgba(249,115,22,0.6)]' : isColorLink ? 'w-[42%] max-w-[96px] aspect-square drop-shadow-sm' : 'w-[35%] max-w-[80px] aspect-square'} ${!isComingSoon ? 'group-hover:scale-105' : ''}`}>
+          <div className={`z-20 mt-1 shrink-0 transition-transform duration-300 ${iconSizeClass} ${!isComingSoon ? 'group-hover:scale-105' : ''}`}>
             <div className={`
               w-full h-full
               ${config.id === 'helirescue' ? 'flex items-center justify-center relative' : `rounded-full overflow-hidden flex items-center justify-center ${iconContainerBg} border-2 md:border-[3px] ${iconBorder} shadow-sm relative`}
@@ -181,25 +207,25 @@ const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) =
           </div>
 
           {/* TEXT CONTAINER */}
-          <div className={`flex-1 w-full flex flex-col justify-center items-center ${textColorClass} z-20 relative px-1 my-1 sm:my-1.5 min-h-0`}>
-            <h3 className="text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] font-black tracking-tight leading-[1.15] mb-0.5 drop-shadow-xs w-full line-clamp-2">
+          <div className={`flex-1 w-full flex flex-col justify-center items-center ${textColorClass} z-20 relative px-1 ${textContainerSpacing}`}>
+            <h3 className={titleClass}>
               {displayTitle}
             </h3>
             {isColorLink && (
-              <div className="flex items-center gap-1.5 my-0.5">
-                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[8px] sm:text-[9px] md:text-[10px] font-black tracking-wider bg-indigo-50/90 text-indigo-700 border border-indigo-200/70 shadow-2xs">
+              <div className="flex items-center justify-center gap-1 my-0.5 shrink-0">
+                <span className="inline-flex items-center px-1.5 py-0.2 sm:px-2 sm:py-0.5 rounded-full text-[6.5px] sm:text-[7.5px] xl:text-[8.5px] font-black tracking-wider bg-indigo-50/90 text-indigo-700 border border-indigo-200/70 shadow-2xs whitespace-nowrap">
                   🧠 LOGIKA
                 </span>
-                <div className="flex items-center gap-0.5 opacity-90" aria-hidden="true" title="Node warna Color Link">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#8B5CF6]"></span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6]"></span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#06B6D4]"></span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F97316]"></span>
+                <div className="flex items-center gap-0.5 opacity-90 shrink-0" aria-hidden="true" title="Node warna Color Link">
+                  <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-[#8B5CF6]"></span>
+                  <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-[#3B82F6]"></span>
+                  <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-[#06B6D4]"></span>
+                  <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-[#10B981]"></span>
+                  <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-[#F97316]"></span>
                 </div>
               </div>
             )}
-            <p className={`text-[8px] sm:text-[9px] md:text-[10px] lg:text-[11px] leading-[1.2] font-bold opacity-90 line-clamp-2 w-full px-1 ${subTextColorClass}`}>
+            <p className={subtitleClass}>
               {displaySubtitle}
             </p>
           </div>
