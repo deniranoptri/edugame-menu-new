@@ -24,9 +24,9 @@ const GameDetail: React.FC<GameDetailProps> = ({ game, onBack, locale = "id" }) 
   useEffect(() => {
     const docTitle = isEn 
       ? `${displayTitle} | Interactive Educational Games | Papan Interaktif`
-      : `${game.title} | Game Edukasi Interaktif | Papan Interaktif`;
+      : (game.seoTitle || `${game.title} | Game Edukasi Interaktif | Papan Interaktif`);
 
-    const descriptionText = displayDescription || `${game.title} - ${game.subtitle}. Game edukasi di Papan Interaktif.`;
+    const descriptionText = game.seoDescription || displayDescription || `${game.title} - ${game.subtitle}. Game edukasi di Papan Interaktif.`;
 
     const baseUrl = 'https://papaninteraktif.com';
     const idPath = `/game/${game.id}`;

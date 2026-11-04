@@ -585,6 +585,58 @@ const kidsGames: GameConfigWithTags[] = [
       ]
     }
   },
+  {
+    id: 'basket-angka-junior',
+    title: 'Basket Angka Junior',
+    subtitle: 'Belajar Bilangan Sambil Bermain Basket!',
+    bgColor: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FFB03B 100%)',
+    variant: 'default',
+    isNew: true,
+    image: 'https://raw.githubusercontent.com/deniranoptri/media/sibungas/Maskot_Bola_Basket_Ceria_Berujung_Jempol-removebg-preview%20(1).png',
+    url: 'https://math-basketball.papaninteraktif.com/',
+    description: 'Belajar bilangan sambil bermain basket! Game matematika interaktif untuk PAUD, TK, dan SD kelas 1–3. Tersedia mode Solo, Duel, Trio, dan Squad.',
+    seoTitle: 'Basket Angka Junior – Game Matematika Interaktif untuk Anak',
+    seoDescription: 'Belajar bilangan sambil bermain basket! Game matematika interaktif untuk PAUD, TK, dan SD kelas 1–3. Tersedia mode Solo, Duel, Trio, dan Squad.',
+    subject: 'Matematika & Numerasi',
+    audience: 'PAUD/TK, SD Kelas 1–3',
+    educationLevel: 'paud',
+    learningFocus: 'Pengenalan bilangan, urutan angka, penjumlahan & pengurangan dasar, dan koordinasi motorik.',
+    howToPlay: [
+      'Pilih jenjang kelas (PAUD/TK, Kelas 1, 2, atau 3) dan mode bermain (Solo, Duel, Trio, atau Squad).',
+      'Perhatikan tantangan angka atau soal matematika yang muncul di layar ring basket.',
+      'Pilih jawaban yang benar untuk melakukan tembakan bola otomatis ke keranjang basket (SWISH!).',
+      'Raih kombo beruntun dan kumpulkan skor tertinggi di papan juara Champions Arena!'
+    ],
+    educationalBenefits: [
+      'Mengenalkan konsep bilangan dan urutan angka secara visual dan interaktif.',
+      'Melatih kecepatan berhitung dan ketangkasan mental anak sejak usia dini.',
+      'Mendukung aktivitas interaktif di layar sentuh IFP (Interactive Flat Panel) untuk kolaborasi kelas.',
+      'Membangun sportivitas dan kerjasama tim melalui mode multipemain (Duel, Trio, dan Squad).'
+    ],
+    tags: ['🔢 Numerasi', '🏀 Sport', '🎯 Ice Breaking'],
+    categoryKeys: ['numeracy', 'sport', 'ice-breaking'],
+    hashtags: ['#BasketAngkaJunior', '#GameMatematika', '#PapanInteraktif', '#GameIFP', '#NumerasiAnak'],
+    en: {
+      title: 'Junior Math Basketball',
+      subtitle: 'Learn Numbers While Shooting Hoops!',
+      description: 'Learn numbers while playing basketball! An interactive math game for preschool, kindergarten, and elementary grades 1–3. Master number recognition, fast counting, and hoop shooting in Solo, Duel, Trio, and Squad modes.',
+      subject: 'Mathematics & Numeracy',
+      audience: 'Early Childhood, Elementary Grades 1–3',
+      learningFocus: 'Number recognition, basic addition and subtraction, fast arithmetic, and hand-eye coordination.',
+      howToPlay: [
+        'Select your grade level (Pre-K/Kindergarten, Grade 1, 2, or 3) and game mode (Solo, Duel, Trio, or Squad).',
+        'Observe the number challenge or arithmetic problem displayed on the backboard.',
+        'Choose the correct answer to make an automatic shot right through the hoop (SWISH!).',
+        'Build consecutive answer streaks and claim the top spot on the Champions Arena leaderboard!'
+      ],
+      educationalBenefits: [
+        'Reinforces number sense and early arithmetic through engaging gamified basketball drills.',
+        'Improves mental math fluency and reaction speed in young learners.',
+        'Supports touchscreen collaboration on Interactive Flat Panels (IFP) for classroom engagement.',
+        'Fosters healthy sportsmanship and team collaboration through multiplayer modes.'
+      ]
+    }
+  },
   { id: 'adu-tarik-dino', howToPlay: ["Bermain berdua dalam mode layar terbagi (split-screen).","Perhatikan soal perbandingan atau perhitungan matematika yang muncul.","Pilih jawaban benar lebih cepat dari lawanmu.","Tarik tali ke arah dinosaurusmu untuk setiap jawaban yang benar."], educationalBenefits: ["Melatih kecepatan pemrosesan informasi matematika.","Membangun sportivitas melalui kompetisi yang sehat.","Meningkatkan pemahaman konsep lebih besar dan lebih kecil."], title: 'Tarik Dino', subtitle: 'Adu Kuat!', bgColor: '#FF8FA3', isNew: true, image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0-UeNvrM6NqoMMYlCp4_hsPKZ6qzIlLl9l3nSU4dGEppp1gFJkcLqHOtbReV0gdIrOwMcC4bMvILREr37zsjR0OmBesBbS8h8hWNF6FMl3vRI9xKrHj_sv8DbuNNDftSi41zsRNZWLyrsA4NM1iCZ76-xSpooz6CVD4Iu_9oQ7fdAcN4tU0upk-itvak/s320/Gemini_Generated_Image_fim7njfim7njfim7-removebg-preview%20(1).png', url: 'https://dino-tug-of-war.papaninteraktif.com/', description: "Permainan tarik tambang seru bertema Dinosaurus untuk mengenalkan konsep perbandingan ukuran dan kekuatan dasar.", audience: "PAUD, SD", educationLevel: 'paud', learningFocus: "Pengenalan konsep logika dasar dan perbandingan", tags: ['🧠 Logika', '🔢 Numerasi'], categoryKeys: ['logic', 'numeracy'], 
     
     

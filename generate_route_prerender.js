@@ -126,8 +126,8 @@ function resolveRouteMetadata(loc, routePath) {
     const gameId = p.replace('/game/', '');
     const game = gameMap.get(gameId);
     if (game) {
-      const title = `${game.title} | Game Edukasi Interaktif | Papan Interaktif`;
-      const description = game.description || `${game.title} - ${game.subtitle || ''}. Game edukasi di Papan Interaktif.`;
+      const title = game.seoTitle || `${game.title} | Game Edukasi Interaktif | Papan Interaktif`;
+      const description = game.seoDescription || game.description || `${game.title} - ${game.subtitle || ''}. Game edukasi di Papan Interaktif.`;
       return {
         lang: 'id',
         title,

@@ -548,5 +548,31 @@
     "audience": "PAUD, SD",
     "educationLevel": "paud",
     "learningFocus": "Pengetahuan alam dasar dan logika mencocokkan"
+  },
+  {
+    "id": "basket-angka-junior",
+    "title": "Basket Angka Junior",
+    "subtitle": "Belajar Bilangan Sambil Bermain Basket!",
+    "bgColor": "linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FFB03B 100%)",
+    "isNew": true,
+    "image": "https://raw.githubusercontent.com/deniranoptri/media/sibungas/Maskot_Bola_Basket_Ceria_Berujung_Jempol-removebg-preview%20(1).png",
+    "url": "https://math-basketball.papaninteraktif.com/",
+    "description": "Belajar bilangan sambil bermain basket! Game matematika interaktif untuk PAUD, TK, dan SD kelas 1–3. Tersedia mode Solo, Duel, Trio, dan Squad.",
+    "seoTitle": "Basket Angka Junior – Game Matematika Interaktif untuk Anak",
+    "seoDescription": "Belajar bilangan sambil bermain basket! Game matematika interaktif untuk PAUD, TK, dan SD kelas 1–3. Tersedia mode Solo, Duel, Trio, dan Squad.",
+    "subject": "Matematika & Numerasi",
+    "audience": "PAUD/TK, SD Kelas 1–3",
+    "educationLevel": "paud",
+    "learningFocus": "Pengenalan bilangan, urutan angka, penjumlahan & pengurangan dasar, dan koordinasi motorik.",
+    "tags": ["🔢 Numerasi", "🏀 Sport", "🎯 Ice Breaking"],
+    "categoryKeys": ["numeracy", "sport", "ice-breaking"],
+    "en": {
+      "title": "Junior Math Basketball",
+      "subtitle": "Learn Numbers While Shooting Hoops!",
+      "description": "Learn numbers while playing basketball! An interactive math game for preschool, kindergarten, and elementary grades 1–3. Master number recognition, fast counting, and hoop shooting in Solo, Duel, Trio, and Squad modes.",
+      "subject": "Mathematics & Numeracy",
+      "audience": "Early Childhood, Elementary Grades 1–3",
+      "learningFocus": "Number recognition, basic addition and subtraction, fast arithmetic, and hand-eye coordination."
+    }
   }
 ]
