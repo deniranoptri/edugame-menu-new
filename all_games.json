@@ -24,6 +24,42 @@
     }
   },
   {
+    "id": "kata-gol",
+    "title": "KATA GOL!",
+    "subtitle": "Susun Kalimat, Cetak Gol!",
+    "bgColor": "linear-gradient(135deg, #0B4A38 0%, #126B4E 50%, #0F5132 100%)",
+    "isNew": true,
+    "image": "https://game-bahasa-indonesia.papaninteraktif.com/assets/logo_kata-Ddq1D1lp.png",
+    "url": "https://game-bahasa-indonesia.papaninteraktif.com/",
+    "description": "Susun kalimat, cetak gol! Game edukasi Bahasa Indonesia interaktif bertema sepak bola untuk SD, SMP, dan SMA. Kuasai struktur kalimat SPOK dan cetak skor bersama tim dalam mode Solo, Duel, Trio, dan Squad.",
+    "seoTitle": "KATA GOL! — Game Menyusun Kalimat Bahasa Indonesia",
+    "seoDescription": "Main KATA GOL!, game Bahasa Indonesia interaktif untuk SD, SMP, dan SMA. Susun kalimat, cetak gol, dan bermain bersama hingga 4 pemain.",
+    "subject": "Bahasa Indonesia & Literasi",
+    "audience": "SD 1–6, SMP 7–9, SMA 10–12",
+    "educationLevel": "general",
+    "learningFocus": "Menyusun kalimat Bahasa Indonesia yang benar, struktur SPOK, pengayaan kosakata, dan ketangkasan berbahasa melalui simulasi sepak bola interaktif.",
+    "tags": ["📚 Literasi", "🧠 Logika", "🏀 Sport"],
+    "categoryKeys": ["literacy", "logic", "sport"],
+    "hashtags": [
+      "#PapanInteraktif",
+      "#KataGol",
+      "#GameEdukasi",
+      "#LiterasiIndonesia",
+      "#GameBahasaIndonesia",
+      "#BelajarBahasaIndonesia",
+      "#IceBreakingGuru",
+      "#MediaPembelajaranInteraktif"
+    ],
+    "en": {
+      "title": "KATA GOL!",
+      "subtitle": "Arrange Words, Score Goals!",
+      "description": "Arrange words, score goals! An interactive Indonesian language educational game with a soccer theme for elementary, junior high, and high school students. Master sentence structure and score with your team in Solo, Duel, Trio, and Squad modes.",
+      "subject": "Indonesian Language & Literacy",
+      "audience": "Elementary, Middle & High School",
+      "learningFocus": "Sentence structure (SPOK), vocabulary enrichment, syntax accuracy, and rapid language processing through soccer gamification."
+    }
+  },
+  {
     "id": "ketapel-sakti",
     "title": "KETAPEL SAKTI",
     "subtitle": "Bidik Jawaban, Taklukkan Tantangan!",

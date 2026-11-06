@@ -70,6 +70,7 @@ import { HubLogic } from './components/HubLogic';
 import NotFound from './components/NotFound';
 import { AdSenseDisplay } from './components/AdSenseDisplay';
 import { applySEOMetadata } from './seo';
+import { getDailyGame, getWitaEpochDay, getMsUntilNextWitaMidnight } from './rotationEngine';
 
 type GameMode = 'general' | 'kids';
 
@@ -84,6 +85,70 @@ const socialLinks = [
 ];
 
 const generalGames: GameConfigWithTags[] = [
+  {
+    id: 'kata-gol',
+    title: 'KATA GOL!',
+    subtitle: 'Susun Kalimat, Cetak Gol!',
+    bgColor: 'linear-gradient(135deg, #0B4A38 0%, #126B4E 50%, #0F5132 100%)',
+    isNew: true,
+    image: 'https://game-bahasa-indonesia.papaninteraktif.com/assets/logo_kata-Ddq1D1lp.png',
+    url: 'https://game-bahasa-indonesia.papaninteraktif.com/',
+    description: 'Susun kalimat, cetak gol! Game edukasi Bahasa Indonesia interaktif bertema sepak bola untuk SD, SMP, dan SMA. Kuasai struktur kalimat SPOK dan cetak skor bersama tim dalam mode Solo, Duel, Trio, dan Squad.',
+    seoTitle: 'KATA GOL! — Game Menyusun Kalimat Bahasa Indonesia',
+    seoDescription: 'Main KATA GOL!, game Bahasa Indonesia interaktif untuk SD, SMP, dan SMA. Susun kalimat, cetak gol, dan bermain bersama hingga 4 pemain.',
+    subject: 'Bahasa Indonesia & Literasi',
+    audience: 'SD 1–6, SMP 7–9, SMA 10–12',
+    educationLevel: 'general',
+    learningFocus: 'Menyusun kalimat Bahasa Indonesia yang benar, struktur SPOK, pengayaan kosakata, dan ketangkasan berbahasa melalui simulasi sepak bola interaktif.',
+    howToPlay: [
+      'Pilih mode permainan: Solo, Duel, Trio, atau Squad sesuai jumlah pemain di kelas.',
+      'Amati kartu kata acak yang muncul di layar lapangan sepak bola.',
+      'Susun kata-kata acak menjadi struktur kalimat Bahasa Indonesia yang gramatikal dan padu (SPOK).',
+      'Setiap susunan kalimat yang benar akan menghasilkan tendangan ke gawang dan mencetak gol!',
+      'Kumpulkan skor tertinggi dan raih trofi juara sepak bola literasi kelas.'
+    ],
+    educationalBenefits: [
+      'Meningkatkan pemahaman tata bahasa dan struktur kalimat bahasa Indonesia baku (Subjek-Predikat-Objek-Keterangan).',
+      'Memperkaya perbendaharaan kosakata dan pemahaman sintaksis secara kontekstual.',
+      'Melatih kecepatan berpikir, ketelitian verbal, dan keterampilan pemecahan masalah berbasis bahasa.',
+      'Membangun sportivitas, kolaborasi kelompok, dan keterlibatan aktif dalam pembelajaran di layar sentuh interaktif (IFP).',
+      'Menjadikan pelajaran literasi dan bahasa Indonesia lebih dinamis, seru, dan menyenangkan melalui gamifikasi olahraga.'
+    ],
+    tags: ['📚 Literasi', '🧠 Logika', '🏀 Sport'],
+    categoryKeys: ['literacy', 'logic', 'sport'],
+    hashtags: [
+      '#PapanInteraktif',
+      '#KataGol',
+      '#GameEdukasi',
+      '#LiterasiIndonesia',
+      '#GameBahasaIndonesia',
+      '#BelajarBahasaIndonesia',
+      '#IceBreakingGuru',
+      '#MediaPembelajaranInteraktif'
+    ],
+    en: {
+      title: 'KATA GOL!',
+      subtitle: 'Arrange Words, Score Goals!',
+      description: 'Arrange words, score goals! An interactive Indonesian language educational game with a soccer theme for elementary, junior high, and high school students. Master sentence structure and score with your team in Solo, Duel, Trio, and Squad modes.',
+      subject: 'Indonesian Language & Literacy',
+      audience: 'Elementary, Middle & High School',
+      learningFocus: 'Sentence structure (SPOK), vocabulary enrichment, syntax accuracy, and rapid language processing through soccer gamification.',
+      howToPlay: [
+        'Select game mode: Solo, Duel, Trio, or Squad based on your classroom participants.',
+        'Examine the scrambled word cards displayed on the virtual soccer pitch.',
+        'Rearrange the words into correct Indonesian grammatical sentences.',
+        'Each accurate sentence unleashes a powerful shot to score a goal!',
+        'Accumulate points and take home the literacy champions trophy.'
+      ],
+      educationalBenefits: [
+        'Enhances syntactic competence and structural sentence formation in Indonesian.',
+        'Expands functional vocabulary and comprehension through contextual sentence building.',
+        'Develops rapid cognitive verbal processing and acute grammatical precision.',
+        'Fosters collaborative teamwork and healthy competition on classroom touch displays.',
+        'Transforms language learning into an active, high-energy soccer game experience.'
+      ]
+    }
+  },
   {
     id: 'ketapel-sakti',
     title: 'KETAPEL SAKTI',
@@ -764,20 +829,41 @@ const EduGameIntro = ({ lang = "id" }: { lang?: "id" | "en" }) => (
 );
 
 // ==========================================
-// KOMPONEN TANTANGAN HARIAN (Ganti Otomatis)
+// KOMPONEN TANTANGAN HARIAN (Ganti Otomatis - WITA Rotation Engine)
 // ==========================================
 const DailyChallenge = ({ onClickGame, lang = 'id' }: { onClickGame: (id: string) => void, lang?: 'id' | 'en' }) => {
   const allGames = [...generalGames, ...kidsGames].filter(g => g.url && g.id);
   
   if (allGames.length === 0) return null;
 
-  // Logika Otomatis: Ambil tanggal kalender lokal hari ini
-  const now = new Date();
-  const localDaysSinceEpoch = Math.floor(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) / 86400000);
-  
-  const dailyIndex = localDaysSinceEpoch % allGames.length;
-  const challengeGame = allGames[dailyIndex];
-  
+  // State inisialisasi kalender WITA (Asia/Makassar, UTC+8)
+  const [currentWitaDay, setCurrentWitaDay] = useState<number>(() => getWitaEpochDay());
+
+  // Automatic midnight rollover: Jadwalkan pembaruan tepat saat pergantian hari 00:00:00 WITA
+  useEffect(() => {
+    let timerId: ReturnType<typeof setTimeout> | undefined;
+
+    const scheduleNextMidnight = () => {
+      const msUntilMidnight = getMsUntilNextWitaMidnight();
+      // Tambahkan safety buffer 250ms agar pasti telah melewati batas 00:00:00 WITA
+      timerId = setTimeout(() => {
+        setCurrentWitaDay(getWitaEpochDay());
+        scheduleNextMidnight();
+      }, msUntilMidnight + 250);
+    };
+
+    scheduleNextMidnight();
+
+    return () => {
+      if (timerId) clearTimeout(timerId);
+    };
+  }, []);
+
+  // Ambil rekomendasi game harian berdasarkan rotasi deterministik
+  const dailyResult = getDailyGame(allGames, currentWitaDay);
+  if (!dailyResult || !dailyResult.game) return null;
+
+  const challengeGame = dailyResult.game;
   const gameUrl = lang === 'en' ? `/en/game/${encodeURIComponent(challengeGame.id)}` : `/game/${encodeURIComponent(challengeGame.id)}`;
 
   const label = lang === 'en' ? "GAME OF THE DAY ⚡" : "GAME PILIHAN HARI INI ⚡";
@@ -798,8 +884,8 @@ const DailyChallenge = ({ onClickGame, lang = 'id' }: { onClickGame: (id: string
   ];
   const icons = ["🎮", "🎯", "🌟", "🚀", "🔥", "✨", "🏆"];
   
-  const bg = gradients[dailyIndex % gradients.length];
-  const icon = icons[dailyIndex % icons.length];
+  const bg = gradients[Math.abs(currentWitaDay) % gradients.length];
+  const icon = icons[Math.abs(currentWitaDay) % icons.length];
 
   return (
     <a 

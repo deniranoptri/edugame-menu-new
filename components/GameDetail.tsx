@@ -134,7 +134,7 @@ const GameDetail: React.FC<GameDetailProps> = ({ game, onBack, locale = "id" }) 
                 <img 
                   src={game.image} 
                   alt={`Ikon game ${game.title}`} 
-                  className={`w-full h-full ${game.id === 'color-link-junior' ? 'object-contain p-2' : 'object-cover'} rounded-xl drop-shadow-md`}
+                  className={`w-full h-full ${(game.id === 'color-link-junior' || game.id === 'kata-gol') ? 'object-contain p-2' : 'object-cover'} rounded-xl drop-shadow-md`}
                 />
               )}
             </div>

@@ -197,8 +197,8 @@ const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) =
                    <div className={`absolute inset-0 bg-gray-300/20 animate-pulse transition-opacity duration-300 ${isLoaded ? 'opacity-0' : 'opacity-100'} ${config.id === 'helirescue' ? 'rounded-full' : ''}`} />
                    <img 
                     src={config.image} 
-                    alt={isColorLink ? "Maskot resmi Linki Color Link Junior - Game logika warna anak" : `${config.title} - game edukasi ${config.tags?.join(', ') || ''}`}
-                    className={`w-full h-full ${config.id === 'helirescue' ? 'object-contain scale-125 origin-bottom' : isColorLink ? 'object-contain p-1 transform-gpu hover:scale-110 transition-transform' : 'object-cover'} transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+                    alt={isColorLink ? "Maskot resmi Linki Color Link Junior - Game logika warna anak" : config.id === 'kata-gol' ? "Logo resmi KATA GOL! - Game menyusun kalimat Bahasa Indonesia" : `${config.title} - game edukasi ${config.tags?.join(', ') || ''}`}
+                    className={`w-full h-full ${config.id === 'helirescue' ? 'object-contain scale-125 origin-bottom' : (isColorLink || config.id === 'kata-gol') ? 'object-contain p-1 transform-gpu hover:scale-110 transition-transform' : 'object-cover'} transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
                     referrerPolicy="no-referrer" loading="lazy" onLoad={() => setIsLoaded(true)}
                   />
                 </>
