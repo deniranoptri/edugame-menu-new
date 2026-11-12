@@ -84,6 +84,74 @@
     }
   },
   {
+    "id": "wonder-math-arena",
+    "title": "Wonder Math Arena",
+    "subtitle": "Petualangan Numerasi & Matematika Wisata Nusantara",
+    "bgColor": "linear-gradient(135deg, #064E3B 0%, #047857 50%, #0D9488 100%)",
+    "isNew": true,
+    "image": "https://wondermath.papaninteraktif.com/assets/menu/raka_mascot.png",
+    "url": "https://wondermath.papaninteraktif.com/",
+    "description": "Petualangan matematika interaktif menjelajahi destinasi wisata nusantara sambil berkompetisi menjawab soal berhitung. Dilengkapi 17 materi matematika SD kelas 1–6, 3 tingkat kesulitan (Mudah, Sedang, Sulit), serta mode bermain Solo, Duel split-screen, Trio, dan Squad hingga 4 pemain di layar sentuh IFP.",
+    "seoTitle": "Wonder Math Arena – Game Matematika SD Interaktif Gratis",
+    "seoDescription": "Mainkan Wonder Math Arena, game matematika interaktif SD kelas 1–6 dengan 17 materi, 3 tingkat kesulitan, dan mode hingga 4 pemain.",
+    "subject": "Matematika & Numerasi",
+    "audience": "SD Kelas 1–6",
+    "educationLevel": "general",
+    "learningFocus": "Operasi hitung dasar (penjumlahan, pengurangan, perkalian, pembagian), pecahan, desimal, geometri SD Kurikulum Merdeka, kecepatan respon mental math, dan kolaborasi kompetisi kelas.",
+    "howToPlay": [
+      "Buka Wonder Math Arena di peramban tanpa perlu instalasi aplikasi atau registrasi.",
+      "Pilih mode permainan: SOLO, DUEL (split-screen), TRIO, atau SQUAD (hingga 4 pemain).",
+      "Tentukan durasi pertandingan arena: 180 detik (3 menit) atau 300 detik (5 menit), atau mode latihan bebas.",
+      "Pilih tingkatan kelas (SD Kelas 1 sampai 6), tentukan materi matematika dari 17 pilihan topik, dan atur tingkat kesulitan (Mudah, Sedang, atau Sulit).",
+      "Bersiaplah bersama teman di depan layar saat hitung mundur 3-2-1-GO dimulai.",
+      "Jawab soal matematika secepat dan setepat mungkin sesuai panel kontrol pemain masing-masing.",
+      "Kumpulkan skor tertinggi dan buka potongan gambar serta petunjuk destinasi wisata nusantara bersama Maskot RAKA.",
+      "Lihat pengumuman pemenang di akhir babak dan pilih bermain kembali untuk mencoba tantangan baru."
+    ],
+    "educationalBenefits": [
+      "Meningkatkan otomatisasi dan kelancaran berhitung cepat (mental math) pada materi penjumlahan, pengurangan, perkalian, pembagian, pecahan, desimal, dan geometri.",
+      "Mendukung pembelajaran berdiferensiasi melalui 3 tingkat kesulitan (Mudah, Sedang, Sulit) sesuai kesiapan belajar siswa.",
+      "Menumbuhkan sportivitas, daya juang kognitif, dan motivasi belajar melalui mekanisme gamifikasi pertandingan yang seru.",
+      "Mengenalkan kekayaan geografi dan budaya nusantara melalui penyingkapan petunjuk destinasi wisata Indonesia di setiap babak.",
+      "Panduan Guru IFP: Manfaatkan mode DUEL atau SQUAD pada layar sentuh interaktif (IFP) sebagai ice breaking dan asesmen formatif interaktif tanpa hambatan multi-touch."
+    ],
+    "tags": ["🔢 Numerasi", "🧠 Logika", "⚡ Ice Breaking"],
+    "categoryKeys": ["numeracy", "logic", "ice-breaking"],
+    "hashtags": [
+      "#PapanInteraktif",
+      "#WonderMathArena",
+      "#GameMatematika",
+      "#NumerasiSD",
+      "#KurikulumMerdeka",
+      "#MediaPembelajaranInteraktif"
+    ],
+    "en": {
+      "title": "Wonder Math Arena",
+      "subtitle": "Interactive Math Adventure & Indonesian Destinations",
+      "description": "Wonder Math Arena is an interactive elementary mathematics educational game designed for Grades 1–6. Master 17 curriculum math topics across 3 difficulty tiers (Easy, Medium, Hard) while exploring Indonesia's iconic cultural destinations in Solo, Duel, Trio, or Squad multiplayer modes.",
+      "subject": "Mathematics & Numeracy",
+      "audience": "Elementary School (Grades 1–6)",
+      "learningFocus": "Mental arithmetic speed, basic operations (addition, subtraction, multiplication, division), fractions, decimals, geometry, and collaborative problem-solving on classroom interactive smartboards.",
+      "howToPlay": [
+        "Open Wonder Math Arena in your modern web browser without downloading or registering.",
+        "Select your game mode: SOLO, DUEL (split-screen), TRIO, or SQUAD (up to 4 players).",
+        "Choose your match duration: 180 seconds, 300 seconds, or free practice mode.",
+        "Select your elementary grade level (Grades 1 to 6), mathematics topic, and difficulty tier (Easy, Medium, Hard).",
+        "Get ready as the on-screen countdown displays 3-2-1-GO.",
+        "Solve math problems rapidly using each player's dedicated touch or numeric controls.",
+        "Collect points and unlock Indonesian travel destination clues alongside RAKA the mascot.",
+        "Review final score rankings and play again to explore new topics!"
+      ],
+      "educationalBenefits": [
+        "Strengthens elementary numeracy fluency aligned with modern mathematics standards.",
+        "Supports differentiated classroom instruction with three tailored difficulty tiers.",
+        "Encourages healthy peer engagement and active learning on multi-touch interactive displays (IFP).",
+        "Integrates cultural appreciation with core STEM competencies.",
+        "Teacher IFP Guide: Utilize DUEL or SQUAD modes on classroom interactive displays for high-engagement math ice breaking and formative evaluation."
+      ]
+    }
+  },
+  {
     "id": "bee-english-arena",
     "title": "BEE ENGLISH ARENA",
     "subtitle": "Game Bahasa Inggris Interaktif SD, SMP & SMA",
