@@ -5,6 +5,7 @@ const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) =
   const [isLoaded, setIsLoaded] = useState(false);
   const isColorLink = config.id === 'color-link-junior';
   const isBee = config.id === 'bee-english-arena';
+  const isGebukGuling = config.id === 'gebuk-guling-matematika';
   const isLight = config.variant === 'light' && !isColorLink;
   const isEn = locale === 'en' && config.en;
   const displayTitle = isEn ? config.en.title : config.title;
@@ -14,27 +15,39 @@ const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) =
 
   const isComingSoon = config.isComingSoon;
   
-  const textColorClass = isColorLink ? 'text-[#0C1A69]' : isLight ? 'text-[#B71C1C]' : 'text-white';
-  const subTextColorClass = isColorLink ? 'text-[#0C1A69]/75' : isLight ? 'text-[#B71C1C]' : 'text-white';
-  const borderClass = isColorLink 
+  const textColorClass = isGebukGuling ? 'text-[#7F1D1D]' : isColorLink ? 'text-[#0C1A69]' : isLight ? 'text-[#B71C1C]' : 'text-white';
+  const subTextColorClass = isGebukGuling ? 'text-[#7F1D1D]/90' : isColorLink ? 'text-[#0C1A69]/75' : isLight ? 'text-[#B71C1C]' : 'text-white';
+  const borderClass = isGebukGuling
+    ? 'border-[#F59E0B]/80 shadow-[0_8px_24px_-6px_rgba(185,28,28,0.25)] hover:border-[#F59E0B] hover:shadow-[0_12px_28px_-4px_rgba(185,28,28,0.34)] ring-1 ring-red-600/15'
+    : isColorLink 
     ? 'border-indigo-100/90 shadow-[0_8px_24px_-6px_rgba(79,70,229,0.18)] hover:border-indigo-300 hover:shadow-[0_12px_28px_-4px_rgba(79,70,229,0.25)] ring-1 ring-indigo-500/10' 
     : isLight ? 'border-[#EF9A9A]' : 'border-white/40';
-  const focusRingClass = isColorLink ? 'focus:ring-indigo-400/50' : isLight ? 'focus:ring-[#EF9A9A]/50' : 'focus:ring-white/50';
+  const focusRingClass = isGebukGuling ? 'focus:ring-red-400/60' : isColorLink ? 'focus:ring-indigo-400/50' : isLight ? 'focus:ring-[#EF9A9A]/50' : 'focus:ring-white/50';
   
-  const iconContainerBg = isColorLink 
+  const iconContainerBg = isGebukGuling
+    ? 'bg-white shadow-md'
+    : isColorLink 
     ? 'bg-gradient-to-tr from-cyan-50/90 via-blue-50/90 to-indigo-50/90' 
     : isLight ? 'bg-[#FFEBEE]' : 'bg-white/20';
-  const iconBorder = isColorLink ? 'border-indigo-200/80 shadow-xs' : isLight ? 'border-[#EF9A9A]' : 'border-white/50';
-  const pillBg = isColorLink 
+  const iconBorder = isGebukGuling
+    ? 'border-[#F59E0B] ring-2 ring-white/85 shadow-md'
+    : isColorLink ? 'border-indigo-200/80 shadow-xs' : isLight ? 'border-[#EF9A9A]' : 'border-white/50';
+  const pillBg = isGebukGuling
+    ? 'bg-gradient-to-r from-[#B91C1C] to-[#DC2626] text-white shadow-sm hover:brightness-110'
+    : isColorLink 
     ? 'bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white shadow-sm hover:brightness-105' 
     : isLight ? 'bg-[#FFEBEE] text-[#B71C1C]' : isComingSoon ? 'bg-black/20 text-white/80' : 'bg-white/30 text-white';
   
-  const arrowContainerClass = isColorLink
+  const arrowContainerClass = isGebukGuling
+    ? 'bg-[#B91C1C] text-white group-hover:bg-[#7F1D1D] group-hover:scale-110'
+    : isColorLink
     ? 'bg-indigo-600 text-white group-hover:bg-[#0C1A69] group-hover:scale-110'
     : isLight 
     ? 'bg-[#FFEBEE] group-hover:bg-[#B71C1C] group-hover:scale-110' 
     : 'bg-white/30 group-hover:bg-white group-hover:scale-110';
-  const arrowIconClass = isColorLink
+  const arrowIconClass = isGebukGuling
+    ? 'text-white'
+    : isColorLink
     ? 'text-white'
     : isLight
     ? 'text-[#B71C1C] group-hover:text-white'
@@ -49,17 +62,23 @@ const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) =
     : isBee
     ? 'w-[27%] max-w-[50px] sm:max-w-[54px] xl:max-w-[66px] aspect-square'
     : 'w-[35%] max-w-[80px] aspect-square';
-  const textContainerSpacing = isColorLink
+  const textContainerSpacing = isGebukGuling
+    ? 'mt-1.5 mb-0.5 pt-1 min-h-0'
+    : isColorLink
     ? 'my-0.5 min-h-0 gap-0.5 xl:gap-1'
     : isBee
     ? 'my-0.5 xl:my-1 min-h-0'
     : 'my-1 sm:my-1.5 min-h-0';
-  const titleClass = isBee
+  const titleClass = isGebukGuling
+    ? 'text-[10px] sm:text-[11px] md:text-[11.5px] lg:text-[13px] xl:text-[14px] font-black tracking-tight leading-[1.12] mb-0.5 w-full line-clamp-2'
+    : isBee
     ? 'text-[8.5px] sm:text-[9.5px] xl:text-[12.5px] font-black tracking-tight leading-[1.08] mb-0.5 drop-shadow-xs w-full line-clamp-2'
     : isColorLink
     ? 'text-[8.5px] sm:text-[9.5px] xl:text-[12px] font-black tracking-tight leading-tight drop-shadow-xs w-full line-clamp-1'
     : 'text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] font-black tracking-tight leading-[1.15] mb-0.5 drop-shadow-xs w-full line-clamp-2';
-  const subtitleClass = isBee
+  const subtitleClass = isGebukGuling
+    ? `text-[7.5px] sm:text-[8.5px] md:text-[9px] lg:text-[10px] xl:text-[10.5px] leading-[1.18] font-bold opacity-95 line-clamp-2 w-full px-1 ${subTextColorClass}`
+    : isBee
     ? `text-[6.5px] sm:text-[7.2px] xl:text-[9px] leading-[1.15] font-semibold opacity-95 line-clamp-2 w-full px-0.5 ${subTextColorClass}`
     : isColorLink
     ? `text-[7px] sm:text-[7.5px] xl:text-[9px] leading-tight font-bold opacity-90 line-clamp-1 w-full px-1 ${subTextColorClass}`
@@ -197,8 +216,8 @@ const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) =
                    <div className={`absolute inset-0 bg-gray-300/20 animate-pulse transition-opacity duration-300 ${isLoaded ? 'opacity-0' : 'opacity-100'} ${config.id === 'helirescue' ? 'rounded-full' : ''}`} />
                    <img 
                     src={config.image} 
-                    alt={isColorLink ? "Maskot resmi Linki Color Link Junior - Game logika warna anak" : config.id === 'kata-gol' ? "Logo resmi KATA GOL! - Game menyusun kalimat Bahasa Indonesia" : config.id === 'wonder-math-arena' ? "Maskot resmi RAKA Wonder Math Arena - Game Matematika SD Interaktif" : `${config.title} - game edukasi ${config.tags?.join(', ') || ''}`}
-                    className={`w-full h-full ${config.id === 'helirescue' ? 'object-contain scale-125 origin-bottom' : (isColorLink || config.id === 'kata-gol' || config.id === 'wonder-math-arena') ? 'object-contain p-1 transform-gpu hover:scale-110 transition-transform' : 'object-cover'} transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+                    alt={isColorLink ? "Maskot resmi Linki Color Link Junior - Game logika warna anak" : config.id === 'kata-gol' ? "Logo resmi KATA GOL! - Game menyusun kalimat Bahasa Indonesia" : config.id === 'wonder-math-arena' ? "Maskot resmi RAKA Wonder Math Arena - Game Matematika SD Interaktif" : config.id === 'junior-race-academy' ? "Maskot resmi JUNIOR RACE ACADEMY - Game Balap Matematika, Hitung & Kata" : isGebukGuling ? "Maskot resmi GEBUK GULING MATEMATIKA - Game Duel Berhitung SD 2 Pemain" : `${config.title} - game edukasi ${config.tags?.join(', ') || ''}`}
+                    className={`w-full h-full ${config.id === 'helirescue' ? 'object-contain scale-125 origin-bottom' : (isColorLink || config.id === 'kata-gol' || config.id === 'wonder-math-arena' || config.id === 'junior-race-academy' || isGebukGuling) ? 'object-contain p-1 transform-gpu hover:scale-110 transition-transform' : 'object-cover'} transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
                     referrerPolicy="no-referrer" loading="lazy" onLoad={() => setIsLoaded(true)}
                   />
                 </>

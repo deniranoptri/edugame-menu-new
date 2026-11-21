@@ -678,5 +678,130 @@
       "audience": "Early Childhood, Elementary Grades 1–3",
       "learningFocus": "Number recognition, basic addition and subtraction, fast arithmetic, and hand-eye coordination."
     }
+  },
+  {
+    "id": "junior-race-academy",
+    "title": "JUNIOR RACE ACADEMY",
+    "subtitle": "Balap Matematika, Hitung & Kata!",
+    "bgColor": "linear-gradient(135deg, #0369A1 0%, #2563EB 52%, #6D28D9 100%)",
+    "variant": "default",
+    "isNew": true,
+    "image": "https://github.com/deniranoptri/media/blob/sibungas/Maskot%20JRA.png?raw=true",
+    "url": "https://juniorrace.papaninteraktif.com/",
+    "description": "Balapan edukatif seru untuk PAUD, TK, dan SD kelas 1–3! Jawab tantangan matematika, hitung gambar, dan gambar & kata sambil berlomba bersama teman dalam mode DUEL 2 pemain atau SQUAD 4 pemain.",
+    "seoTitle": "JUNIOR RACE ACADEMY – Game Balap Matematika, Hitung & Kata Anak",
+    "seoDescription": "Mainkan Junior Race Academy, game balap edukatif untuk PAUD, TK, dan SD kelas 1–3. Latih matematika, hitung gambar, dan gambar & kata dalam mode DUEL 2 pemain atau SQUAD 4 pemain.",
+    "subject": "Matematika, Numerasi & Literasi",
+    "audience": "PAUD/TK, SD Kelas 1–3",
+    "educationLevel": "paud",
+    "learningFocus": "Matematika dasar (penjumlahan dan pengurangan), aktivitas hitung gambar, literasi gambar & kata, serta kecepatan respons dan kolaborasi di layar sentuh.",
+    "howToPlay": [
+      "Buka Junior Race Academy langsung melalui browser tanpa instalasi.",
+      "Pilih mode bermain: DUEL (2 pemain) atau SQUAD (4 pemain) dalam satu layar.",
+      "Pilih aktivitas belajar yang diinginkan: Matematika, Hitung Gambar, atau Gambar & Kata sesuai jenjang PAUD/TK hingga SD kelas 1–3.",
+      "Jawab setiap tantangan dengan tepat pada panel pemain masing-masing agar kendaraan melaju menuju garis finis.",
+      "Rayakan hasil balapan bersama teman dan mainkan kembali dengan kategori tantangan lainnya!"
+    ],
+    "educationalBenefits": [
+      "Melatih kemampuan numerasi dasar melalui soal matematika dan aktivitas hitung gambar yang visual dan menarik.",
+      "Mengembangkan literasi awal serta pengenalan kosakata anak lewat aktivitas gambar & kata.",
+      "Mendukung pembelajaran aktif dan ice breaking kelas menggunakan mode DUEL 2 pemain maupun SQUAD 4 pemain pada layar sentuh IFP.",
+      "Meningkatkan fokus, ketelitian, dan sportivitas berkompetisi secara positif sejak usia PAUD/TK dan SD kelas 1–3."
+    ],
+    "tags": ["🔢 Numerasi", "📚 Literasi", "🎯 Ice Breaking", "🏎️ Sport"],
+    "categoryKeys": ["numeracy", "literacy", "ice-breaking", "sport"],
+    "hashtags": [
+      "#JuniorRaceAcademy",
+      "#GameJunior",
+      "#PapanInteraktif",
+      "#GameIFP",
+      "#NumerasiAnak",
+      "#LiterasiAnak"
+    ],
+    "en": {
+      "title": "JUNIOR RACE ACADEMY",
+      "subtitle": "Math, Picture Counting & Word Race!",
+      "description": "An exciting educational racing game for Preschool, Kindergarten, and Grades 1–3! Solve math challenges, picture counting, and picture & word activities while racing friends in 2-player DUEL or 4-player SQUAD modes.",
+      "subject": "Mathematics, Numeracy & Literacy",
+      "audience": "Early Childhood (Pre-K/TK), Elementary Grades 1–3",
+      "learningFocus": "Early arithmetic, visual picture counting, beginner word-picture literacy, and responsive multiplayer engagement.",
+      "howToPlay": [
+        "Open Junior Race Academy directly in your browser with no installation required.",
+        "Choose your multiplayer mode: 2-player DUEL or 4-player SQUAD on a single screen.",
+        "Select your learning activity: Math, Picture Counting, or Picture & Word tailored for Pre-K/TK and Grades 1–3.",
+        "Answer each prompt accurately on your player panel to race your vehicle toward the finish line.",
+        "Review the race results with classmates and play another round to practice new challenges!"
+      ],
+      "educationalBenefits": [
+        "Builds foundational numeracy fluency through interactive math and visual picture-counting exercises.",
+        "Supports early literacy and vocabulary recognition through engaging picture & word matching.",
+        "Ideal for classroom ice breaking and multi-touch engagement in 2-player DUEL and 4-player SQUAD modes on IFP displays.",
+        "Encourages focus, accuracy, and positive sportsmanship for young learners."
+      ]
+    }
+  },
+  {
+    "id": "gebuk-guling-matematika",
+    "title": "GEBUK GULING MATEMATIKA",
+    "subtitle": "Adu Cepat Berhitung di Atas Bambu!",
+    "bgColor": "linear-gradient(180deg, #B91C1C 0%, #DC2626 35%, #F59E0B 35.8%, #FFFFFF 36.8%, #FFF7F7 100%)",
+    "variant": "light",
+    "isNew": true,
+    "image": "https://github.com/deniranoptri/media/blob/sibungas/Gebuk_Guling_Matematika_Ceria-removebg-preview%20(1).png?raw=true",
+    "url": "https://game-17agustus.papaninteraktif.com/",
+    "description": "Permainan edukasi matematika SD dua pemain bertema lomba tradisional 17 Agustus gebuk guling di atas kolam desa. Tim Merah #10 dan Tim Biru #7 beradu cepat menjawab soal penjumlahan, pengurangan, perkalian, pembagian, dan campuran pada level Pemula atau Mahir dengan durasi 3, 5, atau 10 menit—dilengkapi Bank Soal Guru (Excel/CSV) serta Klasemen Juara lokal dengan ekspor Excel untuk kelas dan papan interaktif (IFP).",
+    "seoTitle": "GEBUK GULING MATEMATIKA – Game Duel Berhitung SD 2 Pemain",
+    "seoDescription": "Mainkan Gebuk Guling Matematika, game edukasi SD 2 pemain bertema lomba 17 Agustus. Latih penjumlahan, pengurangan, perkalian, dan pembagian dengan Bank Soal Guru & Klasemen di IFP.",
+    "subject": "Matematika & Numerasi",
+    "audience": "SD Kelas 1–6",
+    "educationLevel": "general",
+    "learningFocus": "Kecepatan berhitung mental pada operasi penjumlahan, pengurangan, perkalian, pembagian, dan campuran untuk siswa SD dalam duel 2 pemain yang sportif di kelas maupun papan interaktif (IFP).",
+    "howToPlay": [
+      "Pilih sumber soal (Soal Otomatis bawaan atau Bank Soal Guru dari file Excel/CSV), topik matematika (Penjumlahan, Pengurangan, Perkalian, Pembagian, atau Campuran), serta tingkat kesulitan Pemula atau Mahir.",
+      "Masukkan nama pemain untuk Tim Merah #10 dan Tim Biru #7, lalu pilih durasi pertandingan 3, 5, atau 10 menit.",
+      "Setelah aba-aba hitungan mundur 3–2–1–MULAI!, kedua pemain menjawab soal matematika masing-masing melalui keypad angka lalu menekan tombol Go.",
+      "Setiap jawaban benar menambah skor, mengayunkan bantal guling untuk menggoyahkan keseimbangan lawan, serta membantu memulihkan keseimbangan sendiri.",
+      "Raih Menang KO dengan menjatuhkan lawan ke kolam atau Menang Skor saat waktu habis, lalu pantau peringkat di Klasemen Juara lokal dan ekspor laporan ke Excel (.xlsx)."
+    ],
+    "educationalBenefits": [
+      "Melatih kelancaran berhitung cepat (mental math) pada operasi penjumlahan, pengurangan, perkalian, pembagian, dan soal campuran secara menyenangkan.",
+      "Mendukung pembelajaran adaptif melalui pilihan tingkat kesulitan Pemula (penjumlahan & pengurangan) dan Mahir (keempat operasi) serta fitur unggah Bank Soal Guru berbasis Excel/CSV.",
+      "Mendorong partisipasi aktif, sportivitas, dan fokus siswa SD melalui format duel 2 pemain tatap muka di layar sentuh Interactive Flat Panel (IFP) atau smartboard kelas.",
+      "Memudahkan dokumentasi capaian lomba kelas dengan pencatatan Klasemen Juara lokal dan fitur ekspor hasil ke Excel (.xlsx).",
+      "Mengangkat nuansa kebersamaan lomba tradisional 17 Agustus Indonesia ke dalam aktivitas pembelajaran numerasi di kelas."
+    ],
+    "tags": ["🔢 Numerasi", "🎯 Ice Breaking", "🏀 Sport"],
+    "categoryKeys": ["numeracy", "ice-breaking", "sport"],
+    "hashtags": [
+      "#GebukGulingMatematika",
+      "#PapanInteraktif",
+      "#GameMatematikaSD",
+      "#Lomba17Agustus",
+      "#NumerasiSD",
+      "#GameIFP",
+      "#IceBreakingKelas"
+    ],
+    "en": {
+      "title": "GEBUK GULING MATEMATIKA",
+      "subtitle": "Fast Math Pillow-Fight Duel!",
+      "description": "A 2-player elementary math educational game inspired by Indonesia’s traditional August 17th pillow-fight competition over a village pond. Red Team #10 and Blue Team #7 race to solve addition, subtraction, multiplication, division, and mixed arithmetic across Beginner or Advanced levels in 3, 5, or 10-minute matches—complete with Teacher Question Bank (Excel/CSV) and local Leaderboard with Excel export for classroom IFP displays.",
+      "subject": "Mathematics & Numeracy",
+      "audience": "Elementary Grades 1–6",
+      "learningFocus": "Rapid mental arithmetic across addition, subtraction, multiplication, division, and mixed operations through a head-to-head 2-player classroom duel.",
+      "howToPlay": [
+        "Choose the question source (built-in Automatic Questions or Teacher Question Bank via Excel/CSV), arithmetic topic (Addition, Subtraction, Multiplication, Division, or Mixed), and Beginner or Advanced difficulty.",
+        "Enter player names for Red Team #10 and Blue Team #7, then select a 3, 5, or 10-minute match duration.",
+        "After the 3–2–1–GO countdown, both players solve their math problems simultaneously on their numeric keypads and tap Go.",
+        "Each correct answer awards points, swings the bolster pillow to reduce the opponent’s balance, and restores your own stability.",
+        "Win by Knockout (KO) when the opponent falls into the pond or by highest score when time runs out, then review local Leaderboard rankings and export results to Excel (.xlsx)."
+      ],
+      "educationalBenefits": [
+        "Builds rapid mental calculation fluency in addition, subtraction, multiplication, division, and mixed arithmetic.",
+        "Supports differentiated classroom instruction with Beginner and Advanced difficulty tiers plus custom Teacher Question Bank uploads (Excel/CSV).",
+        "Promotes active engagement, focus, and friendly sportsmanship in simultaneous 2-player duels on Interactive Flat Panels (IFP) and smartboards.",
+        "Simplifies classroom tournament tracking with a built-in local Leaderboard and Excel (.xlsx) export.",
+        "Celebrates Indonesian Independence Day traditional games while reinforcing elementary numeracy."
+      ]
+    }
   }
 ]

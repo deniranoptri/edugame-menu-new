@@ -133,8 +133,8 @@ const GameDetail: React.FC<GameDetailProps> = ({ game, onBack, locale = "id" }) 
               {game.image && (
                 <img 
                   src={game.image} 
-                  alt={`Ikon game ${game.title}`} 
-                  className={`w-full h-full ${(game.id === 'color-link-junior' || game.id === 'kata-gol') ? 'object-contain p-2' : 'object-cover'} rounded-xl drop-shadow-md`}
+                  alt={game.id === 'gebuk-guling-matematika' ? 'Maskot resmi GEBUK GULING MATEMATIKA - Game Duel Berhitung SD 2 Pemain' : `Ikon game ${game.title}`} 
+                  className={`w-full h-full ${(game.id === 'color-link-junior' || game.id === 'kata-gol' || game.id === 'junior-race-academy' || game.id === 'gebuk-guling-matematika') ? 'object-contain p-2' : 'object-cover'} rounded-xl drop-shadow-md`}
                 />
               )}
             </div>
