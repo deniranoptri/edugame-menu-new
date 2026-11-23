@@ -177,17 +177,61 @@ export const HubIfp: React.FC<HubIfpProps> = ({ games, onBack, navigateTo, local
     navigateTo('gameDetail', locale === 'en' ? `/en/game/${encodeURIComponent(id)}` : `/game/${encodeURIComponent(id)}`);
   };
 
+  const handleSpaLink = (e: React.MouseEvent<HTMLAnchorElement>, view: string, path: string) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
+    navigateTo(view, path);
+  };
+
+  const verifiedAdditionalIfpGamesId = [
+    {
+      id: 'gebuk-guling-matematika',
+      title: 'GEBUK GULING MATEMATIKA',
+      meta: 'Matematika · Adu Cepat Berhitung di Atas Bambu',
+    },
+    {
+      id: 'kata-gol',
+      title: 'KATA GOL!',
+      meta: 'Bahasa Indonesia · Susun Kalimat, Cetak Gol',
+    },
+    {
+      id: 'wonder-math-arena',
+      title: 'Wonder Math Arena',
+      meta: 'Matematika · Petualangan Numerasi & Wisata Nusantara',
+    },
+    {
+      id: 'numeriq-math',
+      title: 'NUMERIQ Math',
+      meta: 'Matematika · Matriks & Tantangan Numerasi',
+    },
+    {
+      id: 'junior-race-academy',
+      title: 'JUNIOR RACE ACADEMY',
+      meta: 'PAUD, TK & SD · Balap Matematika, Hitung & Kata',
+    },
+    {
+      id: 'color-link-junior',
+      title: 'Color Link Junior',
+      meta: 'PAUD & SD · Puzzle Logika Warna',
+    },
+    {
+      id: 'basket-angka-junior',
+      title: 'Basket Angka Junior',
+      meta: 'PAUD & TK · Belajar Bilangan Sambil Bermain Basket',
+    },
+  ];
+
   return (
     <div className="min-h-[100dvh] bg-[#DDEBF8] p-4 md:p-8 font-sans">
       <div className="max-w-7xl mx-auto flex flex-col gap-8">
         
         <header className="bg-gradient-to-br from-emerald-50 to-teal-50 backdrop-blur-md rounded-3xl p-6 md:p-10 shadow-xl border-4 border-white relative overflow-hidden flex flex-col gap-6 text-center animate-fadeIn">
-          <button onClick={onBack} className="absolute top-6 left-6 flex items-center gap-2 text-[#0C1A69] font-black hover:text-blue-600 transition-colors bg-white hover:bg-blue-50 px-4 py-2 rounded-xl text-sm shadow-sm border-2 border-transparent hover:border-blue-100 z-10">
+          <button onClick={onBack} className="self-start md:absolute md:top-6 md:left-6 flex items-center gap-2 text-[#0C1A69] font-black hover:text-blue-600 transition-colors bg-white hover:bg-blue-50 px-4 py-2 rounded-xl text-sm shadow-sm border-2 border-transparent hover:border-blue-100 z-10">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
             KEMBALI
           </button>
           
-          <div className="mt-8 relative z-10">
+          <div className="mt-0 md:mt-8 relative z-10">
             <div className="inline-block bg-teal-100 text-teal-800 px-4 py-1.5 rounded-full font-black text-xs md:text-sm uppercase tracking-widest mb-4 shadow-sm">
               Untuk Papan Interaktif Digital (IFP)
             </div>
@@ -198,13 +242,13 @@ export const HubIfp: React.FC<HubIfpProps> = ({ games, onBack, navigateTo, local
             <nav aria-label="Breadcrumb" className="mb-6 flex justify-center">
               <ol className="flex flex-wrap items-center justify-center gap-2 text-xs md:text-sm font-semibold text-gray-500">
                 <li>
-                  <a href={locale === 'en' ? "/en/" : "/"} onClick={(e) => { e.preventDefault(); navigateTo('home', locale === 'en' ? '/en/' : '/'); }} className="hover:text-blue-600 transition-colors">
+                  <a href={locale === 'en' ? "/en/" : "/"} onClick={(e) => handleSpaLink(e, 'home', locale === 'en' ? '/en/' : '/')} className="hover:text-blue-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
                     {locale === 'en' ? "Home" : "Beranda"}
                   </a>
                 </li>
                 <li><span aria-hidden="true" className="opacity-50 mx-1">/</span></li>
                 <li>
-                  <a href={locale === 'en' ? "/en/" : "/"} onClick={(e) => { e.preventDefault(); navigateTo('home', locale === 'en' ? '/en/' : '/'); }} className="hover:text-blue-600 transition-colors">
+                  <a href={locale === 'en' ? "/en/" : "/"} onClick={(e) => handleSpaLink(e, 'home', locale === 'en' ? '/en/' : '/')} className="hover:text-blue-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
                     {locale === 'en' ? "Educational Games" : "Game Edukasi"}
                   </a>
                 </li>
@@ -228,7 +272,7 @@ export const HubIfp: React.FC<HubIfpProps> = ({ games, onBack, navigateTo, local
               </p>
             </div>
             <div className="inline-block bg-white text-[#0C1A69] px-5 py-2 rounded-full font-black text-xs md:text-sm shadow-sm border-2 border-[#0C1A69]/10 mt-4 hover:scale-105 transition-transform">
-              <a href={locale === "en" ? "/en/guides/using-educational-games-on-interactive-flat-panels" : "/panduan/penggunaan-ifp-papan-interaktif-digital"} onClick={(e) => { e.preventDefault(); navigateTo('guideIfp', locale === "en" ? "/en/guides/using-educational-games-on-interactive-flat-panels" : "/panduan/penggunaan-ifp-papan-interaktif-digital"); }}>
+              <a href={locale === "en" ? "/en/guides/using-educational-games-on-interactive-flat-panels" : "/panduan/penggunaan-ifp-papan-interaktif-digital"} onClick={(e) => handleSpaLink(e, 'guideIfp', locale === "en" ? "/en/guides/using-educational-games-on-interactive-flat-panels" : "/panduan/penggunaan-ifp-papan-interaktif-digital")} className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
                 {locale === "en" ? "📖 Guide: Using Educational Games on IFPs" : "📖 Baca: Panduan Menggunakan IFP di Kelas"}
               </a>
             </div>
@@ -248,8 +292,148 @@ export const HubIfp: React.FC<HubIfpProps> = ({ games, onBack, navigateTo, local
             ))}
           </div>
 
+          {locale === 'id' ? (
+            <section aria-labelledby="verified-ifp-more-heading" className="mt-4 bg-white/80 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-md border-2 border-white flex flex-col gap-5">
+              <div>
+                <h2 id="verified-ifp-more-heading" className="text-xl md:text-2xl font-black text-[#0C1A69] border-l-4 border-emerald-500 pl-4">
+                  Game Layar Sentuh IFP Lainnya yang Terverifikasi
+                </h2>
+                <p className="text-sm text-gray-700 font-medium mt-2 pl-4">
+                  Pilihan game numerasi, literasi, dan logika tambahan yang dirancang responsif untuk papan interaktif digital dan layar sentuh di kelas.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {verifiedAdditionalIfpGamesId.map((item) => {
+                  const href = `/game/${encodeURIComponent(item.id)}`;
+                  return (
+                    <a
+                      key={item.id}
+                      href={href}
+                      onClick={(e) => handleSpaLink(e, 'gameDetail', href)}
+                      className="group flex flex-col justify-between gap-1 rounded-2xl bg-white p-4 border-2 border-teal-100 hover:border-teal-400 hover:bg-teal-50/50 transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] focus-visible:ring-offset-2"
+                    >
+                      <span className="font-black text-[#0C1A69] group-hover:text-teal-800 text-sm md:text-base">
+                        {item.title}
+                      </span>
+                      <span className="text-xs text-gray-600 font-semibold leading-snug">
+                        {item.meta}
+                      </span>
+                    </a>
+                  );
+                })}
+              </div>
+              <nav aria-label="Koleksi dan Referensi Guru Terkait" className="pt-3 border-t border-teal-100 flex flex-wrap gap-3">
+                <a
+                  href="/game-edukasi-anak"
+                  onClick={(e) => handleSpaLink(e, 'hubKids', '/game-edukasi-anak')}
+                  className="inline-flex items-center rounded-xl bg-teal-50 px-4 py-2 text-xs md:text-sm font-bold text-[#0C1A69] border border-teal-200 hover:bg-teal-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69]"
+                >
+                  Koleksi Game Edukasi Anak PAUD &amp; TK
+                </a>
+                <a
+                  href="/game-logika"
+                  onClick={(e) => handleSpaLink(e, 'hubLogic', '/game-logika')}
+                  className="inline-flex items-center rounded-xl bg-teal-50 px-4 py-2 text-xs md:text-sm font-bold text-[#0C1A69] border border-teal-200 hover:bg-teal-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69]"
+                >
+                  Koleksi Game Logika &amp; Pemecahan Masalah
+                </a>
+                <a
+                  href="/jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas"
+                  onClick={(e) => handleSpaLink(e, 'articleAssessmentIfp', '/jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas')}
+                  className="inline-flex items-center rounded-xl bg-teal-50 px-4 py-2 text-xs md:text-sm font-bold text-[#0C1A69] border border-teal-200 hover:bg-teal-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69]"
+                >
+                  Jurnal Guru: Asesmen Formatif Menggunakan IFP
+                </a>
+                <a
+                  href="/jurnal-guru/pembelajaran-matematika-interaktif-menggunakan-ifp"
+                  onClick={(e) => handleSpaLink(e, 'articleMatematikaIfp', '/jurnal-guru/pembelajaran-matematika-interaktif-menggunakan-ifp')}
+                  className="inline-flex items-center rounded-xl bg-teal-50 px-4 py-2 text-xs md:text-sm font-bold text-[#0C1A69] border border-teal-200 hover:bg-teal-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69]"
+                >
+                  Jurnal Guru: Pembelajaran Matematika Interaktif di IFP
+                </a>
+              </nav>
+            </section>
+          ) : (
+            <section aria-labelledby="english-ifp-direct-heading" className="mt-4 bg-white/80 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-md border-2 border-white flex flex-col gap-5">
+              <div>
+                <h2 id="english-ifp-direct-heading" className="text-xl md:text-2xl font-black text-[#0C1A69] border-l-4 border-emerald-500 pl-4">
+                  Related English Teacher Resources
+                </h2>
+                <p className="text-sm text-gray-700 font-medium mt-2 pl-4">
+                  Explore practical teacher articles and classroom strategies for Interactive Flat Panel (IFP) instruction.
+                </p>
+              </div>
+              <nav aria-label="Related English Teacher Resources" className="pt-3 border-t border-teal-100 flex flex-wrap gap-3">
+                <a
+                  href="/en/journal"
+                  onClick={(e) => handleSpaLink(e, 'blogEn', '/en/journal')}
+                  className="inline-flex items-center rounded-xl bg-teal-50 px-4 py-2 text-xs md:text-sm font-bold text-[#0C1A69] border border-teal-200 hover:bg-teal-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69]"
+                >
+                  Teacher Journal: IFP Classroom Strategies
+                </a>
+                <a
+                  href="/en/journal/formative-assessment-using-interactive-flat-panel"
+                  onClick={(e) => handleSpaLink(e, 'articleAssessmentIfpEn', '/en/journal/formative-assessment-using-interactive-flat-panel')}
+                  className="inline-flex items-center rounded-xl bg-teal-50 px-4 py-2 text-xs md:text-sm font-bold text-[#0C1A69] border border-teal-200 hover:bg-teal-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69]"
+                >
+                  Formative Assessment Using Interactive Flat Panels
+                </a>
+                <a
+                  href="/en/journal/collaborative-learning-using-interactive-flat-panel"
+                  onClick={(e) => handleSpaLink(e, 'articleCollaborativeIfpEn', '/en/journal/collaborative-learning-using-interactive-flat-panel')}
+                  className="inline-flex items-center rounded-xl bg-teal-50 px-4 py-2 text-xs md:text-sm font-bold text-[#0C1A69] border border-teal-200 hover:bg-teal-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69]"
+                >
+                  Collaborative Learning Using Interactive Flat Panels
+                </a>
+              </nav>
+            </section>
+          )}
+
           {/* IFP HUB SUPPORTING CONTENT */}
           <section className="mt-12 bg-white/60 backdrop-blur-sm rounded-3xl p-6 md:p-10 shadow-lg border-2 border-white">
+            {locale === "id" && (
+              <div className="mb-10 bg-white/90 rounded-2xl p-5 md:p-7 border border-teal-100 shadow-sm">
+                <h2 className="text-xl md:text-2xl font-black text-[#0C1A69] mb-3 border-l-4 border-teal-500 pl-4">
+                  Pemanfaatan Game Edukasi di Papan Tulis Interaktif &amp; Smartboard Kelas
+                </h2>
+                <p className="text-gray-700 font-medium leading-relaxed text-sm md:text-base mb-4">
+                  Di ruang kelas, game edukasi pada <strong>papan tulis interaktif</strong>, <strong>smartboard</strong>, maupun <strong>Interactive Flat Panel (IFP)</strong> membantu guru mengubah latihan materi menjadi aktivitas visual yang dapat diamati seluruh kelas. Perlu dicatat bahwa dukungan sentuhan dan mode bermain berbeda-beda pada setiap game—tidak semua game dirancang untuk sentuhan simultan bersamaan. Sebagian game ideal dimainkan secara bergiliran di layar besar, sementara beberapa game tertentu memiliki mode kompetitif multi-pemain lokal sesuai informasi di katalognya.
+                </p>
+                <ul className="list-disc pl-5 text-gray-700 font-medium text-sm md:text-base space-y-2 mb-4">
+                  <li>
+                    <strong>Pemanasan Literasi, Numerasi &amp; Latihan Akademik:</strong> Guru dapat memandu diskusi kelas pada{' '}
+                    <a
+                      href="/game/ketapel-sakti"
+                      onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/ketapel-sakti')}
+                      className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded"
+                    >
+                      KETAPEL SAKTI
+                    </a>{' '}
+                    atau latihan kosakata bahasa Inggris lewat{' '}
+                    <a
+                      href="/game/bee-english-arena"
+                      onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/bee-english-arena')}
+                      className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded"
+                    >
+                      BEE ENGLISH ARENA
+                    </a>
+                    .
+                  </li>
+                  <li>
+                    <strong>Aktivitas Kelompok &amp; Mode Multi-Pemain Lokal:</strong> Untuk mengatur giliran siswa, etika layar sentuh, serta daftar game dengan mode Duel, Trio, dan Squad, pelajari panduan{' '}
+                    <a
+                      href="/jurnal-guru/pembelajaran-kolaboratif-menggunakan-ifp-di-kelas"
+                      onClick={(e) => handleSpaLink(e, 'articleCollaborativeIfp', '/jurnal-guru/pembelajaran-kolaboratif-menggunakan-ifp-di-kelas')}
+                      className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded"
+                    >
+                      Pembelajaran Kolaboratif Menggunakan IFP di Kelas
+                    </a>
+                    .
+                  </li>
+                </ul>
+              </div>
+            )}
+
             <h2 className="text-2xl md:text-3xl font-black text-[#0C1A69] mb-4">
               {locale === "en" ? "Why Use Educational Games on Interactive Flat Panels?" : "Mengapa Menggunakan Game IFP di Kelas?"}
             </h2>

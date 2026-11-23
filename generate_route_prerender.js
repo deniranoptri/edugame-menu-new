@@ -123,8 +123,12 @@ function resolveRouteMetadata(loc, routePath) {
 
   // Indonesian Games
   if (p.startsWith('/game/')) {
-    const gameId = p.replace('/game/', '');
-    const game = gameMap.get(gameId);
+    const rawGameId = p.replace('/game/', '');
+    let gameId = rawGameId;
+    try {
+      gameId = decodeURIComponent(rawGameId);
+    } catch {}
+    const game = gameMap.get(gameId) || gameMap.get(rawGameId);
     if (game) {
       const title = game.seoTitle || `${game.title} | Game Edukasi Interaktif | Papan Interaktif`;
       const description = game.seoDescription || game.description || `${game.title} - ${game.subtitle || ''}. Game edukasi di Papan Interaktif.`;
@@ -140,8 +144,12 @@ function resolveRouteMetadata(loc, routePath) {
 
   // English Games
   if (p.startsWith('/en/game/')) {
-    const gameId = p.replace('/en/game/', '');
-    const game = gameMap.get(gameId);
+    const rawGameId = p.replace('/en/game/', '');
+    let gameId = rawGameId;
+    try {
+      gameId = decodeURIComponent(rawGameId);
+    } catch {}
+    const game = gameMap.get(gameId) || gameMap.get(rawGameId);
     if (game) {
       const en = game.en || {};
       const displayTitle = en.title || game.title;
@@ -274,6 +282,213 @@ function resolveRouteMetadata(loc, routePath) {
   };
 }
 
+// Curated, user-visible static internal anchors for authorized hub/guide routes (SEO-02B-W2) and targeted journal routes (SEO-03B)
+const STATIC_ROUTE_LINKS = {
+  '/game-edukasi-ifp': {
+    heading: 'Tautan Utama Game Edukasi IFP & Panduan Kelas',
+    ariaLabel: 'Navigasi Utama Game Edukasi IFP',
+    summary: 'Koleksi game edukasi ini dirancang untuk papan tulis interaktif, smartboard, dan Interactive Flat Panel (IFP) di kelas. Dukungan sentuhan dan mode bermain berbeda pada setiap game; sebagian cocok dimainkan bergiliran, sedangkan beberapa game menyediakan mode kompetitif multi-pemain lokal sesuai deskripsi katalognya.',
+    links: [
+      { href: '/', label: 'Beranda Papan Interaktif' },
+      { href: '/panduan/penggunaan-ifp-papan-interaktif-digital', label: 'Panduan Menggunakan IFP di Kelas' },
+      { href: '/game/nusaboard', label: 'NusaBoard — Peta Pikiran Interaktif' },
+      { href: '/game/doodle', label: 'Doodle AI — Gambar & Tebak' },
+      { href: '/game/adu-tarik-dino', label: 'Tarik Dino — Adu Tarik Tambang Kelas' },
+      { href: '/game/gebuk-guling-matematika', label: 'GEBUK GULING MATEMATIKA' },
+      { href: '/game/wonder-math-arena', label: 'Wonder Math Arena' },
+      { href: '/game/kata-gol', label: 'KATA GOL!' },
+      { href: '/game/ketapel-sakti', label: 'KETAPEL SAKTI — Literasi, Numerasi & Latihan TKA' },
+      { href: '/game/bee-english-arena', label: 'BEE ENGLISH ARENA — Kosakata Bahasa Inggris' },
+      { href: '/game-edukasi-anak', label: 'Koleksi Game Edukasi Anak PAUD & TK' },
+      { href: '/game-logika', label: 'Koleksi Game Logika & Pemecahan Masalah' },
+      { href: '/jurnal-guru/pembelajaran-kolaboratif-menggunakan-ifp-di-kelas', label: 'Jurnal Guru: Pembelajaran Kolaboratif & Mode Multiplayer IFP' },
+      { href: '/jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas', label: 'Jurnal Guru: Asesmen Formatif Menggunakan IFP' },
+      { href: '/jurnal-guru/pembelajaran-matematika-interaktif-menggunakan-ifp', label: 'Jurnal Guru: Pembelajaran Matematika Interaktif di IFP' },
+    ],
+  },
+  '/en/educational-games-for-interactive-flat-panels': {
+    heading: 'Featured Interactive Flat Panel Games & Teacher Resources',
+    ariaLabel: 'Interactive Flat Panel Games Navigation',
+    links: [
+      { href: '/en/', label: 'Home — Papan Interaktif' },
+      { href: '/en/guides/using-educational-games-on-interactive-flat-panels', label: 'Guide: Using Educational Games on IFPs' },
+      { href: '/en/game/nusaboard', label: 'NusaBoard — Interactive Mind Mapping' },
+      { href: '/en/game/doodle', label: 'Doodle AI — Draw & Guess' },
+      { href: '/en/game/adu-tarik-dino', label: 'Tarik Dino — Classroom Tug-of-War' },
+      { href: '/en/game/puzzle', label: 'Photo Puzzle — Custom Image Touch Puzzle' },
+      { href: '/en/game/banua-fruit-blast', label: 'Banua Fruit Blast — Fast Math & Reflex' },
+      { href: '/en/game/traditional', label: 'Traditional Games — Interactive Classroom Challenge' },
+      { href: '/en/game/sciencelink', label: 'SCIENCELINK — Science Logic Puzzle' },
+      { href: '/en/journal', label: 'Teacher Journal: IFP Classroom Strategies' },
+      { href: '/en/journal/formative-assessment-using-interactive-flat-panel', label: 'Formative Assessment Using Interactive Flat Panels' },
+      { href: '/en/journal/collaborative-learning-using-interactive-flat-panel', label: 'Collaborative Learning Using Interactive Flat Panels' },
+    ],
+  },
+  '/game-edukasi-anak': {
+    heading: 'Pilihan Game Edukasi Anak PAUD & TK serta Koleksi Terkait',
+    ariaLabel: 'Navigasi Koleksi Game Edukasi Anak',
+    links: [
+      { href: '/', label: 'Beranda Papan Interaktif' },
+      { href: '/panduan/memilih-game-edukasi-anak', label: 'Panduan Memilih Game Anak PAUD/TK' },
+      { href: '/game/junior-race-academy', label: 'JUNIOR RACE ACADEMY' },
+      { href: '/game/basket-angka-junior', label: 'Basket Angka Junior' },
+      { href: '/game/color-link-junior', label: 'Color Link Junior' },
+      { href: '/game/belajar-angka', label: 'Belajar Angka' },
+      { href: '/game/mewarnai', label: 'Mewarnai Ceria' },
+      { href: '/game-edukasi-ifp', label: 'Koleksi Game Edukasi IFP' },
+      { href: '/game-logika', label: 'Koleksi Game Logika & Asah Otak' },
+      { href: '/jurnal-guru', label: 'Jurnal Guru & Strategi Pembelajaran IFP' },
+    ],
+  },
+  '/game-logika': {
+    heading: 'Pilihan Game Logika & Panduan Kelas Terkait',
+    ariaLabel: 'Navigasi Koleksi Game Logika',
+    links: [
+      { href: '/', label: 'Beranda Papan Interaktif' },
+      { href: '/game/sciencelink', label: 'SCIENCELINK' },
+      { href: '/game/si-taktik', label: 'Si Taktik' },
+      { href: '/game/puzzle', label: 'Puzzle Gambar' },
+      { href: '/game/color-link-junior', label: 'Color Link Junior' },
+      { href: '/game/cocok-logi', label: 'Cocok Logi' },
+      { href: '/game-edukasi-ifp', label: 'Koleksi Game Edukasi IFP' },
+      { href: '/game-edukasi-anak', label: 'Koleksi Game Edukasi Anak PAUD & TK' },
+      { href: '/panduan/penggunaan-ifp-papan-interaktif-digital', label: 'Panduan Menggunakan IFP di Kelas' },
+      { href: '/jurnal-guru/pembelajaran-berbasis-masalah-menggunakan-ifp', label: 'Jurnal Guru: Pembelajaran Berbasis Masalah di IFP' },
+    ],
+  },
+  '/panduan/penggunaan-ifp-papan-interaktif-digital': {
+    heading: 'Game IFP & Referensi Guru Terkait',
+    ariaLabel: 'Navigasi Referensi Panduan IFP',
+    links: [
+      { href: '/', label: 'Beranda Papan Interaktif' },
+      { href: '/game-edukasi-ifp', label: 'Koleksi Game Edukasi IFP & Papan Interaktif' },
+      { href: '/game/nusaboard', label: 'NusaBoard' },
+      { href: '/game/adu-tarik-dino', label: 'Tarik Dino' },
+      { href: '/game-logika', label: 'Koleksi Game Logika' },
+      { href: '/game/gebuk-guling-matematika', label: 'Gebuk Guling Matematika' },
+      { href: '/game/wonder-math-arena', label: 'Wonder Math Arena' },
+      { href: '/game/kata-gol', label: 'KATA GOL!' },
+      { href: '/game/martabak-pecahan', label: 'Martabak Pecahan' },
+      { href: '/jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas', label: 'Asesmen Formatif Menggunakan IFP di Kelas' },
+      { href: '/jurnal-guru/pembelajaran-matematika-interaktif-menggunakan-ifp', label: 'Pembelajaran Matematika Interaktif Menggunakan IFP' },
+      { href: '/game-edukasi-anak', label: 'Koleksi Game Edukasi Anak PAUD & TK' },
+    ],
+  },
+  '/en/guides/using-educational-games-on-interactive-flat-panels': {
+    heading: 'Recommended English IFP Games & Teacher Guides',
+    ariaLabel: 'English IFP Classroom Guide Navigation',
+    links: [
+      { href: '/en/', label: 'Home — Papan Interaktif' },
+      { href: '/en/educational-games-for-interactive-flat-panels', label: 'IFP Games Collection' },
+      { href: '/en/game/adu-tarik-dino', label: 'Tarik Dino (Classroom Tug-of-War)' },
+      { href: '/en/game/nusaboard', label: 'NusaBoard (Interactive Mind Mapping)' },
+      { href: '/en/game/doodle', label: 'Doodle AI (Draw & Guess)' },
+      { href: '/en/game/sciencelink', label: 'SCIENCELINK (Science Logic)' },
+      { href: '/en/journal/formative-assessment-using-interactive-flat-panel', label: 'Formative Assessment Using IFP' },
+      { href: '/en/journal/gamification-using-interactive-flat-panel', label: 'Gamification Using IFP' },
+      { href: '/en/journal', label: 'English Teacher Journal' },
+    ],
+  },
+  '/jurnal-guru/pembelajaran-kolaboratif-menggunakan-ifp-di-kelas': {
+    heading: 'Game Edukasi Multiplayer Terdokumentasi (Duel, Trio, Squad & Split-Screen)',
+    ariaLabel: 'Navigasi Game Multiplayer dan Referensi Pembelajaran Kolaboratif',
+    summary: 'Tujuh game berikut mendokumentasikan mode multi-pemain lokal (Duel 2 pemain, split-screen, Trio, hingga Squad 4 pemain) pada katalog portal Papan Interaktif. Guru disarankan mencoba kesesuaian layar di perangkat IFP kelas sebelum pembelajaran dimulai.',
+    links: [
+      { href: '/', label: 'Beranda Papan Interaktif' },
+      { href: '/jurnal-guru', label: 'Jurnal Guru & Strategi IFP' },
+      { href: '/game-edukasi-ifp', label: 'Koleksi Game Edukasi IFP' },
+      { href: '/game/gebuk-guling-matematika', label: 'GEBUK GULING MATEMATIKA (Duel 2 Pemain)' },
+      { href: '/game/adu-tarik-dino', label: 'Tarik Dino (Split-Screen Duel)' },
+      { href: '/game/wonder-math-arena', label: 'Wonder Math Arena (Solo, Duel Split-Screen, Trio & Squad)' },
+      { href: '/game/junior-race-academy', label: 'JUNIOR RACE ACADEMY (Duel 2 Pemain & Squad 4 Pemain)' },
+      { href: '/game/kata-gol', label: 'KATA GOL! (Solo, Duel, Trio & Squad)' },
+      { href: '/game/bee-english-arena', label: 'BEE ENGLISH ARENA (Solo, Duel, Trio & Squad)' },
+      { href: '/game/basket-angka-junior', label: 'Basket Angka Junior (Solo, Duel, Trio & Squad)' },
+      { href: '/jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas', label: 'Asesmen Formatif Menggunakan IFP di Kelas' },
+    ],
+  },
+  '/jurnal-guru/pembelajaran-matematika-interaktif-menggunakan-ifp': {
+    heading: 'Pemetaan Game Matematika & Numerasi Berdasarkan Topik dan Audiens',
+    ariaLabel: 'Navigasi Game Matematika dan Referensi Numerasi IFP',
+    summary: 'Pemetaan game matematika berdasarkan topik terdokumentasi (bilangan dasar, operasi hitung, pecahan, garis bilangan, bangun datar, bangun ruang 3D, pembagian porogapit, dan matriks numerasi) serta rentang audiens katalog. Label audiens luas SD–SMA merupakan rekomendasi latihan umum dan bukan bukti cakupan menyeluruh seluruh materi setiap tingkat kelas.',
+    links: [
+      { href: '/', label: 'Beranda Papan Interaktif' },
+      { href: '/jurnal-guru', label: 'Jurnal Guru & Strategi IFP' },
+      { href: '/game-edukasi-ifp', label: 'Koleksi Game Edukasi IFP' },
+      { href: '/game-edukasi-anak', label: 'Koleksi Game Edukasi Anak PAUD & TK' },
+      { href: '/game/basket-angka-junior', label: 'Basket Angka Junior (PAUD/TK & SD 1–3)' },
+      { href: '/game/junior-race-academy', label: 'JUNIOR RACE ACADEMY (PAUD/TK & SD 1–3)' },
+      { href: '/game/wonder-math-arena', label: 'Wonder Math Arena (17 Materi Numerasi SD 1–6)' },
+      { href: '/game/gebuk-guling-matematika', label: 'GEBUK GULING MATEMATIKA (Operasi Hitung SD 1–6)' },
+      { href: '/game/martabak-pecahan', label: 'Martabak Pecahan (Konsep Pecahan)' },
+      { href: '/game/si-taktik', label: 'Si Taktik (Garis Bilangan & Logika Matematika)' },
+      { href: '/game/geo-squad', label: 'Geo Squad (Bangun Datar & Geometri)' },
+      { href: '/game/ruang-io', label: 'Ruang.io (Bangun Ruang & Spasial 3D)' },
+      { href: '/game/porogapit-arena', label: 'Porogapit Arena (Pembagian Bersusun)' },
+      { href: '/game/numeriq-math', label: 'NUMERIQ Math (Aritmetika & Matriks Numerasi)' },
+      { href: '/game/math-domino-arena', label: 'Math Domino Arena (Penalaran & Strategi Numerasi)' },
+      { href: '/game/jejak-angka', label: 'Jejak Angka (Ketelitian Berhitung & Logika)' },
+    ],
+  },
+  '/jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas': {
+    heading: 'Contoh Game Edukasi untuk Alur Cek Pemahaman Guru di Kelas',
+    ariaLabel: 'Navigasi Game dan Panduan Asesmen Formatif IFP',
+    summary: 'Contoh alur fasilitasi guru menggunakan game edukasi untuk mengamati pemahaman literasi, numerasi, struktur kalimat, IPA, dan peta konsep di layar IFP. Strategi ini merupakan panduan observasi kelas oleh guru dan bukan fitur laporan nilai otomatis atau ekspor analitik bawaan game.',
+    links: [
+      { href: '/', label: 'Beranda Papan Interaktif' },
+      { href: '/jurnal-guru', label: 'Jurnal Guru & Strategi IFP' },
+      { href: '/game-edukasi-ifp', label: 'Koleksi Game Edukasi IFP' },
+      { href: '/panduan/penggunaan-ifp-papan-interaktif-digital', label: 'Panduan Penggunaan IFP di Kelas' },
+      { href: '/game/ketapel-sakti', label: 'KETAPEL SAKTI (Literasi, Numerasi, Logika & Latihan TKA)' },
+      { href: '/game/wonder-math-arena', label: 'Wonder Math Arena (Cek Numerasi SD)' },
+      { href: '/game/martabak-pecahan', label: 'Martabak Pecahan (Cek Konsep Pecahan)' },
+      { href: '/game/kata-gol', label: 'KATA GOL! (Cek Struktur Kalimat SPOK)' },
+      { href: '/game/bee-english-arena', label: 'BEE ENGLISH ARENA (Cek Kosakata Bahasa Inggris)' },
+      { href: '/game/sciencelink', label: 'SCIENCELINK (Cek Penalaran Konsep IPA)' },
+      { href: '/game/nusaboard', label: 'NusaBoard (Peta Konsep & Exit Ticket Visual)' },
+    ],
+  },
+  '/en/journal/formative-assessment-using-interactive-flat-panel': {
+    heading: 'Published English Interactive Flat Panel Games for Classroom Checks',
+    ariaLabel: 'English Interactive Flat Panel Games and Teacher Resources',
+    summary: 'Practical teacher-led classroom workflows using the seven published English Interactive Flat Panel game pages for live observation, quick concept checks, and visual exit tickets rather than automated gradebooks or score exports.',
+    links: [
+      { href: '/en/', label: 'Home — Papan Interaktif' },
+      { href: '/en/journal', label: 'English Teacher Journal' },
+      { href: '/en/educational-games-for-interactive-flat-panels', label: 'Interactive Flat Panel Educational Games Collection' },
+      { href: '/en/guides/using-educational-games-on-interactive-flat-panels', label: 'Guide: Using Educational Games on Interactive Flat Panels' },
+      { href: '/en/game/nusaboard', label: 'NusaBoard — Concept Mapping & Visual Exit Tickets' },
+      { href: '/en/game/doodle', label: 'Doodle AI — Draw & Guess Vocabulary Check' },
+      { href: '/en/game/sciencelink', label: 'SCIENCELINK — Science Logic Warm-Up' },
+      { href: '/en/game/banua-fruit-blast', label: 'Banua Fruit Blast — Fast Mental Math Check' },
+      { href: '/en/game/adu-tarik-dino', label: 'Tarik Dino — Local Split-Screen Classroom Check' },
+      { href: '/en/game/puzzle', label: 'Photo Puzzle — Group Pattern Recognition' },
+      { href: '/en/game/traditional', label: 'Traditional Games — Classroom Brain Break' },
+      { href: '/en/journal/diagnostic-assessment-using-interactive-flat-panel', label: 'Diagnostic Assessment Using Interactive Flat Panel' },
+      { href: '/en/journal/reflective-learning-using-interactive-flat-panel', label: 'Reflective Learning Using Interactive Flat Panel' },
+    ],
+  },
+};
+
+const sitemapPathSet = new Set(sitemapEntries.map(e => e.path));
+
+function buildStaticLinksHtml(routePath) {
+  const cfg = STATIC_ROUTE_LINKS[routePath];
+  if (!cfg) return '';
+
+  const seen = new Set();
+  const items = [];
+  for (const link of cfg.links) {
+    if (!sitemapPathSet.has(link.href) || seen.has(link.href)) continue;
+    seen.add(link.href);
+    items.push(`          <li><a href="${escapeXml(link.href)}">${escapeXml(link.label)}</a></li>`);
+  }
+  if (items.length === 0) return '';
+
+  const summaryHtml = cfg.summary ? `\n          <p>${escapeXml(cfg.summary)}</p>` : '';
+  return `\n        <nav aria-label="${escapeXml(cfg.ariaLabel)}">\n          <h2>${escapeXml(cfg.heading)}</h2>${summaryHtml}\n          <ul>\n${items.join('\n')}\n          </ul>\n        </nav>`;
+}
+
 // 4. HTML Injector
 function buildRouteHtml(template, entry) {
   const meta = resolveRouteMetadata(entry.loc, entry.path);
@@ -358,10 +573,11 @@ function buildRouteHtml(template, entry) {
   // Preserve the rich static SEO content for the root homepage ('/'), but replace for all sub-routes
   const isRootHome = entry.path === '/' || entry.path === '' || entry.path === '/index.html';
   if (!isRootHome) {
+    const staticLinksHtml = buildStaticLinksHtml(entry.path);
     const staticBodyHtml = `
       <div class="static-seo-content">
         <h1>${escapeXml(meta.title)}</h1>
-        <p>${escapeXml(meta.description)}</p>
+        <p>${escapeXml(meta.description)}</p>${staticLinksHtml}
       </div>`;
 
     html = html.replace(/<div class="static-seo-content">.*?<\/div>/s, staticBodyHtml.trim());
@@ -390,7 +606,12 @@ for (const entry of sitemapEntries) {
     targetFilePath = path.join(DIST_DIR, 'index.html');
   } else {
     // e.g. /en/game/doodle -> dist/en/game/doodle/index.html
-    const cleanPath = entry.path.replace(/^\//, '').replace(/\/$/, '');
+    // Decode percent-encoded segments (e.g. %20 -> space) so Netlify & static servers resolve the file instead of SPA fallback
+    const rawCleanPath = entry.path.replace(/^\//, '').replace(/\/$/, '');
+    let cleanPath = rawCleanPath;
+    try {
+      cleanPath = decodeURIComponent(rawCleanPath);
+    } catch {}
     const dirPath = path.join(DIST_DIR, cleanPath);
     if (!fs.existsSync(dirPath)) {
       fs.mkdirSync(dirPath, { recursive: true });

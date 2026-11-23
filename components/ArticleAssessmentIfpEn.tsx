@@ -122,6 +122,12 @@ const ArticleAssessmentIfpEn: React.FC<ArticleAssessmentIfpEnProps> = ({ onBack,
     };
   }, []);
 
+  const handleSpaLink = (e: React.MouseEvent<HTMLAnchorElement>, view: string, path: string) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
+    navigateTo(view, path);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50/50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 pt-24">
@@ -180,6 +186,72 @@ const ArticleAssessmentIfpEn: React.FC<ArticleAssessmentIfpEnProps> = ({ onBack,
                   <li><strong>9. The "Draw It" Challenge:</strong> Ask students to draw a concept (e.g., a cell structure) on their tablets and cast it to the IFP to create a mosaic of class understanding.</li>
                   <li><strong>10. Concept Mapping Assessment:</strong> Have students build a mind map on the IFP from scratch. The missing links or incorrect branches will quickly reveal gaps in their understanding.</li>
                 </ul>
+
+                <h2 className="text-2xl font-black text-[#0C1A69] pt-4">Classroom Uses of Published English IFP Game Pages</h2>
+                <p>
+                  Teachers looking for ready-to-open interactive whiteboard activities can browse our{' '}
+                  <a href="/en/educational-games-for-interactive-flat-panels" onClick={(e) => handleSpaLink(e, 'hubIfp', '/en/educational-games-for-interactive-flat-panels')} className="text-blue-700 font-bold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                    Interactive Flat Panel Educational Games collection
+                  </a>{' '}
+                  or review classroom setup tips in the{' '}
+                  <a href="/en/guides/using-educational-games-on-interactive-flat-panels" onClick={(e) => handleSpaLink(e, 'guideIfp', '/en/guides/using-educational-games-on-interactive-flat-panels')} className="text-blue-700 font-bold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                    IFP Classroom Guide
+                  </a>
+                  . Below are practical teacher-led ways to incorporate the seven published English game pages during lesson checks:
+                </p>
+                <div className="bg-blue-50/70 p-5 md:p-6 rounded-2xl border border-blue-100 space-y-3 text-sm md:text-base text-left">
+                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                    <li>
+                      <a href="/en/game/nusaboard" onClick={(e) => handleSpaLink(e, 'gameDetail', '/en/game/nusaboard')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                        NusaBoard
+                      </a>{' '}
+                      — Use as a shared concept-mapping canvas for whole-class exit tickets and visual brainstorming.
+                    </li>
+                    <li>
+                      <a href="/en/game/doodle" onClick={(e) => handleSpaLink(e, 'gameDetail', '/en/game/doodle')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                        Doodle AI
+                      </a>{' '}
+                      — Run quick &quot;draw it&quot; vocabulary or concept-recognition prompts on the interactive screen.
+                    </li>
+                    <li>
+                      <a href="/en/game/sciencelink" onClick={(e) => handleSpaLink(e, 'gameDetail', '/en/game/sciencelink')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                        SCIENCELINK
+                      </a>{' '}
+                      — Check science reasoning and concept connections through guided group turns.
+                    </li>
+                    <li>
+                      <a href="/en/game/banua-fruit-blast" onClick={(e) => handleSpaLink(e, 'gameDetail', '/en/game/banua-fruit-blast')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                        Banua Fruit Blast
+                      </a>{' '}
+                      — Observe addition and subtraction fluency during short mental-math warm-ups.
+                    </li>
+                    <li>
+                      <a href="/en/game/adu-tarik-dino" onClick={(e) => handleSpaLink(e, 'gameDetail', '/en/game/adu-tarik-dino')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                        Tarik Dino
+                      </a>{' '}
+                      — Pair two teams in a local split-screen tug-of-war format to practice quick comparison checks.
+                    </li>
+                    <li>
+                      <a href="/en/game/puzzle" onClick={(e) => handleSpaLink(e, 'gameDetail', '/en/game/puzzle')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                        Photo Puzzle
+                      </a>{' '}
+                      — Invite small groups to assemble visual puzzles and discuss pattern clues together.
+                    </li>
+                    <li>
+                      <a href="/en/game/traditional" onClick={(e) => handleSpaLink(e, 'gameDetail', '/en/game/traditional')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                        Traditional Games
+                      </a>{' '}
+                      — Use as a brief active brain break between longer instructional blocks.
+                    </li>
+                  </ul>
+                  <p className="text-xs md:text-sm text-gray-600 border-t border-blue-200 pt-3">
+                    <strong>Note for educators:</strong> These activities are suggested teacher-led classroom workflows for live observation and discussion, not built-in automated gradebooks, analytics dashboards, or assessment export tools. Explore more articles in the{' '}
+                    <a href="/en/journal" onClick={(e) => handleSpaLink(e, 'blogEn', '/en/journal')} className="text-blue-700 font-bold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                      English Teacher Journal
+                    </a>
+                    .
+                  </p>
+                </div>
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">Connecting Assessments</h2>
                 <p>

@@ -94,6 +94,12 @@ const ArticleMatematikaIfp: React.FC<ArticleMatematikaIfpProps> = ({ onBack, nav
     };
   }, []);
 
+  const handleSpaLink = (e: React.MouseEvent<HTMLAnchorElement>, view: string, path: string) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
+    navigateTo(view, path);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 pt-24 pb-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -222,6 +228,98 @@ const ArticleMatematikaIfp: React.FC<ArticleMatematikaIfpProps> = ({ onBack, nav
                 <p>
                   Menyelingi proses dengan <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); navigateTo('hubIfp', '/game-edukasi-ifp'); }} className="text-blue-700 hover:underline font-bold">game edukasi IFP</a> dapat mengikis ketegangan ruang kelas. Permainan mencocokkan jumlah, kuis adu cepat perkalian, atau teka-teki logika ruang (<em>spatial logic</em>) membangun kompetisi sehat yang memacu otomatisasi penghitungan dasar.
                 </p>
+
+                <div className="bg-blue-50/70 p-5 md:p-6 rounded-2xl border border-blue-100 space-y-4 text-sm md:text-base text-left my-4">
+                  <h3 className="font-black text-lg text-[#0C1A69]">Pemetaan Game Matematika &amp; Numerasi Berdasarkan Topik dan Audiens Katalog</h3>
+                  <div>
+                    <h4 className="font-bold text-[#0C1A69] mb-1">PAUD/TK &amp; SD Kelas 1–3 (Bilangan &amp; Hitung Dasar)</h4>
+                    <ul className="list-disc pl-5 space-y-1.5 text-gray-700">
+                      <li>
+                        <a href="/game/basket-angka-junior" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/basket-angka-junior')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                          Basket Angka Junior
+                        </a>{' '}
+                        — Pengenalan bilangan, urutan angka, serta penjumlahan dan pengurangan dasar.
+                      </li>
+                      <li>
+                        <a href="/game/junior-race-academy" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/junior-race-academy')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                          JUNIOR RACE ACADEMY
+                        </a>{' '}
+                        — Latihan penjumlahan, pengurangan, dan aktivitas hitung gambar (lihat juga{' '}
+                        <a href="/game-edukasi-anak" onClick={(e) => handleSpaLink(e, 'hubKids', '/game-edukasi-anak')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                          Koleksi Game Edukasi Anak
+                        </a>
+                        ).
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#0C1A69] mb-1">SD Kelas 1–6 (Operasi Hitung, Pecahan, Desimal &amp; Geometri Dasar)</h4>
+                    <ul className="list-disc pl-5 space-y-1.5 text-gray-700">
+                      <li>
+                        <a href="/game/wonder-math-arena" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/wonder-math-arena')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                          Wonder Math Arena
+                        </a>{' '}
+                        — Tercatat memuat 17 materi numerasi SD (operasi hitung dasar, pecahan, desimal, dan geometri).
+                      </li>
+                      <li>
+                        <a href="/game/gebuk-guling-matematika" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/gebuk-guling-matematika')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                          GEBUK GULING MATEMATIKA
+                        </a>{' '}
+                        — Kecepatan berhitung mental penjumlahan, pengurangan, perkalian, pembagian, dan campuran.
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#0C1A69] mb-1">Topik Spesifik (Audiens Katalog SD–SMP / SD–SMA)</h4>
+                    <ul className="list-disc pl-5 space-y-1.5 text-gray-700">
+                      <li>
+                        <a href="/game/martabak-pecahan" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/martabak-pecahan')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                          Martabak Pecahan
+                        </a>{' '}
+                        — Pemahaman konsep dasar pecahan matematika.
+                      </li>
+                      <li>
+                        <a href="/game/si-taktik" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/si-taktik')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                          Si Taktik
+                        </a>{' '}
+                        — Logika matematika, urutan nilai, dan pemahaman garis bilangan.
+                      </li>
+                      <li>
+                        <a href="/game/geo-squad" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/geo-squad')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                          Geo Squad
+                        </a>{' '}
+                        &amp;{' '}
+                        <a href="/game/ruang-io" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/ruang-io')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                          Ruang.io
+                        </a>{' '}
+                        — Pengenalan bangun datar, bangun ruang, dan pemahaman spasial 3D.
+                      </li>
+                      <li>
+                        <a href="/game/porogapit-arena" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/porogapit-arena')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                          Porogapit Arena
+                        </a>{' '}
+                        — Langkah terstruktur pembagian bersusun (porogapit) dan ketelitian kalkulasi.
+                      </li>
+                      <li>
+                        <a href="/game/numeriq-math" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/numeriq-math')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                          NUMERIQ Math
+                        </a>{' '}
+                        (katalog: SD, SMP),{' '}
+                        <a href="/game/math-domino-arena" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/math-domino-arena')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                          Math Domino Arena
+                        </a>
+                        , dan{' '}
+                        <a href="/game/jejak-angka" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/jejak-angka')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                          Jejak Angka
+                        </a>{' '}
+                        — Operasi aritmetika, logika matriks angka, strategi memilih angka, dan pemecahan masalah numerasi.
+                      </li>
+                    </ul>
+                  </div>
+                  <p className="text-xs md:text-sm text-gray-600 border-t border-blue-200 pt-3">
+                    <strong>Catatan cakupan jenjang:</strong> Label audiens luas seperti <em>SD, SMP, SMA</em> pada katalog portal menunjukkan bahwa permainan dapat dimanfaatkan sebagai latihan kelancaran hitung atau pemanasan lintas jenjang, bukan bukti cakupan menyeluruh seluruh materi kurikulum setiap tingkat kelas. Guru tetap perlu meninjau kesesuaian topik dengan tujuan pembelajaran kelasnya.
+                  </p>
+                </div>
 
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">17. Aktivitas Individu vs Pasangan vs Kelompok</h2>
                 <p>

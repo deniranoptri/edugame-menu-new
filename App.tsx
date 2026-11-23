@@ -1057,7 +1057,7 @@ const DailyChallenge = ({ onClickGame, lang = 'id' }: { onClickGame: (id: string
   if (!dailyResult || !dailyResult.game) return null;
 
   const challengeGame = dailyResult.game;
-  const gameUrl = lang === 'en' ? `/en/game/${encodeURIComponent(challengeGame.id)}` : `/game/${encodeURIComponent(challengeGame.id)}`;
+  const gameUrl = getDailyChallengeGameUrl(challengeGame.id, lang);
 
   const label = lang === 'en' ? "GAME OF THE DAY ⚡" : "GAME PILIHAN HARI INI ⚡";
   const cta = lang === 'en' ? "PLAY NOW ➔" : "GAS MAINKAN ➔";
@@ -1155,6 +1155,32 @@ interface ParsedRoute {
   slug?: string;
 }
 
+
+const SUPPORTED_EN_GAME_IDS = [
+  'nusaboard',
+  'doodle',
+  'adu-tarik-dino',
+  'puzzle',
+  'banua-fruit-blast',
+  'traditional',
+  'sciencelink'
+];
+
+export const getDailyChallengeGameUrl = (gameId: string, lang: 'id' | 'en'): string => {
+  const encodedId = encodeURIComponent(gameId);
+  if (lang === 'en' && SUPPORTED_EN_GAME_IDS.includes(gameId)) {
+    return `/en/game/${encodedId}`;
+  }
+  return `/game/${encodedId}`;
+};
+
+const safeDecodeSlug = (slug: string): string => {
+  try {
+    return decodeURIComponent(slug);
+  } catch {
+    return slug;
+  }
+};
 
 const clearHreflangs = () => {
   const links = document.querySelectorAll('link[rel="alternate"][hreflang]');
@@ -1345,8 +1371,11 @@ const App: React.FC = () => {
   const [selectedGameId, setSelectedGameId] = useState<string | null>(null);
 
   useEffect(() => {
-    clearHreflangs();
     const parsed = parseRoute(window.location.pathname);
+    const isValidHome = parsed.type === 'home' && (parsed.locale === 'id' || parsed.locale === 'en');
+    if (!isValidHome) {
+      clearHreflangs();
+    }
     
     // Safety boundary: treat non-ID locales as unknown/fallback to home for now to prevent rendering raw Indonesian content on /en/
     const isAllowedEn = parsed.locale === 'en' && ['home', 'blogEn', 'hubIfp', 'guideIfp', 'gameDetail', 'articleGamificationIfpEn', 'articleDifferentiatedIfpEn', 'articleInkuiriIfpEn', 'articlePjblIfpEn', 'articleSteamIfpEn', 'articleFlippedIfpEn', 'articleStationRotationIfpEn', 'articleVisualIfpEn', 'articleCollaborativeIfpEn', 'articleAssessmentIfpEn', 'articleDiagnosticIfpEn', 'articleDeepLearningIfpEn', 'articleAuthenticAssessmentIfpEn', 'articleReflectiveLearningIfpEn', 'articleCooperativeIfpEn', 'articleClassroomManagementIfpEn', 'articlePseIfpEn', 'articlePblIfpEn'].includes(parsed.type);
@@ -1357,9 +1386,8 @@ const App: React.FC = () => {
       setCurrentLocale(parsed.locale as 'id' | 'en');
       if (parsed.type === 'gameDetail') {
         // Additional gate: only allow IFP games for EN pilot
-        const slug = decodeURIComponent(parsed.slug!);
-        const ifpGames = ['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional', 'sciencelink'];
-        if (parsed.locale === 'en' && !ifpGames.includes(slug)) {
+        const slug = safeDecodeSlug(parsed.slug!);
+        if (parsed.locale === 'en' && !SUPPORTED_EN_GAME_IDS.includes(slug.toLowerCase())) {
           setCurrentLocale('id');
           setCurrentView('notfound');
         } else {
@@ -1383,8 +1411,11 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const handlePopState = () => {
-      clearHreflangs();
       const parsed = parseRoute(window.location.pathname);
+      const isValidHome = parsed.type === 'home' && (parsed.locale === 'id' || parsed.locale === 'en');
+      if (!isValidHome) {
+        clearHreflangs();
+      }
       
       const isAllowedEn = parsed.locale === 'en' && ['home', 'blogEn', 'hubIfp', 'guideIfp', 'gameDetail', 'articleGamificationIfpEn', 'articleDifferentiatedIfpEn', 'articleInkuiriIfpEn', 'articlePjblIfpEn', 'articleSteamIfpEn', 'articleFlippedIfpEn', 'articleStationRotationIfpEn', 'articleVisualIfpEn', 'articleCollaborativeIfpEn', 'articleAssessmentIfpEn', 'articleDiagnosticIfpEn', 'articleDeepLearningIfpEn', 'articleAuthenticAssessmentIfpEn', 'articleReflectiveLearningIfpEn', 'articleCooperativeIfpEn', 'articleClassroomManagementIfpEn', 'articlePseIfpEn', 'articlePblIfpEn'].includes(parsed.type);
       if (parsed.locale !== 'id' && !isAllowedEn) {
@@ -1393,9 +1424,8 @@ const App: React.FC = () => {
       } else {
         setCurrentLocale(parsed.locale as 'id' | 'en');
         if (parsed.type === 'gameDetail') {
-          const slug = decodeURIComponent(parsed.slug!);
-          const ifpGames = ['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional', 'sciencelink'];
-          if (parsed.locale === 'en' && !ifpGames.includes(slug)) {
+          const slug = safeDecodeSlug(parsed.slug!);
+          if (parsed.locale === 'en' && !SUPPORTED_EN_GAME_IDS.includes(slug.toLowerCase())) {
             setCurrentLocale('id');
             setCurrentView('notfound');
           } else {
@@ -1428,9 +1458,12 @@ const App: React.FC = () => {
   });
 
   const navigateTo = (view: 'home' | 'privacy' | 'contact' | 'about' | 'blog' | 'articleIfpMedia' | 'articleGuideIfp' | 'articleIfpActivities' | 'articleMathIfp' | 'articleMatematikaIfp' | 'articleIpaIfp' | 'articleBahasaIfp' | 'articleBahasaIndonesiaIfp' | 'articleEnglishIfp' | 'articleIpsIfp' | 'articleGamificationIfp' | 'articleGamificationIfpEn'  | 'articleDifferentiatedIfpEn' | 'articleInkuiriIfpEn' | 'articlePjblIfpEn' | 'articleSteamIfpEn' | 'articleFlippedIfpEn' | 'articleStationRotationIfpEn' | 'articleVisualIfpEn' | 'articleCollaborativeIfpEn' | 'articleAssessmentIfpEn' | 'articleDiagnosticIfpEn' | 'articleDeepLearningIfpEn' | 'articleAuthenticAssessmentIfpEn' | 'articleReflectiveLearningIfpEn' | 'articleCooperativeIfpEn' | 'articleClassroomManagementIfpEn' | 'articleSteamIfp' | 'articlePseIfp' | 'articleInkuiriIfp' | 'articleFlippedIfp' | 'articleStationRotationIfp' | 'articleVisualIfp' | 'articleAssessmentIfp' | 'articleCollaborativeIfp' | 'articleClassroomManagementIfp' | 'articleIfpFeatures' | 'articleChooseIfp' | 'articleDifferentiatedIfp' | 'articleDeepLearningIfp' | 'articleModuleIfp' | 'articleInclusiveIfp' | 'articlePjblIfp' | 'articleDiagnosticIfp' | 'articleReflectionIfp' | 'articleDigitalLiteracyIfp' | 'articleAuthenticAssessmentIfp' | 'articlePblIfp' | 'gameDetail' | 'hubKids' | 'hubLogic' | 'hubIfp' | 'guideIfp' | 'guideKids' | 'notfound', path: string) => {
-    clearHreflangs();
     window.history.pushState({}, '', path);
     const parsed = parseRoute(path);
+    const isValidHome = parsed.type === 'home' && (parsed.locale === 'id' || parsed.locale === 'en');
+    if (!isValidHome) {
+      clearHreflangs();
+    }
     const isAllowedEn = parsed.locale === 'en' && ['home', 'blogEn', 'hubIfp', 'guideIfp', 'gameDetail', 'articleGamificationIfpEn', 'articleDifferentiatedIfpEn', 'articleInkuiriIfpEn', 'articlePjblIfpEn', 'articleSteamIfpEn', 'articleFlippedIfpEn', 'articleStationRotationIfpEn', 'articleVisualIfpEn', 'articleCollaborativeIfpEn', 'articleAssessmentIfpEn', 'articleDiagnosticIfpEn', 'articleDeepLearningIfpEn', 'articleAuthenticAssessmentIfpEn', 'articleReflectiveLearningIfpEn', 'articleCooperativeIfpEn', 'articleClassroomManagementIfpEn', 'articlePseIfpEn', 'articlePblIfpEn'].includes(parsed.type);
     if (parsed.locale !== 'id' && !isAllowedEn) {
       setCurrentLocale('id');
@@ -1439,9 +1472,8 @@ const App: React.FC = () => {
       setCurrentLocale(parsed.locale as 'id' | 'en');
       if (parsed.type === 'gameDetail') {
         // Additional gate: only allow IFP games for EN pilot
-        const slug = decodeURIComponent(parsed.slug!);
-        const ifpGames = ['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional', 'sciencelink'];
-        if (parsed.locale === 'en' && !ifpGames.includes(slug)) {
+        const slug = safeDecodeSlug(parsed.slug!);
+        if (parsed.locale === 'en' && !SUPPORTED_EN_GAME_IDS.includes(slug.toLowerCase())) {
           setCurrentLocale('id');
           setCurrentView('notfound');
         } else {
@@ -1546,7 +1578,14 @@ const App: React.FC = () => {
   if (currentView === 'guideKids') return <GuideKids onBack={() => navigateTo('home', '/')} navigateTo={navigateTo} />;
 
   if (currentView === 'gameDetail' && selectedGameId) {
-    const game = currentGames.find(g => g.id === selectedGameId) || generalGames.find(g => g.id === selectedGameId) || kidsGames.find(g => g.id === selectedGameId);
+    const normalizedSelectedId = selectedGameId.toLowerCase();
+    const game =
+      currentGames.find(g => g.id === selectedGameId) ||
+      generalGames.find(g => g.id === selectedGameId) ||
+      kidsGames.find(g => g.id === selectedGameId) ||
+      currentGames.find(g => g.id.toLowerCase() === normalizedSelectedId) ||
+      generalGames.find(g => g.id.toLowerCase() === normalizedSelectedId) ||
+      kidsGames.find(g => g.id.toLowerCase() === normalizedSelectedId);
     if (game) {
       return <GameDetail locale={currentLocale} game={game} onBack={() => navigateTo('home', '/')} />;
     } else {
@@ -1629,7 +1668,13 @@ const App: React.FC = () => {
             <input id="search-game" type="text" placeholder="Cari game edukasi..." aria-label="Kolom Pencarian Game" className="w-full pl-6 pr-6 py-4 bg-white/60 backdrop-blur-md rounded-2xl text-[#0C1A69] font-bold shadow-sm mb-6 focus:ring-4 focus:ring-blue-200 outline-none" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
             
             {/* TAMBAHAN BANNER TANTANGAN HARIAN */}
-            <DailyChallenge onClickGame={handleCardClick} lang={currentLocale as "id" | "en"} />
+            <DailyChallenge
+              onClickGame={(id) => {
+                playSound('bloop');
+                navigateTo('gameDetail', getDailyChallengeGameUrl(id, currentLocale));
+              }}
+              lang={currentLocale as "id" | "en"}
+            />
             {/* ================================== */}
 
             <AdSenseDisplay />

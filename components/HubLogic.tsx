@@ -86,6 +86,12 @@ export const HubLogic: React.FC<HubLogicProps> = ({ games, onBack, navigateTo })
     navigateTo('gameDetail', `/game/${encodeURIComponent(id)}`);
   };
 
+  const handleSpaLink = (e: React.MouseEvent<HTMLAnchorElement>, view: string, path: string) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
+    navigateTo(view, path);
+  };
+
   return (
     <div className="min-h-[100dvh] bg-[#DDEBF8] p-4 md:p-8 font-sans">
       <div className="max-w-7xl mx-auto flex flex-col gap-8">
@@ -100,9 +106,22 @@ export const HubLogic: React.FC<HubLogicProps> = ({ games, onBack, navigateTo })
             <div className="inline-block bg-indigo-100 text-indigo-700 px-4 py-1.5 rounded-full font-black text-xs md:text-sm uppercase tracking-widest mb-4 shadow-sm">
               Kemampuan Kognitif & Analisis
             </div>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0C1A69] tracking-tight leading-[1.1] drop-shadow-sm mb-6">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0C1A69] tracking-tight leading-[1.1] drop-shadow-sm mb-4">
               Game Logika & Pemecahan Masalah
             </h1>
+            <nav aria-label="Breadcrumb" className="mb-5 flex justify-center">
+              <ol className="flex flex-wrap items-center justify-center gap-2 text-xs md:text-sm font-semibold text-gray-500">
+                <li>
+                  <a href="/" onClick={(e) => handleSpaLink(e, 'home', '/')} className="hover:text-blue-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                    Beranda
+                  </a>
+                </li>
+                <li><span aria-hidden="true" className="opacity-50 mx-1">/</span></li>
+                <li aria-current="page" className="text-[#0C1A69]">
+                  Game Logika
+                </li>
+              </ol>
+            </nav>
             <p className="text-sm md:text-lg text-gray-700 font-bold max-w-2xl mx-auto leading-relaxed">
               Mengembangkan cara berpikir tingkat tinggi (Higher Order Thinking Skills) membutuhkan latihan yang konsisten. Koleksi game logika ini mengajak siswa untuk mengenali pola, memecahkan teka-teki ruang, mengatur strategi, serta memahami hubungan sebab-akibat melalui simulasi fisika yang menyenangkan.
             </p>
@@ -119,6 +138,43 @@ export const HubLogic: React.FC<HubLogicProps> = ({ games, onBack, navigateTo })
             ))}
           </div>
         </main>
+
+        <footer className="bg-white/80 rounded-3xl p-8 text-center text-[#0C1A69] shadow-sm border-2 border-white mt-4">
+          <h2 className="text-xl font-black mb-3">Eksplorasi Koleksi &amp; Panduan Kelas</h2>
+          <p className="text-sm font-bold text-gray-600 max-w-3xl mx-auto">
+            Gunakan permainan logika ini untuk latihan pemecahan masalah, diskusi kelompok, dan aktivitas berpikir kritis pada Interactive Flat Panel maupun perangkat siswa.
+          </p>
+          <nav aria-label="Koleksi dan Panduan Terkait" className="mt-6 pt-6 border-t border-indigo-100 flex flex-wrap justify-center gap-3">
+            <a
+              href="/game-edukasi-ifp"
+              onClick={(e) => handleSpaLink(e, 'hubIfp', '/game-edukasi-ifp')}
+              className="inline-flex items-center rounded-xl bg-indigo-50 px-4 py-2 text-xs md:text-sm font-bold text-[#0C1A69] border border-indigo-200 hover:bg-indigo-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69]"
+            >
+              Koleksi Game Edukasi IFP
+            </a>
+            <a
+              href="/game-edukasi-anak"
+              onClick={(e) => handleSpaLink(e, 'hubKids', '/game-edukasi-anak')}
+              className="inline-flex items-center rounded-xl bg-indigo-50 px-4 py-2 text-xs md:text-sm font-bold text-[#0C1A69] border border-indigo-200 hover:bg-indigo-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69]"
+            >
+              Koleksi Game Edukasi Anak PAUD &amp; TK
+            </a>
+            <a
+              href="/panduan/penggunaan-ifp-papan-interaktif-digital"
+              onClick={(e) => handleSpaLink(e, 'guideIfp', '/panduan/penggunaan-ifp-papan-interaktif-digital')}
+              className="inline-flex items-center rounded-xl bg-indigo-50 px-4 py-2 text-xs md:text-sm font-bold text-[#0C1A69] border border-indigo-200 hover:bg-indigo-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69]"
+            >
+              Panduan Menggunakan IFP di Kelas
+            </a>
+            <a
+              href="/jurnal-guru/pembelajaran-berbasis-masalah-menggunakan-ifp"
+              onClick={(e) => handleSpaLink(e, 'articlePblIfp', '/jurnal-guru/pembelajaran-berbasis-masalah-menggunakan-ifp')}
+              className="inline-flex items-center rounded-xl bg-indigo-50 px-4 py-2 text-xs md:text-sm font-bold text-[#0C1A69] border border-indigo-200 hover:bg-indigo-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69]"
+            >
+              Jurnal Guru: Pembelajaran Berbasis Masalah di IFP
+            </a>
+          </nav>
+        </footer>
       </div>
     </div>
   );

@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
 import { MenuCardProps } from '../types';
 
+const PUBLISHED_EN_GAME_IDS = new Set([
+  'nusaboard',
+  'doodle',
+  'adu-tarik-dino',
+  'puzzle',
+  'banua-fruit-blast',
+  'traditional',
+  'sciencelink',
+]);
+
 const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const isColorLink = config.id === 'color-link-junior';
@@ -12,6 +22,10 @@ const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) =
   const displaySubtitle = isEn ? config.en.subtitle : config.subtitle;
   const displayAudience = isEn ? config.en.audience : config.audience;
   const displaySubject = isEn ? config.en.subject : config.subject;
+  const hasPublishedEnRoute = locale === 'en' && PUBLISHED_EN_GAME_IDS.has(config.id.toLowerCase());
+  const cardHref = hasPublishedEnRoute
+    ? `/en/game/${encodeURIComponent(config.id)}`
+    : `/game/${encodeURIComponent(config.id)}`;
 
   const isComingSoon = config.isComingSoon;
   
@@ -158,8 +172,9 @@ const MenuCard: React.FC<MenuCardProps> = ({ config, onClick, locale = "id" }) =
         {
           ...((!isComingSoon && config.url) 
             ? {
-                href: `/game/${encodeURIComponent(config.id)}`,
+                href: cardHref,
                 onClick: (e: React.MouseEvent) => {
+                  if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
                   e.preventDefault();
                   onClick(config.id);
                 },

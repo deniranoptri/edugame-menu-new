@@ -78,6 +78,12 @@ const ArticleAssessmentIfp: React.FC<ArticleAssessmentIfpProps> = ({ onBack, nav
     });
   }, []);
 
+  const handleSpaLink = (e: React.MouseEvent<HTMLAnchorElement>, view: string, path: string) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
+    navigateTo(view, path);
+  };
+
   return (
     <div className="fixed inset-0 z-[9999] bg-[#F8FAFC] overflow-y-auto w-full h-[100dvh]">
       <div className="min-h-full flex flex-col items-center py-6 md:py-10 px-4 md:px-8">
@@ -193,6 +199,59 @@ const ArticleAssessmentIfp: React.FC<ArticleAssessmentIfpProps> = ({ onBack, nav
               <p>
                 Sebuah <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); navigateTo('hubIfp', '/game-edukasi-ifp'); }} className="text-blue-600 font-bold hover:underline">game pembelajaran interaktif</a> yang mengusung mode kuis atau <em>time-attack</em> akan memicu antusiasme siswa sekaligus memberikan data kepada guru tentang penguasaan materi (misalnya <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); navigateTo('hubIfp', '/game-edukasi-ifp'); }} className="text-blue-600 font-bold hover:underline">game untuk IFP</a> dengan mode kompetisi regu). Tentu saja, penggunaan <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); navigateTo('hubIfp', '/game-edukasi-ifp'); }} className="text-blue-600 font-bold hover:underline">aktivitas game edukasi pada IFP</a> haruslah memiliki tujuan pedagogis yang selaras dengan indikator pencapaian kompetensi.
               </p>
+
+              <div className="bg-purple-50/70 p-5 md:p-6 rounded-2xl border border-purple-100 space-y-4 text-sm md:text-base text-left my-4">
+                <h3 className="font-black text-lg text-[#0C1A69]">Contoh Alur Guru Menggunakan Game Edukasi untuk Cek Pemahaman</h3>
+                <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                  <li>
+                    <strong>Cek Pemahaman Literasi, Numerasi &amp; Latihan Soal:</strong> Gunakan{' '}
+                    <a href="/game/ketapel-sakti" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/ketapel-sakti')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                      KETAPEL SAKTI
+                    </a>{' '}
+                    untuk latihan akademik lintas literasi, numerasi, logika, dan persiapan TKA. Minta siswa menjelaskan alasan jawaban sebelum membidik sasaran agar guru dapat mengamati alur penalaran mereka.
+                  </li>
+                  <li>
+                    <strong>Cek Cepat Operasi Hitung &amp; Pecahan:</strong> Gunakan{' '}
+                    <a href="/game/wonder-math-arena" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/wonder-math-arena')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                      Wonder Math Arena
+                    </a>{' '}
+                    atau{' '}
+                    <a href="/game/martabak-pecahan" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/martabak-pecahan')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                      Martabak Pecahan
+                    </a>{' '}
+                    untuk menjeda kelas sesaat ketika muncul kesalahan konsep dan membahasnya bersama di papan interaktif.
+                  </li>
+                  <li>
+                    <strong>Cek Struktur Kalimat &amp; Kosakata Bahasa:</strong> Ajak perwakilan kelompok menyusun kalimat SPOK di{' '}
+                    <a href="/game/kata-gol" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/kata-gol')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                      KATA GOL!
+                    </a>{' '}
+                    atau mengeja kosakata bahasa Inggris pada{' '}
+                    <a href="/game/bee-english-arena" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/bee-english-arena')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                      BEE ENGLISH ARENA
+                    </a>{' '}
+                    sambil memeriksa pemahaman siswa yang duduk di bangku.
+                  </li>
+                  <li>
+                    <strong>Cek Penalaran IPA &amp; Refleksi Peta Konsep:</strong> Manfaatkan{' '}
+                    <a href="/game/sciencelink" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/sciencelink')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                      SCIENCELINK
+                    </a>{' '}
+                    untuk mengecek hubungan konsep sains, serta{' '}
+                    <a href="/game/nusaboard" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/nusaboard')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                      NusaBoard
+                    </a>{' '}
+                    untuk merangkum peta konsep sebagai <em>exit ticket</em> bersama. Untuk pengaturan kelas di layar besar, lihat{' '}
+                    <a href="/panduan/penggunaan-ifp-papan-interaktif-digital" onClick={(e) => handleSpaLink(e, 'guideIfp', '/panduan/penggunaan-ifp-papan-interaktif-digital')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                      Panduan Penggunaan IFP di Kelas
+                    </a>
+                    .
+                  </li>
+                </ul>
+                <p className="text-xs md:text-sm text-gray-600 border-t border-purple-200 pt-3">
+                  <strong>Catatan penting:</strong> Alur di atas adalah saran strategi fasilitasi guru secara langsung di kelas, bukan klaim fitur laporan nilai otomatis, dasbor analitik, atau ekspor penilaian bawaan di dalam game. Penilaian formatif tetap bergantung pada observasi guru terhadap jawaban, diskusi, dan alasan siswa.
+                </p>
+              </div>
 
               <div className="bg-purple-50 p-4 rounded-xl border-l-4 border-purple-500 my-6 text-sm">
                 <strong>💡 Saran Pelaksanaan:</strong> Jika Anda baru pertama kali mencoba membawa IFP melampaui batas proyektor biasa, bacalah panduan <a href="/jurnal-guru/memaksimalkan-ifp-sebagai-media-pembelajaran-interaktif" onClick={(e) => { e.preventDefault(); navigateTo('articleIfpMedia', '/jurnal-guru/memaksimalkan-ifp-sebagai-media-pembelajaran-interaktif'); }} className="text-blue-700 hover:underline font-bold">memaksimalkan IFP sebagai media pembelajaran interaktif</a> untuk mengatur kelas secara efektif.

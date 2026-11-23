@@ -86,6 +86,12 @@ export const HubKids: React.FC<HubKidsProps> = ({ games, onBack, navigateTo }) =
     navigateTo('gameDetail', `/game/${encodeURIComponent(id)}`);
   };
 
+  const handleSpaLink = (e: React.MouseEvent<HTMLAnchorElement>, view: string, path: string) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
+    navigateTo(view, path);
+  };
+
   return (
     <div className="min-h-[100dvh] bg-[#DDEBF8] p-4 md:p-8 font-sans">
       <div className="max-w-7xl mx-auto flex flex-col gap-8">
@@ -100,14 +106,27 @@ export const HubKids: React.FC<HubKidsProps> = ({ games, onBack, navigateTo }) =
             <div className="inline-block bg-[#FFEBEE] text-[#B71C1C] px-4 py-1.5 rounded-full font-black text-xs md:text-sm uppercase tracking-widest mb-4 shadow-sm">
               Untuk PAUD & TK
             </div>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0C1A69] tracking-tight leading-[1.1] drop-shadow-sm mb-6">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0C1A69] tracking-tight leading-[1.1] drop-shadow-sm mb-4">
               Game Edukasi Anak
             </h1>
+            <nav aria-label="Breadcrumb" className="mb-5 flex justify-center">
+              <ol className="flex flex-wrap items-center justify-center gap-2 text-xs md:text-sm font-semibold text-gray-500">
+                <li>
+                  <a href="/" onClick={(e) => handleSpaLink(e, 'home', '/')} className="hover:text-blue-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                    Beranda
+                  </a>
+                </li>
+                <li><span aria-hidden="true" className="opacity-50 mx-1">/</span></li>
+                <li aria-current="page" className="text-[#0C1A69]">
+                  Game Edukasi Anak
+                </li>
+              </ol>
+            </nav>
             <p className="text-sm md:text-lg text-gray-700 font-bold max-w-2xl mx-auto leading-relaxed">
               Masa usia dini adalah masa emas (golden age) di mana anak-anak belajar paling efektif melalui aktivitas bermain. Koleksi game edukasi anak PAUD dan TK ini dirancang khusus untuk merangsang perkembangan motorik halus, pengenalan warna, bentuk, serta literasi dan numerasi dasar dalam lingkungan yang aman, menyenangkan, dan interaktif.
             </p>
             <div className="inline-block bg-white text-[#0C1A69] px-5 py-2 rounded-full font-black text-xs md:text-sm shadow-sm border-2 border-[#0C1A69]/10 mt-4 hover:scale-105 transition-transform">
-              <a href="/panduan/memilih-game-edukasi-anak" onClick={(e) => { e.preventDefault(); navigateTo('guideKids', '/panduan/memilih-game-edukasi-anak'); }}>
+              <a href="/panduan/memilih-game-edukasi-anak" onClick={(e) => handleSpaLink(e, 'guideKids', '/panduan/memilih-game-edukasi-anak')} className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
                 📖 Baca: Panduan Memilih Game Anak PAUD/TK
               </a>
             </div>
@@ -131,6 +150,29 @@ export const HubKids: React.FC<HubKidsProps> = ({ games, onBack, navigateTo }) =
            <p className="text-sm font-bold text-gray-600 max-w-3xl mx-auto">
              Setiap permainan di sini telah dievaluasi untuk memastikan kesesuaian usia. Tanpa iklan yang mengganggu saat bermain, aplikasi ini 100% aman digunakan sebagai media pendamping belajar di rumah maupun ice breaking di sekolah.
            </p>
+           <nav aria-label="Eksplorasi Koleksi dan Jurnal Guru" className="mt-6 pt-6 border-t border-blue-100 flex flex-wrap justify-center gap-3">
+             <a
+               href="/game-edukasi-ifp"
+               onClick={(e) => handleSpaLink(e, 'hubIfp', '/game-edukasi-ifp')}
+               className="inline-flex items-center rounded-xl bg-blue-50 px-4 py-2 text-xs md:text-sm font-bold text-[#0C1A69] border border-blue-200 hover:bg-blue-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69]"
+             >
+               Koleksi Game Edukasi IFP
+             </a>
+             <a
+               href="/game-logika"
+               onClick={(e) => handleSpaLink(e, 'hubLogic', '/game-logika')}
+               className="inline-flex items-center rounded-xl bg-blue-50 px-4 py-2 text-xs md:text-sm font-bold text-[#0C1A69] border border-blue-200 hover:bg-blue-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69]"
+             >
+               Koleksi Game Logika &amp; Asah Otak
+             </a>
+             <a
+               href="/jurnal-guru"
+               onClick={(e) => handleSpaLink(e, 'blog', '/jurnal-guru')}
+               className="inline-flex items-center rounded-xl bg-blue-50 px-4 py-2 text-xs md:text-sm font-bold text-[#0C1A69] border border-blue-200 hover:bg-blue-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69]"
+             >
+               Jurnal Guru &amp; Strategi Pembelajaran IFP
+             </a>
+           </nav>
         </footer>
       </div>
     </div>

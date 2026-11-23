@@ -78,6 +78,12 @@ const ArticleCollaborativeIfp: React.FC<ArticleCollaborativeIfpProps> = ({ onBac
     });
   }, []);
 
+  const handleSpaLink = (e: React.MouseEvent<HTMLAnchorElement>, view: string, path: string) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
+    navigateTo(view, path);
+  };
+
   return (
     <div className="fixed inset-0 z-[9999] bg-[#F8FAFC] overflow-y-auto w-full h-[100dvh]">
       <div className="min-h-full flex flex-col items-center py-6 md:py-10 px-4 md:px-8">
@@ -255,7 +261,79 @@ const ArticleCollaborativeIfp: React.FC<ArticleCollaborativeIfpProps> = ({ onBac
                 <li><strong>Menit 55–70 (Refleksi & Penutup):</strong> Perwakilan kelompok maju menempelkan stiker digital berupa emoji di layar IFP untuk menilai seberapa baik kerja sama kelompok mereka hari itu. Guru menutup dengan penguatan materi.</li>
               </ul>
 
-              <h2 className="text-2xl font-black text-[#0C1A69] pt-4">10. Kesimpulan</h2>
+              <h2 className="text-2xl font-black text-[#0C1A69] pt-4">10. Pemetaan Mode Game Edukasi Multiplayer di Portal (Duel, Trio, Squad &amp; Split-Screen)</h2>
+              <p>
+                Untuk membantu guru memilih game edukasi yang sesuai dengan format kelompok di kelas, berikut adalah tujuh game di portal Papan Interaktif yang secara eksplisit mendokumentasikan mode multi-pemain lokal pada katalognya:
+              </p>
+              <div className="bg-teal-50/70 p-5 md:p-6 rounded-2xl border border-teal-100 space-y-4 text-sm md:text-base text-left">
+                <div>
+                  <h3 className="font-black text-[#0C1A69] text-base md:text-lg mb-1">Mode Duel (2 Pemain)</h3>
+                  <ul className="list-disc pl-5 space-y-1.5 text-gray-700">
+                    <li>
+                      <a href="/game/gebuk-guling-matematika" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/gebuk-guling-matematika')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                        GEBUK GULING MATEMATIKA
+                      </a>{' '}
+                      — Duel 2 pemain (Tim Merah vs Tim Biru) untuk latihan berhitung mental matematika SD kelas 1–6.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-black text-[#0C1A69] text-base md:text-lg mb-1">Mode Split-Screen Lokal</h3>
+                  <ul className="list-disc pl-5 space-y-1.5 text-gray-700">
+                    <li>
+                      <a href="/game/adu-tarik-dino" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/adu-tarik-dino')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                        Tarik Dino
+                      </a>{' '}
+                      — Duel tarik tambang digital berlayar terpisah (<em>split-screen</em>) untuk latihan logika dan perbandingan dasar PAUD–SD.
+                    </li>
+                    <li>
+                      <a href="/game/wonder-math-arena" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/wonder-math-arena')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                        Wonder Math Arena
+                      </a>{' '}
+                      — Mendukung <em>split-screen</em> Duel selain mode Solo, Trio, dan Squad hingga 4 pemain untuk matematika SD kelas 1–6.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-black text-[#0C1A69] text-base md:text-lg mb-1">Mode Duel (2 Pemain) &amp; Squad (4 Pemain)</h3>
+                  <ul className="list-disc pl-5 space-y-1.5 text-gray-700">
+                    <li>
+                      <a href="/game/junior-race-academy" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/junior-race-academy')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                        JUNIOR RACE ACADEMY
+                      </a>{' '}
+                      — Balapan numerasi dan literasi awal untuk PAUD, TK, dan SD kelas 1–3 dengan mode Duel 2 pemain dan Squad 4 pemain.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-black text-[#0C1A69] text-base md:text-lg mb-1">Mode Solo, Duel, Trio &amp; Squad</h3>
+                  <ul className="list-disc pl-5 space-y-1.5 text-gray-700">
+                    <li>
+                      <a href="/game/kata-gol" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/kata-gol')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                        KATA GOL!
+                      </a>{' '}
+                      — Menyusun kalimat Bahasa Indonesia (SPOK) untuk rentang SD, SMP, dan SMA dalam mode Solo, Duel, Trio, dan Squad.
+                    </li>
+                    <li>
+                      <a href="/game/bee-english-arena" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/bee-english-arena')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                        BEE ENGLISH ARENA
+                      </a>{' '}
+                      — Kosakata dan ejaan Bahasa Inggris (SD, SMP, SMA) dengan pilihan mode Solo, Duel, Trio, dan Squad.
+                    </li>
+                    <li>
+                      <a href="/game/basket-angka-junior" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/basket-angka-junior')} className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-2 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0C1A69] rounded">
+                        Basket Angka Junior
+                      </a>{' '}
+                      — Pengenalan bilangan dan hitung dasar PAUD, TK, dan SD kelas 1–3 dengan mode Solo, Duel, Trio, dan Squad.
+                    </li>
+                  </ul>
+                </div>
+                <p className="text-xs md:text-sm text-gray-600 border-t border-teal-200 pt-3">
+                  <strong>Catatan verifikasi:</strong> Daftar mode di atas dirangkum dari metadata katalog resmi portal Papan Interaktif dan belum mencakup pengujian langsung terhadap seluruh aplikasi game eksternal. Karena setiap game berjalan pada subdomain terpisah, guru disarankan mencoba terlebih dahulu tampilan layar dan respons sentuh pada perangkat IFP kelas sebelum digunakan bersama siswa.
+                </p>
+              </div>
+
+              <h2 className="text-2xl font-black text-[#0C1A69] pt-4">11. Kesimpulan</h2>
               <p>
                 Keberhasilan <strong>pembelajaran kolaboratif dengan IFP</strong> tidak ditentukan semata-mata oleh resolusi layar atau sensitivitas sentuhan perangkat, melainkan pada kejelian guru merancang <a href="/jurnal-guru/aktivitas-pembelajaran-interaktif-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleIfpActivities', '/jurnal-guru/aktivitas-pembelajaran-interaktif-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">aktivitas interaktif</a> yang mewajibkan siswa bernegosiasi dan mencapai konsensus. Ketika layar sentuh digunakan sebagai "medan pertemuan" ide-ide siswa, maka IFP benar-benar memenuhi janjinya sebagai jembatan transformasi pendidikan modern.
               </p>

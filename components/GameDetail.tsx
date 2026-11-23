@@ -29,8 +29,9 @@ const GameDetail: React.FC<GameDetailProps> = ({ game, onBack, locale = "id" }) 
     const descriptionText = game.seoDescription || displayDescription || `${game.title} - ${game.subtitle}. Game edukasi di Papan Interaktif.`;
 
     const baseUrl = 'https://papaninteraktif.com';
-    const idPath = `/game/${game.id}`;
-    const enPath = `/en/game/${game.id}`;
+    const encodedId = encodeURIComponent(game.id);
+    const idPath = `/game/${encodedId}`;
+    const enPath = `/en/game/${encodedId}`;
     const currentUrl = baseUrl + (locale === 'en' ? enPath : idPath);
 
     const isBilingualIfp = ['nusaboard', 'doodle', 'adu-tarik-dino', 'puzzle', 'banua-fruit-blast', 'traditional', 'sciencelink'].includes(game.id);
