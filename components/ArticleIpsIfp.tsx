@@ -265,6 +265,35 @@ const ArticleIpsIfp: React.FC<ArticleIpsIfpProps> = ({ onBack, navigateTo }) => 
                   <li><span className="text-orange-500 mr-2">✓</span> Apakah ada kesempatan <em>think-pair-share</em> sebelum siswa mengambil keputusan visual di depan layar?</li>
                 </ul>
 
+                <section className="my-6 bg-orange-50/70 p-6 rounded-2xl border border-orange-200 space-y-4">
+                  <h2 className="text-xl md:text-2xl font-black text-[#0C1A69]">
+                    Rekomendasi Game IPS Interaktif untuk Kelas IFP
+                  </h2>
+                  <p>
+                    Untuk menghidupkan diskusi geografi, interaksi sosial, sejarah, dan keberagaman budaya dalam <strong>pembelajaran menggunakan papan interaktif</strong>, guru dapat memadukan peta visual dengan pilihan <strong>game IPS interaktif</strong> dan <strong>game edukasi lintas mata pelajaran</strong> yang tersedia di portal:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2.5 text-sm md:text-base">
+                    <li>
+                      <a href="/game/helirescue" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/helirescue'); }} className="text-blue-700 hover:underline font-bold">HELI RESCUE</a> — game kuis lintas mata pelajaran (SD–SMA) yang mencakup bank soal <strong>IPS, IPAS, dan Pendidikan Pancasila</strong> untuk meninjau konsep sosial, ruang wilayah, dan kewarganegaraan secara bertahap.
+                    </li>
+                    <li>
+                      <a href="/game/mancing-kata" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/mancing-kata'); }} className="text-blue-700 hover:underline font-bold">Mancing Kata</a> — menyediakan pilihan materi IPAS (Alam &amp; Sosial), Pendidikan Pancasila, serta kategori SMP (IPS, Sejarah, Ekonomi) dalam mode Solo, Duel, dan Trio; guru juga dapat memasukkan soal custom untuk istilah geografi atau tokoh sejarah setempat.
+                    </li>
+                    <li>
+                      <a href="/game/traditional" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/traditional'); }} className="text-blue-700 hover:underline font-bold">Lomba 17an</a> — permainan virtual bertema perayaan 17 Agustus dan budaya Indonesia (SD–SMA) yang relevan sebagai pemantik diskusi keberagaman budaya dan kerja sama kelas di layar IFP (aktivitas layar ini bersifat pengenalan budaya, bukan pengganti permainan fisik di lapangan).
+                    </li>
+                    <li>
+                      <a href="/game/nusaboard" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/nusaboard'); }} className="text-blue-700 hover:underline font-bold">NusaBoard</a> — papan kolaboratif visual untuk menyusun peta konsep fenomena sosial, analisis sebab-akibat, maupun lini masa sejarah bersama kelompok.
+                    </li>
+                  </ul>
+                  <p className="text-sm md:text-base">
+                    <strong>Praktik kelas &amp; asesmen formatif:</strong> Jalankan 1–2 ronde kuis sebagai pemantik awal atau rekap 10 menit sebelum penutup, lalu minta perwakilan kelompok menjelaskan alasan jawaban mereka di depan kelas. Gunakan respons lisan dan pola jawaban siswa sebagai bahan <strong>asesmen formatif berbasis game</strong> lewat observasi guru—bukan bergantung pada sistem penilaian otomatis bawaan game. Lengkapi skenario Anda melalui{' '}
+                    <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); navigateTo('hubIfp', '/game-edukasi-ifp'); }} className="text-blue-700 hover:underline font-bold">Koleksi Game Edukasi IFP</a>,{' '}
+                    <a href="/jurnal-guru/pembelajaran-sosial-emosional-menggunakan-ifp" onClick={(e) => { e.preventDefault(); navigateTo('articlePseIfp', '/jurnal-guru/pembelajaran-sosial-emosional-menggunakan-ifp'); }} className="text-blue-700 hover:underline font-bold">Pembelajaran Sosial Emosional di IFP</a>, dan{' '}
+                    <a href="/jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleAssessmentIfp', '/jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">Panduan Asesmen Formatif IFP</a>.
+                  </p>
+                </section>
+
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">Penutup</h2>
                 <p>
                   Mata pelajaran IPS adalah jembatan bagi siswa untuk memahami dunia nyata yang terus berubah. Melalui <strong>pembelajaran IPS interaktif menggunakan IFP</strong>, kelas sosial berubah dari sekadar ruangan untuk mendengarkan, menjadi laboratorium tempat mereka membedah fenomena, mengamati jejak sejarah secara dekat, dan merumuskan argumen. Ketika siswa diberi kuasa untuk berdiri, menyorot peta, merangkai urutan sebab-akibat secara kolaboratif di atas layar interaktif, saat itulah esensi ilmu pengetahuan sosial benar-benar tertanam kuat di benak mereka.

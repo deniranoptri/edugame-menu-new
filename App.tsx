@@ -58,6 +58,11 @@ import ArticleAuthenticAssessmentIfp from './components/ArticleAuthenticAssessme
 import ArticlePblIfp from './components/ArticlePblIfp';
 import ArticlePblIfpEn from './components/ArticlePblIfpEn';
 import ArticleCooperativeIfp from './components/ArticleCooperativeIfp';
+import ArticleSeniRupaIfp from './components/ArticleSeniRupaIfp';
+import ArticlePjokIfp from './components/ArticlePjokIfp';
+import ArticlePancasilaIfp from './components/ArticlePancasilaIfp';
+import ArticleKkaIfp from './components/ArticleKkaIfp';
+import ArticlePaiIfp from './components/ArticlePaiIfp';
 import GuideIFP from './components/GuideIFP';
 import GuideKids from './components/GuideKids'; 
 import GameDetail from './components/GameDetail';
@@ -1151,7 +1156,7 @@ const SapaanWaktu = () => {
 // SURGICAL ROUTE PARSER - PHASE 8.1 / 9
 interface ParsedRoute {
   locale: string;
-  type: 'home' | 'privacy' | 'contact' | 'about' | 'blog' | 'blogEn' | 'articleIfpMedia' | 'articleGuideIfp' | 'articleIfpActivities' | 'articleMathIfp' | 'articleMatematikaIfp' | 'articleIpaIfp' | 'articleBahasaIfp' | 'articleBahasaIndonesiaIfp' | 'articleEnglishIfp' | 'articleIpsIfp' | 'articleGamificationIfp' | 'articleGamificationIfpEn'  | 'articleDifferentiatedIfpEn' | 'articleInkuiriIfpEn' | 'articlePjblIfpEn' | 'articleSteamIfpEn' | 'articleFlippedIfpEn' | 'articleStationRotationIfpEn' | 'articleVisualIfpEn' | 'articleCollaborativeIfpEn' | 'articleAssessmentIfpEn' | 'articleDiagnosticIfpEn' | 'articleDeepLearningIfpEn' | 'articleAuthenticAssessmentIfpEn' | 'articleReflectiveLearningIfpEn' | 'articleCooperativeIfpEn' | 'articleClassroomManagementIfpEn' | 'articleSteamIfp' | 'articlePseIfp' | 'articlePseIfpEn' | 'articleInkuiriIfp' | 'articleFlippedIfp' | 'articleStationRotationIfp' | 'articleVisualIfp' | 'articleAssessmentIfp' | 'articleCollaborativeIfp' | 'articleClassroomManagementIfp' | 'articleIfpFeatures' | 'articleChooseIfp' | 'articleDifferentiatedIfp' | 'articleDeepLearningIfp' | 'articleModuleIfp' | 'articleInclusiveIfp' | 'articlePjblIfp' | 'articleDiagnosticIfp' | 'articleReflectionIfp' | 'articleDigitalLiteracyIfp' | 'articleAuthenticAssessmentIfp' | 'articlePblIfp' | 'articlePblIfpEn' | 'articleCooperativeIfp' | 'gameDetail' | 'hubKids' | 'hubLogic' | 'hubIfp' | 'guideIfp' | 'guideKids' | 'unknown';
+  type: 'home' | 'privacy' | 'contact' | 'about' | 'blog' | 'blogEn' | 'articleIfpMedia' | 'articleGuideIfp' | 'articleIfpActivities' | 'articleMathIfp' | 'articleMatematikaIfp' | 'articleIpaIfp' | 'articleBahasaIfp' | 'articleBahasaIndonesiaIfp' | 'articleEnglishIfp' | 'articleIpsIfp' | 'articleGamificationIfp' | 'articleGamificationIfpEn'  | 'articleDifferentiatedIfpEn' | 'articleInkuiriIfpEn' | 'articlePjblIfpEn' | 'articleSteamIfpEn' | 'articleFlippedIfpEn' | 'articleStationRotationIfpEn' | 'articleVisualIfpEn' | 'articleCollaborativeIfpEn' | 'articleAssessmentIfpEn' | 'articleDiagnosticIfpEn' | 'articleDeepLearningIfpEn' | 'articleAuthenticAssessmentIfpEn' | 'articleReflectiveLearningIfpEn' | 'articleCooperativeIfpEn' | 'articleClassroomManagementIfpEn' | 'articleSteamIfp' | 'articlePseIfp' | 'articlePseIfpEn' | 'articleInkuiriIfp' | 'articleFlippedIfp' | 'articleStationRotationIfp' | 'articleVisualIfp' | 'articleAssessmentIfp' | 'articleCollaborativeIfp' | 'articleClassroomManagementIfp' | 'articleIfpFeatures' | 'articleChooseIfp' | 'articleDifferentiatedIfp' | 'articleDeepLearningIfp' | 'articleModuleIfp' | 'articleInclusiveIfp' | 'articlePjblIfp' | 'articleDiagnosticIfp' | 'articleReflectionIfp' | 'articleDigitalLiteracyIfp' | 'articleAuthenticAssessmentIfp' | 'articlePblIfp' | 'articlePblIfpEn' | 'articleCooperativeIfp' | 'articleSeniRupaIfp' | 'articlePjokIfp' | 'articlePancasilaIfp' | 'articleKkaIfp' | 'articlePaiIfp' | 'gameDetail' | 'hubKids' | 'hubLogic' | 'hubIfp' | 'guideIfp' | 'guideKids' | 'unknown';
   slug?: string;
 }
 
@@ -1327,6 +1332,16 @@ const parseRoute = (pathname: string): ParsedRoute => {
   } else if (locale === 'en' && pathType === 'journal/problem-based-learning-using-interactive-flat-panel') {
     return { locale, type: 'articlePblIfpEn' };} else if (locale === 'id' && pathType === 'jurnal-guru/pembelajaran-kooperatif-menggunakan-ifp') {
     return { locale, type: 'articleCooperativeIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/game-seni-rupa-interaktif-menggunakan-ifp') {
+    return { locale, type: 'articleSeniRupaIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/game-pjok-interaktif-menggunakan-ifp') {
+    return { locale, type: 'articlePjokIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/game-pendidikan-pancasila-interaktif-menggunakan-ifp') {
+    return { locale, type: 'articlePancasilaIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/game-koding-kecerdasan-artifisial-ifp') {
+    return { locale, type: 'articleKkaIfp' };
+  } else if (locale === 'id' && pathType === 'jurnal-guru/game-pendidikan-agama-islam-interaktif-ifp') {
+    return { locale, type: 'articlePaiIfp' };
   } else if (locale === 'id' && pathType === 'panduan/penggunaan-ifp-papan-interaktif-digital') {
     return { locale, type: 'guideIfp' };
   } else if (locale === 'en' && pathType === 'guides/using-educational-games-on-interactive-flat-panels') {
@@ -1367,7 +1382,7 @@ const App: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [currentLocale, setCurrentLocale] = useState<'id' | 'en'>('id');
-  const [currentView, setCurrentView] = useState<'home' | 'privacy' | 'contact' | 'about' | 'blog' | 'blogEn' | 'articleIfpMedia' | 'articleGuideIfp' | 'articleIfpActivities' | 'articleMathIfp' | 'articleMatematikaIfp' | 'articleIpaIfp' | 'articleBahasaIfp' | 'articleBahasaIndonesiaIfp' | 'articleEnglishIfp' | 'articleIpsIfp' | 'articleGamificationIfp' | 'articleGamificationIfpEn'  | 'articleDifferentiatedIfpEn' | 'articleInkuiriIfpEn' | 'articlePjblIfpEn' | 'articleSteamIfpEn' | 'articleFlippedIfpEn' | 'articleStationRotationIfpEn' | 'articleVisualIfpEn' | 'articleCollaborativeIfpEn' | 'articleAssessmentIfpEn' | 'articleDiagnosticIfpEn' | 'articleDeepLearningIfpEn' | 'articleAuthenticAssessmentIfpEn' | 'articleReflectiveLearningIfpEn' | 'articleCooperativeIfpEn' | 'articleClassroomManagementIfpEn' | 'articleSteamIfp' | 'articlePseIfp' | 'articleInkuiriIfp' | 'articleFlippedIfp' | 'articleStationRotationIfp' | 'articleVisualIfp' | 'articleAssessmentIfp' | 'articleCollaborativeIfp' | 'articleClassroomManagementIfp' | 'articleIfpFeatures' | 'articleChooseIfp' | 'articleDifferentiatedIfp' | 'articleDeepLearningIfp' | 'articleModuleIfp' | 'articleInclusiveIfp' | 'articlePjblIfp' | 'articleDiagnosticIfp' | 'articleReflectionIfp' | 'articleDigitalLiteracyIfp' | 'articleAuthenticAssessmentIfp' | 'articlePblIfp' | 'articlePblIfpEn' | 'articleCooperativeIfp' | 'gameDetail' | 'hubKids' | 'hubLogic' | 'hubIfp' | 'guideIfp' | 'guideKids' | 'notfound'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'privacy' | 'contact' | 'about' | 'blog' | 'blogEn' | 'articleIfpMedia' | 'articleGuideIfp' | 'articleIfpActivities' | 'articleMathIfp' | 'articleMatematikaIfp' | 'articleIpaIfp' | 'articleBahasaIfp' | 'articleBahasaIndonesiaIfp' | 'articleEnglishIfp' | 'articleIpsIfp' | 'articleGamificationIfp' | 'articleGamificationIfpEn'  | 'articleDifferentiatedIfpEn' | 'articleInkuiriIfpEn' | 'articlePjblIfpEn' | 'articleSteamIfpEn' | 'articleFlippedIfpEn' | 'articleStationRotationIfpEn' | 'articleVisualIfpEn' | 'articleCollaborativeIfpEn' | 'articleAssessmentIfpEn' | 'articleDiagnosticIfpEn' | 'articleDeepLearningIfpEn' | 'articleAuthenticAssessmentIfpEn' | 'articleReflectiveLearningIfpEn' | 'articleCooperativeIfpEn' | 'articleClassroomManagementIfpEn' | 'articleSteamIfp' | 'articlePseIfp' | 'articleInkuiriIfp' | 'articleFlippedIfp' | 'articleStationRotationIfp' | 'articleVisualIfp' | 'articleAssessmentIfp' | 'articleCollaborativeIfp' | 'articleClassroomManagementIfp' | 'articleIfpFeatures' | 'articleChooseIfp' | 'articleDifferentiatedIfp' | 'articleDeepLearningIfp' | 'articleModuleIfp' | 'articleInclusiveIfp' | 'articlePjblIfp' | 'articleDiagnosticIfp' | 'articleReflectionIfp' | 'articleDigitalLiteracyIfp' | 'articleAuthenticAssessmentIfp' | 'articlePblIfp' | 'articlePblIfpEn' | 'articleCooperativeIfp' | 'articleSeniRupaIfp' | 'articlePjokIfp' | 'articlePancasilaIfp' | 'articleKkaIfp' | 'articlePaiIfp' | 'gameDetail' | 'hubKids' | 'hubLogic' | 'hubIfp' | 'guideIfp' | 'guideKids' | 'notfound'>('home');
   const [selectedGameId, setSelectedGameId] = useState<string | null>(null);
 
   useEffect(() => {
@@ -1457,7 +1472,7 @@ const App: React.FC = () => {
     return matchesSearch && matchesCategory;
   });
 
-  const navigateTo = (view: 'home' | 'privacy' | 'contact' | 'about' | 'blog' | 'articleIfpMedia' | 'articleGuideIfp' | 'articleIfpActivities' | 'articleMathIfp' | 'articleMatematikaIfp' | 'articleIpaIfp' | 'articleBahasaIfp' | 'articleBahasaIndonesiaIfp' | 'articleEnglishIfp' | 'articleIpsIfp' | 'articleGamificationIfp' | 'articleGamificationIfpEn'  | 'articleDifferentiatedIfpEn' | 'articleInkuiriIfpEn' | 'articlePjblIfpEn' | 'articleSteamIfpEn' | 'articleFlippedIfpEn' | 'articleStationRotationIfpEn' | 'articleVisualIfpEn' | 'articleCollaborativeIfpEn' | 'articleAssessmentIfpEn' | 'articleDiagnosticIfpEn' | 'articleDeepLearningIfpEn' | 'articleAuthenticAssessmentIfpEn' | 'articleReflectiveLearningIfpEn' | 'articleCooperativeIfpEn' | 'articleClassroomManagementIfpEn' | 'articleSteamIfp' | 'articlePseIfp' | 'articleInkuiriIfp' | 'articleFlippedIfp' | 'articleStationRotationIfp' | 'articleVisualIfp' | 'articleAssessmentIfp' | 'articleCollaborativeIfp' | 'articleClassroomManagementIfp' | 'articleIfpFeatures' | 'articleChooseIfp' | 'articleDifferentiatedIfp' | 'articleDeepLearningIfp' | 'articleModuleIfp' | 'articleInclusiveIfp' | 'articlePjblIfp' | 'articleDiagnosticIfp' | 'articleReflectionIfp' | 'articleDigitalLiteracyIfp' | 'articleAuthenticAssessmentIfp' | 'articlePblIfp' | 'gameDetail' | 'hubKids' | 'hubLogic' | 'hubIfp' | 'guideIfp' | 'guideKids' | 'notfound', path: string) => {
+  const navigateTo = (view: 'home' | 'privacy' | 'contact' | 'about' | 'blog' | 'articleIfpMedia' | 'articleGuideIfp' | 'articleIfpActivities' | 'articleMathIfp' | 'articleMatematikaIfp' | 'articleIpaIfp' | 'articleBahasaIfp' | 'articleBahasaIndonesiaIfp' | 'articleEnglishIfp' | 'articleIpsIfp' | 'articleGamificationIfp' | 'articleGamificationIfpEn'  | 'articleDifferentiatedIfpEn' | 'articleInkuiriIfpEn' | 'articlePjblIfpEn' | 'articleSteamIfpEn' | 'articleFlippedIfpEn' | 'articleStationRotationIfpEn' | 'articleVisualIfpEn' | 'articleCollaborativeIfpEn' | 'articleAssessmentIfpEn' | 'articleDiagnosticIfpEn' | 'articleDeepLearningIfpEn' | 'articleAuthenticAssessmentIfpEn' | 'articleReflectiveLearningIfpEn' | 'articleCooperativeIfpEn' | 'articleClassroomManagementIfpEn' | 'articleSteamIfp' | 'articlePseIfp' | 'articleInkuiriIfp' | 'articleFlippedIfp' | 'articleStationRotationIfp' | 'articleVisualIfp' | 'articleAssessmentIfp' | 'articleCollaborativeIfp' | 'articleClassroomManagementIfp' | 'articleIfpFeatures' | 'articleChooseIfp' | 'articleDifferentiatedIfp' | 'articleDeepLearningIfp' | 'articleModuleIfp' | 'articleInclusiveIfp' | 'articlePjblIfp' | 'articleDiagnosticIfp' | 'articleReflectionIfp' | 'articleDigitalLiteracyIfp' | 'articleAuthenticAssessmentIfp' | 'articlePblIfp' | 'articleCooperativeIfp' | 'articleSeniRupaIfp' | 'articlePjokIfp' | 'articlePancasilaIfp' | 'articleKkaIfp' | 'articlePaiIfp' | 'gameDetail' | 'hubKids' | 'hubLogic' | 'hubIfp' | 'guideIfp' | 'guideKids' | 'notfound', path: string) => {
     window.history.pushState({}, '', path);
     const parsed = parseRoute(path);
     const isValidHome = parsed.type === 'home' && (parsed.locale === 'id' || parsed.locale === 'en');
@@ -1573,6 +1588,11 @@ const App: React.FC = () => {
   if (currentView === 'articleReflectiveLearningIfpEn') return <ArticleReflectiveLearningIfpEn onBack={() => navigateTo('blog', '/en/journal')} navigateTo={navigateTo} />;
   if (currentView === 'articleCooperativeIfpEn') return <ArticleCooperativeIfpEn onBack={() => navigateTo('blog', '/en/journal')} navigateTo={navigateTo} />;
   if (currentView === 'articleClassroomManagementIfpEn') return <ArticleClassroomManagementIfpEn onBack={() => navigateTo('blog', '/en/journal')} navigateTo={navigateTo} />;
+  if (currentView === 'articleSeniRupaIfp') return <ArticleSeniRupaIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articlePjokIfp') return <ArticlePjokIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articlePancasilaIfp') return <ArticlePancasilaIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articleKkaIfp') return <ArticleKkaIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
+  if (currentView === 'articlePaiIfp') return <ArticlePaiIfp onBack={() => navigateTo('blog', '/jurnal-guru')} navigateTo={navigateTo} />;
 
   if (currentView === 'guideIfp') return <GuideIFP locale={currentLocale} onBack={() => navigateTo('home', '/')} navigateTo={navigateTo} />;
   if (currentView === 'guideKids') return <GuideKids onBack={() => navigateTo('home', '/')} navigateTo={navigateTo} />;

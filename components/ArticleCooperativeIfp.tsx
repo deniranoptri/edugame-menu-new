@@ -250,6 +250,36 @@ const ArticleCooperativeIfp: React.FC<ArticleCooperativeIfpProps> = ({ onBack, n
                 <li><span className="text-emerald-500 mr-2">✓</span> Apakah penilaian saya sudah mencakup skor untuk keterampilan bekerja sama (<em>social skills</em>), bukan sekadar skor kognitif?</li>
               </ul>
 
+              <section className="my-6 bg-emerald-50/70 p-6 rounded-2xl border border-emerald-200 space-y-4">
+                <h2 className="text-xl md:text-2xl font-black text-[#0C1A69]">
+                  Penerapan Nilai Gotong Royong, Pendidikan Pancasila &amp; Budaya Indonesia melalui Game IFP
+                </h2>
+                <p>
+                  Prinsip <em>interdependensi positif</em> dan pembagian peran dalam pembelajaran kooperatif sangat selaras dengan praktik <strong>Pendidikan Pancasila</strong>, gotong royong, sportivitas, serta pengenalan budaya Indonesia di kelas. Guru dapat memadukan diskusi kelompok dengan game berikut di papan interaktif:
+                </p>
+                <ul className="list-disc pl-6 space-y-2.5 text-sm md:text-base">
+                  <li>
+                    <a href="/game/traditional" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/traditional'); }} className="text-blue-700 hover:underline font-bold">Lomba 17an</a> — aktivitas virtual bertema perayaan 17 Agustus (SD–SMA) untuk memantik diskusi kebersamaan, rasa syukur kemerdekaan, dan sportivitas tim (permainan virtual di layar, bukan pengganti lomba lapangan).
+                  </li>
+                  <li>
+                    <a href="/game/helirescue" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/helirescue'); }} className="text-blue-700 hover:underline font-bold">HELI RESCUE</a> — memuat bank soal <strong>Pendidikan Pancasila</strong> (bagian dari 13 mata pelajaran SD–SMA) untuk mengecek pemahaman nilai kewarganegaraan dan aturan bersama secara berkelompok.
+                  </li>
+                  <li>
+                    <a href="/game/mancing-kata" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/mancing-kata'); }} className="text-blue-700 hover:underline font-bold">Mancing Kata</a> — menyediakan pilihan materi <strong>Pendidikan Pancasila</strong> lintas jenjang dalam mode Solo, Duel, dan Trio, serta mendukung input soal custom guru untuk studi kasus nilai Pancasila di sekolah.
+                  </li>
+                  <li>
+                    <a href="/game/gebuk-guling-matematika" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/gebuk-guling-matematika'); }} className="text-blue-700 hover:underline font-bold">GEBUK GULING MATEMATIKA</a> &amp;{' '}
+                    <a href="/game/wonder-math-arena" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/wonder-math-arena'); }} className="text-blue-700 hover:underline font-bold">Wonder Math Arena</a> — memadukan nuansa lomba tradisional 17 Agustus serta jelajah destinasi nusantara dalam mode kompetisi kelompok yang sportif.
+                  </li>
+                </ul>
+                <p className="text-sm md:text-base">
+                  <strong>Fokus pengamatan guru:</strong> Amati bagaimana siswa berbagi giliran, menghargai pendapat rekan, dan menyikapi hasil menang/kalah—lalu tutup dengan refleksi singkat mengenai sikap gotong royong. Lanjutkan membaca{' '}
+                  <a href="/jurnal-guru/pembelajaran-sosial-emosional-menggunakan-ifp" onClick={(e) => { e.preventDefault(); navigateTo('articlePseIfp', '/jurnal-guru/pembelajaran-sosial-emosional-menggunakan-ifp'); }} className="text-blue-700 hover:underline font-bold">Pembelajaran Sosial Emosional (PSE) di IFP</a>,{' '}
+                  <a href="/jurnal-guru/aktivitas-ips-interaktif-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleIpsIfp', '/jurnal-guru/aktivitas-ips-interaktif-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">Aktivitas IPS Interaktif di IFP</a>, dan{' '}
+                  <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); navigateTo('hubIfp', '/game-edukasi-ifp'); }} className="text-blue-700 hover:underline font-bold">Koleksi Game Edukasi IFP</a>.
+                </p>
+              </section>
+
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">17. Kesimpulan</h2>
               <p className="text-xl font-bold text-center text-emerald-800 bg-emerald-50 p-6 rounded-2xl border border-emerald-100 my-8 shadow-sm">
                 "Kerja sama bukanlah sesuatu yang instan. Ia perlu direkayasa secara pedagogis. IFP membantu guru merancang rekayasa tersebut dengan membuat tujuan bersama dapat terlihat dengan jelas oleh semua orang di dalam ruangan."

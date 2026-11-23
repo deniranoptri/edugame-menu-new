@@ -145,7 +145,63 @@ export const HubKids: React.FC<HubKidsProps> = ({ games, onBack, navigateTo }) =
           </div>
         </main>
         
-        <footer className="bg-white/80 rounded-3xl p-8 text-center text-[#0C1A69] shadow-sm border-2 border-white mt-12">
+        <section aria-label="Peta Tematik 17 Game Junior PAUD, TK dan SD Awal" className="bg-white/85 rounded-3xl p-6 md:p-8 text-[#0C1A69] shadow-sm border-2 border-white mt-4">
+          <h2 className="text-xl md:text-2xl font-black mb-2 text-center">
+            Peta Tematik 17 Game Junior untuk PAUD, TK &amp; SD Kelas 1–3
+          </h2>
+          <p className="text-sm text-gray-700 font-medium max-w-3xl mx-auto text-center mb-6 leading-relaxed">
+            Seluruh koleksi 17 game Junior dirancang dengan kontrol sentuh ramah anak untuk layar IFP kelas maupun tablet. Guru dan orang tua dapat memilih permainan sesuai fokus perkembangan berikut:
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-700">
+            <div className="bg-blue-50/70 rounded-2xl p-4 border border-blue-100 space-y-2">
+              <h3 className="font-black text-[#0C1A69]">1. Literasi Awal &amp; Pra-Menulis</h3>
+              <p className="leading-relaxed">
+                Latih pengenalan huruf, kosakata benda, dan motorik halus menulis lewat{' '}
+                <a href="/game/Jalur%20Huruf" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/Jalur%20Huruf')} className="text-blue-700 font-bold hover:underline">Jalur Huruf</a> (tracing huruf),{' '}
+                <a href="/game/pendekar-balon" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/pendekar-balon')} className="text-blue-700 font-bold hover:underline">Pendekar Balon</a> (simbol huruf &amp; angka), dan{' '}
+                <a href="/game/detektif-cilik" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/detektif-cilik')} className="text-blue-700 font-bold hover:underline">Detektif</a> (cari benda tersembunyi).
+              </p>
+            </div>
+            <div className="bg-amber-50/70 rounded-2xl p-4 border border-amber-100 space-y-2">
+              <h3 className="font-black text-[#0C1A69]">2. Numerasi Awal &amp; Perbandingan</h3>
+              <p className="leading-relaxed">
+                Kenalkan urutan bilangan, penjumlahan dasar, dan perbandingan melalui{' '}
+                <a href="/game/junior-race-academy" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/junior-race-academy')} className="text-blue-700 font-bold hover:underline">JUNIOR RACE ACADEMY</a> (Duel/Squad),{' '}
+                <a href="/game/basket-angka-junior" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/basket-angka-junior')} className="text-blue-700 font-bold hover:underline">Basket Angka Junior</a> (Solo–Squad), dan{' '}
+                <a href="/game/adu-tarik-dino" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/adu-tarik-dino')} className="text-blue-700 font-bold hover:underline">Tarik Dino</a> (perbandingan ukuran &amp; kekuatan).
+              </p>
+            </div>
+            <div className="bg-emerald-50/70 rounded-2xl p-4 border border-emerald-100 space-y-2">
+              <h3 className="font-black text-[#0C1A69]">3. Logika, Pola &amp; Spasial</h3>
+              <p className="leading-relaxed">
+                Bangun dasar berpikir komputasional dan ketelitian visual dengan{' '}
+                <a href="/game/color-link-junior" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/color-link-junior')} className="text-blue-700 font-bold hover:underline">Color Link Junior</a>,{' '}
+                <a href="/game/cocok-logi" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/cocok-logi')} className="text-blue-700 font-bold hover:underline">Cocok Logi</a>,{' '}
+                <a href="/game/Aksi%20Ambulans" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/Aksi%20Ambulans')} className="text-blue-700 font-bold hover:underline">Ambulans</a>,{' '}
+                <a href="/game/Petualangan%20Satu%20Garis" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/Petualangan%20Satu%20Garis')} className="text-blue-700 font-bold hover:underline">Satu Garis</a>,{' '}
+                <a href="/game/gabung-ceria" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/gabung-ceria')} className="text-blue-700 font-bold hover:underline">Gabung Ceria</a>, dan{' '}
+                <a href="/game/tatap-hap" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/tatap-hap')} className="text-blue-700 font-bold hover:underline">Tatap Hap</a>.
+              </p>
+            </div>
+            <div className="bg-rose-50/70 rounded-2xl p-4 border border-rose-100 space-y-2">
+              <h3 className="font-black text-[#0C1A69]">4. Seni, Warna, Sains Awal &amp; Sebab-Akibat</h3>
+              <p className="leading-relaxed">
+                Eksplorasi warna, alam, dan koordinasi visual lewat{' '}
+                <a href="/game/mewarnai" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/mewarnai')} className="text-blue-700 font-bold hover:underline">Sayuran</a> (mewarnai digital),{' '}
+                <a href="/game/belajar-angka" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/belajar-angka')} className="text-blue-700 font-bold hover:underline">Lab Warna</a> (campur warna dasar),{' '}
+                <a href="/game/dunia-hewan" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/dunia-hewan')} className="text-blue-700 font-bold hover:underline">Dunia Hewan</a> (makanan satwa),{' '}
+                <a href="/game/Gass%20Damkar" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/Gass%20Damkar')} className="text-blue-700 font-bold hover:underline">Damkar</a> (koordinasi gerak), dan{' '}
+                <a href="/game/mesin-koleksi" onClick={(e) => handleSpaLink(e, 'gameDetail', '/game/mesin-koleksi')} className="text-blue-700 font-bold hover:underline">Mesin Gacha</a> (sebab-akibat sederhana).
+              </p>
+            </div>
+          </div>
+          <p className="text-xs md:text-sm text-gray-600 font-medium text-center mt-5">
+            Untuk kelas PAUD/TK di depan papan interaktif (IFP), batasi sesi layar 5–10 menit secara bergiliran dan padukan dengan aktivitas fisik atau lembar mewarnai nyata. Pelajari tips pendampingan di{' '}
+            <a href="/panduan/memilih-game-edukasi-anak" onClick={(e) => handleSpaLink(e, 'guideKids', '/panduan/memilih-game-edukasi-anak')} className="text-blue-700 font-bold hover:underline">Panduan Memilih Game Anak PAUD/TK</a>.
+          </p>
+        </section>
+
+        <footer className="bg-white/80 rounded-3xl p-8 text-center text-[#0C1A69] shadow-sm border-2 border-white mt-8">
            <h2 className="text-xl font-black mb-4">Mengapa Memilih Game Edukasi Ini?</h2>
            <p className="text-sm font-bold text-gray-600 max-w-3xl mx-auto">
              Setiap permainan di sini telah dievaluasi untuk memastikan kesesuaian usia. Tanpa iklan yang mengganggu saat bermain, aplikasi ini 100% aman digunakan sebagai media pendamping belajar di rumah maupun ice breaking di sekolah.

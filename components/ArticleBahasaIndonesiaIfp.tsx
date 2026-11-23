@@ -275,6 +275,36 @@ const ArticleBahasaIndonesiaIfp: React.FC<ArticleBahasaIndonesiaIfpProps> = ({ o
                   </ul>
                 </div>
 
+                <section className="my-6 bg-indigo-50/60 p-6 rounded-2xl border border-indigo-200 space-y-4">
+                  <h2 className="text-xl md:text-2xl font-black text-[#0C1A69]">
+                    25. Integrasi Game Literasi &amp; Cek Pemahaman Bahasa Indonesia di Papan Interaktif
+                  </h2>
+                  <p>
+                    Dalam merancang <strong>pembelajaran menggunakan papan interaktif</strong> untuk literasi, pemilihan <strong>game edukasi IFP</strong> sebaiknya mengikuti tahap tujuan sesi—mulai dari pengenalan kosakata, penguatan struktur kalimat, hingga refleksi isi bacaan:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2.5 text-sm md:text-base">
+                    <li>
+                      <strong>Penguatan Struktur Kalimat:</strong> Gunakan{' '}
+                      <a href="/game/kata-gol" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/kata-gol'); }} className="text-blue-700 hover:underline font-bold">KATA GOL!</a> untuk latihan menyusun pola SPOK secara berpasangan atau berkelompok, lalu bahas perubahan makna bila urutan kata diubah.
+                    </li>
+                    <li>
+                      <strong>Ejaan &amp; Perbendaharaan Kata:</strong> Manfaatkan{' '}
+                      <a href="/game/jagoan-kata" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/jagoan-kata'); }} className="text-blue-700 hover:underline font-bold">Jagoan Kata</a> atau{' '}
+                      <a href="/game/mancing-kata" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/mancing-kata'); }} className="text-blue-700 hover:underline font-bold">Mancing Kata</a> (yang mendukung soal custom guru dan mode Solo/Duel/Trio) untuk melatih kosakata baku dari bacaan eksposisi atau narasi yang sedang dipelajari.
+                    </li>
+                    <li>
+                      <strong>Latihan Pemahaman &amp; Lintas Mapel:</strong>{' '}
+                      <a href="/game/helirescue" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/helirescue'); }} className="text-blue-700 hover:underline font-bold">HELI RESCUE</a> menyediakan bank soal Bahasa Indonesia (bagian dari 781 soal lintas 13 mapel SD–SMA) yang dapat dipakai sebagai latihan soal bergiliran, sedangkan{' '}
+                      <a href="/game/nusaboard" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/nusaboard'); }} className="text-blue-700 hover:underline font-bold">NusaBoard</a> membantu siswa memetakan ide pokok paragraf secara visual.
+                    </li>
+                  </ul>
+                  <p className="text-sm md:text-base">
+                    <strong>Catatan asesmen formatif:</strong> Penerapan <strong>asesmen formatif berbasis game</strong> di sini dilakukan melalui pengamatan guru saat siswa menyusun kalimat atau membenarkan ejaan di layar—bukan rekap nilai otomatis bawaan aplikasi. Lihat inspirasi aktivitas singkat di{' '}
+                    <a href="/jurnal-guru/aktivitas-bahasa-indonesia-interaktif-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleBahasaIfp', '/jurnal-guru/aktivitas-bahasa-indonesia-interaktif-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">Ide Aktivitas Bahasa Indonesia IFP</a> dan{' '}
+                    <a href="/jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleAssessmentIfp', '/jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">Asesmen Formatif Menggunakan IFP</a>.
+                  </p>
+                </section>
+
                 <p>
                   Menguasai keterampilan bahasa adalah proses mengonstruksi makna. Saat siswa tidak hanya melihat teks, tetapi menyentuh, menggeser, mencoret, dan memvisualisasikannya di atas IFP, keterampilan membaca dan menulis perlahan bertransformasi dari sekadar tuntutan akademis menjadi pengalaman intelektual yang menyenangkan. Teruslah bereksplorasi agar <strong>pembelajaran Bahasa Indonesia interaktif menggunakan IFP</strong> mampu menjangkau berbagai karakteristik murid di ruang kelas.
                 </p>

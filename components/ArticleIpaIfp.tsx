@@ -298,6 +298,36 @@ const ArticleIpaIfp: React.FC<ArticleIpaIfpProps> = ({ onBack, navigateTo }) => 
                 <li><span className="text-emerald-500 mr-2">✓</span> Apakah siswa dibebankan tanggung jawab verbal untuk menyuarakan argumentasi (<em>reasoning</em>) di balik segala aksi sentuhan mereka di atas panel?</li>
               </ul>
 
+              <section className="my-6 bg-emerald-50/70 p-6 rounded-2xl border border-emerald-200 space-y-4">
+                <h2 className="text-xl md:text-2xl font-black text-[#0C1A69]">
+                  Rekomendasi Game IPA &amp; IPAS Interaktif untuk Kelas IFP
+                </h2>
+                <p>
+                  Untuk memperkuat observasi, klasifikasi makhluk hidup, dan pemahaman konsep sains dalam <strong>pembelajaran menggunakan papan interaktif</strong>, guru dapat memadukan eksperimen kelas dengan pilihan <strong>game IPA SD</strong> dan <strong>game IPAS interaktif</strong> yang relevan di portal Papan Interaktif:
+                </p>
+                <ul className="list-disc pl-6 space-y-2.5 text-sm md:text-base">
+                  <li>
+                    <a href="/game/sciencelink" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/sciencelink'); }} className="text-blue-700 hover:underline font-bold">SCIENCELINK</a> — game puzzle penalaran konsep IPA untuk SD–SMP (berdasarkan katalog portal), cocok untuk menguji keterkaitan sebab-akibat sains di layar sentuh.
+                  </li>
+                  <li>
+                    <a href="/game/rimba-pedia" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/rimba-pedia'); }} className="text-blue-700 hover:underline font-bold">Rimba Pedia</a> &amp;{' '}
+                    <a href="/game/dunia-hewan" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/dunia-hewan'); }} className="text-blue-700 hover:underline font-bold">Dunia Hewan</a> — mendukung pengenalan fakta satwa, klasifikasi jenis makanan hewan, dan observasi visual (Dunia Hewan cocok untuk PAUD/SD kelas awal).
+                  </li>
+                  <li>
+                    <a href="/game/helirescue" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/helirescue'); }} className="text-blue-700 hover:underline font-bold">HELI RESCUE</a> — game kuis lintas mata pelajaran (781 soal SD–SMA) yang memuat bank soal <strong>IPAS, IPA, Biologi, dan Fisika</strong> untuk review materi bertahap.
+                  </li>
+                  <li>
+                    <a href="/game/mancing-kata" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/mancing-kata'); }} className="text-blue-700 hover:underline font-bold">Mancing Kata</a> — <strong>game edukasi lintas mata pelajaran</strong> (PAUD/TK–SMP) dengan pilihan materi IPAS dasar hingga SMP, mode Solo/Duel/Trio, serta fitur soal custom guru untuk istilah sains spesifik.
+                  </li>
+                </ul>
+                <p className="text-sm md:text-base">
+                  <strong>Alur kelas &amp; asesmen formatif:</strong> Jalankan sesi pembuka 5–10 menit secara kelompok bergiliran di depan IFP (1 kelompok memilih jawaban, kelompok lain menjelaskan alasan ilmiahnya). Gunakan pola jawaban keliru sebagai bahan <strong>asesmen formatif berbasis game</strong> melalui observasi langsung guru—bukan bergantung pada laporan nilai otomatis bawaan game. Jelajahi opsi lain di{' '}
+                  <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); navigateTo('hubIfp', '/game-edukasi-ifp'); }} className="text-blue-700 hover:underline font-bold">Koleksi Game Edukasi IFP</a>,{' '}
+                  <a href="/game-logika" onClick={(e) => { e.preventDefault(); navigateTo('hubLogic', '/game-logika'); }} className="text-blue-700 hover:underline font-bold">Koleksi Game Logika</a>, dan{' '}
+                  <a href="/jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleAssessmentIfp', '/jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">Panduan Asesmen Formatif IFP</a>.
+                </p>
+              </section>
+
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">20. Kesimpulan Akhir</h2>
               <p>
                 Melaksanakan berbagai ragam <strong>kegiatan IPA interaktif di kelas</strong> dengan bersenjatakan kemampuan layar sentuh Interactive Flat Panel berpotensi penuh merevolusi ruang kelas yang pasif menjadi arena inkubasi nalar kritis. Melalui sepuluh pola aktivitas mulai dari observasi visual anomali alam hingga resolusi studi kasus kolaboratif, IFP tak sekadar berfungsi sebagai teropong yang menampakkan wujud materi tak kasat mata, ia menstimulasi murid untuk bertukar sanggahan, mendebat data empiris, dan menarik sintesis selayaknya saintis tulen. Peganglah filosofi ini: sebuah panel yang interaktif baru akan bernilai edukatif saat ia berhasil menjaring pikiran siswa yang jauh lebih interaktif.

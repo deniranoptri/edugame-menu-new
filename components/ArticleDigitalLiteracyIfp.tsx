@@ -259,6 +259,38 @@ const ArticleDigitalLiteracyIfp: React.FC<ArticleDigitalLiteracyIfpProps> = ({ o
                 <li><span className="text-teal-500 mr-2">✓</span> Apakah saya menggunakan fitur IFP untuk merangsang kolaborasi, bukan sekadar sebagai layar bioskop?</li>
               </ul>
 
+              <section className="my-6 bg-teal-50/70 p-6 rounded-2xl border border-teal-200 space-y-4">
+                <h2 className="text-xl md:text-2xl font-black text-[#0C1A69]">
+                  Rekomendasi Game Literasi Digital &amp; Berpikir Komputasional di IFP
+                </h2>
+                <p>
+                  Selain menganalisis sumber informasi dan etika bermedia, <strong>pembelajaran menggunakan papan interaktif</strong> dapat diperkaya lewat <strong>game literasi digital</strong> dan <strong>game edukasi IFP</strong> yang melatih nalar algoritmik, pemecahan masalah, serta pemahaman cara kerja teknologi AI secara langsung:
+                </p>
+                <ul className="list-disc pl-6 space-y-2.5 text-sm md:text-base">
+                  <li>
+                    <a href="/game/helirescue" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/helirescue'); }} className="text-blue-700 hover:underline font-bold">HELI RESCUE</a> — memuat bank soal terstruktur lintas 13 mata pelajaran (SD–SMA), termasuk materi <strong>Informatika</strong> serta <strong>Koding dan Kecerdasan Artifisial (KKA)</strong> untuk mengecek pemahaman konsep digital dan logika dasar.
+                  </li>
+                  <li>
+                    <a href="/game/kancil" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/kancil'); }} className="text-blue-700 hover:underline font-bold">Jalan Kancil</a> — puzzle penyusunan rute jembatan (PAUD–SD, mode Solo 20 level, Duel 1v1, dan Squad 4 pemain) untuk melatih dekomposisi masalah, urutan langkah, dan evaluasi strategi sebelum dieksekusi.
+                  </li>
+                  <li>
+                    <a href="/game/color-link-junior" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/color-link-junior'); }} className="text-blue-700 hover:underline font-bold">Color Link Junior</a> — tantangan menghubungkan jalur warna tanpa tumpang tindih (PAUD/TK–SD, Solo/Duel/Squad) guna mengasah pengenalan pola spasial dan kepatuhan pada batasan aturan.
+                  </li>
+                  <li>
+                    <a href="/game/doodle" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/doodle'); }} className="text-blue-700 hover:underline font-bold">Doodle AI</a> — permainan gambar dan tebak berbasis model pengenalan gambar AI (<em>TensorFlow.js MobileNet</em>); sangat efektif sebagai demonstrasi kelas tentang bagaimana sistem AI mengenali pola sekaligus mengapa AI tetap bisa keliru membaca input visual.
+                  </li>
+                  <li>
+                    <a href="/game/ai-basketball" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/ai-basketball'); }} className="text-blue-700 hover:underline font-bold">AI Basketball</a> — mendukung deteksi gerak melalui kamera (<em>MediaPipe</em>) maupun kontrol sentuh alternatif; dapat dipakai sebagai pemantik diskusi nyata mengenai sensor kamera AI, pengaruh pencahayaan, dan etika privasi kamera di kelas.
+                  </li>
+                </ul>
+                <p className="text-sm md:text-base">
+                  <strong>Catatan pedagogis &amp; batas fitur:</strong> Game logika dan demonstrasi interaksi AI berfungsi sebagai pengantar berpikir komputasional serta pengalaman literasi AI—bukan kurikulum pemrograman atau pelatihan model AI secara otomatis, dan tidak menyediakan rubrik penilaian literasi informasi otomatis. Guru tetap berperan memfasilitasi diskusi kritis, verifikasi fakta, dan etika digital. Lihat pilihan lanjutan di{' '}
+                  <a href="/game-logika" onClick={(e) => { e.preventDefault(); navigateTo('hubLogic', '/game-logika'); }} className="text-blue-700 hover:underline font-bold">Koleksi Game Logika &amp; KKA</a>,{' '}
+                  <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); navigateTo('hubIfp', '/game-edukasi-ifp'); }} className="text-blue-700 hover:underline font-bold">Koleksi Game Edukasi IFP</a>, dan{' '}
+                  <a href="/jurnal-guru/pembelajaran-berbasis-masalah-menggunakan-ifp" onClick={(e) => { e.preventDefault(); navigateTo('articlePblIfp', '/jurnal-guru/pembelajaran-berbasis-masalah-menggunakan-ifp'); }} className="text-blue-700 hover:underline font-bold">Pembelajaran Berbasis Masalah di IFP</a>.
+                </p>
+              </section>
+
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">21. Penutup</h2>
               <p className="text-xl font-bold text-center text-teal-800 bg-teal-50 p-6 rounded-2xl border border-teal-100 my-8 shadow-sm">
                 "Literasi digital adalah sistem imun kognitif di abad 21. Kita menggunakan IFP bukan sekadar untuk mentransfer data, melainkan untuk melatih kekebalan berpikir anak."

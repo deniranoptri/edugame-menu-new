@@ -212,6 +212,40 @@ const ArticleSteamIfp: React.FC<ArticleSteamIfpProps> = ({ onBack, navigateTo })
                   <li><span className="text-teal-500 mr-2">✓</span> Apakah jaringan Wi-Fi lokal stabil jika siswa akan melakukan <em>casting/mirroring</em> tugas mereka ke layar IFP?</li>
                 </ul>
 
+                <section className="my-6 bg-teal-50/70 p-6 rounded-2xl border border-teal-200 space-y-4">
+                  <h2 className="text-xl md:text-2xl font-black text-[#0C1A69]">
+                    Integrasi Game Seni (Arts), Logika &amp; Pengenalan KKA untuk Proyek STEAM di IFP
+                  </h2>
+                  <p>
+                    Agar unsur <em>Technology</em>, <em>Engineering</em>, <em>Arts</em>, dan <em>Mathematics</em> saling terhubung saat proyek kelas, guru dapat memanfaatkan game interaktif yang mendukung ekspresi visual, penalaran ruang, serta fondasi <strong>berpikir komputasional dan Koding &amp; Kecerdasan Artifisial (KKA)</strong>:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2.5 text-sm md:text-base">
+                    <li>
+                      <strong>Unsur Seni &amp; Visual (Arts):</strong>{' '}
+                      <a href="/game/doodle" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/doodle'); }} className="text-blue-700 hover:underline font-bold">Doodle AI</a> (sketsa cepat &amp; pengenalan gambar AI <em>TensorFlow.js MobileNet</em>),{' '}
+                      <a href="/game/puzzle" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/puzzle'); }} className="text-blue-700 hover:underline font-bold">Puzzle Gambar</a> (unggah foto proyek/karya sendiri), dan{' '}
+                      <a href="/game/belajar-angka" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/belajar-angka'); }} className="text-blue-700 hover:underline font-bold">Lab Warna</a> (eksperimen pencampuran warna dasar untuk PAUD–SD awal).
+                    </li>
+                    <li>
+                      <strong>Unsur Teknologi &amp; Berpikir Komputasional (KKA):</strong>{' '}
+                      <a href="/game/helirescue" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/helirescue'); }} className="text-blue-700 hover:underline font-bold">HELI RESCUE</a> (memuat bank soal Informatika serta Koding &amp; Kecerdasan Artifisial SD–SMA),{' '}
+                      <a href="/game/kancil" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/kancil'); }} className="text-blue-700 hover:underline font-bold">Jalan Kancil</a> (perencanaan urutan rute &amp; dekomposisi masalah), dan{' '}
+                      <a href="/game/color-link-junior" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/color-link-junior'); }} className="text-blue-700 hover:underline font-bold">Color Link Junior</a> (pengenalan pola jalur spasial).
+                    </li>
+                    <li>
+                      <strong>Unsur Geometri &amp; Desain Ruang (Engineering &amp; Math):</strong>{' '}
+                      <a href="/game/geo-squad" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/geo-squad'); }} className="text-blue-700 hover:underline font-bold">Geo Squad</a> dan{' '}
+                      <a href="/game/ruang-io" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/ruang-io'); }} className="text-blue-700 hover:underline font-bold">Ruang.io</a> membantu eksplorasi bangun datar dan bangun ruang 3D sebelum siswa membuat sketsa prototipe.
+                    </li>
+                  </ul>
+                  <p className="text-sm md:text-base">
+                    <strong>Batas cakupan faktual:</strong> Permainan logika dan demonstrasi pengenalan gambar AI berperan sebagai fondasi berpikir komputasional serta pengalaman literasi AI—bukan kurikulum penulisan kode atau pelatihan model AI secara otomatis. Jelajahi referensi terkait di{' '}
+                    <a href="/game-logika" onClick={(e) => { e.preventDefault(); navigateTo('hubLogic', '/game-logika'); }} className="text-blue-700 hover:underline font-bold">Koleksi Game Logika &amp; KKA</a>,{' '}
+                    <a href="/jurnal-guru/literasi-digital-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleDigitalLiteracyIfp', '/jurnal-guru/literasi-digital-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">Literasi Digital di IFP</a>, dan{' '}
+                    <a href="/jurnal-guru/pembelajaran-berbasis-visual-menggunakan-ifp" onClick={(e) => { e.preventDefault(); navigateTo('articleVisualIfp', '/jurnal-guru/pembelajaran-berbasis-visual-menggunakan-ifp'); }} className="text-blue-700 hover:underline font-bold">Pembelajaran Berbasis Visual di IFP</a>.
+                  </p>
+                </section>
+
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">Kesimpulan</h2>
                 <p>
                   Integrasi <strong>pembelajaran STEAM menggunakan IFP</strong> mendobrak tembok pemisah antar mata pelajaran. IFP berfungsi sebagai laboratorium digital, meja gambar arsitek, studio seni, dan pusat kendali data dalam waktu yang bersamaan. Dengan mengizinkan siswa berkolaborasi, berdebat, dan mendesain solusi secara langsung di atas layar interaktif, guru tidak lagi sekadar mendikte teori dari buku. Mereka sedang melatih generasi pemikir kritis yang siap menyelesaikan masalah nyata di masa depan dengan paduan sempurna antara logika sains, ketepatan matematika, efisiensi teknologi, ketahanan teknik, dan keindahan seni.

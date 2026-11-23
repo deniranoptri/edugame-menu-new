@@ -532,6 +532,170 @@ const JurnalGuru: React.FC<JurnalGuruProps> = ({ locale, onBack, navigateTo }) =
                   </div>
                 </section>
 
+                <section id="game-lintas-mapel" className="scroll-mt-8 bg-teal-50/40 rounded-2xl p-6 md:p-8 border border-teal-100">
+                  <div className="mb-6 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b-2 border-teal-100 pb-4">
+                    <div>
+                      <h2 className="text-2xl font-black text-[#0C1A69]">GAME EDUKASI LINTAS MATA PELAJARAN</h2>
+                      <p className="text-gray-600 font-medium mt-1">Jelajahi permainan interaktif untuk pembelajaran lintas mapel, PJOK, budaya Indonesia, dan berpikir komputasional.</p>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {[
+                      {
+                        title: 'Mancing Kata — Game Lintas Mata Pelajaran',
+                        desc: 'Permainan edukasi dengan pilihan materi dari berbagai mata pelajaran, mendukung aktivitas belajar individu maupun kelompok.',
+                        href: '/game/mancing-kata',
+                        view: 'gameDetail',
+                        cta: 'Buka Game',
+                      },
+                      {
+                        title: 'Heli Rescue — Tantangan Edukasi Multi-Mapel',
+                        desc: 'Game edukasi dengan tantangan soal lintas mata pelajaran, termasuk Informatika dan Koding serta Kecerdasan Artifisial.',
+                        href: '/game/helirescue',
+                        view: 'gameDetail',
+                        cta: 'Buka Game',
+                      },
+                      {
+                        title: 'AI Basketball — Aktivitas PJOK Interaktif',
+                        desc: 'Permainan basket interaktif dengan dukungan kamera dan alternatif kontrol sentuh untuk aktivitas pembelajaran.',
+                        href: '/game/ai-basketball',
+                        view: 'gameDetail',
+                        cta: 'Buka Game',
+                      },
+                      {
+                        title: 'Game Tradisional — Budaya dan Aktivitas Kelas',
+                        desc: 'Permainan virtual bertema tradisi Indonesia dan kegiatan 17 Agustus untuk memperkaya aktivitas kelas.',
+                        href: '/game/traditional',
+                        view: 'gameDetail',
+                        cta: 'Buka Game',
+                      },
+                      {
+                        title: 'Game Logika — Berpikir Komputasional dan KKA',
+                        desc: 'Jelajahi permainan logika, pola, dan pemecahan masalah sebagai fondasi berpikir komputasional.',
+                        href: '/game-logika',
+                        view: 'hubLogic',
+                        cta: 'Lihat Koleksi',
+                      },
+                    ].map((card) => (
+                      <a
+                        key={card.href}
+                        href={card.href}
+                        onClick={(e) => {
+                          if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                          e.preventDefault();
+                          navigateTo(card.view, card.href);
+                        }}
+                        className="bg-white p-5 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all border border-teal-100 border-l-4 border-l-teal-500 group flex flex-col h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2"
+                      >
+                        <h3 className="font-bold text-[#0C1A69] text-lg group-hover:text-teal-700 transition-colors mb-2 leading-tight">
+                          {card.title}
+                        </h3>
+                        <p className="text-sm text-gray-600 font-medium mb-4 leading-relaxed flex-grow">
+                          {card.desc}
+                        </p>
+                        <span className="text-xs font-bold text-teal-700 uppercase tracking-wider mt-auto group-hover:underline">
+                          {card.cta} &rarr;
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+
+                  <div className="mt-6 pt-5 border-t border-teal-200/80">
+                    <h3 className="text-sm font-black uppercase tracking-wider text-[#0C1A69] mb-3">
+                      Panduan Mapel Baru &amp; Jenjang PAUD/SD Awal
+                    </h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm">
+                      <div className="bg-white/90 rounded-xl p-3.5 border border-teal-100">
+                        <span className="block text-xs font-black uppercase tracking-wider text-teal-700 mb-1">Seni Rupa &amp; Kreativitas</span>
+                        <a
+                          href="/jurnal-guru/game-seni-rupa-interaktif-menggunakan-ifp"
+                          onClick={(e) => { if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return; e.preventDefault(); navigateTo('articleSeniRupaIfp', '/jurnal-guru/game-seni-rupa-interaktif-menggunakan-ifp'); }}
+                          className="font-bold text-[#0C1A69] hover:text-blue-700 hover:underline"
+                        >
+                          Game Seni Rupa Interaktif di IFP untuk SD &rarr;
+                        </a>
+                      </div>
+                      <div className="bg-white/90 rounded-xl p-3.5 border border-teal-100">
+                        <span className="block text-xs font-black uppercase tracking-wider text-teal-700 mb-1">PJOK &amp; Aktivitas Gerak</span>
+                        <a
+                          href="/jurnal-guru/game-pjok-interaktif-menggunakan-ifp"
+                          onClick={(e) => { if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return; e.preventDefault(); navigateTo('articlePjokIfp', '/jurnal-guru/game-pjok-interaktif-menggunakan-ifp'); }}
+                          className="font-bold text-[#0C1A69] hover:text-blue-700 hover:underline"
+                        >
+                          Game PJOK Interaktif di IFP untuk Kelas &rarr;
+                        </a>
+                      </div>
+                      <div className="bg-white/90 rounded-xl p-3.5 border border-teal-100">
+                        <span className="block text-xs font-black uppercase tracking-wider text-teal-700 mb-1">Pendidikan Pancasila &amp; Budaya</span>
+                        <a
+                          href="/jurnal-guru/game-pendidikan-pancasila-interaktif-menggunakan-ifp"
+                          onClick={(e) => { if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return; e.preventDefault(); navigateTo('articlePancasilaIfp', '/jurnal-guru/game-pendidikan-pancasila-interaktif-menggunakan-ifp'); }}
+                          className="font-bold text-[#0C1A69] hover:text-blue-700 hover:underline"
+                        >
+                          Game Pendidikan Pancasila &amp; Budaya di IFP &rarr;
+                        </a>
+                      </div>
+                      <div className="bg-white/90 rounded-xl p-3.5 border border-teal-100">
+                        <span className="block text-xs font-black uppercase tracking-wider text-teal-700 mb-1">Koding &amp; Kecerdasan Artifisial (KKA)</span>
+                        <a
+                          href="/jurnal-guru/game-koding-kecerdasan-artifisial-ifp"
+                          onClick={(e) => { if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return; e.preventDefault(); navigateTo('articleKkaIfp', '/jurnal-guru/game-koding-kecerdasan-artifisial-ifp'); }}
+                          className="font-bold text-[#0C1A69] hover:text-blue-700 hover:underline"
+                        >
+                          Game Koding &amp; Kecerdasan Artifisial (KKA) &rarr;
+                        </a>
+                      </div>
+                      <div className="bg-white/90 rounded-xl p-3.5 border border-teal-100">
+                        <span className="block text-xs font-black uppercase tracking-wider text-teal-700 mb-1">Pendidikan Agama Islam (PAI)</span>
+                        <div className="flex flex-col gap-1">
+                          <a
+                            href="/jurnal-guru/game-pendidikan-agama-islam-interaktif-ifp"
+                            onClick={(e) => { if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return; e.preventDefault(); navigateTo('articlePaiIfp', '/jurnal-guru/game-pendidikan-agama-islam-interaktif-ifp'); }}
+                            className="font-bold text-[#0C1A69] hover:text-blue-700 hover:underline"
+                          >
+                            Panduan Game PAI Interaktif di IFP &rarr;
+                          </a>
+                          <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs">
+                            <a
+                              href="/game/tanzib"
+                              onClick={(e) => { if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return; e.preventDefault(); navigateTo('gameDetail', '/game/tanzib'); }}
+                              className="font-semibold text-teal-800 hover:underline"
+                            >
+                              Tanzib
+                            </a>
+                            <a
+                              href="/game/celestial-weaver"
+                              onClick={(e) => { if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return; e.preventDefault(); navigateTo('gameDetail', '/game/celestial-weaver'); }}
+                              className="font-semibold text-teal-800 hover:underline"
+                            >
+                              Celestial Weaver
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-white/90 rounded-xl p-3.5 border border-teal-100">
+                        <span className="block text-xs font-black uppercase tracking-wider text-teal-700 mb-1">PAUD/TK &amp; SD Awal (Junior)</span>
+                        <div className="flex flex-wrap gap-x-3 gap-y-1">
+                          <a
+                            href="/game-edukasi-anak"
+                            onClick={(e) => { if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return; e.preventDefault(); navigateTo('hubKids', '/game-edukasi-anak'); }}
+                            className="font-bold text-[#0C1A69] hover:text-blue-700 hover:underline"
+                          >
+                            17 Game Junior &rarr;
+                          </a>
+                          <a
+                            href="/panduan/memilih-game-edukasi-anak"
+                            onClick={(e) => { if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return; e.preventDefault(); navigateTo('guideKids', '/panduan/memilih-game-edukasi-anak'); }}
+                            className="font-bold text-[#0C1A69] hover:text-blue-700 hover:underline"
+                          >
+                            Panduan PAUD &rarr;
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
                 <section id="teknologi-inovasi" className="scroll-mt-8">
                   <div className="mb-6 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b-2 border-gray-100 pb-4">
                     <div>

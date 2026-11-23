@@ -105,19 +105,66 @@ export const GuideKids: React.FC<GuideProps> = ({ onBack, navigateTo }) => {
           </section>
 
           <section>
+            <h2 className="text-2xl font-black mb-4">Peta Rekomendasi Game Junior untuk Kelas PAUD, TK &amp; SD Kelas 1–3</h2>
+            <p className="text-gray-700 font-medium leading-relaxed mb-4">
+              Guru PAUD/TK dan SD kelas awal dapat menyesuaikan pilihan permainan di papan interaktif (IFP) atau tablet dengan kebutuhan tahap perkembangan anak:
+            </p>
+            <ul className="list-disc pl-6 space-y-2.5 text-sm md:text-base text-gray-700 font-medium">
+              <li>
+                <strong>Motorik Halus &amp; Pra-Menulis:</strong>{' '}
+                <a href="/game/Jalur%20Huruf" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/Jalur%20Huruf'); }} className="text-blue-700 font-bold hover:underline">Jalur Huruf</a> (mengikuti garis huruf),{' '}
+                <a href="/game/Petualangan%20Satu%20Garis" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/Petualangan%20Satu%20Garis'); }} className="text-blue-700 font-bold hover:underline">Satu Garis</a> (alur tarikan garis), dan{' '}
+                <a href="/game/mewarnai" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/mewarnai'); }} className="text-blue-700 font-bold hover:underline">Sayuran</a> (mewarnai digital).
+              </li>
+              <li>
+                <strong>Pengenalan Warna, Satwa &amp; Eksplorasi Awal:</strong>{' '}
+                <a href="/game/belajar-angka" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/belajar-angka'); }} className="text-blue-700 font-bold hover:underline">Lab Warna</a> (campur warna dasar),{' '}
+                <a href="/game/dunia-hewan" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/dunia-hewan'); }} className="text-blue-700 font-bold hover:underline">Dunia Hewan</a> (mencocokkan makanan satwa),{' '}
+                <a href="/game/Gass%20Damkar" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/Gass%20Damkar'); }} className="text-blue-700 font-bold hover:underline">Damkar</a>, dan{' '}
+                <a href="/game/mesin-koleksi" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/mesin-koleksi'); }} className="text-blue-700 font-bold hover:underline">Mesin Gacha</a>.
+              </li>
+              <li>
+                <strong>Literasi &amp; Numerasi Awal (TK B – SD Kelas 1–3):</strong>{' '}
+                <a href="/game/pendekar-balon" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/pendekar-balon'); }} className="text-blue-700 font-bold hover:underline">Pendekar Balon</a>,{' '}
+                <a href="/game/detektif-cilik" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/detektif-cilik'); }} className="text-blue-700 font-bold hover:underline">Detektif</a>,{' '}
+                <a href="/game/junior-race-academy" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/junior-race-academy'); }} className="text-blue-700 font-bold hover:underline">JUNIOR RACE ACADEMY</a>,{' '}
+                <a href="/game/basket-angka-junior" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/basket-angka-junior'); }} className="text-blue-700 font-bold hover:underline">Basket Angka Junior</a>, dan{' '}
+                <a href="/game/adu-tarik-dino" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/adu-tarik-dino'); }} className="text-blue-700 font-bold hover:underline">Tarik Dino</a>.
+              </li>
+              <li>
+                <strong>Logika Dasar, Pola &amp; Spasial:</strong>{' '}
+                <a href="/game/color-link-junior" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/color-link-junior'); }} className="text-blue-700 font-bold hover:underline">Color Link Junior</a>,{' '}
+                <a href="/game/cocok-logi" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/cocok-logi'); }} className="text-blue-700 font-bold hover:underline">Cocok Logi</a>,{' '}
+                <a href="/game/Aksi%20Ambulans" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/Aksi%20Ambulans'); }} className="text-blue-700 font-bold hover:underline">Ambulans</a>,{' '}
+                <a href="/game/tatap-hap" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/tatap-hap'); }} className="text-blue-700 font-bold hover:underline">Tatap Hap</a>, dan{' '}
+                <a href="/game/gabung-ceria" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/gabung-ceria'); }} className="text-blue-700 font-bold hover:underline">Gabung Ceria</a>.
+              </li>
+            </ul>
+          </section>
+
+          <section>
             <h2 className="text-2xl font-black mb-4">Integrasi dengan Dunia Nyata</h2>
             <p className="text-gray-700 font-medium leading-relaxed mb-4">
               Pastikan pengalaman digital diikuti dengan praktik dunia nyata. Jika anak bermain game mencampur warna (seperti Lab Warna), sediakan juga aktivitas melukis dengan cat air setelahnya. <em>Screen time</em> harus menjadi jembatan menuju aktivitas fisik, bukan penggantinya.
             </p>
             <div className="mt-6 bg-blue-50 p-4 rounded-xl border border-blue-100 flex flex-col items-start gap-3">
-              <p className="text-sm font-bold text-blue-900">Eksplorasi kumpulan game edukasi yang telah dikurasi khusus untuk anak PAUD & TK:</p>
-              <a 
-                href="/game-edukasi-anak" 
-                onClick={(e) => { e.preventDefault(); navigateTo('hubKids', '/game-edukasi-anak'); }}
-                className="inline-block bg-[#0C1A69] text-white px-4 py-2 rounded-lg text-sm font-black uppercase tracking-wider hover:bg-blue-800 transition-colors"
-              >
-                Lihat Koleksi Game Anak →
-              </a>
+              <p className="text-sm font-bold text-blue-900">Eksplorasi kumpulan game edukasi yang telah dikurasi khusus untuk anak PAUD &amp; TK:</p>
+              <div className="flex flex-wrap gap-3">
+                <a 
+                  href="/game-edukasi-anak" 
+                  onClick={(e) => { e.preventDefault(); navigateTo('hubKids', '/game-edukasi-anak'); }}
+                  className="inline-block bg-[#0C1A69] text-white px-4 py-2 rounded-lg text-sm font-black uppercase tracking-wider hover:bg-blue-800 transition-colors"
+                >
+                  Lihat Koleksi Game Anak →
+                </a>
+                <a
+                  href="/jurnal-guru"
+                  onClick={(e) => { e.preventDefault(); navigateTo('blog', '/jurnal-guru'); }}
+                  className="inline-block bg-white text-[#0C1A69] border border-blue-200 px-4 py-2 rounded-lg text-sm font-bold hover:bg-blue-100 transition-colors"
+                >
+                  Buka Jurnal Guru IFP
+                </a>
+              </div>
             </div>
           </section>
 

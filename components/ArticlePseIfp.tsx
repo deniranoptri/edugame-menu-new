@@ -209,6 +209,39 @@ const ArticlePseIfp: React.FC<ArticlePseIfpProps> = ({ onBack, navigateTo }) => 
                   <li><span className="text-pink-500 mr-2">✓</span> Apakah guru sudah mengelola (regulasi) emosinya sendiri sebelum memandu regulasi emosi siswa?</li>
                 </ul>
 
+                <section className="my-6 bg-pink-50/70 p-6 rounded-2xl border border-pink-200 space-y-4">
+                  <h2 className="text-xl md:text-2xl font-black text-[#0C1A69]">
+                    Rekomendasi Game Edukasi IFP untuk Kolaborasi, Sportivitas &amp; Refleksi PSE
+                  </h2>
+                  <p>
+                    Dalam <strong>pembelajaran menggunakan papan interaktif</strong>, sesi bermain singkat bersama di layar kelas dapat menjadi laboratorium nyata untuk melatih kesadaran diri, komunikasi sehat, pengelolaan emosi saat menang atau kalah, serta empati antar-teman melalui pilihan <strong>game edukasi IFP</strong> berikut:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2.5 text-sm md:text-base">
+                    <li>
+                      <a href="/game/traditional" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/traditional'); }} className="text-blue-700 hover:underline font-bold">Lomba 17an</a> — permainan virtual bertema kebersamaan dan perayaan budaya 17 Agustus (SD–SMA) untuk melatih kerja sama tim, berbagi giliran, dan sportivitas kelas (bersifat aktivitas layar interaktif, bukan pengganti lomba lapangan fisik).
+                    </li>
+                    <li>
+                      <a href="/game/ai-basketball" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/ai-basketball'); }} className="text-blue-700 hover:underline font-bold">AI Basketball</a> — mendukung interaksi gerak lewat kamera (<em>MediaPipe</em>) maupun kontrol sentuh dalam mode Latihan, Challenge, dan VS; ideal sebagai jeda gerak (<em>active brain break</em>) untuk membantu regulasi energi dan fokus kelas.
+                    </li>
+                    <li>
+                      <a href="/game/mancing-kata" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/mancing-kata'); }} className="text-blue-700 hover:underline font-bold">Mancing Kata</a> — mode <strong>Duel (2 Pemain)</strong> dan <strong>Trio</strong> lintas mata pelajaran melatih komunikasi bergiliran, dukungan positif bagi rekan satu tim, serta pengendalian diri dalam suasana kompetitif yang aman.
+                    </li>
+                    <li>
+                      <a href="/game/kancil" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/kancil'); }} className="text-blue-700 hover:underline font-bold">Jalan Kancil</a> — mode <strong>Duel</strong> dan <strong>Squad</strong> memberi ruang aman bagi siswa untuk mengelola rasa frustrasi saat rute gagal, mendengarkan saran teman, dan mencoba ulang strategi bersama.
+                    </li>
+                    <li>
+                      <a href="/game/nusaboard" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/nusaboard'); }} className="text-blue-700 hover:underline font-bold">NusaBoard</a> — papan kolaboratif digital untuk aktivitas <em>emotional check-in</em>, pemetaan kesepakatan kelas, dan apresiasi kelompok secara visual.
+                    </li>
+                  </ul>
+                  <p className="text-sm md:text-base">
+                    <strong>Peran observasi guru:</strong> Game interaktif di atas bukan instrumen asesmen psikologis otomatis. Jadikan dinamika bermain sebagai bahan pengamatan guru terhadap keterampilan berelasi dan regulasi emosi siswa, lalu tutup dengan refleksi lisan 3–5 menit mengenai pengalaman bekerja sama. Lanjutkan eksplorasi melalui{' '}
+                    <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); navigateTo('hubIfp', '/game-edukasi-ifp'); }} className="text-blue-700 hover:underline font-bold">Koleksi Game Edukasi IFP</a>,{' '}
+                    <a href="/game-logika" onClick={(e) => { e.preventDefault(); navigateTo('hubLogic', '/game-logika'); }} className="text-blue-700 hover:underline font-bold">Koleksi Game Logika</a>,{' '}
+                    <a href="/jurnal-guru/pembelajaran-kolaboratif-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleCollaborativeIfp', '/jurnal-guru/pembelajaran-kolaboratif-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">Pembelajaran Kolaboratif di IFP</a>, dan{' '}
+                    <a href="/jurnal-guru/refleksi-pembelajaran-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleReflectionIfp', '/jurnal-guru/refleksi-pembelajaran-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">Refleksi Pembelajaran di IFP</a>.
+                  </p>
+                </section>
+
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">Kesimpulan</h2>
                 <p>
                   <strong>Pembelajaran Sosial Emosional menggunakan IFP</strong> membuktikan bahwa teknologi layar cerdas tidak membuat siswa teralienasi; sebaliknya, teknologi justru dapat menjadi katalisator empati. Dengan mengubah perasaan abstrak menjadi elemen visual yang dapat disentuh, digeser, dan dikelompokkan, IFP memfasilitasi dialog emosional yang sehat. Ketika guru memberikan ruang bagi kesadaran diri dan keterampilan berelasi di layar utama kelas, mereka mengirimkan pesan pedagogis yang paling fundamental: bahwa sebelum kita mengasah pikiran, kita harus merawat kemanusiaan para siswa.

@@ -215,6 +215,31 @@ const ArticleBahasaIfp: React.FC<ArticleBahasaIfpProps> = ({ onBack, navigateTo 
                 <li><strong>Presentasi Hasil Kelompok:</strong> Minta kelompok siswa memproyeksikan draf naskah mereka dari <em>smartphone</em> ke IFP (fitur <em>screen mirroring</em>), dan biarkan kelas membedahnya bersama.</li>
               </ul>
 
+              <section className="my-6 bg-blue-50/70 p-6 rounded-2xl border border-blue-200 space-y-4">
+                <h2 className="text-xl md:text-2xl font-black text-[#0C1A69]">
+                  Pilihan Game Edukasi untuk Aktivitas Cepat Bahasa Indonesia di IFP
+                </h2>
+                <p>
+                  Saat guru membutuhkan pemanasan 5–10 menit atau jeda aktif untuk melatih kosakata dan ketangkasan menyusun kalimat, beberapa <strong>game Bahasa Indonesia SD</strong> hingga menengah berikut dapat langsung dijalankan pada layar sentuh IFP:
+                </p>
+                <ul className="list-disc pl-6 space-y-2.5 text-sm md:text-base">
+                  <li>
+                    <a href="/game/kata-gol" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/kata-gol'); }} className="text-blue-700 hover:underline font-bold">KATA GOL!</a> — tantangan menyusun kalimat Bahasa Indonesia dan struktur SPOK (SD–SMA) dengan mode individu maupun multi-pemain tim.
+                  </li>
+                  <li>
+                    <a href="/game/jagoan-kata" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/jagoan-kata'); }} className="text-blue-700 hover:underline font-bold">Jagoan Kata</a> — aktivitas merangkai huruf acak menjadi kata baku untuk memperkaya kosakata dan ketelitian ejaan (berdasarkan katalog portal).
+                  </li>
+                  <li>
+                    <a href="/game/mancing-kata" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/mancing-kata'); }} className="text-blue-700 hover:underline font-bold">Mancing Kata</a> — <strong>game edukasi lintas mata pelajaran</strong> (PAUD/TK–SMP) dengan materi Bahasa Indonesia, mode Solo/Duel/Trio, serta fitur input soal custom agar guru dapat memasukkan kosakata dari teks bacaan hari itu.
+                  </li>
+                </ul>
+                <p className="text-sm md:text-base">
+                  <strong>Ide fasilitasi kelas:</strong> Bagi kelas menjadi 2–3 tim untuk bergantian menyusun kalimat atau menebak kosakata di IFP, lalu minta siswa membacakan hasil kalimatnya dengan intonasi yang tepat. Strategi pengelolaan kerja kelompok dan pendalaman pedagogi bahasa dapat dilihat pada{' '}
+                  <a href="/jurnal-guru/pembelajaran-bahasa-indonesia-interaktif-menggunakan-ifp" onClick={(e) => { e.preventDefault(); navigateTo('articleBahasaIndonesiaIfp', '/jurnal-guru/pembelajaran-bahasa-indonesia-interaktif-menggunakan-ifp'); }} className="text-blue-700 hover:underline font-bold">Pembelajaran Bahasa Indonesia Interaktif Menggunakan IFP</a> dan{' '}
+                  <a href="/jurnal-guru/pembelajaran-kolaboratif-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleCollaborativeIfp', '/jurnal-guru/pembelajaran-kolaboratif-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">Pembelajaran Kolaboratif di IFP</a>.
+                </p>
+              </section>
+
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">Kesimpulan</h2>
               <p>
                 Membawa pelajaran sastra dan literasi ke era digital membutuhkan lebih dari sekadar <em>e-book</em>; ia membutuhkan medium interaksi. <strong>Aktivitas Bahasa Indonesia interaktif</strong> yang difasilitasi IFP memastikan setiap kalimat, paragraf, dan teks bisa dibongkar-pasang dengan sentuhan jari. Jadikan <em>media pembelajaran Bahasa Indonesia IFP</em> tidak hanya sebagai alat menayangkan cerita, melainkan kanvas bagi para siswa untuk merangkai maknanya sendiri. Apabila masih ragu tentang hal-hal teknis, jangan lupa untuk membaca <a href="/jurnal-guru/panduan-menggunakan-ifp-untuk-pembelajaran-interaktif-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleGuideIfp', '/jurnal-guru/panduan-menggunakan-ifp-untuk-pembelajaran-interaktif-di-kelas'); }} className="text-blue-700 hover:underline font-bold">panduan dasar penggunaan IFP</a> terlebih dahulu.

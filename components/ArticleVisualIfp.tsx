@@ -203,6 +203,37 @@ const ArticleVisualIfp: React.FC<ArticleVisualIfpProps> = ({ onBack, navigateTo 
                   <li><span className="text-rose-500 mr-2">✓</span> Apakah rutinitas analisis gambar (seperti pertanyaan VTS) lebih berfokus pada "meminta bukti visual" daripada sekadar mencari satu jawaban benar?</li>
                 </ul>
 
+                <section className="my-6 bg-rose-50/70 p-6 rounded-2xl border border-rose-200 space-y-4">
+                  <h2 className="text-xl md:text-2xl font-black text-[#0C1A69]">
+                    Rekomendasi Game Seni Rupa, Warna &amp; Kreativitas Visual di IFP
+                  </h2>
+                  <p>
+                    Selain sketsa dan anotasi kanvas, guru Seni Rupa maupun guru kelas SD–SMP dapat memperkaya <strong>pembelajaran visual menggunakan papan interaktif</strong> lewat pilihan game berbasis gambar, komposisi, pola, dan pencampuran warna berikut:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2.5 text-sm md:text-base">
+                    <li>
+                      <a href="/game/doodle" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/doodle'); }} className="text-blue-700 hover:underline font-bold">Doodle AI</a> — latihan menggambar cepat dan ekspresi visual di layar sentuh (SD–SMA) di mana model AI menebak sketsa siswa; efektif untuk pemanasan seni rupa sekaligus mengamati ciri bentuk utama suatu objek.
+                    </li>
+                    <li>
+                      <a href="/game/puzzle" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/puzzle'); }} className="text-blue-700 hover:underline font-bold">Puzzle Gambar</a> — guru dapat mengunggah foto karya seni, motif daerah, atau gambar materi sendiri untuk disusun ulang bersama siswa guna melatih pengamatan komposisi dan detail visual.
+                    </li>
+                    <li>
+                      <a href="/game/belajar-angka" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/belajar-angka'); }} className="text-blue-700 hover:underline font-bold">Lab Warna</a> &amp;{' '}
+                      <a href="/game/mewarnai" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/mewarnai'); }} className="text-blue-700 hover:underline font-bold">Sayuran</a> — dua game Junior (PAUD–SD awal) untuk bereksperimen mencampur warna dasar menjadi warna baru serta mewarnai digital secara terbimbing.
+                    </li>
+                    <li>
+                      <a href="/game/Petualangan%20Satu%20Garis" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/Petualangan%20Satu%20Garis'); }} className="text-blue-700 hover:underline font-bold">Satu Garis</a> &amp;{' '}
+                      <a href="/game/nusaboard" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/nusaboard'); }} className="text-blue-700 hover:underline font-bold">NusaBoard</a> — melatih kontrol garis berkesinambungan serta pemetaan ide visual kolaboratif pada kanvas bersama.
+                    </li>
+                  </ul>
+                  <p className="text-sm md:text-base">
+                    <strong>Penerapan di kelas:</strong> Gunakan 5–10 menit sesi layar sebagai pemantik apresiasi bentuk dan warna, lalu lanjutkan ke praktik berkarya fisik (kertas, cat air, atau kolase). Lihat ide lintas disiplin di{' '}
+                    <a href="/jurnal-guru/pembelajaran-steam-menggunakan-ifp" onClick={(e) => { e.preventDefault(); navigateTo('articleSteamIfp', '/jurnal-guru/pembelajaran-steam-menggunakan-ifp'); }} className="text-blue-700 hover:underline font-bold">Pembelajaran STEAM di IFP</a>,{' '}
+                    <a href="/game-edukasi-anak" onClick={(e) => { e.preventDefault(); navigateTo('hubKids', '/game-edukasi-anak'); }} className="text-blue-700 hover:underline font-bold">Koleksi Game Junior PAUD/TK</a>, dan{' '}
+                    <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); navigateTo('hubIfp', '/game-edukasi-ifp'); }} className="text-blue-700 hover:underline font-bold">Koleksi Game Edukasi IFP</a>.
+                  </p>
+                </section>
+
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">Kesimpulan</h2>
                 <p>
                   Mengadopsi <strong>Pembelajaran Berbasis Visual menggunakan IFP</strong> berarti menggeser peran layar dari sekadar alat penyaji teks menjadi kanvas kognitif. Ketika pikiran siswa yang awalnya tersembunyi dapat dituangkan menjadi gambar, ditarik menjadi garis penghubung, dan dikelompokkan secara warna pada satu layar besar, ruang kelas berubah menjadi lebih inklusif. Di sinilah guru benar-benar "melihat" proses berpikir anak didiknya, dan di sanalah intervensi pembelajaran paling bermakna dapat dilakukan.

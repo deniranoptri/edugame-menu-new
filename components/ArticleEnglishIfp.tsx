@@ -275,6 +275,32 @@ const ArticleEnglishIfp: React.FC<ArticleEnglishIfpProps> = ({ onBack, navigateT
                   Pada jenjang SD (<em>Primary</em>), guru lebih sering memfokuskan IFP pada pergerakan benda fisik, lagu-lagu beranimasi (<em>TPR/Total Physical Response</em>), serta warna-warni yang mencolok. Sementara pada jenjang SMP (<em>Secondary</em>), guru dapat mulai bergeser pada bedah teks sederhana, <em>jumbled sentences</em>, teks deskriptif tokoh idola, dan latihan mengemukakan pendapat pendek di area komentar digital layar <em>board</em> IFP.
                 </p>
 
+                <section className="my-6 bg-sky-50/70 p-6 rounded-2xl border border-sky-200 space-y-4">
+                  <h2 className="text-xl md:text-2xl font-black text-[#0C1A69]">
+                    Rekomendasi Game Bahasa Inggris Interaktif untuk Kelas IFP
+                  </h2>
+                  <p>
+                    Untuk membantu siswa berlatih kosakata, ejaan (<em>spelling</em>), dan pemahaman makna tanpa rasa canggung, guru dapat mengombinasikan sesi <em>speaking</em> dengan <strong>game Bahasa Inggris interaktif</strong> berikut di layar IFP:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2.5 text-sm md:text-base">
+                    <li>
+                      <a href="/game/bee-english-arena" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/bee-english-arena'); }} className="text-blue-700 hover:underline font-bold">BEE ENGLISH ARENA</a> — game kosakata, menyusun huruf, dan memahami makna kata Bahasa Inggris untuk SD–SMA dengan mode Solo, Duel, Trio, dan Squad.
+                    </li>
+                    <li>
+                      <a href="/game/mancing-kata" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/mancing-kata'); }} className="text-blue-700 hover:underline font-bold">Mancing Kata</a> — <strong>game edukasi lintas mata pelajaran</strong> yang memuat menu <em>English for Kids</em> dan kosakata Bahasa Inggris SD (mode Solo/Duel/Trio), serta memungkinkan guru memasukkan daftar <em>vocabulary</em> custom sesuai topik pelajaran.
+                    </li>
+                    <li>
+                      <a href="/game/helirescue" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/helirescue'); }} className="text-blue-700 hover:underline font-bold">HELI RESCUE</a> — menyediakan latihan soal Bahasa Inggris sebagai bagian dari bank soal lintas 13 mata pelajaran (SD–SMA) untuk sesi review cepat bersama kelas.
+                    </li>
+                  </ul>
+                  <p className="text-sm md:text-base">
+                    <strong>Tips komunikasi &amp; cek pemahaman:</strong> Setelah tim menyusun atau menangkap kata di IFP, minta siswa mengucapkan kata tersebut dengan lantang dan membuat satu kalimat lisan sederhana. Pengamatan pelafalan dan ketepatan ejaan di papan menjadi <strong>asesmen formatif berbasis game</strong> yang dipandu langsung oleh guru (bukan evaluasi pengucapan otomatis dari game). Lengkapi persiapan sesi dengan{' '}
+                    <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); navigateTo('hubIfp', '/game-edukasi-ifp'); }} className="text-blue-700 hover:underline font-bold">Koleksi Game Edukasi IFP</a>,{' '}
+                    <a href="/jurnal-guru/pembelajaran-kolaboratif-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleCollaborativeIfp', '/jurnal-guru/pembelajaran-kolaboratif-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">Strategi Kolaborasi IFP</a>, dan{' '}
+                    <a href="/jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleAssessmentIfp', '/jurnal-guru/asesmen-formatif-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">Asesmen Formatif IFP</a>.
+                  </p>
+                </section>
+
                 <h2 className="text-2xl font-black text-[#0C1A69] pt-4">Penutup</h2>
                 <p>
                   Kehadiran IFP dalam kurikulum pengajaran bahasa bukan demi menggantikan interaksi lisan, melainkan menyokong <em>language acquisition</em> dengan jembatan visual yang kukuh. <strong>Pembelajaran Bahasa Inggris interaktif menggunakan IFP</strong> terbukti memfasilitasi anak untuk lebih berani mencoba berucap, karena fokus mereka kini dibagi dari rasa malu ditatap guru, menuju tantangan mekanis di atas layar. Berikan mereka spidol digitalnya, dorong mereka merangkai kata, dan saksikan perbendaharaan kalimat mereka mekar seketika.

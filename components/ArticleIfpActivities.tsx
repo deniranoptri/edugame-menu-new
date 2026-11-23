@@ -217,6 +217,36 @@ const ArticleIfpActivities: React.FC<ArticleIfpActivitiesProps> = ({ onBack, nav
                 Kunci utama <strong>penggunaan IFP di kelas</strong> adalah pada frekuensi interaksi. Jangan biarkan layar IFP hanya dikendalikan oleh guru. <strong>Interactive Flat Panel untuk pembelajaran</strong> dirancang agar tahan terhadap ketukan dan sentuhan siswa. Selalu ajukan pertanyaan pemantik, berikan <em>stylus</em> kepada siswa, dan biasakan mereka untuk berdiri, bergerak, dan menyentuh pengetahuan yang sedang mereka diskusikan. 
               </p>
 
+              <section className="my-6 bg-blue-50/70 p-6 rounded-2xl border border-blue-200 space-y-4">
+                <h2 className="text-xl md:text-2xl font-black text-[#0C1A69]">
+                  Rekomendasi Aktivitas Gerak, PJOK &amp; Kebersamaan di Layar IFP
+                </h2>
+                <p>
+                  Saat cuaca tidak mendukung kegiatan lapangan atau guru memerlukan pemanasan aktif (<em>active brain break</em>) di dalam ruangan, layar IFP dapat dimanfaatkan untuk aktivitas bertema <strong>PJOK</strong>, koordinasi gerak, dan kebersamaan kelas melalui pilihan berikut:
+                </p>
+                <ul className="list-disc pl-6 space-y-2.5 text-sm md:text-base">
+                  <li>
+                    <a href="/game/ai-basketball" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/ai-basketball'); }} className="text-blue-700 hover:underline font-bold">AI Basketball</a> — mendukung deteksi gerak tangan dan tubuh via kamera (<em>MediaPipe</em>) serta alternatif kontrol sentuh dengan mode Latihan, Challenge, dan VS; ideal untuk pemanasan koordinasi motorik kasar di depan IFP berkamera (akurasi bergantung pada pencahayaan/posisi perangkat dan bukan alat asesmen kebugaran fisik formal).
+                  </li>
+                  <li>
+                    <a href="/game/traditional" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/traditional'); }} className="text-blue-700 hover:underline font-bold">Lomba 17an</a> — aktivitas virtual bertema perayaan tradisional 17 Agustus (SD–SMA) untuk membangun sportivitas dan <em>ice breaking</em> tim (bersifat aktivitas layar pengenalan budaya, bukan pengganti lomba atau olahraga lapangan fisik).
+                  </li>
+                  <li>
+                    <a href="/game/helirescue" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/helirescue'); }} className="text-blue-700 hover:underline font-bold">HELI RESCUE</a> &amp;{' '}
+                    <a href="/game/mancing-kata" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/mancing-kata'); }} className="text-blue-700 hover:underline font-bold">Mancing Kata</a> — keduanya memuat pilihan materi pengetahuan <strong>PJOK</strong> (lintas mata pelajaran, ditambah dukungan soal custom guru pada Mancing Kata) untuk cek teori kesehatan dan aturan olahraga di dalam kelas.
+                  </li>
+                  <li>
+                    <a href="/game/basket-angka-junior" onClick={(e) => { e.preventDefault(); navigateTo('gameDetail', '/game/basket-angka-junior'); }} className="text-blue-700 hover:underline font-bold">Basket Angka Junior</a> — menggabungkan tema olahraga basket dengan latihan bilangan dasar untuk anak PAUD/TK hingga SD kelas 1–3 dalam mode Solo hingga Squad.
+                  </li>
+                </ul>
+                <p className="text-sm md:text-base">
+                  <strong>Tips pelaksanaan:</strong> Pastikan area di depan IFP aman dari meja/kursi untuk giliran 2–4 siswa sekaligus, lalu jadikan aktivitas ini pengantar sebelum praktik olahraga riil. Telusuri ide lain di{' '}
+                  <a href="/game-edukasi-ifp" onClick={(e) => { e.preventDefault(); navigateTo('hubIfp', '/game-edukasi-ifp'); }} className="text-blue-700 hover:underline font-bold">Koleksi Game Edukasi IFP</a>,{' '}
+                  <a href="/game-edukasi-anak" onClick={(e) => { e.preventDefault(); navigateTo('hubKids', '/game-edukasi-anak'); }} className="text-blue-700 hover:underline font-bold">Koleksi Game Anak PAUD/TK</a>, dan{' '}
+                  <a href="/jurnal-guru/pembelajaran-kolaboratif-menggunakan-ifp-di-kelas" onClick={(e) => { e.preventDefault(); navigateTo('articleCollaborativeIfp', '/jurnal-guru/pembelajaran-kolaboratif-menggunakan-ifp-di-kelas'); }} className="text-blue-700 hover:underline font-bold">Pembelajaran Kolaboratif di IFP</a>.
+                </p>
+              </section>
+
               <h2 className="text-2xl font-black text-[#0C1A69] pt-4">8. Kesimpulan</h2>
               <p>
                 Menghidupkan <strong>aktivitas pembelajaran interaktif</strong> tidak serta-merta terjadi hanya karena ada IFP di dalam kelas. Alat canggih membutuhkan metode yang relevan. Dengan memadukan <em>game edukasi IFP</em>, sesi kolaboratif, dan keberanian guru untuk mengubah pola interaksi menjadi dua arah, IFP dapat benar-benar mentransformasi ruang kelas tradisional menjadi laboratorium ide yang menyenangkan bagi siswa.

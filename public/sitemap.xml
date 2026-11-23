@@ -888,4 +888,34 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://papaninteraktif.com/jurnal-guru/game-seni-rupa-interaktif-menggunakan-ifp</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://papaninteraktif.com/jurnal-guru/game-pjok-interaktif-menggunakan-ifp</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://papaninteraktif.com/jurnal-guru/game-pendidikan-pancasila-interaktif-menggunakan-ifp</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://papaninteraktif.com/jurnal-guru/game-koding-kecerdasan-artifisial-ifp</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://papaninteraktif.com/jurnal-guru/game-pendidikan-agama-islam-interaktif-ifp</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
